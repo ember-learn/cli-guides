@@ -1,0 +1,31 @@
+{
+  "name": "@ember-learn/cli-guides",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Markdown files for Ember-Cli Guides",
+  "bugs": {
+    "url": "https://github.com/ember-learn/cli-guides-source/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ember-learn/cli-guides-source.git"
+  },
+  "license": "MIT",
+  "author": "Jen Weber",
+  "repository": "",
+  "scripts": {
+    "release": "np",
+    "test": "mocha",
+    "test-watch": "npm test -- -w"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.8.0",
+    "mocha": "^5.0.0",
+    "np": "*"
+  },
+  "dependencies": {
+    "guidemaker-link-checker": "^1.0.0"
+  }
+}
