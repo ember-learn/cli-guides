@@ -1,7 +1,6 @@
 {
   "name": "@ember-learn/cli-guides",
   "version": "0.0.1",
-  "private": true,
   "description": "Markdown files for Ember-Cli Guides",
   "bugs": {
     "url": "https://github.com/ember-learn/cli-guides-source/issues"
