@@ -1,5 +1,3 @@
-# Using addons
-
 Check out [Ember Observer](https://www.emberobserver.com/) to see what kinds of npm libraries are ready-made for your app!
 
 The modern web developer has an incredible selection of open source code that they can use through the npm ecosystem, plus great tools for writing their own modules. Ember developers are free to use regular npm packages in their apps, but there are also thousands of packages that are made specifically for the Ember ecosystem. We call such packages "addons."

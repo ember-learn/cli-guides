@@ -1,5 +1,3 @@
-# CLI Commands
-
 In their day to day work, most Ember developers use only a small number of CLI commands.
 We'll cover them here, along with a quick tutorial of how to use the `--help` option.
 

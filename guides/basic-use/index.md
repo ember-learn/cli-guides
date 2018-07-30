@@ -1,5 +1,3 @@
-# Installing and upgrading the CLI
-
 ## Prerequisites
 
 * [npm](https://www.npmjs.com/get-npm) or [yarn](https://yarnpkg.com/en/docs/install)

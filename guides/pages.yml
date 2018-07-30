@@ -1,6 +1,5 @@
 - title: 'Introduction'
   url: 'index'
-  skip_toc: true
   pages:
     - title: "The Ember CLI"
       url: ""
@@ -30,5 +29,11 @@
 - title: 'Advanced use'
   url: 'advanced-use'
   pages:
-  - title: 'Advanced'
+  - title: 'Overview'
+    url: 'index'
+
+- title: 'API Documentation'
+  url: 'api-documentation'
+  pages:
+  - title: 'Overview'
     url: 'index'

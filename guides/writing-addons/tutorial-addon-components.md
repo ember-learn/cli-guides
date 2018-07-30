@@ -1,5 +1,3 @@
-# Tutorial: addon components
-
 This tutorial will cover how to make a component addon from start to finish, including:
 - generating the files
 - adding stylesheets that other apps can use

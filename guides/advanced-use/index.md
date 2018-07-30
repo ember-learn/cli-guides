@@ -1,5 +1,3 @@
-# Advanced use
-
 This section of the CLI Guides describes how to make custom configurations to the app's build behavior, testing, and more.
 Ember is designed for a zero config experience for most users, but it was also designed to be extensible. Think of it as configuration without confusion.
 
