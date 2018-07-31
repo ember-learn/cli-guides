@@ -1,6 +1,6 @@
 ## Ember-Cli Guides Source
 
-This repository is part of a Work-In-Progress project to refresh the CLI guides content that currently lives at [https://ember-cli.com](ember-cli.com). The [cli-guides-app](https://github.com/ember-learn/cli-guides-source) is the structure for the markdown files in this repository.
+This repository is part of a Work-In-Progress project to refresh the CLI guides content that currently lives at [https://ember-cli.com](https://ember-cli.com). The [cli-guides-app](https://github.com/ember-learn/cli-guides-source) is the structure for the markdown files in this repository.
 
 As this project is pre-1.0, no content should be taken as the final word. Additional review is still pending.
 
