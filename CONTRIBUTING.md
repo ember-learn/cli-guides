@@ -40,6 +40,7 @@ Extending on these rules:
 - No var. Only const and let for variable declarations
 - Use brace expansion for imports, i.e. import { a, b } from @ember/somepackage and use the same name as is used in the API docs
 - Links to the API docs should point to the `/release/` version
+- Whenever possible, choose semi-generic heading titles, so that as Ember grows and changes, we can keep using them.
 
 ### Writing
 
