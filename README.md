@@ -1,10 +1,14 @@
 ## Ember-Cli Guides Source
 
-This repository is part of a Work-In-Progress project to refresh the CLI guides content that currently lives at [https://ember-cli.com](https://ember-cli.com). The [cli-guides-app](https://github.com/ember-learn/cli-guides-source) is the structure for the markdown files in this repository.
+This repository is part of a Work-In-Progress project to refresh and replace the CLI guides content of [https://ember-cli.com](https://ember-cli.com).
 
-As this project is pre-1.0, no content should be taken as the final word. Additional review is still pending.
+## Contributing
 
-Do you know a thing or two about the CLI or addons? We'd love to have your help with writing! Do you _wish_ you knew a thing or do? You could help us review to make sure that content is helpful to all knowledge levels. Please drop by the #-team-learning channel on the [Ember Community Slack](https://ember-community-slackin.herokuapp.com/) and `@` one of the [main contributors](https://github.com/ember-learn/cli-guides-source/graphs/contributors) to get more information.
+Do you know a thing or two about the CLI or addons? Do you _wish_ you knew a thing or do?  We'd love to have your help with writing or reviewing to make sure that content is helpful to all knowledge levels. To learn more about the motivation for this, read this [RFC](https://github.com/jenweber/rfcs-1/blob/cli-guides/active/0000-cli-guides.md).
+
+Overall project status and tasks that need help are tracked in [this Quest issue](https://github.com/ember-learn/cli-guides-source/issues/3). Have a read through that and the [CONTRIBUTING.md](CONTRIBUTING.md) file in order to get started.
+
+As this project is pre-1.0, no content should be taken as technically authoritative.
 
 ## Prerequisites
 
@@ -14,14 +18,7 @@ You will need the following things properly installed on your computer.
 * [Node.js](https://nodejs.org/) (with npm)
 * [Ember CLI](https://ember-cli.com/)
 * [Google Chrome](https://google.com/chrome/)
-
-## Installation
-
-* `git clone <repository-url>` this repository
-* `cd cli-guides-app`
-* `npm install`
-
-This will display the content of the deployed Guides markdown
+* [npm](https://docs.npmjs.com/cli/install)
 
 ## Local Development
 
@@ -33,10 +30,14 @@ To see what a local copy of the Guides markdown looks like:
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 * Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
+If you follow this strategy above, as you save changes to
+the markdown files of this repository, your locally served
+app should update.
+
 ### Adding more things to the table of contents
 
-See `pages.yaml` in the cli-guides-source. Whatever has a url of index will be what is shown for the top level path, like `/tutorial/`. There must be an `index.md` under each topic. 
+See `pages.yaml` in the cli-guides-source. Whatever has a url of index will be what is shown for the top level path, like `/tutorial/`. There must be an `index.md` under each topic.
 
 ### Deploying
 
-See instructions on the [cli-guides-app](https://github.com/ember-learn/cli-guides-source) README.
+See instructions on the [cli-guides-app](https://github.com/ember-learn/cli-guides-app) README.
