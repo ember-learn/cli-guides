@@ -22,7 +22,7 @@ ember generate component <component-name>
 
 However, in the context of an addon, this creates more files than we would see in an app:
 
-```
+```bash
   create addon/components/<addon-name>.js
   create addon/templates/components/<addon-name>.hbs
   create tests/integration/components/<addon-name>-test.js

@@ -22,7 +22,7 @@ The help command is also the best way to see the aliased or shorthand versions o
 
 ### Format:
 
-```
+```bash
 ember new <my-app-name> [options]
 ```
 
@@ -34,7 +34,7 @@ ember new <my-app-name> [options]
 
 This command below will create a folder called `camping-trip-tracker`, which will be full of app files. It uses the `--yarn` option to show that the app should use `yarn` by default. Yarn is a package manager alternative to `npm`. Options typically start with a double dash `--` and can be omitted entirely.
 
-```
+```bash
 ember new camping-trip-tracker --yarn
 ```
 
@@ -46,7 +46,7 @@ ember new camping-trip-tracker --yarn
 
 ### Format
 
-```
+```bash
 ember serve [options]
 ```
 
@@ -58,7 +58,7 @@ ember serve [options]
 
 By default, apps are served at port `4200`, but if you need to change it for some reason, you could visit your app at `http://localhost:3200` by using this command:
 
-```
+```bash
 ember serve --port 3200
 ```
 
@@ -70,7 +70,7 @@ ember serve --port 3200
 
 ### Format
 
-```
+```bash
 ember generate <type of file> <the name to give it>
 ```
 
@@ -84,7 +84,7 @@ The new files will contain the necessary boilerplate, they will go in the right 
 
 This command will make a component named `packing-list`. There will be three files created in the app: `packing-list.hbs` which will define what it looks like, `packing-list.js` with JavaScript code to handle user interaction, and an integration test (aka rendering test) file called `packing-list-test.js`.
 
-```
+```bash
 ember generate component packing-list
 ```
 
@@ -96,7 +96,7 @@ ember generate component packing-list
 
 ### Format
 
-```
+```bash
 ember install <addon-name>
 ```
 
@@ -110,7 +110,7 @@ To use npm packages directly, see <!-- LINK --> to learn about the options.
 
 Here's an example of adding SASS support to your app using <!-- LINK TO CLI SASS -->. SASS is an alternative to writing plain CSS. This is a popular community-maintained addon.
 
-```
+```bash
 ember install ember-cli-sass
 ```
 
@@ -124,7 +124,7 @@ ember install ember-cli-sass
 
 ### Format
 
-```
+```bash
 ember test [options]
 ```
 
@@ -136,7 +136,7 @@ ember test [options]
 
 To make tests re-run as we change files, we could use the `--server` option:
 
-```
+```bash
 ember test --server
 ```
 
@@ -146,7 +146,7 @@ ember test --server
 
 ### Format
 
-```
+```bash
 ember build [options]
 ```
 
@@ -162,7 +162,7 @@ Ember apps can be built with only three environments: development, production, a
 
 This command builds the app using the production configuration, so that means by default, it will use maximum minification for best app performance.
 
-```
+```bash
 ember build --environment production
 ```
 

@@ -12,7 +12,7 @@ It is recommend to install the most recent LTS (long term support) version of `n
 
 ## Installing the ember-cli
 
-```
+```bash
 npm install -g ember-cli
 ```
 
@@ -22,7 +22,7 @@ This will make the `ember` command available throughout your project folders. Th
 
 Mac users may need to install [Watchman](https://facebook.github.io/watchman/) via [Homebrew](http://brew.sh/). Watchman helps correct for some buggy file watching behavior in MacOS. Do not use the `npm` package by the same name.
 
-```
+```bash
 brew install watchman
 ```
 
