@@ -21,8 +21,8 @@
   pages:
   - title: 'Addon structure'
     url: 'index'
-  - title: 'Tutorial: addon components'
-    url: 'tutorial-addon-components'
+  - title: 'Tutorial'
+    url: 'tutorial'
   - title: 'Testing'
     url: 'testing'
 
