@@ -11,6 +11,8 @@ Developers of all knowledge and experience levels are invited to help out. Here 
 - Help review Pull Requests
 - Add comments to Markdown files with tips, resources, and notes to help others figure out what to write
 
+**Note on respecting copywrite** - It is ok to copy/paste content over from ember-cli.com. It is _not_ ok to copy and paste content that you didn't write that came from blog posts, articles, tutorials, etc. whether paid or free. Exceptions are if the license allows it (please link to it in your PR) or you have written permission of the author via a comment on an issue in this repo.
+
 ## How to get started
 
 1. See the [Quest issue](https://github.com/ember-learn/cli-guides-source/issues/3) for a list of tasks that need help. Add a comment indicating which issue you can help with, then open an issue with the name of that task. Any Q&A for the task should go there. Contributors are encouraged to work in pairs.
