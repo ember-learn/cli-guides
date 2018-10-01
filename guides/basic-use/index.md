@@ -18,29 +18,21 @@ npm install -g ember-cli
 
 This will make the `ember` command available throughout your project folders. The installation is successful if `ember -v` returns a version number. When it is run inside of an Ember app directory, it will show the version of the app, otherwise it will show the globally installed version of the CLI.
 
-### Additional steps for Mac users
+### Additional steps for Mac and Linux users
 
-Mac users may need to install [Watchman](https://facebook.github.io/watchman/) via [Homebrew](http://brew.sh/). Watchman helps correct for some buggy file watching behavior in MacOS. Do not use the `npm` package by the same name.
+Mac and Linux users may need to install [Watchman](https://facebook.github.io/watchman/). Watchman helps correct for some buggy and inefficient file watching behavior. Do not use the `npm` package by the same name.
+
+Mac users cann install via [Homebrew](http://brew.sh/):
 
 ```bash
 brew install watchman
 ```
 
-## Versioning
+Linux users should follow the steps on the [Watchman](https://facebook.github.io/watchman/) website to build from the source.
 
-The Ember CLI is backwards compatible, meaning that the latest CLI can be used on older app versions. New versions of the CLI are released roughly every 6 weeks, in step with versions of Ember.js itself.
+### Installing for Windows
 
-A list of CLI releases and their features can be found on the GitHub repository for [ember-cli](https://github.com/ember-cli/ember-cli/releases).
-
-## Upgrading the CLI version
-
-The Ember CLI can be updated independently of the apps it is used with.
-Upgrade instructions are published with [each release](https://github.com/ember-cli/ember-cli/releases).
-
-## Upgrading the Ember app itself
-
-There are automated Ember CLI tools available to help upgrade Ember apps, including codemods that help with syntax changes. Visit
-[ember-cli-update](https://github.com/ember-cli/ember-cli-update for the latest instructions.
+<!-- copy over from ember-cli.com -->
 
 ## Getting help
 
