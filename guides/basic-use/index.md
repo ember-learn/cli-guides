@@ -20,15 +20,17 @@ This will make the `ember` command available throughout your project folders. Th
 
 ### Additional steps for Mac and Linux users
 
-Mac and Linux users may need to install [Watchman](https://facebook.github.io/watchman/). Watchman helps correct for some buggy and inefficient file watching behavior. Do not use the `npm` package by the same name.
+For Mac and Linux users we recommend installing [Watchman](https://facebook.github.io/watchman/). Watchman helps correct for some buggy and inefficient file watching behavior. Do not use the `npm` package by the same name.
 
-Mac users cann install via [Homebrew](http://brew.sh/):
+Mac users cann install via [Homebrew](https://brew.sh/):
 
 ```bash
 brew install watchman
 ```
 
 Linux users should follow the steps on the [Watchman](https://facebook.github.io/watchman/) website to build from the source.
+
+If Watchman is not installed, a notice is displayed when invoking various commands ("Could not start watchman"). It's safe to ignore this message. However, file-watching won't be as smooth as it is with Watchman.
 
 ### Installing for Windows
 
