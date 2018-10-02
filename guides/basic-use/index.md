@@ -4,7 +4,7 @@
 * Recent version of [node](https://nodejs.org/en/download/), which comes included in `yarn` or `npm` 
 * Mac users need [Watchman](https://facebook.github.io/watchman/) (not the npm version!)
 
-First, we first need to have a package manager installed. A package manager installs new dependencies from the command line, whether they are used as commands or in the app itself. Follow these installation instructions for [npm](https://www.npmjs.com/get-npm) or [yarn](https://yarnpkg.com/en/docs/install). While these two tools have somewhat different features, both are compatible with Ember app development.
+First, we need to have a package manager installed. A package manager installs new dependencies from the command line, whether they are used as commands or in the app itself. Follow these installation instructions for [npm](https://www.npmjs.com/get-npm) or [yarn](https://yarnpkg.com/en/docs/install). While these two tools have somewhat different features, both are compatible with Ember app development.
 
 We'll know installation is successful when `npm --version` or `yarn --version` returns the version number. 
 
@@ -22,7 +22,7 @@ This will make the `ember` command available throughout your project folders. Th
 
 For Mac and Linux users we recommend installing [Watchman](https://facebook.github.io/watchman/). Watchman helps correct for some buggy and inefficient file watching behavior. Do not use the `npm` package by the same name.
 
-Mac users cann install via [Homebrew](https://brew.sh/):
+Mac users can install via [Homebrew](https://brew.sh/):
 
 ```bash
 brew install watchman
