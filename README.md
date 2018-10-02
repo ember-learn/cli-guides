@@ -25,7 +25,7 @@ You will need the following things properly installed on your computer.
 To see what a local copy of the Guides markdown looks like:
 
 * Clone the [Ember CLI Guides](https://github.com/ember-learn/cli-guides-app) App repository
-* link the `ember-cli-guides-source` repository by running `npm link` inside this repository, then `npm link @ember-learn/cli-guides` in the guides-app
+* link the `cli-guides-source` repository by running `npm link` inside this repository, then `npm link @ember-learn/cli-guides` in the guides-app
 * `npm install` and `ember serve` in the guides app
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 * Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
