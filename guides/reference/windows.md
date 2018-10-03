@@ -1,16 +1,16 @@
-Windows Vista and newer windows versions are fully supported.
+Windows Vista and newer Windows versions are fully supported.
 
 To get started ensure the following dependencies are installed:
 
 * Node.js - [https://nodejs.org/en/](https://nodejs.org/en/)
 * Git - [https://git-scm.com/](https://git-scm.com/)
-* Phantom.js - [http://phantomjs.org/](http://phantomjs.org/)
+* Chrome - [https://www.google.com/chrome/](https://www.google.com/chrome/)
 
 ### Performance
 
 Although supported, Windows performance, at least by default, isn't as good as
 on Linux or MacOS. On a positive note, this story continues to improve. Both
-Microsoft, and the Ember CLI team continue to work to improve these developer
+Microsoft, and the Ember CLI team continue to work on improving these developer
 ergonomics.
 
 #### What causes the build slowdown?
