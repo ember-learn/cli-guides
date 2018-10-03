@@ -12,6 +12,7 @@
   "license": "MIT",
   "author": "Jen Weber",
   "scripts": {
+    "lint:md": "remark .",
     "release": "np",
     "test": "mocha",
     "test-watch": "npm test -- -w"
