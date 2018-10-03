@@ -1,0 +1,18 @@
+---
+language: node_js
+node_js:
+  - 6
+
+sudo: false
+dist: trusty
+
+cache:
+  directories:
+    - $HOME/.npm
+
+before_install:
+  - npm config set spin false
+
+script:
+  - npm run lint:md
+  - npm test
