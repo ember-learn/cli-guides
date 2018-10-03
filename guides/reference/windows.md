@@ -22,10 +22,7 @@ The two primary reasons are:
 
 #### For the best possible Windows experience
 
-* Windows 10, insiders release with development mode enabled. Symlinks are enabled
-  by default) [Details from
-  Microsoft](https://blogs.windows.com/buildingapps/2016/12/02/symlinks-windows-10/)
-* or, Windows Subsystem Linux [Installation
+* Use Windows Subsystem Linux [Installation
   Guide](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide)
 
 #### Improving your Windows experience
@@ -33,14 +30,17 @@ The two primary reasons are:
 Ensure Search and Defender ignore your project's `tmp` directory:
 
 ```bash
-npm install --save-dev ember-cli-windows-addon
+npm install -g ember-cli-windows
 ```
 
 Then, to start the automatic configuration, run:
 
 ```bash
-ember windows
+ember-cli-windows
 ```
+
+*Make sure you use an elevated PowerShell.* <!-- Needs Instructions -->
+If there was an error, try executing Set-ExecutionPolicy Unrestricted -scope Process first.
 
 [Read more about this from the Microsoft DX Open Source team](http://felixrieseberg.com/improved-ember-cli-performance-with-windows/)
 
