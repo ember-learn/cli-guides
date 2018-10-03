@@ -5,7 +5,10 @@
   "bugs": {
     "url": "https://github.com/ember-learn/cli-guides-source/issues"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ember-learn/cli-guides-source.git"
+  },
   "license": "MIT",
   "author": "Jen Weber",
   "scripts": {
