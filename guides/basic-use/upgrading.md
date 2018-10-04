@@ -21,7 +21,7 @@ ember --version
 ## Upgrading an Ember app itself
 
 There are automated Ember CLI tools available to help upgrade Ember apps, including codemods that help with syntax changes. Visit
-[ember-cli-update](https://github.com/ember-cli/ember-cli-update for the latest instructions.
+[ember-cli-update](https://github.com/ember-cli/ember-cli-update) for the latest instructions.
 
 <!-- Needs a section that describes a common upgrade experience, explains deprecations, links to Deprecations site, and hints that upgrades to get new features or jump major versions require changes to the codebase. Common misconception is that you can just jump versions in package.json. Pull in info from https://ember-cli.com/user-guide/#upgrading  -->
 

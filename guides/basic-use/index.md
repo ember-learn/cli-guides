@@ -34,7 +34,8 @@ If Watchman is not installed, a notice is displayed when invoking various comman
 
 ### Installing for Windows
 
-<!-- copy over from ember-cli.com -->
+Windows Vista and newer Windows versions are fully supported, although there are steps you can take to improve your experience.
+You can find more information about this in our section on [Windows support](../reference/windows/)
 
 ## Getting help
 
