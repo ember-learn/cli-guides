@@ -50,14 +50,14 @@ Our goal is to be able to pass the `buttonName` value to the addon, just like we
 
 ### Trying out the addon template in an app
 
-There are several options to see the addon in action. We could use `npm link` or `yarn link` to try it out locally or publish the addon online. We'll use `link` while we are still developing and testing. 
+There are several options to see the addon in action. We could use `npm link` or `yarn link` to try it out locally or publish the addon online. We'll use `link` while we are still developing and testing.
 
-** From the addon project directory:**
+**From the addon project directory:**
 1. Since our addon uses a template, we need the template precompiler to be a `dependency` and not a `devDependency`. In the addon's `package.json`, move the entry for `ember-cli-htmlbars` into the `dependencies` listing. If this step is missed, there is a clear error message when we try to start the app that uses our addon.
 2. `yarn install` or `npm install`
 3. Run the command `yarn link` or `npm link`
 
-** From the directory of the app using the addon:**
+**From the directory of the app using the addon:**
 1. `yarn link <addon-name>` or `npm link <addon-name>`.
 2. In the Ember app's `package.json`, add a `devDependencies` entry for your addon, like `"addon-name": "*"`. The `*` means that it will include all version numbers of our addon.
 3. Run `yarn install` or `npm install` in the app
@@ -67,17 +67,17 @@ There are several options to see the addon in action. We could use `npm link` or
 We should now see our addon in action!
 
 **Having problems?**
-- Check to make sure that your `package.json` is valid, looking for missing commas or trailing commas. 
-- "Template precompiler" errors mean that you skipped Step 1 and 2 above. 
-- `404 not found` means we forgot to `yarn` or `npm install` 
+- Check to make sure that your `package.json` is valid, looking for missing commas or trailing commas.
+- "Template precompiler" errors mean that you skipped Step 1 and 2 above.
+- `404 not found` means we forgot to `yarn` or `npm install`
 - Make sure all the files have been saved.
-- Did you rename or relocate any files after they were created? This is prone to mistakes, and the resulting errors can be really strange. It is best to create files using the CLI. 
+- Did you rename or relocate any files after they were created? This is prone to mistakes, and the resulting errors can be really strange. It is best to create files using the CLI.
 
 ### Making a UI component available in block form
 
 In an Ember app, components can be used in ["simple" or "block" form](https://guides.emberjs.com/release/components/wrapping-content-in-a-component/). Addon templates have the same capabilities. The simple form allows data objects or configuration values to be passed to the addon. The block form allows a developer to pass in their own template, content, and interactivity.
 
-In an Ember app, a block style component uses the `{{yield}}` helper as a placeholder for where the passed-in content will go. It is the same in an Ember addon. 
+In an Ember app, a block style component uses the `{{yield}}` helper as a placeholder for where the passed-in content will go. It is the same in an Ember addon.
 
 Let's change our button addon we made earlier so that developers can pass in their own handlebars content by using the `{{yield}}` helper:
 
@@ -141,9 +141,9 @@ Now any buttons made using our addon will have the `padding: 10px` rule applied.
 
 For some addons, it makes sense to give the developer the option to import the stylesheet we provide, or import no stylesheets at all. Using this approach, we could even offer the developer a few themes to choose from.
 
-We can do this by creating stylesheets in the `app/styles/` directory instead. These stylesheets share a file namespace with the consuming app and all the other addons someone is using, so name them wisely. For example, if we name our stylesheet `addon.css`, that's likely to clash. Just as before, it's important to choose uniquely named targets for the CSS rules so that they don't clash with other addons or the app. 
+We can do this by creating stylesheets in the `app/styles/` directory instead. These stylesheets share a file namespace with the consuming app and all the other addons someone is using, so name them wisely. For example, if we name our stylesheet `addon.css`, that's likely to clash. Just as before, it's important to choose uniquely named targets for the CSS rules so that they don't clash with other addons or the app.
 
-Let's create `app/styles/our-addon-name.css` and add a rule to it: 
+Let's create `app/styles/our-addon-name.css` and add a rule to it:
 
 ```css
 /* addon/styles/our-addon-name.css */
@@ -175,7 +175,7 @@ The best way to learn how to use CSS preprocessors in your addon is to consult t
 There are two main types of JavaScript functionality that an addon can provide:
 
 1. API methods that developers can use after importing your addon
-2. Interactive features that are part of UI components. 
+2. Interactive features that are part of UI components.
 
 We'll cover UI use cases first.
 
@@ -250,7 +250,7 @@ This is a very tiny example of what addons can do in terms of providing JavaScri
 
 ## In-repo addons
 
-If the addon is just meant to be used in a single project, an "in-repo" addon could be created instead. The benefits are that it is lightweight and the developer has access addon APIs, like adding packages and commands. However, there are some major limitations: an in-repo addon can't be shared between apps, versioned independently, or published to npm. 
+If the addon is just meant to be used in a single project, an "in-repo" addon could be created instead. The benefits are that it is lightweight and the developer has access addon APIs, like adding packages and commands. However, there are some major limitations: an in-repo addon can't be shared between apps, versioned independently, or published to npm.
 
 From within an existing Ember app, create an in-repo addon:
 
@@ -268,7 +268,7 @@ The most common use case for an in-repo addon is when there is a chance a compon
 
 ## Documenting addons
 
-For other developers to discover and use our addon, we need to teach them how to use it! 
+For other developers to discover and use our addon, we need to teach them how to use it!
 
 Here are the most common ways that addons provide user-facing documentation:
 
