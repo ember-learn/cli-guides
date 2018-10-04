@@ -5,22 +5,38 @@
   "bugs": {
     "url": "https://github.com/ember-learn/cli-guides-source/issues"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ember-learn/cli-guides-source.git"
+  },
   "license": "MIT",
   "author": "Jen Weber",
   "scripts": {
+    "lint:md": "remark .",
     "release": "np",
     "test": "mocha",
     "test-watch": "npm test -- -w"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^13.0.0",
-    "eslint-plugin-import": "^2.8.0",
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "guidemaker-link-checker": "^1.0.0",
     "mocha": "^5.0.0",
-    "np": "*"
+    "np": "*",
+    "remark-cli": "^5.0.0",
+    "remark-lint": "^6.0.2",
+    "remark-preset-lint-consistent": "^2.0.2",
+    "remark-preset-lint-recommended": "^3.0.2"
   },
-  "dependencies": {
-    "guidemaker-link-checker": "^1.0.0"
+  "remarkConfig": {
+    "plugins": [
+      "remark-preset-lint-recommended",
+      "remark-preset-lint-consistent",
+      [
+        "remark-lint-list-item-indent",
+        "space"
+      ]
+    ]
   }
 }
