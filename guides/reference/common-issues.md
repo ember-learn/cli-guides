@@ -1,5 +1,3 @@
-# Common Issues
-
 ### `npm` Package Management with `sudo`
 
 Installing packages such as `bower` with `sudo` powers can lead to permissions
@@ -37,7 +35,7 @@ For `ember-data`: `npm install --save-dev emberjs/data#master`
 
 ### Windows Build Performance Issues
 
-See [The Windows Section](#windows) for more details.
+See [The Windows Section](/release/reference/windows/) for more details.
 
 ### PhantomJS on Windows
 
