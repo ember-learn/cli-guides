@@ -18,15 +18,15 @@ The result is the creation of a directory called `<addon-name>`, which has many 
 
 ### Addon file structure
 
-In some ways, an addon is like a mini Ember app. It has a very similar file structure, uses a lot of the same API methods, and can do most things that components are able to do. 
+In some ways, an addon is like a mini Ember app. It has a very similar file structure, uses a lot of the same API methods, and can do most things that components are able to do.
 
-Let's take a look a some of the most important files and folders in an addon, and how they are different from what we would find in an app. 
+Let's take a look a some of the most important files and folders in an addon, and how they are different from what we would find in an app.
 
-#### `addon/` 
+#### `addon/`
 
 This directory can hold many of the same subdirectories and files that an Ember app would, like `/components/` and `/templates/`. For developers who are making components, most of the work will happen here.
 
-#### `app/` 
+#### `app/`
 
 The `app` directory plays an important role to help an Ember app automatically discover the components exported by an addon.
 The default way to make a component is to put the implementation in `addon/`, which allows developers to import and extend the addon component. However, Ember apps always look for components within the `app` namespace, so we must re-export our components from `app/`.
@@ -36,9 +36,9 @@ Fortunately, when we run `ember generate component my-component-name` in an addo
 #### `tests/dummy/`
 This directory contains a full Ember app for addon testing purposes. During tests, we can check to make sure that the addon works or looks as expected when it is used in an app. Many addon developers use the dummy app to hold their documentation site's content as well.
 
-#### `package.json` 
+#### `package.json`
 
-If we want other people to be able to use our addon, we need to specify a name, license, version, the repository url, and description. For an addon to show up on [https://emberobserver.com](Ember Observer), it must have `keywords: ["ember-addon"]` and a repository URL.
+If we want other people to be able to use our addon, we need to specify a name, license, version, the repository url, and description. For an addon to show up on [Ember Observer](https://emberobserver.com), it must have `keywords: ["ember-addon"]` and a repository URL.
 
 #### `config/ember-try.js`
 
