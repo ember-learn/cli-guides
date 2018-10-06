@@ -1,5 +1,7 @@
 ## Ember-Cli Guides Source
 
+[![Build Status](https://travis-ci.org/ember-learn/cli-guides-source.svg?branch=master)](https://travis-ci.org/ember-learn/cli-guides-source)
+
 This repository is part of a Work-In-Progress project to refresh and replace the CLI guides content of [https://ember-cli.com](https://ember-cli.com).
 
 ## Contributing
