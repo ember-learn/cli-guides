@@ -20,54 +20,62 @@ ember --version
 
 ## Upgrading an Ember app itself
 
-To upgrade an Ember CLI app use `ember-cli-update`, install instructions can be found [here](https://github.com/ember-cli/ember-cli-update#installation).
+To upgrade an Ember CLI app use `ember-cli-update`. Installation instructions can be found [here](https://github.com/ember-cli/ember-cli-update#installation).
 
 When it's done, if you installed `ember-cli-update` globally, run the following command inside your project directory,
 
-`ember-cli-update`
+```bash
+ember-cli-update
+```
 
 or if you installed as an Ember CLI command, run
 
-`ember update`
+```bash
+ember update
+```
 
 This will update your app or addon to the latest Ember CLI version. It does this by fetching the latest version and comparing it to your project's Ember CLI version. It then applies a diff of the changes from the latest version to your project. It will only modify the files if there are changes between your project's version and the latest version, and it will only change the section necessary, not the entire file.
 
-This is different from the existing `ember init` command. That command tries to reset your project back to a brand new project. It removes all your changes and additions.
-
 You will probably encounter merge conflicts, in which the default behavior is to let you resolve conflicts on your own. You can supply the `--resolve-conflicts` option to run your system's git merge tool if any conflicts are found.
 
-There's some others `ember-cli-update`'s options documented [here](https://github.com/ember-cli/ember-cli-update#options).
+There's some other `ember-cli-update` options documented [here](https://github.com/ember-cli/ember-cli-update#options).
+
+For example, to update to a specific version, use the `--to` option:
+```bash
+ember-cli-update --to 3.4.3
+```
 
 Steps to upgrade to the latest version of Ember CLI are also included with the
 [release notes for each release](https://github.com/ember-cli/ember-cli/releases).
 
-#### Examples
 
-(These examples assume you are using the global command.)
 
-To update to the latest version of Ember CLI:
+### Updating your code automatically
 
-```
-ember-cli-update
-```
+After running the normal update shown above, and after you've resolved any conflicts,
+you can run `ember-cli-update` again with the `--run-codemods` option. 
+Codemods are tools that automatically make the tedious syntax changes to your code that 
+you would normally have to do manually. 
+They help to ensure you are using the latest patterns and platform features.
 
-To update to a certain version of Ember CLI:
-
-```
-ember-cli-update --to 3.4.0
-```
-
-To run codemods:
-
-(This should be run after running the normal update shown above, and after you've resolved any conflicts.)
-
-```
+```bash
 ember-cli-update --run-codemods
 ```
+The tool will examine your project and list the available codemods. 
+Use the arrow keys to move the selector up and down. Press space to select the ones you want 
+or you can press `a` to select them all. Press Enter to proceed.
+```js
+? These codemods apply to your project. Select which one's to run. 
+Press <space> to select, <a> to toggle all, <i> to invert selection
+❯◯ ember-modules-codemod
+ ◯ ember-qunit-codemod
+ ◯ ember-test-helpers-codemod
+ ◯ es5-getter-ember-codemod
+ ◯ qunit-dom-codemod
+```
 
-Codemods are tools that assist large-scale codebase refactoring.
 
-#### Hints
+#### Troubleshooting
 If you made a mistake during the update/conflict resolution, run these commands to undo everything and get you back to before the update:
 
 ```bash
