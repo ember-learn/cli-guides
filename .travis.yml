@@ -14,6 +14,7 @@ before_install:
   - npm config set spin false
 
 script:
+  - set -o errexit
   - npm run lint:md
   - npm run lint:alex
   - npm test
