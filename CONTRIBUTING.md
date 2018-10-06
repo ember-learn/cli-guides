@@ -65,10 +65,10 @@ Give enough information to form the mental models and show how things are connec
 Avoid voice altogether whenever you can. When some voice is needed, use first person plural (“we”, “our”, “let’s”)
 
 
-- Needs revision: “There is an entire ecosystem of adapters that allow our Ember app to talk to different types of servers…” 
-- Better: “There is an entire ecosystem of adapters that allow our Ember app to talk to different types of servers …” 
-- Best: “There is an entire ecosystem of adapters that allows Ember apps to talk to different types of servers …” 
+- Needs revision: “There is an entire ecosystem of adapters that allow our Ember app to talk to different types of servers…”
+- Better: “There is an entire ecosystem of adapters that allow our Ember app to talk to different types of servers …”
+- Best: “There is an entire ecosystem of adapters that allows Ember apps to talk to different types of servers …”
 
 #### Inclusive language
-
+<!--alex disable her-him-->
 “They/Them” is  used in place of him/he/she/her/etc. Do not use gender in code examples. Avoid terms like “just, simply, obviously” etc.

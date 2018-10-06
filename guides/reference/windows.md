@@ -69,7 +69,7 @@ still need to start your shell using `Run as Administrator`.
 ![Enabling Symlinks](/assets/images/enabling-symlinks.png)
 
 ### Issues With npm: `EEXISTS`, Path too Long, etc
-
+<!--alex disable executed-->
 There were always two major issues with running Node.js on Windows: first and
 foremost, the operating system maintains a maximum length for path names, which
 clashes with Node's traditional way of nesting modules in `node_modules`. The
