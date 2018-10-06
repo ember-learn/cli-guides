@@ -15,4 +15,5 @@ before_install:
 
 script:
   - npm run lint:md
+  - npm run lint:alex
   - npm test
