@@ -1,4 +1,4 @@
-### `npm` Package Management with `sudo`
+### Don't install `npm` packages with `sudo`
 
 Installing packages such as `bower` with `sudo` powers can lead to permissions
 issues and ultimately to problems installing dependencies. See
@@ -30,29 +30,14 @@ git config --global url."https://".insteadOf git://
 
 ### Using Canary Build instead of release
 
+In most cases you should use a stable release, but if you need to install a canary version to test beta features, you'd do it like this:
+
 For Ember: `bower install ember#canary --resolution canary`
 For `ember-data`: `npm install --save-dev emberjs/data#master`
 
 ### Windows Build Performance Issues
 
 See [The Windows Section](/release/reference/windows/) for more details.
-
-### PhantomJS on Windows
-
-When running tests on Windows via PhantomJS the following error can occur:
-
-```bash
-events.js:72
-throw er; // Unhandled 'error' event
-^
-Error: spawn ENOENT
-at errnoException (child_process.js:988:11)
-at Process.ChildProcess._handle.onexit (child_process.js:779:34)
-```
-
-In order to fix this ensure the following is added to your `PATH`:
-
-`C:\Users\USER_NAME\AppData\Roaming\npm\node_modules\phantomjs\lib\phantom`
 
 ### Cygwin on Windows
 
@@ -75,7 +60,7 @@ applications and run tests, there are a couple of pitfalls to avoid.
 
 ### Usage with Vagrant
 
-[Vagrant](http://vagrantup.com) is a system for automatically creating and
+[Vagrant](https://vagrantup.com) is a system for automatically creating and
 setting up development environments that run in a virtual machine (VM).
 
 Running your Ember CLI development environment from inside of a Vagrant VM will
