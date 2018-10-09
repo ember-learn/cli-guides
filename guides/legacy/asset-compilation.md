@@ -613,6 +613,8 @@ CDN.
 The reason to add this to your application is to protect against poisoned CDNs
 breaking JavaScript or CSS.
 
+<!--alex ignore attack-->
+
 - [JavaScript DDoS prevention](https://blog.cloudflare.com/an-introduction-to-javascript-based-ddos/)
   - The latest [GitHub DDoS attack](http://googleonlinesecurity.blogspot.co.uk/2015/04/a-javascript-based-ddos-attack-as-seen.html)
 - Protection against corrupted code on less trusted servers
