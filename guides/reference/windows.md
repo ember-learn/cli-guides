@@ -53,7 +53,7 @@ the Administrators group must run their shell using Run As Administrator
 because UAC strips away certain permissions from the Administrators +group,
 including `SeCreateSymbolicLinkPrivilege`.
 
-![Run As Administrator]({{ site.url }}/assets/images/common-issues/run-as-admin.png)
+![Run As Administrator](/assets/images/run-as-admin.png)
 
 If the user account is not part of the Administrators group you will need to
 add the `SeCreateSymbolicLinkPrivilege` to allow the creation of symlinks. To
@@ -66,10 +66,10 @@ group has been added, your user should be able to create symlinks. Keep in mind
 if your user is part of the Administrators group and UAC is enabled you will
 still need to start your shell using `Run as Administrator`.
 
-![Enabling Symlinks]({{ site.url }}/assets/images/common-issues/enabling-symlinks.png)
+![Enabling Symlinks](/assets/images/enabling-symlinks.png)
 
 ### Issues With npm: `EEXISTS`, Path too Long, etc
-
+<!--alex disable executed-->
 There were always two major issues with running Node.js on Windows: first and
 foremost, the operating system maintains a maximum length for path names, which
 clashes with Node's traditional way of nesting modules in `node_modules`. The

@@ -76,7 +76,7 @@ ember generate <type of file> <the name to give it>
 
 ### What it does
 
-`ember generate` creates new files within your app. For example, you can use it to create components, routes, services, models, and more. For a full list, type `ember generate --help`. 
+`ember generate` creates new files within your app. For example, you can use it to create components, routes, services, models, and more. For a full list, type `ember generate --help`.
 
 The new files will contain the necessary boilerplate, they will go in the right place, and the CLI will make sure that file naming conventions are followed. For example, components must always have a dash in their names. Creating files by hand is not recommended because mistakes can lead to confusing error messages.
 
@@ -129,7 +129,7 @@ ember test [options]
 ```
 
 ### What it does
-
+<!--alex disable failed-->
 `ember test` runs all of the tests found in the `tests` folder of the app. By default, it runs all the tests once and displays the results. We'll see things like syntax errors, linting problems, deprecations, and failed assertions in the command line output. By default, these tests are run in Headless Chrome. What headless means is, we won't see the visual output of the browser, but it's running them in a Chrome environment. This makes the test suite faster. To watch tests in the browser as they run, visit `http://localhost:4200/tests` while the local server is running.
 
 ### Example
@@ -174,7 +174,7 @@ ember build --environment production
 <!-- link to guides and maybe super rentals -->
 
 
-<!-- 
+<!--
 ## Table of Contents
 Basic use (explain options of each)
     - using the "help" commmand

@@ -1,6 +1,6 @@
 {
   "name": "@ember-learn/cli-guides",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Markdown files for Ember-Cli Guides",
   "bugs": {
     "url": "https://github.com/ember-learn/cli-guides-source/issues"
@@ -13,11 +13,13 @@
   "author": "Jen Weber",
   "scripts": {
     "lint:md": "remark .",
+    "lint:alex": "alex .",
     "release": "np",
     "test": "mocha",
     "test-watch": "npm test -- -w"
   },
   "devDependencies": {
+    "alex": "^6.0.0",
     "eslint": "^5.6.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
