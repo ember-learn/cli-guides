@@ -47,16 +47,9 @@ Rather then using Cygwin, we recommend running Ember CLI natively on windows,
 or via the new [Windows Subsystem
 Linux](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide).
 
-### Usage with Docker
+<!-- ### Usage with Docker -->
+<!-- Possible topic for future development. -->
 
-When building your own [Docker](http://docker.com) image to build Ember
-applications and run tests, there are a couple of pitfalls to avoid.
-
-* PhantomJS requires `bzip2` and `fontconfig` to already be installed.
-* After installing PhantomJS, you will need to manually link PhantomJS to
-  `/usr/local/bin` if that is not done by the install process.
-* Testem uses the `which` command to locate PhantomJS, so you must install
-  `which` if it is not included in your base OS.
 
 ### Usage with Vagrant
 
