@@ -30,7 +30,7 @@ For example, these community-authored addons bring in familiar functionality fro
 
 Here are just a few examples of popular community-maintained addons unique to Ember, in no particular order:
 
-- A wealth of UI component libraries, like [ember-power-select]() and [ember-basic-dropdown](https://www.emberobserver.com/addons/ember-basic-dropdown)
+- A wealth of UI component libraries, like [ember-power-select](https://www.emberobserver.com/addons/ember-power-select) and [ember-basic-dropdown](https://www.emberobserver.com/addons/ember-basic-dropdown)
 - Tools to automate deployment, like [ember-cli-deploy](https://www.emberobserver.com/categories/deployment) and its own ecosystem of plugins
 - Testing tools like [ember-test-selectors](https://www.emberobserver.com/addons/ember-test-selectors), to make DOM assertions in testing easier and clearer, and [ember-a11y-testing](https://www.emberobserver.com/addons/ember-a11y-testing) to check for accessibility
 - Authentication libraries and plugins, like [torii](https://www.emberobserver.com/addons/torii) and [ember-simple-auth](https://www.emberobserver.com/addons/ember-simple-auth), and [ember-oauth2](https://www.emberobserver.com/addons/ember-oauth2)
