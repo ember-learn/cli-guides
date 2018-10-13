@@ -9,12 +9,32 @@ For example, `ember --help` will show a list of all available top level commands
 
 The help command is also the best way to see the aliased or shorthand versions of common commands and options. For example, here are some of the most frequently used abbreviations:
 
-| full command | alias |
-|--------------|-------|
-| `ember generate` | `ember g` |
-| `ember serve`    | `ember s` |
-| `ember test`     | `ember t` |
-| `ember version`  | `ember v` |
+<table>
+  <thead>
+    <tr>
+      <th>full command</th>
+      <th>alias</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ember generate</code></td>
+      <td><code>ember g</code></td>
+    </tr>
+    <tr>
+      <td><code>ember serve</code></td>
+      <td><code>ember s</code></td>
+    </tr>
+    <tr>
+      <td><code>ember test</code></td>
+      <td><code>ember t</code></td>
+    </tr>
+    <tr>
+      <td><code>ember version</code></td>
+      <td><code>ember v</code></td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- SCREENSHOT -->
 
