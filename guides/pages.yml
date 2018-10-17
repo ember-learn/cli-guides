@@ -37,8 +37,6 @@
     url: 'deploying'
   - title: 'Wrapping existing libraries'
     url: 'wrappers'
-  - title: 'Managing addon dependencies'
-    url: 'dependencies'
 
 - title: 'Advanced use'
   url: 'advanced-use'
@@ -81,3 +79,5 @@
   pages:
     - title: 'Asset Compilation'
       url: 'asset-compilation'
+    - title: 'Managing Dependencies'
+      url: 'dependencies'
