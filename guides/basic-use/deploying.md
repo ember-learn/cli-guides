@@ -26,8 +26,10 @@ If you already have a hosting plan in mind, you can build the app from the comma
 It's important to set the environment to `production` so that your app receives the right treatment for minification and fingerprinting:
 
 ```bash
-ember build --environment=development
+ember build --environment=production
 ```
+
+The results of the `build` command are placed in the `dist` directory within your project.
 
 For a tutorial that shows how to build your app and upload it to a web host using `scp` and `rsync`, see the [Official Ember.js Tutorial](https://guides.emberjs.com/release/tutorial/deploying/).
 
@@ -49,7 +51,7 @@ Please [open an issue](https://github.com/ember-learn/cli-guides-source) for thi
 
 ## Common deployment configurations
 
-Compared to develping an locally, there are some options to consider when an app is in deployment. Here are just a few of the most common to help you get started. For more details, see the [Advanced Use](../advanced-use/) section of the CLI guides.
+Compared to develping an locally, there are some options to consider when an app is in deployment. Some apps may not need to make any of these configurations, but here are just a few of the most common examples to help you get started. For more details, see the [Advanced Use](../advanced-use/) section of the CLI guides.
 
 ### Configuring `rootURL`
 
@@ -98,25 +100,52 @@ Lastly, if you find yourself working with an older app, you may see references t
 
 ### Content Security Policy
 
-For those interested in enhanced security for their web application, they
-should consider the setting up a content-security policy even for development.
-That way security violations can be discovered immediately, rather than in
-production.
+It is best practice to define a Content Security Policy for your application, even for local development, and to make it restrictive. That way security violations can be discovered immediately.
 
+A Content Security Policy configuration defines the list of places that your app should accept data from. For example, an app may allow stylesheets from a CDN and images from a specific data storage service.
+
+The Content Security Policy can be set in `environment.js`:
+
+```javascript
+module.exports = function(environment) {
+  let ENV = {
+    ...
+    contentSecurityPolicy: {
+      'default-src': "'self'",
+      'script-src': "'self' *.my-domain-name.com",
+      'font-src': "'self' fonts.googleapis.com fonts.gstatic.com",
+      'connect-src': "'self' my-auth-provider.com",
+      'img-src': "self",
+      'style-src': "self",
+      'media-src': "self"
+    }
+  };
+  ...
+}
+```
+
+<!-- we need to inline some of this info
 For more information, see the [`ember-cli-content-security-policy` README.]( https://github.com/rwjblue/ember-cli-content-security-policy)
+-->
 
-### Deploying an HTTPS server using Nginx on a Unix/Linux/MacOSx machine
+### Serving your app securely across HTTPS
 
-The following is a simple deployment with https using nginx.  Http just
-redirects to the https server here.  Don't forget to include your ssl keys in
-your config.
+The use of HTTPS certificates is best practice for web security and professionalism of any deployed apps for any framework. It is outside the scope of this guide to go into detail about how to manage HTTPS certificates, redirects, and web hosting details. However, front end developers should be aware of security best practices and have a few hints to help them move in the right direction.
 
-Before deployment make sure you run this command to populate the dist directory:
+Plain old HTTP sites are likely to show your users security warnings and they are vulnerable to man-in-the-middle attacks. HTTPS certificates are available at no cost from many identity and hosting providers. However, even if you have an HTTPS certificate, you will still need a way to redirect any users who visit `http://your-ember-app.com`, for example.
 
-{% highlight bash %}
-ember build --environment="production"
-{% endhighlight %}
+The following is a simple http-to-https redirect using [nginx](). Don't forget to include your ssl keys in your config.
 
+First, make a production build of your app. The results will be saved in the `dist` directory:
+
+```bash
+ember build --environment=production
+```
+
+<!-- Where does this file go, exactly? -->
+Then, define an `nginx.conf` to be used on your server:
+
+```text
 #### File: nginx.conf
 
     ## Nginx Production Https Ember Server Configuration
@@ -163,3 +192,4 @@ ember build --environment="production"
 
         rewrite ^/.*$ https://$host$request_uri? permanent;
     }
+```
