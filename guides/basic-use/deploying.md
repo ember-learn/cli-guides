@@ -25,7 +25,7 @@ If you already have a hosting plan in mind, you can build the app from the comma
 
 It's important to set the environment to `production` so that your app receives the right treatment for minification and fingerprinting:
 
-```
+```bash
 ember build --environment=development
 ```
 
@@ -33,9 +33,9 @@ For a tutorial that shows how to build your app and upload it to a web host usin
 
 ### Ember CLI Deploy
 
-[ember-cli-deploy](http://ember-cli-deploy.com/) is a very popular community-built plugin for the Ember CLI. What this means is that it's not built into the CLI by default, but it adds commands and configurations that should feel familiar to an Ember developer. The main benefit is that you set it up once and may never have to think about it again.
+[ember-cli-deploy](http://ember-cli-deploy.com/) is a very popular community-built addon for the Ember CLI. What this means is that it's not built into the CLI by default, but it adds commands and configurations that should feel familiar to an Ember developer. The main benefit is that you set it up once and may never have to think about it again.
 
-`ember-cli-deploy` is a fairly generic tool that adds the `ember deploy` command and some configuration files to your project. There are many [`ember-cli-deploy` plugins](https://www.emberobserver.com/categories/ember-cli-deploy-plugins) that help you deploy to many diffent destinations and web hosting services, such as AWS S3 or GitHub pages.
+`ember-cli-deploy` provides the `ember deploy` command, some build hooks, and configuration files to your project. There are many [`ember-cli-deploy` plugins](https://www.emberobserver.com/categories/ember-cli-deploy-plugins) that help you deploy to many diffent destinations and web hosting services, such as AWS S3 or GitHub pages.
 
 The best way to get started using ember-cli-deploy is to visit the [documentation](http://ember-cli-deploy.com/) for the project.
 
@@ -47,31 +47,38 @@ For example, Heroku has a build pack and CLI of their own that provides a zero-c
 Do you know of any other hosting services that make it easy to deploy Ember apps?
 Please [open an issue](https://github.com/ember-learn/cli-guides-source) for this Guide.
 
-### History API and Root URL
+## Common deployment configurations
 
-If you are deploying the app to somewhere other than the `rootURL` (`/`),
+Compared to develping an locally, there are some options to consider when an app is in deployment. Here are just a few of the most common to help you get started. For more details, see the [Advanced Use](../advanced-use/) section of the CLI guides.
+
+### Configuring `rootURL`
+
+<!-- older docs reference the "History API". Is that still a thing? I took it out. (Jen) -->
+
+Many Ember apps are served from the index of a domain, like `https://some-domain-name.com/`, which requres no configuration. However, if an app is served from somewhere other than the root `/` of the domain, like `https://some-domain-name.com/path/to/ember/app/`
 you will need to configure the value of `rootURL` in `config/environment.js`.
-This is required for the History API, and thus also the Router, to function correctly.
+This is required for Router to function correctly.
 
-For example
+Here's an example of configuring rootURL:
 
-{% highlight javascript %}
+```javascript
 // config/environment.js
 if (environment === 'production') {
   ENV.rootURL = '/path/to/ember/app/';
 }
-{% endhighlight %}
+```
 
-This will also be used as a prefix for assets, eg `/path/to/ember/app/assets/vendor.js`. However when
-building for production the value of `prepend` for `fingerprint` will be used instead. So for
+The `rootURL` is used as a prefix for assets, eg `/path/to/ember/app/assets/vendor.js`. However when
+building for production, the value of `prepend` for `fingerprint` will be used instead. 
 
-{% highlight bash %}
+Here's an example of building for production and using the `fingerprint` and `prepend` configuration. The asset URLs will not use `rootURL`. Instead, the result will be
+`https://cdn.example.com/assets/vendor-3b1b39893d8e34a6d0bd44095afcd5c4.js`.
+
+```bash
 ember build --prod
-{% endhighlight %}
+```
 
-with
-
-{% highlight javascript %}
+```javascript
 // ember-cli-build.js
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
@@ -85,14 +92,9 @@ module.exports = function(defaults) {
 
   return app.toTree();
 };
-{% endhighlight %}
+```
 
-the asset URLs will not use `rootURL` and will instead be:
-`https://cdn.example.com/assets/vendor-3b1b39893d8e34a6d0bd44095afcd5c4.js`.
-
-As of version 2.7, `baseURL` is deprecated and `rootURL` should be used
-instead. See this [blog post](http://emberjs.com/blog/2016/04/28/baseURL.html)
-for more details.
+Lastly, if you find yourself working with an older app, you may see references to `baseURL` rather than `rootURL`. `baseURL` was deprecated in 2.7 and removed in Ember 3.
 
 ### Content Security Policy
 
