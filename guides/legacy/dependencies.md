@@ -1,29 +1,29 @@
 ### NPM and Yarn Configuration
 
-Ember CLI supports [NPM](https://www.npmjs.com) and [yarn](https://yarnpkg.com/) 
-for dependency management. A newly generated Ember CLI project only has NPM 
-dependencies, so it will include a `package.json` file and use NPM by default. 
-If you include a `yarn.lock` file, the CLI will detect it and use Yarn instead. 
-In cases where both a `yarn.lock` file and a `package-lock.json` file are present,
-Ember CLI will default to using Yarn.
+Ember CLI supports [npm](https://www.npmjs.com) and [Yarn](https://yarnpkg.com/) 
+for dependency management. A newly generated Ember CLI project only has npm 
+dependencies, so it will include a `package.json` file and use npm by default. 
+If you use Yarn to manage dependencies, the CLI will detect the `yarn.lock` file 
+and use Yarn instead. In cases where both a `yarn.lock` file and a `package-lock.json` 
+file are present, Ember CLI will default to using Yarn.
 
 Changes to your dependencies should be managed through your `package.json` file.
 Executing `npm install` will install all of the dependencies listed in
 `package.json` in one step.
 
 Ember CLI is configured to have git ignore your `node_modules` directories by 
-default. Using the NPM configuration files allows collaborators to fork your 
+default. Using the npm configuration files allows collaborators to fork your 
 repo and get their dependencies installed locally by executing 
 `npm install` themselves.
 
 Ember CLI will not watch for changes in your `package.json` file. Therefore, 
-if you install NPM dependencies via `npm install <dependencies> --save`, you will 
+if you install npm dependencies via `npm install <dependencies> --save`, you will 
 need to restart your Ember CLI server session manually.
 
-Further documentation about NPM and Yarn is available at their official
+Further documentation about npm and Yarn is available at their official
 documentation pages:
 
-* [NPM](https://www.npmjs.com)
+* [npm](https://www.npmjs.com)
 * [Yarn](https://yarnpkg.com)
 
 Note that it is often easiest to install Ember addon dependencies using the
@@ -40,7 +40,8 @@ root (not the default `ember-cli-build.js`).
 
 To add an asset specify the dependency in your`ember-cli-build.js` before
 calling `app.toTree()`. You can only import assets that are within the
-`vendor` directories. The following example scenarios illustrate how this works.
+`node_modules` or `vendor` directories. The following example scenarios illustrate 
+how this works.
 
 #### Javascript Assets
 
