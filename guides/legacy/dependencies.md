@@ -1,39 +1,30 @@
-### NPM/Yarn and Bower Configuration
+### NPM and Yarn Configuration
 
-Ember CLI supports [NPM](https://www.npmjs.com), [yarn](https://yarnpkg.com/)
-and optionally [Bower](http://bower.io/) for dependency management. It will
-detect whether you are using npm or yarn by the presence of a `yarn.lock` file
-in your project.
+Ember CLI supports [npm](https://www.npmjs.com) and [Yarn](https://yarnpkg.com/) 
+for dependency management. A newly generated Ember CLI project only has npm 
+dependencies, so it will include a `package.json` file and use npm by default. 
+If you use Yarn to manage dependencies, the CLI will detect the `yarn.lock` file 
+and use Yarn instead. In cases where both a `yarn.lock` file and a `package-lock.json` 
+file are present, Ember CLI will default to using Yarn.
 
-A newly generated Ember CLI project only has NPM dependencies, so you will
-notice a `package.json` file at the root of your project, but not a `bower.json`.
-To use Bower packages, you will have to first run `bower init` to create a
-`bower.json` file also at the root of the project.
-
-NPM's `package.json` together with Bower's `bower.json` allow you to declare
-the dependencies of your project.
-Changes to your dependencies should be managed through these files, rather
-than manually installing packages individually.
-
+Changes to your dependencies should be managed through your `package.json` file.
 Executing `npm install` will install all of the dependencies listed in
-`package.json` in one step. Similarly, executing `bower install` will install
-all of the dependencies listed in `bower.json` in one step.
+`package.json` in one step.
 
-Ember CLI is configured to have git ignore your `bower_components` and
-`node_modules` directories by default. Using the Bower and NPM configuration
-files allows collaborators to fork your repo and get their dependencies installed
-locally by executing `npm install` and `bower install` themselves.
+Ember CLI is configured to have git ignore your `node_modules` directories by 
+default. Using the npm configuration files allows collaborators to fork your 
+repo and get their dependencies installed locally by executing 
+`npm install` themselves.
 
-Ember CLI watches `bower.json` for changes. Thus it reloads your app if you
-install new dependencies via `bower install <dependencies> --save`. If you
-install NPM dependencies via `npm install <dependencies> --save`, you will need
-to restart your Ember CLI server session manually.
+Ember CLI will not watch for changes in your `package.json` file. Therefore, 
+if you install npm dependencies via `npm install <dependencies> --save`, you will 
+need to restart your Ember CLI server session manually.
 
-Further documentation about NPM and Bower is available at their official
+Further documentation about npm and Yarn is available at their official
 documentation pages:
 
-* [Bower](http://bower.io/)
-* [NPM](https://www.npmjs.com)
+* [npm](https://www.npmjs.com)
+* [Yarn](https://yarnpkg.com)
 
 Note that it is often easiest to install Ember addon dependencies using the
 `ember install` command, which will save all dependencies to the correct
@@ -49,8 +40,8 @@ root (not the default `ember-cli-build.js`).
 
 To add an asset specify the dependency in your`ember-cli-build.js` before
 calling `app.toTree()`. You can only import assets that are within the
-`bower_components` or `vendor`
-directories. The following example scenarios illustrate how this works.
+`node_modules` or `vendor` directories. The following example scenarios illustrate 
+how this works.
 
 #### Javascript Assets
 
