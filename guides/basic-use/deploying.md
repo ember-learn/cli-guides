@@ -51,7 +51,7 @@ Please [open an issue](https://github.com/ember-learn/cli-guides-source) for thi
 
 ## Common deployment configurations
 
-Compared to develping an locally, there are some options to consider when an app is in deployment. Some apps may not need to make any of these configurations, but here are just a few of the most common examples to help you get started. For more details, see the [Advanced Use](../advanced-use/) section of the CLI guides.
+Compared to develping an app locally, there are some options to consider when an app is in deployment. Some apps may not need to make any of these configurations, but here are just a few of the most common examples to help you get started. For more details, see the [Advanced Use](../advanced-use/) section of the CLI guides.
 
 ### Configuring `rootURL`
 
