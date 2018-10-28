@@ -1,5 +1,3 @@
-<!-- should show ember build, link to ember-cli-deploy, Guides tutorial -->
-
 No matter where you are deploying your app to, the Ember CLI and community ecosystem have tools to help. In this section of the guide, we will go over some general approaches and common configurations.
 
 ## Behind the scenes of deploying
