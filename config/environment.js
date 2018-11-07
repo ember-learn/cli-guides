@@ -28,7 +28,9 @@ module.exports = function(environment) {
       description: 'Ember CLI Guides'
     },
 
-    guidemaker: {}
+    guidemaker: {
+      title: 'Ember CLI Guides'
+    }
   };
 
   if (environment === 'development') {
