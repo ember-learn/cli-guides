@@ -75,7 +75,7 @@ Here's an example of building for production and using the `fingerprint` and `pr
 `https://cdn.example.com/assets/vendor-3b1b39893d8e34a6d0bd44095afcd5c4.js`.
 
 ```bash
-ember build --prod
+ember build environment=production
 ```
 
 ```javascript
