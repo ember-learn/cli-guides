@@ -23,7 +23,7 @@ You will need the following things properly installed on your computer.
 
 ## Local Development
 
-The Ember-Cli Guides is just a normal Ember application so if you want to run it locally you follow the standard steps:
+The Ember-Cli Guides is a normal Ember application so if you want to run it locally you follow the standard steps:
 
 * Clone this repository
 * `cd cli-guides-source`
