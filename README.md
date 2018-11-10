@@ -1,6 +1,6 @@
 ## ember-cli guides
 
-[![Build Status](https://travis-ci.org/ember-learn/cli-guides-source.svg?branch=master)](https://travis-ci.org/ember-learn/cli-guides-source)
+[![Build Status](https://travis-ci.org/ember-learn/cli-guides.svg?branch=master)](https://travis-ci.org/ember-learn/cli-guides-source)
 
 This repository holds the guides and tutorials for the [Ember CLI](https://github.com/ember-cli/ember-cli), a powerful tool that helps you create, develop, and build an Ember app.
 
