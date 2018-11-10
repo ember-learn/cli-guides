@@ -2,9 +2,9 @@
 
 [![Build Status](https://travis-ci.org/ember-learn/cli-guides-source.svg?branch=master)](https://travis-ci.org/ember-learn/cli-guides-source)
 
-This repository holds the guides and tutorials for the [Ember CLI](https://github.com/ember-cli/ember-cli), a powerful tool that helps you create, develop, and build an Ember app. The content itself is in the form of Markdown files in the [guides](https://github.com/ember-learn/cli-guides/tree/master/guides) directory. Those markdown files are processed and displayed by the Ember App.
+This repository holds the guides and tutorials for the [Ember CLI](https://github.com/ember-cli/ember-cli), a powerful tool that helps you create, develop, and build an Ember app.
 
-To contribute to the API documentation, which lists properties and methods used by advanced addons and apps, instead visit [Ember CLI](https://github.com/ember-cli/ember-cli), where the API docs are managed as code comments within the codebase.
+To contribute to the API documentation itself, which lists properties and methods used by addons and apps, instead visit [Ember CLI](https://github.com/ember-cli/ember-cli), where the API docs are managed as code comments within the codebase.
 
 This project replaces, updates, and adds to the content historically hosted at [https://ember-cli.com/](https://ember-cli.com/).
 
@@ -18,11 +18,6 @@ Check out
 [deprecation-app](https://github.com/ember-learn/deprecation-app),
 and [styleguide](https://github.com/ember-learn/ember-styleguide).
 
-## Help Wanted
-
-Do you know a thing or two about the CLI or addons? Do you _wish_ you knew a thing or do?  We'd love to have your help with writing or reviewing to make sure that content is helpful to all knowledge levels. To learn more about the motivation for this, read this [RFC](https://github.com/jenweber/rfcs-1/blob/cli-guides/active/0000-cli-guides.md).
-
-Overall project status and tasks that need help are tracked in [this Quest issue](https://github.com/ember-learn/cli-guides-source/issues/3). Have a read through that and the [CONTRIBUTING.md](CONTRIBUTING.md) file in order to get started.
 
 ## Prerequisites
 
@@ -49,6 +44,17 @@ application should live-update with the content changes.
 To run the tests you can run `npm test` in your terminal, this will run any
 Ember tests that have been setup but also some scripts that check the Markdown
 files such as the link-checker.
+
+## How this app works 
+
+The guides content is in the form of Markdown files in the [guides](https://github.com/ember-learn/cli-guides/tree/master/guides) directory. An Ember app processes and serves the Markdown files. If you look at the `app` directory, you'll see there's not much in it! That's because most of the work is done through a dependency on [guidemaker](https://sea-region.github.com/empress/guidemaker), a static site generator created in Ember.
+
+## Contributing
+
+Do you know a thing or two about the CLI or addons? Do you _wish_ you knew a thing or do?  We'd love to have your help with writing or reviewing to make sure that content is helpful to all knowledge levels. To learn more about the motivation for this, read this [RFC](https://github.com/jenweber/rfcs-1/blob/cli-guides/active/0000-cli-guides.md). If you're new to writing Markdown, follow [this cheat sheet](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf).
+
+Overall project status and tasks that need help are tracked in [this Quest issue](https://github.com/ember-learn/cli-guides-source/issues/3). Have a read through that and the [CONTRIBUTING.md](CONTRIBUTING.md) file in order to get started.
+
 
 ### Adding more things to the table of contents
 
