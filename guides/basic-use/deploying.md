@@ -7,7 +7,7 @@ No matter which framework you use, there are some processing steps that the code
 As a result, you may not need to understand or configure build steps, but it's still helpful to have some background knowledge and terminology. Here are some common steps that the Ember CLI handles for you:
 
 - compilation - Instead of having dozens of files, many are combined together into a smaller number
-- minification and uglification - code is optimized for speedy execution by the browser, as opposed to human readability
+- minification and uglification - code is optimized for speedy evaluation by the browser, as opposed to human readability
 - transpilation - modern JavaScript APIs are not available in some browsers, but that doesn't have to stop developers! Tools like Babel are used by many frameworks to turn newer JavaScript into code that still runs in older browsers.
 - transformations - things like stripping out code comments
 

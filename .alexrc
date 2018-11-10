@@ -2,6 +2,8 @@
   "allow": [
     "host-hostess",
     "watchman-watchwoman",
-    "disabled"
+    "disabled",
+    "hooks",
+    "attacks"
   ]
 }
