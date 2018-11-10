@@ -1,16 +1,28 @@
-## Ember-Cli Guides Source
+## ember-cli guides
 
 [![Build Status](https://travis-ci.org/ember-learn/cli-guides-source.svg?branch=master)](https://travis-ci.org/ember-learn/cli-guides-source)
 
-This repository is part of a Work-In-Progress project to refresh and replace the CLI guides content of [https://ember-cli.com](https://ember-cli.com).
+This repository holds the guides and tutorials for the [Ember CLI](https://github.com/ember-cli/ember-cli), a powerful tool that helps you create, develop, and build an Ember app. The content itself is in the form of Markdown files in the [guides](https://github.com/ember-learn/cli-guides/tree/master/guides) directory. Those markdown files are processed and displayed by the Ember App.
 
-## Contributing
+To contribute to the API documentation, which lists properties and methods used by advanced addons and apps, instead visit [Ember CLI](https://github.com/ember-cli/ember-cli), where the API docs are managed as code comments within the codebase.
+
+This project replaces, updates, and adds to the content historically hosted at [https://ember-cli.com/](https://ember-cli.com/).
+
+Looking for repositories for the other parts of [emberjs.com](https://emberjs.com)? 
+Check out
+[guides-source](https://github.com/ember-learn/guides-source),
+[website](https://github.com/emberjs/website),
+[ember-api-docs](https://github.com/ember-learn/ember-api-docs),
+[super-rentals tutorial](https://github.com/ember-learn/super-rentals),
+[statusboard](https://github.com/ember-learn/statusboard),
+[deprecation-app](https://github.com/ember-learn/deprecation-app),
+and [styleguide](https://github.com/ember-learn/ember-styleguide).
+
+## Help Wanted
 
 Do you know a thing or two about the CLI or addons? Do you _wish_ you knew a thing or do?  We'd love to have your help with writing or reviewing to make sure that content is helpful to all knowledge levels. To learn more about the motivation for this, read this [RFC](https://github.com/jenweber/rfcs-1/blob/cli-guides/active/0000-cli-guides.md).
 
 Overall project status and tasks that need help are tracked in [this Quest issue](https://github.com/ember-learn/cli-guides-source/issues/3). Have a read through that and the [CONTRIBUTING.md](CONTRIBUTING.md) file in order to get started.
-
-As this project is pre-1.0, no content should be taken as technically authoritative.
 
 ## Prerequisites
 
@@ -23,7 +35,7 @@ You will need the following things properly installed on your computer.
 
 ## Local Development
 
-The Ember-Cli Guides is a normal Ember application so if you want to run it locally you follow the standard steps:
+The Ember-Cli Guides is a normal Ember application, so if you want to run it locally you follow the standard steps:
 
 * Clone this repository
 * `cd cli-guides-source`
