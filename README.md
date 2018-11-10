@@ -20,21 +20,23 @@ You will need the following things properly installed on your computer.
 * [Node.js](https://nodejs.org/) (with npm)
 * [Ember CLI](https://ember-cli.com/)
 * [Google Chrome](https://google.com/chrome/)
-* [npm](https://docs.npmjs.com/cli/install)
 
 ## Local Development
 
-To see what a local copy of the Guides markdown looks like:
+The Ember-Cli Guides is a normal Ember application so if you want to run it locally you follow the standard steps:
 
-* Clone the [Ember CLI Guides](https://github.com/ember-learn/cli-guides-app) App repository
-* link the `cli-guides-source` repository by running `npm link` inside this repository, then `npm link @ember-learn/cli-guides` in the guides-app
-* `npm install` and `ember serve` in the guides app
+* Clone this repository
+* `cd cli-guides-source`
+* `npm install`
+* `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
-If you follow this strategy above, as you save changes to
-the markdown files of this repository, your locally served
-app should update.
+If you then edit the Markdown files located in the `guides/` folder your
+application should live-update with the content changes.
+
+To run the tests you can run `npm test` in your terminal, this will run any
+Ember tests that have been setup but also some scripts that check the Markdown
+files such as the link-checker.
 
 ### Adding more things to the table of contents
 
