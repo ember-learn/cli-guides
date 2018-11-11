@@ -34,7 +34,7 @@ Using addons provides the best experience for including new dependencies in an a
 Visit [EmberObserver](https://emberobserver.com) to browse for addons.
 Installing them with `ember install some-addon-name` ensures that all the files
 go in the right place, and any further setup is completed, like codemods. More details are available in
-[Using Addons](../../using-addons/).
+[Using Addons](../../basic-use/using-addons/).
 
 <!-- 
 If addons are installed accidentally with `npm install` or `yarn install`,
@@ -111,7 +111,7 @@ will make small changes to `ember-cli-build.js`.
 <!-- need to use some info from Jessica's readers question about what broccoli is -->
 
 This section covers how to manually manage dependencies.
-See [Using Addons](../../using-addons/) and [Using NPM Packages](../../using-npm-packages/) for automated dependency management.
+See [Using Addons](../../basic-use/using-addons/) and [Using NPM Packages](../../basic-use/using-npm-packages/) for automated dependency management.
 
 To add an asset, specify the dependency in your `ember-cli-build.js` before
 calling `app.toTree()`. You can only import assets that are within the
