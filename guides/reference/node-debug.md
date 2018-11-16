@@ -1,6 +1,6 @@
-Chrome's DevTools can be used to debug the node code in an addon or app. For example, debugging Broccoli errors in an addon's `index.js`.
+Chrome's DevTools can debug the node code in an addon or app. For example, debugging Broccoli errors in an addon's `index.js`.
 
-A web socket is used to communicate with Chrome which needs to be configured to accept the connection.  The simplest way to configure Chrome is using [Node.js - inspection manager](https://chrome.google.com/webstore/detail/nodejs-v8-inspector-manag/gnhhdgbaldcilmgcpfddgdbkhjohddkj) from the Chrome web store.  Install and configure the extension to Auto open DevTools.
+Configure Chrome to accept a web socket connection using [Node.js - inspection manager](https://chrome.google.com/webstore/detail/nodejs-v8-inspector-manag/gnhhdgbaldcilmgcpfddgdbkhjohddkj) from the Chrome web store.  Install and configure the extension to Auto open DevTools.
 
 To debug, place a `debugger` statement where the code should break.  Then serve the application using
 
@@ -18,4 +18,4 @@ Debugger attached.
 
 DevTools will open paused at the beginning of the node code. Resume code execution to break at the set point.
 
-Ember serve can be stopped as normal with `Ctrl-C`
+Stop Ember serve as normal with `Ctrl-C`
