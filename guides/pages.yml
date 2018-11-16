@@ -63,6 +63,8 @@
     url: 'windows'
   - title: 'Code Editor Integrations'
     url: 'dev-tools'
+  - title: 'Debug node code'
+    url: 'node-debug'
   - title: 'Common issues'
     url: 'common-issues'
   - title: 'Frequently Asked Questions'
