@@ -132,7 +132,7 @@ The use of HTTPS certificates is best practice for web security and professional
 
 Plain old HTTP sites are likely to show your users security warnings and they are vulnerable to man-in-the-middle attacks. HTTPS certificates are available at no cost from many identity and hosting providers. However, even if you have an HTTPS certificate, you will still need a way to redirect any users who visit `http://your-ember-app.com`, for example.
 
-The following is a simple http-to-https redirect using [nginx](). Don't forget to include your ssl keys in your config.
+The following is a simple http-to-https redirect using [nginx](https://nginx.org/en/). Don't forget to include your ssl keys in your config.
 
 First, make a production build of your app. The results will be saved in the `dist` directory:
 
