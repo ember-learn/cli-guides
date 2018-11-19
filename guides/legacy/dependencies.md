@@ -17,7 +17,7 @@ Here are the most common places:
 
 - Every Ember app has a file called `package.json` that lists node modules used by the app.
 The code itself goes in `node_modules`, just like in many non-Ember JavaScript projects
-- The `vendor` directory, which is a common home for extra JavaScript, such as web workers
+- The `vendor` directory, which is a common home for third party JavaScript that is copied and pasted in
 - The `public` directory, the typical place for assets like images
 - The `styles` directory, for stylesheets like CSS, SASS, or LESS
 plus folders like `vendor` and `public` that hold can many other files of the developer's
@@ -25,8 +25,6 @@ choice
 
 Some older apps may use a package manager and registry called Bower, which has
 a `bower_components` directory. Bower itself is deprecated and should not be used.
-
-<!-- Where exactly should we talk about utils? At all? Doesn't fit here -->
 
 ## Addons as dependencies
 
@@ -198,6 +196,8 @@ exports as the second:
 ```javascript
 app.import('path/to/hamster-wheel/dist/named-amd/main.js');
 ```
+
+<!-- we need to talk about importing a commonjs asset or an es6 asset -->
 
 To use this asset in your app, import it.
 For example, with `ic-ajax`, in order to import `ic.ajax.raw`:
@@ -373,10 +373,11 @@ All style assets added this way will be concatenated and output as
 The vendor trees that are provided upon instantiation are available to your
 dynamic style files.  Take the following example (in `app/styles/app.scss`):
 
-<!-- CHECK THIS -->
 ```scss
 @import "foundation/scss/normalize.scss";
 ```
+
+<!-- need to expand on this section -->
 
 ## Other Assets
 
