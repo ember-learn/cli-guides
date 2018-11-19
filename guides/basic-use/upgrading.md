@@ -26,9 +26,9 @@ There's more to upgrading an Ember app than changing the version number in `pack
 
 Upgrade experience depends on whether the app should have a major, minor, or patch version upgrade. Ember follows [semver](https://semver.org/) rules closely, meaning that:
 
-- Moving from patch versions (like 3.4.1 to 3.4.2) will not change the app's behavior. They are mostly bugfixes and internal refactors. These upgrades are usually very quick and require no changes besides changing some dependency versions in `package.json`
-- Upgrading minor versions (like 3.4 to 3.5) will give access to new features, but the codebase will not need to change, so these are also usually very quick. Afterwards, developers may see new notices about deprecations, whether from their own app or addons they are using. Deprecations are warnings that some API or behavior will be changed in the future for a major release (like Ember 2 to 3)
-- Major version upgrades (like Ember 2 to 3) introduce breaking changes. Before the upgrade can be made, code inside the app may need to change. See "Managing major upgrades" below for the overall strategy.
+1. Moving from patch versions (like 3.4.1 to 3.4.2) will not change the app's behavior. They are mostly bugfixes and internal refactors. These upgrades are usually very quick and require no changes besides changing some dependency versions in `package.json`
+2. Upgrading minor versions (like 3.4 to 3.5) will give access to new features, but the codebase will not need to change, so these are also usually very quick. Afterwards, developers may see new notices about deprecations, whether from their own app or addons they are using. Deprecations are warnings that some API or behavior will be changed in the future for a major release (like Ember 2 to 3)
+2. Major version upgrades (like Ember 2 to 3) introduce breaking changes. Before the upgrade can be made, code inside the app may need to change. See [Managing major upgrades](#managing-major-upgrades) below for the overall strategy.
 
 Developers who upgrade infrequently are encouraged to choose LTS or "long term support" versions of Ember, which receive security updates for an extended period of time after release. See the [Ember release blog posts](https://www.emberjs.com/blog/tags/releases.html) to find the latest LTS version.
 
@@ -96,7 +96,7 @@ git clean -f
 
 If it is helpful to see a side-by-side comparison between your app and a brand-new app, you can visit the [ember-cli releases](https://github.com/ember-cli/ember-cli/releases), choose the correct version, and look inside the `blueprints` directory.
 
-### Strategy for upgrading major versions
+### Managing major upgrades
 
 When upgrading major versions, such as Ember 2 to 3, some work may need to be done before the `ember-cli-update` command above should be run.
 
