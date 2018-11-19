@@ -1,3 +1,5 @@
+<!-- This page is not yet in production. When it is ready, add it to pages.yml -->
+
 <!-- The bare minimum explanation of what to do with ember-cli-build.js -->
 
 <!--

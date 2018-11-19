@@ -17,8 +17,6 @@
       url: 'deploying'
     - title: 'Upgrading'
       url: 'upgrading'
-    - title: 'Common configurations'
-      url: 'configurations'
 
 - title: 'Writing addons'
   url: 'writing-addons'
