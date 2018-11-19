@@ -1,6 +1,6 @@
 The API docs for Ember CLI are mainly for addon authors, advanced Ember app developers, and contributors to the CLI itself.
 
-## [https://ember-cli.com/api/](https://ember-cli.com/api/) 
+[https://ember-cli.com/api/](https://ember-cli.com/api/) 
 
 The docs are the main resource for information like build pipeline modifications, addon author APIs, advanced configurations, and more.
 

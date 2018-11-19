@@ -350,7 +350,7 @@ module.exports = function(defaults) {
 };
 ```
 
-**Notes:**
+##### Notes:
 - Be sure to pass `{ type: 'test' }` as the second argument to `app.import`.
   This will ensure that your libraries are compiled into the `test-support.js`
   file.

@@ -146,7 +146,8 @@ ember install ember-cli-sass
 
 - [Ember CLI Guide](../using-addons/) for using and choosing addons
 - [The Ember.js Guides](https://guides.emberjs.com/release/addons-and-dependencies/managing-dependencies/) section on Addons and Dependencies
-- [../../writing-addons/](Writing Addons) to learn how to make your own addon
+- [Writing addons](../writing-addons/) to learn how to make your own addon
+
 <!-- Link to writing your own wrapper, once content is done -->
 
 ## Testing your app
