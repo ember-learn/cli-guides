@@ -70,6 +70,8 @@ ember new camping-trip-tracker --yarn
 ember serve [options]
 ```
 
+To stop an Ember server, press `control-c`.
+
 ### What it does
 
 `ember serve` takes all of the app's files and turns them into something that can be rendered in the browser. By default, view the app by visiting `http://localhost:4200`. It's a good idea to keep the server running as we work so that we know as soon as we've broken something. The CLI watches the project folders, and will rerender as files change.
