@@ -2,7 +2,7 @@
 
 Ember CLI ships with support for blueprints. Blueprints are snippet generators used to create the entities — components, routes, services, models and more — used in your applications. Blueprints allow us to share common Ember patterns in the community. Developers can define blueprints for use in their applications or addons.
 
-Ember's builtin [blueprints](https://github.com/emberjs/ember.js/tree/master/blueprints) are a source of detailed examples to help you learn more about blueprints.
+Ember's builtin [blueprints](https://github.com/emberjs/ember.js/tree/master/blueprints) are a source of detailed examples to help you learn more about blueprints.  The Ember CLI API docs on [blueprints](https://ember-cli.com/api/classes/Blueprint.html) provides advanced information for developing blueprints.
 
 To see a list of all available blueprints with a short descriptions of what they do, run `ember generate --help` or `ember help generate`.
 
@@ -206,6 +206,7 @@ As shown above, the following hooks are available to blueprint authors:
 - `fileMapTokens`
 - `filesPath`
 - `files`
+- `install`
 - `beforeInstall`
 - `afterInstall`
 - `beforeUninstall`
@@ -234,7 +235,7 @@ The object passed to `locals` looks like this:
 ```
 
 <!-- Old ember-cli docs or api examples are not correct -->
-<!-- see PR https://github.com/ember-cli/ember-cli/pull/8210 to fix api docs -->
+<!-- PR https://github.com/ember-cli/ember-cli/pull/8210 to fix api docs -->
 
 <!-- Options object is extensive and not documented anywhere.  Should be included in ember-cli API docs -->
 
@@ -279,11 +280,14 @@ Called before any of the template files are processed and receives the same argu
 
 The `afterInstall` and `afterUninstall` hooks receives the same arguments as locals. Use it to perform any custom work after the files are processed. For example, the built-in route blueprint uses these hooks to add and remove relevant route declarations in app/router.js.
 
-### Overriding install
+<!-- Was in the old docs but the install hook would be very specialized/advanced use case.  Does it need to be documented in the guides? -->
+### install
 
-If you don’t want your blueprint to not install any files you can override `install` blueprint hook.
+The `install` hook installs the blueprint and is not normally used when developing addons.  If you don't want your blueprint to install any files, you can override the `install` hook.
 
-### Pod Blueprints
+See the ember-cli [source](https://github.com/ember-cli/ember-cli/blob/master/lib/models/blueprint.js) for `install` hook details.
+
+## Pod Blueprints
 
 Pod based applications use a different file structure to give you more control to scale and maintain large applications. To support pods, the blueprint need a different structure. Blueprints supporting pods are universal and will support both pods and classic applications.
 
@@ -316,7 +320,7 @@ installing
   create tests/unit/pods/foo/route-test.js
 ```
 
-Blueprints that don’t support pods structure will ignore the `--pod` option and use the default structure. Blueprints that support pods structure will also use the default structure when generated without the `--pod` option.
+Blueprints that don’t support pods structure will ignore the `--pod` option and use the default structure. Blueprints that support the pods structure will also use the default structure when generated without the `--pod` option.
 
 Generate a blueprint that supports the `--pod` option without the option
 
@@ -507,3 +511,84 @@ The options object passed to fileMapTokens is:
 ```
 
 As mentioned above, Ember's builtin [blueprints](https://github.com/emberjs/ember.js/tree/master/blueprints) provide detailed examples on how to create custom blueprints.
+
+## Addon Blueprints
+
+As in applications, custom blueprints are available in addons.  Addon blueprints are used to generate code snippets in the client application.  Addons can also have a default blueprint that will run automatically after the addon is installed.
+
+Addon blueprints have the same structure as regular blueprints.  The default blueprint has extra hooks to install packages (Bower or NPM) and/or install another Ember addon into the client app.
+
+To create the default blueprint, invoke `ember generate blueprint <addon-name>`
+
+```js
+// blueprints/<addon-name>/index.js
+module.exports = {
+  normalizeEntityName() {}, // no-op since we're just adding dependencies
+};
+```
+### Blueprint Hooks
+
+In addition to the standard blueprint hooks, the default blueprint can use these hooks.
+
+* `addAddonToProject`
+* `addBowerPackageToProject`
+* `addPackageToProject`
+
+#### addAddonToProject
+
+Installs another Ember addon in the client application
+
+#### addBowerPackageToProject
+
+Installs a Bower package or dependency into the client application
+
+#### addPackageToProject
+
+Installs a NPM package or dependency into the client application
+
+Each of the hooks return a promise, so they are all thenable. The following is an example of each of these:
+
+```js
+// blueprints/ember-cli-x-button/index.js
+module.exports = {
+  normalizeEntityName() {}, // no-op since we're just adding dependencies
+
+  afterInstall() {
+    // Add addons to package.json and run defaultBlueprint
+    return this.addAddonsToProject({
+      // a packages array defines the addons to install
+      packages: [
+        // name is the addon name, and target (optional) is the version
+        {name: 'ember-cli-code-coverage', target: '0.3.9'},
+        {name: 'ember-cli-sass'}
+      ]
+    })
+    .then(() => {
+      // Add npm packages to package.json
+      return this.addPackagesToProject([
+        {name: 'babel-eslint'},
+        {name: 'eslint-plugin-ship-shape'}
+      ]);
+    })
+    .then(() => {
+      return this.addBowerPackagesToProject([
+        {name: 'bootstrap', target: '3.0.0'}
+      ]);
+    });
+  }
+};
+```
+
+### Blueprint Config
+
+The default blueprint is recognized because it normally has the same name as the addon.  Optionally, you may specify a different name for the "defaultBlueprint" in `package.json`
+
+
+```js
+"ember-addon": {
+  // addon configuration properties
+  "configPath": "tests/dummy/config",
+  "defaultBlueprint": "blueprint-that-isnt-package-name",
+}
+```
+
