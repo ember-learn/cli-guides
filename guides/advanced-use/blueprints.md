@@ -85,9 +85,6 @@ The name token is replaced with the dasherized entity name at install time. For 
 
 The  _`_root_`_ token is replaced with either `app` or `addon` depending upon where it is being generated. This token is used to provide support for generating blueprints inside addons.
 
-<!-- This has been changed from the original docs to be more clear. Is this technically correct? It could still be improved! -->
-This token will cause an additional blueprint to be generated in addons. The blueprint re-exports the module in the addon directory to allow consuming applications to override addon modules easier.
-
 
 ### Template Variables (AKA Locals)
 
@@ -422,9 +419,6 @@ If the blueprint is generated without the `--pod` option, _`_path_`_ becomes `co
 #### \_\_root\_\_
 
 The root token is replaced with either `app` or `addon` depending upon where it is being generated. This token is used to provide support for generating blueprints inside addons.
-
-<!-- This has been changed from the original docs to be more clear. Is this technically correct? It could still be improved! -->
-This token will cause an additional blueprint to be generated in addons. The blueprint re-exports the module in the addon directory to allow consuming applications to override addon modules easier.
 
 #### \_\_test\_\_
 
