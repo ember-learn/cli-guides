@@ -29,7 +29,7 @@ The [top 100 list](https://www.emberobserver.com/lists/top-addons) is an importa
 
 For example, these community-authored addons bring in familiar functionality from regular npm packages:
 
-- Stylesheet tooling like [ember-cli-sass](https://www.emberobserver.com/addons/ember-cli-sass), which provides [Sass](https://sass-lang.com/) as an alternative to plain CSS
+- Stylesheet tooling like [ember-cli-sass](https://www.emberobserver.com/addons/ember-cli-sass), which provides [Sass](https://sass-lang.com/) as an alternative to standard CSS
 - JavaScript utilities like [ember-moment](https://www.emberobserver.com/addons/ember-moment), which offers some Ember conveniences to the base [moment library](https://www.npmjs.com/package/moment)
 - Full UI frameworks and design kits like [ember-bootstrap](https://www.emberobserver.com/addons/ember-bootstrap), [semantic-ui-ember](https://www.emberobserver.com/addons/semantic-ui-ember), and [ember-paper](https://www.emberobserver.com/addons/ember-paper). These offer easier, more reliable, more performant functionality than just using the npm packages directly.
 - TypeScript support through [ember-cli-typescript](https://github.com/typed-ember/ember-cli-typescript)
