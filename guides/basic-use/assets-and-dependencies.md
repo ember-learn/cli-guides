@@ -1,27 +1,19 @@
 <!-- Some content redundancy with using addons and using npm packages pages -->
 <!-- A section should clearly show using WASM files, I think -->
 
-This section of the guides will show how to add new dependencies to
-an app or addon.
-Examples of dependencies include node modules, standalone JavaScript files,
-images, stylesheets, WebAssembly files, JSON, and more.
-Regardless of the app framework, _somewhere_ there must be logic that
-determines how the files are
-pulled together into a bundle that the browser can understand and use efficiently.
-In Ember, the CLI handles the most common use cases to deliver a zero config experience.
-Here, we'll also cover some of the less common use cases that require some configuration.
+Assets and dependencies are the resources your app needs to work.
+In general, when people say "assets", they mean things that the developer has added themselves to the app, like images and fonts, while "dependencies" are resources that come from third party libraries.
 
-## Where should dependencies go?
+## Where should assets and dependencies go?
 
 Here are the most common places:
 
 - Every Ember app has a file called `package.json` that lists node modules used by the app.
-The code itself goes in `node_modules`, just like in many non-Ember JavaScript projects
+The code itself goes in `node_modules` during `npm install`, just like in many non-Ember JavaScript projects
 - The `vendor` directory, which is a common home for third party JavaScript that is copied and pasted in
 - The `public` directory, the typical place for assets like images
 - The `styles` directory, for stylesheets like CSS, SASS, or LESS
-plus folders like `vendor` and `public` that hold can many other files of the developer's
-choice
+plus folders like `vendor` and `public` that hold can many other files of the developer's choice
 
 Some older apps may use a package manager and registry called Bower, which has
 a `bower_components` directory. Bower itself is deprecated and should not be used.
