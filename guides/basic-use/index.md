@@ -54,7 +54,7 @@ It's safe to ignore this message. However, file-watching won't be as smooth as i
 ### Installing the CLI on Windows
 
 Windows versions as far back as Vista are fully supported, although there are steps you can take to improve your experience.
-You can find more information about this in our section on [Windows support](../reference/windows/)
+You can find more information about this in our section on [Windows support](../appendix/windows/)
 
 ## Getting help
 
