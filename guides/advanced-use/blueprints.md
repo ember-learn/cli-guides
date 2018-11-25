@@ -268,22 +268,22 @@ Override the list of files provided by the blueprint. Useful if you want to excl
 
 ### beforeInstall & beforeUninstall
 
-Called before any of the template files are processed and receives the same arguments as locals. Typically used for validating any additional command line options.
+Called before any of the template files are processed and receives the same arguments as `locals`. Typically used for validating any additional command line options.
 
 ### afterInstall & afterUninstall
 
-The `afterInstall` and `afterUninstall` hooks receives the same arguments as locals. Use it to perform any custom work after the files are processed. For example, the built-in route blueprint uses these hooks to add and remove relevant route declarations in app/router.js.
+The `afterInstall` and `afterUninstall` hooks receive the same arguments as `locals`. Use it to perform any custom work after the files are processed. For example, the built-in route blueprint uses these hooks to add and remove relevant route declarations in `app/router.js`.
 
 <!-- Was in the old docs but the install hook would be very specialized/advanced use case.  Does it need to be documented in the guides? -->
 ### install
 
-The `install` hook installs the blueprint and is not normally used when developing addons.  If you don't want your blueprint to install any files, you can override the `install` hook.
+The `install` hook installs the blueprint and is not normally used when developing blueprints.  The hook can used for advanced blueprints, for example if you don't want your blueprint to install any files.
 
 See the ember-cli [source](https://github.com/ember-cli/ember-cli/blob/master/lib/models/blueprint.js) for `install` hook details.
 
 ## Pod Blueprints
 
-Pod-based applications use a different file structure to give you more control to scale and maintain large applications. To support pods, the blueprint need a different structure. Blueprints supporting pods are universal and will support both pods and classic applications.
+Pod-based applications use a different file structure giving you more control to scale and maintain large applications. To support pods, the blueprint need a different structure. Blueprints supporting pods are universal and will support both pods and classic applications.
 
 To see which blueprints support the `--pod` option, you can use the help command. For example, `ember help generate component` will give you the list of options for the component blueprint, one of them being `--pod`.
 
