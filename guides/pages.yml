@@ -61,7 +61,7 @@
     url: 'index'
   - title: 'Windows support'
     url: 'windows'
-  - title: 'Code Editor Integrations'
+  - title: 'Developer Tools'
     url: 'dev-tools'
   - title: 'Common issues'
     url: 'common-issues'
