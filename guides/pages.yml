@@ -18,22 +18,6 @@
     - title: 'Upgrading'
       url: 'upgrading'
 
-- title: 'Writing addons'
-  url: 'writing-addons'
-  pages:
-  - title: 'Addon structure'
-    url: 'index'
-  - title: 'Tutorial'
-    url: 'tutorial'
-  - title: 'Testing'
-    url: 'testing'
-  - title: 'Writing documentation'
-    url: 'documenting'
-  - title: 'Deploying an addon'
-    url: 'deploying'
-  - title: 'Wrapping existing libraries'
-    url: 'wrappers'
-
 - title: 'Advanced use'
   url: 'advanced-use'
   pages:
@@ -50,8 +34,30 @@
   - title: 'File layout and the resolver'
     url: 'file-layout'
 
-- title: 'Reference'
-  url: 'reference'
+- title: 'Writing addons'
+  url: 'writing-addons'
+  pages:
+  - title: 'Addon structure'
+    url: 'index'
+  - title: 'Tutorial'
+    url: 'tutorial'
+  - title: 'Testing'
+    url: 'testing'
+  - title: 'Writing documentation'
+    url: 'documenting'
+  - title: 'Deploying an addon'
+    url: 'deploying'
+  - title: 'Wrapping existing libraries'
+    url: 'wrappers'
+
+- title: 'API Documentation'
+  url: 'api-documentation'
+  pages:
+  - title: 'Overview'
+    url: 'index'
+
+- title: 'Appendix'
+  url: 'appendix'
   pages:
   - title: 'Overview'
     url: 'index'
@@ -63,12 +69,6 @@
     url: 'common-issues'
   - title: 'Frequently Asked Questions'
     url: 'faq'
-
-- title: 'API Documentation'
-  url: 'api-documentation'
-  pages:
-  - title: 'Overview'
-    url: 'index'
 
 - title: 'Ported but needs editing and reorganizing'
   url: 'legacy'
