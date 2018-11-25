@@ -4,6 +4,8 @@
     "watchman-watchwoman",
     "disabled",
     "hooks",
-    "attacks"
+    "hook",
+    "attacks",
+    "destroy"
   ]
 }
