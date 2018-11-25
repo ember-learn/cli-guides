@@ -62,4 +62,5 @@ See `pages.yaml` in the cli-guides-source. Whatever has a url of index will be w
 
 ### Deploying
 
-See instructions on the [cli-guides-app](https://github.com/ember-learn/cli-guides-app) README.
+This app has CI/CD in place, which automatically deploys the contents of the `master` branch. 
+It is hosted on the Ember Learning org's Netlify account.
