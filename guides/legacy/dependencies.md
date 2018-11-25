@@ -109,7 +109,7 @@ will make small changes to `ember-cli-build.js`.
 <!-- need to use some info from Jessica's readers question about what broccoli is -->
 
 This section covers how to manually manage dependencies.
-See [Using Addons](../../basic-use/using-addons/) and [Using NPM Packages](../../basic-use/using-npm-packages/) for automated dependency management.
+See [Using Addons](../../basic-use/using-addons/) and [Using NPM Packages](https://guides.emberjs.com/release/addons-and-dependencies/managing-dependencies/) for automated dependency management.
 
 To add an asset, specify the dependency in your `ember-cli-build.js` before
 calling `app.toTree()`. You can only import assets that are within the
@@ -350,7 +350,7 @@ module.exports = function(defaults) {
 };
 ```
 
-**Notes:**
+##### Notes:
 - Be sure to pass `{ type: 'test' }` as the second argument to `app.import`.
   This will ensure that your libraries are compiled into the `test-support.js`
   file.
