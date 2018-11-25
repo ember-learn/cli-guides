@@ -225,7 +225,6 @@ The object passed to `locals` looks like this:
   },
   "dryRun": true,
   "type": "array"
-  // more keys...
 }
 ```
 
