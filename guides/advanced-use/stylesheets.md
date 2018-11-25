@@ -3,17 +3,7 @@
 Ember CLI supports plain CSS out of the box. You can add your css styles to
 `app/styles/app.css` and it will be served at `assets/application-name.css`.
 
-For example, to add bootstrap in your project you need to do the following:
-```bash
-bower install bootstrap --save
-```
-
-In `ember-cli-build.js` add the following:
-```js
-app.import('bower_components/bootstrap/dist/css/bootstrap.css');
-```
-it's going to tell [Broccoli](https://github.com/broccolijs/broccoli) that we want
-this file to be concatenated with our `vendor.css` file.
+<!-- Ought to show how to import stylesheets from node_modules, or link to it in the guides if it's there -->
 
 To use a CSS preprocessor, you'll need to install the appropriate
 [Broccoli](https://github.com/broccolijs/broccoli) plugin. When using a
