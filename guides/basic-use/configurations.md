@@ -1,4 +1,4 @@
-<!-- This page is not yet in production. When it is ready, add it to pages.yml -->
+<!-- This page is not included in the table of contents and therefore not part of the build yet -->
 
 <!-- The bare minimum explanation of what to do with ember-cli-build.js -->
 
