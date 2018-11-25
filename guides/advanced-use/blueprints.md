@@ -1,14 +1,12 @@
-<!-- cover what blueprints are and how to change them. Can be ported from the existing site -->
+Have you ever wanted to define your own custom boilerplate when you create new files in an Ember app? You can do that with blueprints. Blueprints are snippet generators used to create the entities — components, routes, services, models and more — used in your applications. Blueprints allow us to share common Ember patterns in the community. Developers can define blueprints for use in their applications or addons.
 
-Ember CLI ships with support for blueprints. Blueprints are snippet generators used to create the entities — components, routes, services, models and more — used in your applications. Blueprints allow us to share common Ember patterns in the community. Developers can define blueprints for use in their applications or addons.
-
-Ember's builtin [blueprints](https://github.com/emberjs/ember.js/tree/master/blueprints) are a source of detailed examples to help you learn more about blueprints.  The Ember CLI API docs on [blueprints](https://ember-cli.com/api/classes/Blueprint.html) provides advanced information for developing blueprints.
+Ember's built-in [blueprints](https://github.com/emberjs/ember.js/tree/master/blueprints) are a source of detailed examples to help you learn more about blueprints.  The Ember CLI API docs on [blueprints](https://ember-cli.com/api/classes/Blueprint.html) provide advanced information for developing blueprints.
 
 To see a list of all available blueprints with a short descriptions of what they do, run `ember generate --help` or `ember help generate`.
 
 ### Generating Blueprints
 
-This in an example of how to generate a Route blueprint.
+This in an example of how to generate a standard Route blueprint.
 
 ```sh
  ember generate route foo
@@ -44,7 +42,7 @@ installing blueprint
   create blueprints/foo-test/index.js
 ```
 
-Blueprints in your project’s directory take precedence over those packaged with ember-cli. This makes it easy to override the built-in blueprints by generating one with the same name.
+Blueprints in your project’s directory take precedence over those packaged with Ember CLI. This makes it easy to override the built-in blueprints by generating one with the same name.
 
 ### Blueprint Structure
 
@@ -71,26 +69,26 @@ The accompanying test is in another blueprint. It has the same name with a `-tes
   └── index.js
 ```
 
-When creating a custom blueprint only the index.js file is created. The `files` directory structure and all template files must be manually created.
+When creating a custom blueprint, only the `index.js` file is created. The `files` directory structure and all template files must be manually created.
 
 #### files
 
 The files directory contains file templates to be installed into the target directory.
 
-#### \_\_name\_\_
+#### `_name_`
 
-The name token is replaced with the dasherized entity name at install time. For example, when the user invokes `ember generate controller foo` then  _`_name_`_becomes `foo`.
+The name token is replaced with the dasherized entity name at install time. For example, when the user invokes `ember generate controller foo` then  `_name_` becomes `foo`.
 
-#### \_\_root\_\_
+#### `_root_`
 
-The  _`_root_`_ token is replaced with either `app` or `addon` depending upon where it is being generated. This token is used to provide support for generating blueprints inside addons.
+The `_root_` token is replaced with either `app` or `addon` depending upon where it is being generated. This token is used to provide support for generating blueprints inside addons.
 
 
 ### Template Variables (AKA Locals)
 
 Variables can be inserted into templates with `<%= someVariableName %>`.
 
-For example, the built-in util blueprint files/app/utils/**name**.js looks like this:
+For example, the built-in util blueprint `files/app/utils/**name**.js` looks like this:
 
 ```javascript
 export default function <%= camelizedModuleName %>() {
@@ -114,7 +112,7 @@ export default function CountDown() {
 }
 ```
 
-Out of the box, ember-cli provides the following template variables:
+Out of the box, Ember CLI provides the following template variables:
 
 - `dasherizedPackageName`
 - `classifiedPackageName`
@@ -122,7 +120,7 @@ Out of the box, ember-cli provides the following template variables:
 - `classifiedModuleName`
 - `camelizedModuleName`
 
-`packageName` is the project name as found in the project’s package.json.
+`packageName` is the project name as found in the project’s `package.json`.
 
 `moduleName` is the name of the entity being generated.
 
@@ -130,7 +128,7 @@ More custom variables can be created using the `locals` hook, as documented belo
 
 ### Index.js
 
-Overriding the blueprint hooks allows for implementing custom installation and uninstallation behavior. The blueprint's description and command options are also defined in the index file.
+Overriding the blueprint hooks allows for implementing custom installation and uninstallation behavior. The blueprint's description and command options are also defined in the `index` file.
 
 For example, `ember help generate foo` would show
 
@@ -140,7 +138,7 @@ For example, `ember help generate foo` would show
         --type (String) (Default: )
 ```
 
-index.js should export a plain object, which will extend the prototype of the Blueprint class. If needed, the original Blueprint prototype can be accessed through the \_super property.
+`index.js` should export a plain object, which will extend the prototype of the Blueprint class. If needed, the original Blueprint prototype can be accessed through the `_super` property.
 
 ```javascript
 // index.js
@@ -211,7 +209,7 @@ As shown above, the following hooks are available to blueprint authors:
 
 Use `locals` to add custom template variables. The method receives one argument: options. Options is an object containing general and entity-specific options.
 
-Invoking the command line:
+From the command line:
 
 `ember generate controller foo --type=array --dry-run isAdmin:true`
 
@@ -246,7 +244,7 @@ This hook receives the entity name as its first argument. The string returned by
 
 ### fileMapTokens
 
-Use `fileMapTokens` to add custom fileMap tokens for use in the `mapFile` method. The hook must return an object in the following pattern:
+Use `fileMapTokens` to add custom `fileMap` tokens for use in the `mapFile` method. The hook must return an object in the following pattern:
 
 ```javascript
 {
@@ -286,7 +284,7 @@ See the ember-cli [source](https://github.com/ember-cli/ember-cli/blob/master/li
 
 ## Pod Blueprints
 
-Pod based applications use a different file structure to give you more control to scale and maintain large applications. To support pods, the blueprint need a different structure. Blueprints supporting pods are universal and will support both pods and classic applications.
+Pod-based applications use a different file structure to give you more control to scale and maintain large applications. To support pods, the blueprint need a different structure. Blueprints supporting pods are universal and will support both pods and classic applications.
 
 To see which blueprints support the `--pod` option, you can use the help command. For example, `ember help generate component` will give you the list of options for the component blueprint, one of them being `--pod`.
 
@@ -319,7 +317,7 @@ installing
 
 Blueprints that don’t support pods structure will ignore the `--pod` option and use the default structure. Blueprints that support the pods structure will also use the default structure when generated without the `--pod` option.
 
-Generate a blueprint that supports the `--pod` option without the option
+Generate a blueprint that supports the `--pod` option without the option:
 
 ```sh
  ember generate route foo
@@ -333,7 +331,7 @@ installing route-test
   create tests/unit/routes/foo-test.js
 ```
 
-If you would like to use the pods structure as the default for your project, you can set usePods in .ember-cli:
+If you would like to use the pods structure as the default for your project, you can set `usePods` in `.ember-cli`:
 
 ```javascript
 // .ember-cli
@@ -342,7 +340,7 @@ If you would like to use the pods structure as the default for your project, you
 }
 ```
 
-With usePods turned on, the following would occur when generating a route in the pods structure:
+With `usePods` turned on, the following would occur when generating a route in the pods structure:
 
 ```sh
 ember generate route taco
@@ -354,7 +352,7 @@ installing
   create tests/unit/taco/route-test.js
 ```
 
-To generate or destroy a blueprint in the classic structure while usePods is activated, you can use the `--classic` flag:
+To generate or destroy a blueprint in the classic structure while `usePods` is activated, you can use the `--classic` flag:
 
 ```sh
 ember generate route taco --classic
@@ -404,25 +402,25 @@ As with classic Ember applications, only the index.js file is automatically crea
 
 The files directory contains templates for all the files to be installed into the target directory.
 
-#### \_\_name\_\_
+#### `_name_`
 
-When the `--pod` flag is used, invoking `ember generate controller foo --pod` replaces _`_name_`_  with `controller`.
+When the `--pod` flag is used, invoking `ember generate controller foo --pod` replaces `_name_`  with `controller`.
 
-If the blueprint is generated without the `--pod` option, _`_name_`_   would be replaced with `foo`.
+If the blueprint is generated without the `--pod` option, `_name_` would be replaced with `foo`.
 
-#### \_\_path\_\_
+#### `_path_`
 
-When the `--pod` flag is used, invoking `ember generate controller foo --pod` replaces  _`_path_`_ with foo (or <podModulePrefix>/foo if the podModulePrefix is defined).
+When the `--pod` flag is used, invoking `ember generate controller foo --pod` replaces  `_path_` with foo (or <podModulePrefix>/foo if the podModulePrefix is defined).
 
-If the blueprint is generated without the `--pod` option, _`_path_`_ becomes `controller`.
+If the blueprint is generated without the `--pod` option, `_path_` becomes `controller`.
 
-#### \_\_root\_\_
+#### `_root_`
 
 The root token is replaced with either `app` or `addon` depending upon where it is being generated. This token is used to provide support for generating blueprints inside addons.
 
-#### \_\_test\_\_
+#### `_test_`
 
-The  _`_test_`_ token is replaced with the dasherized entity name and appended with `-test` at install time. 
+The  `_test_` token is replaced with the dasherized entity name and appended with `-test` at install time. 
 
 ### Pods Template Variables and Blueprint Hooks
 
@@ -463,7 +461,7 @@ The blueprint structure for a route or a similar custom blueprint would be:
   └── index.js
 ```
 
-The index file for the blueprint would override the `fileMapTokens` hook to assign _`_templatepath_`_ and _`_templatename_`_:
+The index file for the blueprint would override the `fileMapTokens` hook to assign `_templatepath_` and `_templatename_`:
 
 ```javascript
 // index.js
@@ -487,7 +485,7 @@ module.exports = {
 };
 ```
 
-The options object passed to fileMapTokens is:
+The options object passed to `fileMapTokens` is:
 
 ```json
 {
@@ -504,15 +502,15 @@ The options object passed to fileMapTokens is:
 }
 ```
 
-As mentioned above, Ember's builtin [blueprints](https://github.com/emberjs/ember.js/tree/master/blueprints) provide detailed examples on how to create custom blueprints.
+As mentioned above, Ember's built-in [blueprints](https://github.com/emberjs/ember.js/tree/master/blueprints) provide detailed examples on how to create custom blueprints.
 
 ## Addon Blueprints
 
 As in applications, custom blueprints are available in addons.  Addon blueprints are used to generate code snippets in the client application.  Addons can also have a default blueprint that will run automatically after the addon is installed.
 
-Addon blueprints have the same structure as regular blueprints.  The default blueprint has extra hooks to install packages (Bower or NPM) and/or install another Ember addon into the client app.
+Addon blueprints have the same structure as regular blueprints.  The default blueprint has extra hooks to install packages and/or install another Ember addon into the client app.
 
-To create the default blueprint, invoke `ember generate blueprint <addon-name>`
+To create the default blueprint, use `ember generate blueprint <addon-name>`
 
 ```js
 // blueprints/<addon-name>/index.js
@@ -534,13 +532,15 @@ Installs another Ember addon in the client application
 
 #### addBowerPackageToProject
 
-Installs a Bower package or dependency into the client application
+Installs a Bower package or dependency into the client application.
+Bower is a package manager that is [no longer recommended for new projects](https://bower.io/),
+however you may find this hook used in older addons.
 
 #### addPackageToProject
 
-Installs a NPM package or dependency into the client application
+Installs an npm package or dependency into the client application
 
-Each of the hooks return a promise, so they are all thenable. The following is an example of each of these:
+Each of the hooks return a promise, so they can all be chained with `.then()`. The following is an example of each of these:
 
 ```js
 // blueprints/ember-cli-x-button/index.js
@@ -575,7 +575,7 @@ module.exports = {
 
 ### Blueprint Config
 
-The default blueprint is recognized because it normally has the same name as the addon.  Optionally, you may specify a different name for the "defaultBlueprint" in `package.json`
+The default blueprint is recognized because it normally has the same name as the addon.  Optionally, you may specify a different name for the "defaultBlueprint" in `package.json`:
 
 
 ```js
