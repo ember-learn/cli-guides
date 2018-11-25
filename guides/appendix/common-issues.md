@@ -1,11 +1,13 @@
-### Don't install `npm` packages with `sudo`
+Having trouble with something? Check out these common pitfalls.
+
+## Don't install `npm` packages with `sudo`
 
 Installing packages such as `bower` with `sudo` powers can lead to permissions
 issues and ultimately to problems installing dependencies. See
 [https://gist.github.com/isaacs/579814](https://gist.github.com/isaacs/579814)
 for a collection of various solutions.
 
-### Installing From Behind a Proxy
+## Installing From Behind a Proxy
 
 If you're behind a proxy, you might not be able to install because Ember CLI–or
 some of its dependencies–tries to `git clone` a `git://` URL. (In this scenario,
@@ -28,18 +30,18 @@ As a workaround you can configure `git` to make the translation:
 git config --global url."https://".insteadOf git://
 ```
 
-### Using Canary Build instead of release
+## Using Canary Build instead of release
 
 In most cases you should use a stable release, but if you need to install a canary version to test beta features, you'd do it like this:
 
 For Ember: `bower install ember#canary --resolution canary`
 For `ember-data`: `npm install --save-dev emberjs/data#master`
 
-### Windows Build Performance Issues
+## Windows Build Performance Issues
 
 See [The Windows Section](/release/appendix/windows/) for more details.
 
-### Cygwin on Windows
+## Cygwin on Windows
 
 Node.js on Cygwin is no longer supported [more
 details](https://github.com/nodejs/node/wiki/Installation#building-on-cygwin)
@@ -47,11 +49,11 @@ Rather then using Cygwin, we recommend running Ember CLI natively on windows,
 or via the new [Windows Subsystem
 Linux](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide).
 
-<!-- ### Usage with Docker -->
+<!-- ## Usage with Docker -->
 <!-- Possible topic for future development. -->
 
 
-### Usage with Vagrant
+## Usage with Vagrant
 
 [Vagrant](https://vagrantup.com) is a system for automatically creating and
 setting up development environments that run in a virtual machine (VM).
@@ -59,7 +61,7 @@ setting up development environments that run in a virtual machine (VM).
 Running your Ember CLI development environment from inside of a Vagrant VM will
 require some additional configuration and will carry a few caveats.
 
-#### Ports
+### Ports
 
 In order to access your Ember CLI application from your desktop's web browser,
 you'll have to open some forwarded ports into your VM. Ember CLI by default
@@ -78,7 +80,7 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-#### Watched Files
+### Watched Files
 
 The way Vagrant syncs directories between your desktop and vm may prevent file
 watching from working correctly. This will prevent rebuilds and live reloads
@@ -87,7 +89,7 @@ from working correctly. There are several work arounds:
 1. Watch for changes by polling the file system via: `ember serve --watcher polling`.
 2. Use [nfs for synced folders](https://docs.vagrantup.com/v2/synced-folders/nfs.html).
 
-#### VM Setup
+### VM Setup
 
 When setting up your VM, install Ember CLI dependencies as you normally would.
 Some of these dependencies (such as [broccoli-sass](#sass)) may have native
@@ -97,7 +99,7 @@ depenencies that may require recompilation. To do so run:
 npm rebuild
 ```
 
-#### Provider
+### Provider
 
 The two most common Vagrant providers, VirtualBox and VMware Fusion, will both
 work. However, VMware Fusion is substantially faster and will use less battery

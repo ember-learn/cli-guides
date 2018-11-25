@@ -1,4 +1,4 @@
-Windows Vista and newer Windows versions are fully supported.
+Windows versions as far back as Vista are fully supported when using the Ember CLI.
 
 To get started ensure the following dependencies are installed:
 
