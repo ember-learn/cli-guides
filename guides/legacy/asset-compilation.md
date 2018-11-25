@@ -99,51 +99,6 @@ module.exports = function(defaults) {
 };
 ```
 
-
-### CoffeeScript
-
-To enable [CoffeeScript](http://coffeescript.org/), you must
-first add [ember-cli-coffeescript](https://github.com/kimroen/ember-cli-coffeescript) to your
-NPM modules:
-
-```bash
-ember install ember-cli-coffeescript
-```
-
-The modified `package.json` should be checked into source control. CoffeeScript
-can be used in your app's source and in tests, just use the `.coffee` extension
-on any file. We recommend using version >= 1.16.0 of ember-cli-coffeescript to avoid the need
-to escape `import` and `export` statements.
-
-Note that earlier versions of the transpiler had explicit support for
-CoffeeScript, but that support has been removed.
-
-### EmberScript
-
-To enable [EmberScript](http://emberscript.com), you must
-first add [broccoli-ember-script](https://github.com/aradabaugh/broccoli-ember-script) to your
-NPM modules:
-
-```bash
-npm install broccoli-ember-script --save-dev
-```
-
-Note that the ES6 module transpiler is not directly supported with Emberscript,
-to allow use of ES6 modules use the `` ` `` character to escape raw Javascript
-similar to the CoffeeScript example above.
-
-### Emblem
-
-For [Emblem](http://emblemjs.com/), run the following commands:
-
-```bash
-ember install ember-cli-emblem
-```
-
-If you're using the older broccoli-emblem-compiler addon, you need to switch to
-ember-cli-emblem. The older broccoli-emblem-compiler compiles directly to JS
-instead of Handlebars and therefore is broken on all newer version of HTMLBars.
-
 ### Fingerprinting and CDN URLs
 
 Fingerprinting is done using the addon
