@@ -37,7 +37,7 @@ For `ember-data`: `npm install --save-dev emberjs/data#master`
 
 ### Windows Build Performance Issues
 
-See [The Windows Section](/release/reference/windows/) for more details.
+See [The Windows Section](/release/appendix/windows/) for more details.
 
 ### Cygwin on Windows
 
