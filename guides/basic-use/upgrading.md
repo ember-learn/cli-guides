@@ -30,7 +30,8 @@ Upgrade experience depends on whether the app should have a major, minor, or pat
 2. Upgrading minor versions (like 3.4 to 3.5) will give access to new features, but the codebase will not need to change, so these are also usually very quick. Afterwards, developers may see new notices about deprecations, whether from their own app or addons they are using. Deprecations are warnings that some API or behavior will be changed in the future for a major release (like Ember 2 to 3)
 2. Major version upgrades (like Ember 2 to 3) introduce breaking changes. Before the upgrade can be made, code inside the app may need to change. See [Managing major upgrades](#managing-major-upgrades) below for the overall strategy.
 
-Developers who upgrade infrequently are encouraged to choose LTS or "long term support" versions of Ember, which receive security updates for an extended time after release. See the [Ember release blog posts](https://www.emberjs.com/blog/tags/releases.html) to find the latest LTS version.
+Developers who find it challenging to upgrade minor versions as frequently as Ember does are encouraged to choose LTS or "long term support" versions of Ember, which receive security updates for an extended time after release. 
+See the [Ember release blog posts](https://www.emberjs.com/blog/tags/releases.html) to find the latest LTS version.
 
 ### How to do an upgrade
 
