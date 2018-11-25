@@ -1,0 +1,24 @@
+# These redirects preserve the url structure from the old ember-cli.com
+# This _redirects file is a feature of Netlify, where the app is hosted https://www.netlify.com/docs/redirects/
+/#overview      /release/
+/#why       /release/#whydoweneedacli
+/user-guide/#getting-started        /release/basic-use/
+/user-guide/#ember-data     https://guides.emberjs.com/release/models/
+/user-guide/#testing        https://guides.emberjs.com/release/testing/
+/user-guide/#asset-compilation      /release/advanced-use/asset-compilation/
+/user-guide/#managing-dependencies      /release/basic-use/assets-and-dependencies/
+/user-guide/#Environments       https://guides.emberjs.com/release/addons-and-dependencies/managing-dependencies/#toc_environment-specific-assets
+/user-guide/#deployments        /release/basic-use/deploying/
+/user-guide/#upgrading      /release/basic-use/upgrading/
+/user-guide/#commonissues       /release/appendix/common-issues/
+/user-guide/#windows        /release/appendix/windows/
+/user-guide/#editors        /release/appendix/dev-tools/
+/user-guide/#tutorials      https://emberjs.com/learn/
+/user-guide/*        /release/basic-use/
+/extending/#generators-and-blueprints   /release/advanced-use/blueprints/
+/extending/*        /release/advanced-use/blueprints/
+
+# UNHANDLED
+# /user-guide/#using-modules
+# /user-guide/#naming-conventions
+# /extending/#developing-addons-and-blueprints
