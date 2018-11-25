@@ -24,12 +24,14 @@ This will make the `ember` command available throughout your project folders. Th
 
 For Mac and Linux users, we recommend installing [Watchman](https://facebook.github.io/watchman/). Do not use the `npm` package by the same name.
 
-Why is Watchman needed?
+#### Why is Watchman needed?
 When an Ember developer is running a server locally, the server should
 automatically and quickly rebuild when files change.
 However, for some versions of Mac or Linux, this auto-restarting
 does not work perfectly, due to problems in the operating system's
 built-in file watching tools. Watchman helps correct for that buggy and inefficient file watching behavior.
+
+#### Installing Watchman
 
 Mac users can install Watchman via [Homebrew](https://brew.sh/):
 
@@ -41,7 +43,7 @@ Linux users should follow the steps on the [Watchman](https://facebook.github.io
 
 If Watchman is not installed, a notice is displayed when using CLI commands, such as "Could not start watchman". It's safe to ignore this message. However, file-watching won't be as smooth as it is with Watchman.
 
-### Installing for Windows
+### Installing the CLI on Windows
 
 Windows versions as far back as Vista are fully supported, although there are steps you can take to improve your experience.
 You can find more information about this in our section on [Windows support](../reference/windows/)
