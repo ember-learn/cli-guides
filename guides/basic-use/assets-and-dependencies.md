@@ -2,7 +2,7 @@
 <!-- A section should clearly show using WASM files, I think -->
 
 Assets and dependencies are the resources your app needs to work.
-In general, when people say "assets", they mean things that the developer has added themselves to the app, like images and fonts, while "dependencies" are resources that come from third party libraries.
+In general, when people say "assets", they mean things that the developer has added themselves to the app, like images and fonts, while "dependencies" are resources that come from third-party libraries.
 
 ## Where should assets and dependencies go?
 
@@ -10,7 +10,7 @@ Here are the most common places:
 
 - Every Ember app has a file called `package.json` that lists node modules used by the app.
 The code itself goes in `node_modules` during `npm install`, just like in many non-Ember JavaScript projects
-- The `vendor` directory, which is a common home for third party JavaScript that is copied and pasted in
+- The `vendor` directory, which is a common home for third-party JavaScript that is copied and pasted in
 - The `public` directory, the typical place for assets like images
 - The `styles` directory, for stylesheets like CSS, SASS, or LESS
 plus folders like `vendor` and `public` that hold can many other files of the developer's choice
@@ -31,7 +31,7 @@ for node modules management.
 By default, new apps use `npm`.
 Both tools offer similar functionality, and which one to choose is up to
 the developer's preference.
-Dependencies listed in `package.json` can be installed with with either `npm install` or `yarn install`. The files for those packages are added to the `node_modules` folder of the app.
+Dependencies listed in `package.json` can be installed with either `npm install` or `yarn install`. The files for those packages are added to the `node_modules` folder of the app.
 
 There are two ways to switch from `npm` to `yarn`.
 Either include an option when the app is created, like `ember new --yarn`,
@@ -68,7 +68,7 @@ When an app is being served locally, the Ember CLI will not watch for changes in
 if you install npm dependencies via `npm install <dependencies>`, you will 
 need to restart your Ember CLI server session manually.
 
-Dependencies installed with `ember install some-addon-name` will cause a refreash
+Dependencies installed with `ember install some-addon-name` will cause a refresh
 of a local server.
 
 ### Debugging node_modules dependencies
@@ -82,5 +82,5 @@ Common resolution steps are to stop the server, and then take one of these steps
 - Delete the `node_modules` directory and run `npm install` or `yarn install`
 - Delete the `dist` directory (found in apps with versions < 3.4), delete `node_modules`, and `npm install` or `yarn install`
 - If an app uses Bower (a deprecated, npm-like tool), follow all the steps above
-in addition to deleteing `bower_components` and running `bower install`
+in addition to deleting `bower_components` and running `bower install`
 

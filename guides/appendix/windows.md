@@ -61,7 +61,7 @@ do this open the `Local Security Policy` by typing Local Security Policy in the
 Windows `Run` Box.
 
 Under `Local Policies` -> `User Rights Assignment` find the `Create symbolic
-links` policy and double click it to add a new user or group. Once your user or
+links` policy and double-click it to add a new user or group. Once your user or
 group has been added, your user should be able to create symlinks. Keep in mind
 if your user is part of the Administrators group and UAC is enabled you will
 still need to start your shell using `Run as Administrator`.
