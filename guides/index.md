@@ -20,7 +20,7 @@ The CLI comes with a command-line-based help system too. At any point, if you're
 
 There are thousands of JavaScript libraries that work great in Ember. When an [npm package](https://www.npmjs.com/) offers some Ember-specific conveniences, we call it an “addon.” Ember CLI’s addon system provides a way to create reusable units of code, share components and styling, extend the build tooling, and more — all with minimal configuration. 
 
-To view some of the most popular addons, visit [EmberObserver](https://emberobserver.com). 
+To view some of the most popular addons, visit [Ember Observer](https://emberobserver.com).
 
 You can still use your favorite npm packages directly too. If they are not available as addons yet, you can use
 a community tool called [ember-auto-import](https://github.com/ef4/ember-auto-import), include them in the build pipeline yourself, or create a wrapper addon of your own.
@@ -47,4 +47,4 @@ The Ember CLI is developed and maintained by a group of open source contributors
 - [The main ember-cli codebase](https://github.com/ember-cli/ember-cli) 
 - [This documentation site](https://github.com/ember-learn/cli-guides)
 - Official projects under the [ember-cli organization](https://github.com/ember-cli/) 
-- Search the community's CLI plugins on [EmberObserver](https://emberobserver.com)
+- Search the community's CLI plugins on [Ember Observer](https://emberobserver.com)
