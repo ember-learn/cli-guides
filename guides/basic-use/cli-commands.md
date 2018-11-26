@@ -136,7 +136,7 @@ to dependencies to learn about the options.
 
 ### Example use
 
-Here's an example of adding SASS support to your app using [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass). SASS is an alternative to writing plain CSS. This is a popular community-maintained addon.
+Here's an example of adding Sass support to your app using [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass). Sass is an alternative to writing plain CSS. This is a popular community-maintained addon.
 
 ```bash
 ember install ember-cli-sass
