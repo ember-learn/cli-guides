@@ -12,7 +12,7 @@ While these two tools have somewhat different features, both are compatible with
 
 We'll know installation is successful when `npm --version` or `yarn --version` returns the version number. 
 
-It is recommend to install the most recent LTS (long term support) version of `node`.
+It is recommended to install the most recent LTS (long-term support) version of `node`.
 Restart the console after installing your package manager.
 
 ## Installing the ember-cli
@@ -59,4 +59,4 @@ You can find more information about this in our section on [Windows support](../
 ## Getting help
 
 Users of all operating systems can get community support for installation problems.
-A list of chat rooms, forums, and more is available [here](https://www.emberjs.com/learn/).
+A list of chat rooms, forums, and more are available [here](https://www.emberjs.com/learn/).

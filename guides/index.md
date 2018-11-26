@@ -27,16 +27,16 @@ a community tool called [ember-auto-import](https://github.com/ef4/ember-auto-im
 
 ## Why do we need a CLI?
 
-The Ember CLI is like a dependency packager, test runner, optimizer, and local server all rolled into one. Since all the features were built to work together, tasks like upgrading the app version or deploying can be automated with production-ready, open source plugins. The CLI is backwards compatible with older Ember apps, and maintains a six-week release schedule.
+The Ember CLI is like a dependency packager, test runner, optimizer, and local server all rolled into one. Since all the features were built to work together, tasks, like upgrading the app version, or deploying can be automated with production-ready, open source plugins. The CLI is backwards compatible with older Ember apps and maintains a six-week release schedule.
 
 The CLI's job is to make your work easier.
-It was built with the philosophy that a developer should be able to focus on building great apps, not reengineering how to fit all the pieces together at each stage of an app's lifecycle. The result is that apps are more maintainable and approachable, since there are established architectural patterns across individuals, teams, and companies.
+It was built with the philosophy that a developer should be able to focus on building great apps, not re-engineering how to fit all the pieces together at each stage of an app's lifecycle. The result is that apps are more maintainable and approachable, since there are established architectural patterns across individuals, teams, and companies.
 
-However, if you want to make your own adjustments like use a different testing library, you still can.
+However, if you want to make your own adjustments like using a different testing library, you still can.
 
 ## Getting help
 
-Do you have questions? Run into an issue or a bug? Get support from the community. A list of chat rooms, forums, and more is available [here](https://www.emberjs.com/community/).
+Do you have questions? Run into an issue or a bug? Get support from the community. A list of chat rooms, forums, and more are available [here](https://www.emberjs.com/community/).
 
 ## Contributing
 

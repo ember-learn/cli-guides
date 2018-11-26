@@ -1,11 +1,11 @@
 In their daily work, most Ember developers use only a small number of CLI commands.
-We'll cover the most common commands here, along with a quick tutorial of how to use the `--help` option. The help option reveals all available commands and options, beyond what this guide covers.
+We'll cover the most common commands here, along with a quick tutorial on how to use the `--help` option. The help option reveals all available commands and options, beyond what this guide covers.
 
 ## Using the help command
 
 For any CLI commands, you can see all of the options available by using the `--help` flag.
 
-For example, `ember --help` will show a list of all available top level commands. `ember generate --help` will show a full list of all the types of files you can generate using the CLI.
+For example, `ember --help` will show a list of all available top-level commands. `ember generate --help` will show a full list of all the types of files you can generate using the CLI.
 
 The help command is also the best way to see the aliased or shorthand versions of common commands and options. For example, here are some of the most frequently used abbreviations:
 
@@ -186,7 +186,7 @@ ember build [options]
 
 ### What it does
 
-`ember build` takes all of your app files and turns them into a bundle that is minified and transpiled into browser-ready JavaScript code, styles, and html. The bundled files go into a directory called `dist`. This bundle is what can be deployed to a server. By default, the `build` command uses the `development` environment configuration.
+`ember build` takes all of your app files and turns them into a bundle that is minified and transpiled into browser-ready JavaScript code, styles, and HTML. The bundled files go into a directory called `dist`. This bundle is what can be deployed to a server. By default, the `build` command uses the `development` environment configuration.
 
 Although you can upload the built files to a server yourself, many Ember projects use a community addon called [ember-cli-deploy](https://github.com/ember-cli-deploy/ember-cli-deploy) to get their apps into production. `ember-cli-deploy` has a plugin system to make it easy to deploy to many cloud vendors. Search [EmberObserver for "deploy"](https://emberobserver.com/?query=deploy) to browse available options.
 

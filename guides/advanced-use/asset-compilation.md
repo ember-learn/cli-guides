@@ -136,7 +136,7 @@ module.exports = function(defaults) {
 
 ### Exclude from minification
 
-Some files should be excluded from minification, such as copied-and-pasted third party scripts that are already minified.
+Some files should be excluded from minification, such as copied-and-pasted third-party scripts that are already minified.
 
 To exclude assets from `dist/assets` from being minified, one can pass options for
 [broccoli-uglify-sourcemap](https://github.com/ef4/broccoli-uglify-sourcemap) like so:
@@ -171,8 +171,8 @@ When the environment is production (e.g. `ember build --environment=production`)
 the addon will automatically fingerprint your js, css, png, jpg, and gif assets
 by appending an md5 checksum to the end of their filename
 (e.g. `assets/yourapp-9c2cbd818d09a4a742406c6cb8219b3b.js`). In addition, your
-html, js, and css files will be re-written to include the new name. There are
-a few options you can pass in to `EmberApp` in your `ember-cli-build.js` to customize
+HTML, JS, and CSS files will be re-written to include the new name. There are
+a few options you can pass into `EmberApp` in your `ember-cli-build.js` to customize
 this behavior.
 
 * `enabled` - Default: `app.env === 'production'` - Boolean. Enables fingerprinting
@@ -184,7 +184,7 @@ ignore array, the contents of the file will not be processed for fingerprinting.
 * `extensions` - Default: `['js', 'css', 'png', 'jpg', 'gif', 'map']` - The file types
 to add md5 checksums.
 * `prepend` - Default: `''` - A string to prepend to all of the assets. Useful
-for CDN urls like `https://subdomain.cloudfront.net/`
+for CDN URLs like `https://subdomain.cloudfront.net/`
 * `replaceExtensions` - Default: `['html', 'css', 'js']` - The file types to
 replace source code with new checksum file names.
 * `customHash` - When specified, this is appended to fingerprinted filenames instead
@@ -363,7 +363,7 @@ module.exports = function(defaults) {
 };
 ```
 
-The `outputPaths.app.css` option uses a key value relationship. The *key* is
+The `outputPaths.app.css` option uses a key-value relationship. The *key* is
 the input file and the *value* is the output location. Note that we do not
 include the extension for the input path, because each preprocessor has a
 different extension.

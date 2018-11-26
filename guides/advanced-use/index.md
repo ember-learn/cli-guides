@@ -1,5 +1,5 @@
 This section of the CLI Guides describes the ecosystem of tools that are behind an app's build behavior, testing, and more.
-Ember is designed for a zero config experience for most users, but it was also designed to be extensible.
+Ember is designed for a zero-config experience for most users, but it was also designed to be extensible.
 The first step to making your own configurations is to become familiar with some of the vocabulary and tools.
 Later sections will cover how to use them to get work done.
 
@@ -23,7 +23,7 @@ The CLI uses uglify to take dozens of JavaScript files and turn them into someth
 
 ## Stylesheet compilation
 
-Ember apps use CSS by default. However there is support for other stylesheet systems like LESS and SASS.
+Ember apps use CSS by default. However, there is support for other stylesheet systems like LESS and SASS.
 
 ## Testing framework
 
