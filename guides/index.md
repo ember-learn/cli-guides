@@ -40,7 +40,7 @@ Do you have questions? Run into an issue or a bug? Get support from the communit
 
 ## Contributing
 
-The Ember CLI is developed and maintained by a group of open source contributors from many different companies and backgrounds. If you have an idea for a feature, a bug to report, or just want to help out where it is needed, you can reach the team via [GitHub](https://github.com/ember-cli), the [Ember Community forums and chat](https://www.emberjs.com/learn/), or drop by the weekly meeting that is open to the public.
+The Ember CLI is developed and maintained by a group of open source contributors from many different companies and backgrounds. If you have an idea for a feature, a bug to report, or just want to help out where it is needed, you can reach the team via [GitHub](https://github.com/ember-cli), the [Ember Community forums and chat](https://www.emberjs.com/community/), or drop by the weekly meeting that is open to the public.
 
 ### Places to contribute
 
