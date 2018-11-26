@@ -74,7 +74,7 @@ To stop an Ember server, press `control-c`.
 
 ### What it does
 
-`ember serve` takes all of the app's files and turns them into something that can be rendered in the browser. By default, view the app by visiting `http://localhost:4200`. It's a good idea to keep the server running as we work so that we know as soon as we've broken something. The CLI watches the project folders, and will rerender as files change.
+`ember serve` takes all of the app's files and turns them into something that can be rendered in the browser. By default, view the app by visiting `http://localhost:4200`. It's a good idea to keep the server running as we work so that we know as soon as we've broken something. The CLI watches the project folders, and will reload the app in the browser when files change.
 
 If the local server will not start due to missing dependencies, use
 `npm install` or `yarn install` to get going again.
