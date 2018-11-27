@@ -5,7 +5,7 @@ Later sections will cover how to use them to get work done.
 
 ## Broccoli
 
-Ember uses Broccoli for the build process. Broccoli is an independent project that is similar to tools like webpack and parcel. Although many developers never need to configure Broccoli themselves, they have the option to do so. 
+Ember uses Broccoli for the build process. Broccoli is an independent project that is similar to tools like webpack and parcel. Although many developers never need to configure Broccoli themselves, they have the option to do so.
 
 For example, if an app has content in the form of Markdown files that need to be turned into HTML during the build, it could be done with Broccoli. This very app you're reading content on right now follows that architecture, and the work was turned into a [Broccoli plugin](https://github.com/stonecircle/broccoli-static-site-json).
 
@@ -15,7 +15,7 @@ Just like there are Ember community addons, there are a variety of Broccoli plug
 
 The CLI uses Babel as part of the build process. Babel is an independent project used in an incredible percentage of websites. It has an important job, as quoted from [their documentation](https://babeljs.io/docs/en):
 
-> Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in old browsers or environments.
+> Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards-compatible version of JavaScript in old browsers or environments.
 
 ## Minification
 
