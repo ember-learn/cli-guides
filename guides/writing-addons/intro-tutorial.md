@@ -288,11 +288,9 @@ Lastly, be sure to provide a few notes about how others can contribute to the pr
 
 <!-- help wanted -->
 
-## Advanced addon configuration
+## Common addon configurations
 
 Addons are configured using the `ember-addon` hash in the `package.json` file.  
-
-
 
 ```json
 "ember-addon": {
@@ -314,7 +312,7 @@ These properties specify whether your ember-addon must run "before" or "after" a
 ### defaultBlueprint
 Addons have a default blueprint that will automatically run when the addon is installed.  By convention, Ember will run the blueprint named after the `name` property in `package.json` 
 
-You may specify a different name using `defaultBlueprint`. See the [addon blueprints](http://localhost:4200/release/advanced-use/blueprints/#addonblueprints) for more information on the default blueprint.
+You may specify a different name using `defaultBlueprint`. See the [addon blueprints](../../advanced-use/blueprints/#addonblueprints) for more information on the default blueprint.
 
 ### demoURL
 You may specify the `demoURL` property with the fully qualified URL of a website showing your addon in action. [Ember Observer](https://www.emberobserver.com/) will display a link to "demoURL".
