@@ -3,7 +3,7 @@ There are thousands of packages that are made specifically for the Ember ecosyst
 Ember developers are also
 [free to use regular npm packages](https://guides.emberjs.com/release/addons-and-dependencies/managing-dependencies/) in their apps.
 
-Addons can include JavaScript code, reusable UI components, compiling tools, data visualization tools, deployment pipelines, templates, stylesheets, and more. 
+Addons can include JavaScript code, reusable UI components, compiling tools, data visualization tools, deployment pipelines, templates, stylesheets, and more.
 
 Think of addons as node libraries with superpowers. In addition to the usual functionality of an npm package, addons can also help with generating new files, preprocessing, file fingerprinting, and more.
 
@@ -11,7 +11,7 @@ Think of addons as node libraries with superpowers. In addition to the usual fun
 
 [Ember Observer](https://www.emberobserver.com/) is a great way to explore community addons. Although addons can be found by [searching the npm repository directly](https://www.npmjs.com/search?q=ember), Ember Observer has ranked lists of the most popular addons and ratings to help developers choose between them. Ember Observer is a community-run project that has some subjective aspects to the addon ratings.
 
-Most addons are made to drop right into your app with zero configuration. Many addons are backwards-compatible to earlier versions of Ember too! 
+Most addons are made to drop right into your app with zero configuration. Many addons are backwards-compatible with earlier versions of Ember too!
 
 To install an addon, use:
 
@@ -29,22 +29,22 @@ The [top 100 list](https://www.emberobserver.com/lists/top-addons) is an importa
 
 For example, these community-authored addons bring in familiar functionality from regular npm packages:
 
-- Stylesheet tooling like [ember-cli-sass](https://www.emberobserver.com/addons/ember-cli-sass), which provides [Sass](https://sass-lang.com/) as an alternative to standard CSS
-- JavaScript utilities like [ember-moment](https://www.emberobserver.com/addons/ember-moment), which offers some Ember conveniences to the base [moment library](https://www.npmjs.com/package/moment)
+- Stylesheet tooling like [ember-cli-sass](https://www.emberobserver.com/addons/ember-cli-sass), which provides [Sass](https://sass-lang.com/) as an alternative to standard CSS.
+- JavaScript utilities like [ember-moment](https://www.emberobserver.com/addons/ember-moment), which offers some Ember conveniences to the base [moment library](https://www.npmjs.com/package/moment).
 - Full UI frameworks and design kits like [ember-bootstrap](https://www.emberobserver.com/addons/ember-bootstrap), [semantic-ui-ember](https://www.emberobserver.com/addons/semantic-ui-ember), and [ember-paper](https://www.emberobserver.com/addons/ember-paper). These offer easier, more reliable, more performant functionality than just using the npm packages directly.
-- TypeScript support through [ember-cli-typescript](https://github.com/typed-ember/ember-cli-typescript)
-- Charting libraries like [ember-d3](https://github.com/ivanvanderbyl/ember-d3)
+- TypeScript support through [ember-cli-typescript](https://github.com/typed-ember/ember-cli-typescript).
+- Charting libraries like [ember-d3](https://github.com/ivanvanderbyl/ember-d3).
 
 Here are examples of popular community-maintained addons that are unique to Ember, in no particular order:
 
-- A wealth of UI component libraries, like [ember-power-select](https://www.emberobserver.com/addons/ember-power-select) and [ember-basic-dropdown](https://www.emberobserver.com/addons/ember-basic-dropdown)
-- Tools to automate deployments, like [ember-cli-deploy](https://www.emberobserver.com/categories/deployment) and its own ecosystem of plugins
-- Testing tools like [ember-test-selectors](https://www.emberobserver.com/addons/ember-test-selectors), to make DOM assertions in testing easier and clearer, and [ember-a11y-testing](https://www.emberobserver.com/addons/ember-a11y-testing) to check for accessibility
-- Authentication libraries and plugins, like [torii](https://www.emberobserver.com/addons/torii) and [ember-simple-auth](https://www.emberobserver.com/addons/ember-simple-auth), and [ember-oauth2](https://www.emberobserver.com/addons/ember-oauth2)
+- A wealth of UI component libraries, like [ember-power-select](https://www.emberobserver.com/addons/ember-power-select) and [ember-basic-dropdown](https://www.emberobserver.com/addons/ember-basic-dropdown).
+- Tools to automate deployments, like [ember-cli-deploy](https://www.emberobserver.com/categories/deployment) and its own ecosystem of plugins.
+- Testing tools like [ember-test-selectors](https://www.emberobserver.com/addons/ember-test-selectors), to make DOM assertions in testing easier and clearer, and [ember-a11y-testing](https://www.emberobserver.com/addons/ember-a11y-testing) to check for accessibility.
+- Authentication libraries and plugins, like [torii](https://www.emberobserver.com/addons/torii) and [ember-simple-auth](https://www.emberobserver.com/addons/ember-simple-auth), and [ember-oauth2](https://www.emberobserver.com/addons/ember-oauth2).
 - Async and state management tools like [ember-concurrency](https://www.emberobserver.com/addons/ember-concurrency) and [ember-lifeline](https://www.emberobserver.com/addons/ember-lifeline). Don't let a user's impatient clicks kick off 100 API requests.
 - [liquid-fire](https://www.emberobserver.com/addons/liquid-fire), for animating things like route transitions to provide a smooth, native-app-like experience.
-- [ember-intl](https://github.com/ember-intl/ember-intl) for internationalization of dates, numbers, and currencies
-- [ember-cli-mirage](https://www.ember-cli-mirage.com/) for stubbing data that would come from an API
+- [ember-intl](https://github.com/ember-intl/ember-intl) for internationalization of dates, numbers, and currencies.
+- [ember-cli-mirage](https://www.ember-cli-mirage.com/) for stubbing data that would come from an API.
 
 There are too many amazing addons to mention them all here! We thank everyone who shares their work with others through public addons.
 

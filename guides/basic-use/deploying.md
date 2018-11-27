@@ -6,16 +6,16 @@ No matter which framework you use, there are some processing steps that the code
 
 As a result, you may not need to understand or configure build steps, but it's still helpful to have some background knowledge and terminology. Here are some common steps that the Ember CLI handles for you:
 
-- compilation - Instead of having dozens of files, many are combined together into a smaller number
-- minification and uglification - code is optimized for speedy evaluation by the browser, as opposed to human readability
-- transpilation - modern JavaScript APIs are not available in some browsers, but that doesn't have to stop developers! Tools like Babel are used by many frameworks to turn newer JavaScript into code that still runs in older browsers.
-- transformations - things like stripping out code comments
+- Compilation: Instead of having dozens of files, many are combined together into a smaller number.
+- Minification and uglification: code is optimized for speedy evaluation by the browser, as opposed to human readability.
+- Transpilation: modern JavaScript APIs are not available in some browsers, but that doesn't have to stop developers! Tools like Babel are used by many frameworks to turn newer JavaScript into code that still runs in older browsers.
+- Transformations: things like stripping out code comments.
 
 ## How to deploy
 
-Behind the scenes, deploying an app has two steps: building the app for production and pushing the result to a web server for hosting.  
+Behind the scenes, deploying an app has two steps: building the app for production and pushing the result to a web server for hosting.
 
-There are three main options for deploying your app: using the `ember build` command, installing `ember-cli-deploy`, or using pre-made build packs. 
+There are three main options for deploying your app: using the `ember build` command, installing `ember-cli-deploy`, or using pre-made build packs.
 
 ### `ember build` and upload
 
@@ -24,7 +24,7 @@ If you already have a hosting plan in mind, you can build the app from the comma
 It's important to set the environment to `production` so that your app receives the right treatment for minification and fingerprinting:
 
 ```bash
-ember build --environment=production
+ember build --environment production
 ```
 
 The results of the `build` command are placed in the `dist` directory within your project.
@@ -49,7 +49,7 @@ Please [open an issue](https://github.com/ember-learn/cli-guides-source) for thi
 
 ## Common deployment configurations
 
-Compared to developing an app locally, there are some options to consider when an app is in deployment. Some apps may not need to make any of these configurations, but here are just a few of the most common examples to help you get started. For more details, see the [Advanced Use](../../advanced-use/) section of the CLI guides.
+Compared to developing an app locally, there are some options to consider when an app is in deployment. Some apps may not need to configure any of these options, but here are just a few of the most common examples to help you get started. For more details, see the [Advanced Use](../../advanced-use/) section of the CLI guides.
 
 ### Configuring `rootURL`
 
@@ -69,13 +69,13 @@ if (environment === 'production') {
 ```
 
 The `rootURL` is used as a prefix for assets, eg `/path/to/ember/app/assets/vendor.js`. However when
-building for production, the value of `prepend` for `fingerprint` will be used instead. 
+building for production, the value of `prepend` for `fingerprint` will be used instead.
 
 Here's an example of building for production and using the `fingerprint` and `prepend` configuration. The asset URLs will not use `rootURL`. Instead, the result will be
 `https://cdn.example.com/assets/vendor-3b1b39893d8e34a6d0bd44095afcd5c4.js`.
 
 ```bash
-ember build environment=production
+ember build --environment production
 ```
 
 ```javascript
@@ -98,7 +98,7 @@ Lastly, if you find yourself working with an older app, you may see references t
 
 ### Content Security Policy
 
-It is best practice to define a Content Security Policy for your application, even for local development, and to make it restrictive. That way security violations can be discovered immediately.
+It is a best practice to define a Content Security Policy for your application, even for local development, and to make it restrictive. That way security violations can be discovered immediately.
 
 A Content Security Policy configuration defines the list of places that your app should accept data from. For example, an app may allow stylesheets from a CDN and images from a specific data storage service.
 
@@ -128,7 +128,7 @@ For more information, see the [`ember-cli-content-security-policy` README.]( htt
 
 ### Serving your app securely across HTTPS
 
-The use of HTTPS certificates is best practice for web security and professionalism of any deployed apps for any framework. It is outside the scope of this guide to go into detail about how to manage HTTPS certificates, redirects, and web hosting details. However, front-end developers should be aware of security best practices and have a few hints to help them move in the right direction.
+The use of HTTPS certificates is a best practice for web security and professionalism of any deployed apps for any framework. It is outside the scope of this guide to go into detail about how to manage HTTPS certificates, redirects, and web hosting details. However, front-end developers should be aware of security best practices and have a few hints to help them move in the right direction.
 
 Plain old HTTP sites are likely to show your users security warnings and they are vulnerable to man-in-the-middle attacks. HTTPS certificates are available at no cost from many identity and hosting providers. However, even if you have an HTTPS certificate, you will still need a way to redirect any users who visit `http://your-ember-app.com`, for example.
 
@@ -167,7 +167,7 @@ Then, define an `nginx.conf` to be used on your server:
         # include information on SSL keys, cert, protocols and ciphers
         # SSLLabs.com is a great resource for this, along with testing
         # your SSL configuration: https://www.ssllabs.com/projects/documentation/
-        
+
         # Strict Transport Security
         add_header Strict-Transport-Security max-age=2592000;
 

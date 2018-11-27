@@ -74,7 +74,7 @@ To stop an Ember server, press `control-c`.
 
 ### What it does
 
-`ember serve` takes all of the app's files and turns them into something that can be rendered in the browser. By default, view the app by visiting `http://localhost:4200`. It's a good idea to keep the server running as we work so that we know as soon as we've broken something. The CLI watches the project folders, and will reload the app in the browser when files change.
+`ember serve` takes all of the app's files and turns them into something that can be rendered in the browser. By default, we can view the app by visiting `http://localhost:4200`. It's a good idea to keep the server running as we work so that we know as soon as possible that we've broken something. The CLI watches the project folders and will reload the app in the browser when files change.
 
 If the local server will not start due to missing dependencies, use
 `npm install` or `yarn install` to get going again.
@@ -103,12 +103,16 @@ ember generate <type-of-file> <name-of-your-choice>
 
 `ember generate` creates new files within your app. For example, you can use it to create components, routes, services, models, and more. For a full list, type `ember generate --help`.
 
-The new files will contain the necessary boilerplate, they will go in the right place, and the CLI will make sure that file naming conventions are followed. For example, components must always have a dash in their names.
-To avoid mistakes that are hard to debug, always use the CLI to create files, instead of creating the files by hand.
+The CLI's `generate` command will ensure that new files contain the necessary boilerplate, that they go in the right directories, and thatn file naming conventions are followed. For example, components must always have a dash in their names.
+To avoid mistakes that are hard to debug, always use the CLI to create files instead of creating the files by hand.
 
 ### Example use
 
-This command will make a component named `packing-list`. There will be three files created in the app: `packing-list.hbs` which will define what it looks like, `packing-list.js` with JavaScript code to handle user interaction, and an integration test (aka rendering test) file called `packing-list-test.js`.
+This command will make a component named `packing-list`. It will create three files in the app:
+
+* `packing-list.hbs`, which defines what it looks like
+* `packing-list.js` with JavaScript code to handle user interaction
+* `packing-list-test.js` with an integration test (aka rendering test)
 
 ```bash
 ember generate component packing-list
@@ -128,11 +132,11 @@ ember install <addon-name>
 
 ### What it does
 
-`ember install` is used to install addons within your app. An addon is an npm package that was built especially for use in an Ember app. Most addons have a name that starts with `ember`. You can find a full list of addons on [Ember Observer](https://emberobserver.com). There are addon versions of many popular npm libraries, as well as packages that are unique to Ember. The majority are open source community addons.
+`ember install` is used to install addons within your app. An addon is an npm package that was built specifically for use in an Ember app. You can find a full list of addons on [Ember Observer](https://emberobserver.com). There are addon versions of many popular npm libraries, as well as packages that are unique to Ember. The majority are open source community addons.
 By convention, most addons have `ember` in the name, but not all of them.
 
-To use non-addon npm packages directly, see [the Ember.js Guide](https://guides.emberjs.com/release/addons-and-dependencies/managing-dependencies/)
-to dependencies to learn about the options.
+To use non-addon npm packages directly, see "Managing Dependencies" section of the [the Ember.js Guide](https://guides.emberjs.com/release/addons-and-dependencies/managing-dependencies/)
+to learn about the options.
 
 ### Example use
 
@@ -162,7 +166,7 @@ ember test [options]
 <!--alex disable failed-->
 `ember test` runs all of the tests found in the `tests` folder of the app. By default, it runs all the tests once and displays the results. We'll see things like syntax errors, linting problems, deprecations, and failed assertions in the command line output. To instead watch tests in the browser as they run, visit `http://localhost:4200/tests` while the local server is running with `ember serve`.
 
-By default, these tests are run in Headless Chrome. What headless means is, we won't see the visual output of the browser, but it's running them in a Chrome environment. This makes the test suite faster. 
+By default, these tests are run in Headless Chrome. "Headless" means the tests are running the Chrome environment, but we won't see the visual output of the browser. This makes the test suite faster.
 
 ### Example use
 
@@ -171,6 +175,8 @@ To make tests re-run as we change files, we could use the `--server` option:
 ```bash
 ember test --server
 ```
+
+During development, this is less common than running `ember serve` and viewing the tests at `http://localhost:4200/tests`.
 
 ### Learn more
 - [The Ember.js Guides about Testing](https://guides.emberjs.com/release/testing/)
@@ -186,9 +192,9 @@ ember build [options]
 
 ### What it does
 
-`ember build` takes all of your app files and turns them into a bundle that is minified and transpiled into browser-ready JavaScript code, styles, and HTML. The bundled files go into a directory called `dist`. This bundle is what can be deployed to a server. By default, the `build` command uses the `development` environment configuration.
+`ember build` takes all of your app files and turns them into a bundle that is minified and transpiled into browser-ready JavaScript code, styles, and HTML. The bundled files go into a directory called `dist`. This bundle is what can be deployed to a server. By default, the `build` command uses the `development` environment configuration, which is not optimized for production.
 
-Although you can upload the built files to a server yourself, many Ember projects use a community addon called [ember-cli-deploy](https://github.com/ember-cli-deploy/ember-cli-deploy) to get their apps into production. `ember-cli-deploy` has a plugin system to make it easy to deploy to many cloud vendors. Search [Ember Observer for "deploy"](https://emberobserver.com/?query=deploy) to browse available options.
+Although you can upload the built files to a server yourself, many Ember projects use a community addon called [ember-cli-deploy](https://github.com/ember-cli-deploy/ember-cli-deploy) to optimize their apps and get them into production. `ember-cli-deploy` has a plugin system to make it easy to deploy to many cloud vendors. Search [Ember Observer for "deploy"](https://emberobserver.com/?query=deploy) to browse available options.
 
 Ember apps can be built with only three environments: development, production, and testing.
 
