@@ -33,7 +33,7 @@ app
 ```
 To create the pods structure in an application you add the `--pod` option the the `ember generate` command.  For example, to generate the `tags` component, you would run `ember generate component tags --pod`.
 
-As your app gets bigger, a feature-driven structure may be better. Splitting your application by functionality/resource would give you more power and control to scale and maintain it.
+As your app becomes larger, a feature-driven structure may be better. Splitting your application by functionality/resource would give you more power and control to scale and maintain it.
 
 ### Classic or Pods?
 <!-- Is this going to be confusing? -->
