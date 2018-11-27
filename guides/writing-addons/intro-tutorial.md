@@ -288,7 +288,7 @@ Lastly, be sure to provide a few notes about how others can contribute to the pr
 
 <!-- help wanted -->
 
-## Advanced addon configuration
+## Common addon configurations
 
 Addons are configured using the `ember-addon` hash in the `package.json` file.  
 
