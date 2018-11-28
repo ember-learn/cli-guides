@@ -31,7 +31,7 @@ for node modules management.
 By default, new apps use `npm`.
 Both tools offer similar functionality, and which one to choose is up to
 the developer's preference.
-Dependencies listed in `package.json` can be installed with with either `npm install` or `yarn install`. The files for those packages are added to the `node_modules` folder of the app.
+Dependencies listed in `package.json` can be installed with either `npm install` or `yarn install`. The files for those packages are added to the `node_modules` folder of the app.
 
 There are two ways to switch from `npm` to `yarn`.
 Either include an option when the app is created, like `ember new --yarn`,
