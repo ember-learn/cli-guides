@@ -169,7 +169,7 @@ Fingerprinting is done using the addon
 
 When the environment is production (e.g. `ember build --environment=production`),
 the addon will automatically fingerprint your js, css, png, jpg, and gif assets
-by appending an md5 checksum to the end of their filename
+by appending a md5 checksum to the end of their filename
 (e.g. `assets/yourapp-9c2cbd818d09a4a742406c6cb8219b3b.js`). In addition, your
 html, js, and css files will be re-written to include the new name. There are
 a few options you can pass in to `EmberApp` in your `ember-cli-build.js` to customize
