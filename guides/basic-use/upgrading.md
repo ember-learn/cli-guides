@@ -6,7 +6,7 @@ There are three kinds of upgrades for normal Ember app development:
 
 ## Upgrading the CLI version
 
-The Ember CLI is backwards compatible, meaning that the latest CLI can be used with older app versions. New versions of the CLI are released roughly every 6 weeks, in step with versions of Ember.js itself.
+The Ember CLI is backwards-compatible, meaning that the latest CLI can be used with older app versions. New versions of the CLI are released roughly every 6 weeks, in step with versions of Ember.js itself.
 
 Upgrade instructions are published with [each release](https://github.com/ember-cli/ember-cli/releases).
 
