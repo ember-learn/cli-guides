@@ -18,7 +18,7 @@ plus folders like `vendor` and `public` that hold can many other files of the de
 Some older apps may use a package manager and registry called Bower, which has
 a `bower_components` directory. Bower itself is deprecated and should not be used.
 
-<!-- 
+<!--
 If addons are installed accidentally with `npm install` or `yarn install`,
 the blueprints can be run with .... what?
 -->
@@ -59,13 +59,13 @@ documentation pages:
 New apps list the `node_modules` directory in the app's `.gitignore` configuration,
 meaning that any changes to the contents of the directory are ignored by git.
 Using the npm configuration files allows collaborators to download your
-app source code and get the `node_modules` installed locally by executing 
+app source code and get the `node_modules` installed locally by executing
 `npm install` themselves.
 
 ### Effects of new dependencies on local servers
 
-When an app is being served locally, the Ember CLI will not watch for changes in the `package.json` file. Therefore, 
-if you install npm dependencies via `npm install <dependencies>`, you will 
+When an app is being served locally, the Ember CLI will not watch for changes in the `package.json` file. Therefore,
+if you install npm dependencies via `npm install <dependencies>`, you will
 need to restart your Ember CLI server session manually.
 
 Dependencies installed with `ember install some-addon-name` will cause a refresh
@@ -73,12 +73,12 @@ of a local server.
 
 ### Debugging node_modules dependencies
 
-Errors such as "a module named _____ could not be found" or a colleague's report that "well, the app works on my computer but not yours!" sometimes indicate that
+Errors such as "a module named \_\_\_\_\_ could not be found" or a colleague's report that "well, the app works on my computer but not yours!" sometimes indicate that
 the local server needs to be restarted or `node_modules` should be reinstalled.
 
-Common resolution steps are to stop the server, and then take one of these steps, and start the server again:
+Common resolution steps are to stop the server, try one or more of these steps, and start the server again:
 
-- run `npm install` or `yarn install`
+- Run `npm install` or `yarn install`
 - Delete the `node_modules` directory and run `npm install` or `yarn install`
 - Delete the `dist` directory (found in apps with versions < 3.4), delete `node_modules`, and `npm install` or `yarn install`
 - If an app uses Bower (a deprecated, npm-like tool), follow all the steps above
