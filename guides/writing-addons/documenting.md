@@ -13,7 +13,7 @@ If your addon has a documentation site or demo apps, be sure to include links to
 
 ## The CONTRIBUTING
 
- Every new addon contains a `CONTRIBUTING.md` when generated with Ember CLI. This file should describe how to run the addon locally, how to run tests,  and contributing guidelines.
+ Every new addon contains a `CONTRIBUTING.md` when generated with Ember CLI. This file should describe how to run the addon locally, how to run tests, and contributing guidelines.
 
 ## Creating a documentation site
 
