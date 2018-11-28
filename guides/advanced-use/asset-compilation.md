@@ -257,7 +257,7 @@ sample meta tag:
 ```
 
 This meta tag is required for your ember application to function properly.
-If you prefer to have this tag be part of your compiled javascript files
+If you prefer to have this tag be part of your compiled JavaScript files
 instead, you may use the `storeConfigInMeta` flag in `ember-cli-build.js`.
 
 ```javascript
@@ -303,7 +303,7 @@ The compiled files are output to the following paths:
       <td>`/assets/application-name.css`</td>
     </tr>
     <tr>
-      <td>Javascript files you import with `app.import`</td>
+      <td>JavaScript files you import with `app.import`</td>
       <td>`/assets/vendor.js`</td>
     </tr>
     <tr>
@@ -395,7 +395,7 @@ module.exports = function(defaults) {
 ## Integration
 
 When using Ember inside another project, you may want to launch Ember only when
-a specific route is accessed. If you're preloading the Ember javascript before
+a specific route is accessed. If you're preloading the Ember JavaScript before
 you access the route, you have to disable `autoRun`:
 
 ```javascript
