@@ -8,8 +8,12 @@ This makes the addon easier to search for in the [npm repository](https://www.np
 
 ## The README
 
-Every addon should have a `README.md` file describing why someone might want to use the addon, installation instructions, how to run tests, and contributing guidelines.
+Every addon should have a `README.md` file describing why someone might want to use the addon and how to install it.
 If your addon has a documentation site or demo apps, be sure to include links to them.
+
+## The CONTRIBUTING
+
+ Every new addon contains a `CONTRIBUTING.md` when generated with Ember CLI. This file should describe how to run the addon locally, how to run tests,  and contributing guidelines.
 
 ## Creating a documentation site
 
