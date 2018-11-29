@@ -1,6 +1,6 @@
 Ember CLI offers two different options for the layout of project files - `classic` and `pods`.
 
-## Classic Layout
+## Classic layout
 The classic project structure is the default when creating a new Ember app or addon. The classic project structure organizes the filesystem by entity types. 
 
 For example, if you have a `post` resource and a `tags` component in your project, the `classic` structure would have this filesystem:
@@ -22,7 +22,7 @@ app
 
 The `classic` project provides the easiest way to get started with Ember. It's the easiest way to generate files using Ember CLI.  Addons __should only use__ the `classic` structure for compatibility with either `classic` or `pods-based` consuming applications.
 
-## Pods Layout
+## Pods layout
 Pods-based projects organize files by features, combining all entity files into a common directory. The aforementioned example as a `pods-based` project would have this filesystem:
 
 ```sh
@@ -46,7 +46,7 @@ Developers who choose the pods structure will need to do more of their file mana
 
 As mentioned above, addons __should not__ use the `pods` structure
 
-## Classic or Pods?
+## Classic or pods?
 Ember projects do not have to be either `classic` or `pods-based`. They can also be mixed projects. As a default, if a file is not found on the pod structure, the Ember Resolver will look it up within the classic filesystem structure.
 
 If you start with a `classic` project, you can switch to the `pods-based` filesystem as your project grows without changing the existing `classic` filesystem. You can migrate the `classic` structure as time allows in the future.
@@ -55,7 +55,7 @@ As stated above, when using `pods`, developers need to do more to manage their f
 
 If you have the same route in both the `classic` and `pods-based` structures your app may not work as expected. For example if you have `app/routes/about.js` and `app/about/route.js` in your app.  In this case, the Ember Resolver would....do something.
 
-## Pods as Default
+## Pods as default
 If you would like to use the pods structure as the default without using the `--pod` option, you can set `usePods` in `.ember-cli`:
 
 ```js
@@ -101,7 +101,7 @@ app
         └── template.hbs
 ```
 
-## Common Questions
+## Common questions
 
 I heard Ember is getting a new project or file structure?  Yes, there are proposed Ember changes that include a new project/file structure.  The new file system is most similar to pods, with its advantages but with better developer ergonomics like the `classic` filesystem. 
 
