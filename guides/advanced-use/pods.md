@@ -17,7 +17,7 @@ app
     └── post.hbs
 ```
 
-Pods-based projects organize files by features, combining all entity files into a common directory.  The aforementioned example as a `pods-based` project would have this filesystem:
+Pods-based projects organize files by features, combining all entity files into a common directory. The aforementioned example as a `pods-based` project would have this filesystem:
 
 ```sh
 app
