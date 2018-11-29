@@ -128,7 +128,7 @@ ember install <addon-name>
 
 ### What it does
 
-`ember install` is used to install addons within your app. An addon is an npm package that was built especially for use in an Ember app. Most addons have a name that starts with `ember`. You can find a full list of addons at [EmberObserver.com](https://emberobserver.com). There are addon versions of many popular npm libraries, as well as packages that are unique to Ember. The majority are open source community addons.
+`ember install` is used to install addons within your app. An addon is an npm package that was built especially for use in an Ember app. Most addons have a name that starts with `ember`. You can find a full list of addons at [Ember Observer](https://emberobserver.com). There are addon versions of many popular npm libraries, as well as packages that are unique to Ember. The majority are open source community addons.
 By convention, most addons have `ember` in the name, but not all of them.
 
 To use non-addon npm packages directly, see [the Ember.js Guide](https://guides.emberjs.com/release/addons-and-dependencies/managing-dependencies/)
@@ -188,7 +188,7 @@ ember build [options]
 
 `ember build` takes all of your app files and turns them into a bundle that is minified and transpiled into browser-ready JavaScript code, styles, and html. The bundled files go into a directory called `dist`. This bundle is what can be deployed to a server. By default, the `build` command uses the `development` environment configuration.
 
-Although you can upload the built files to a server yourself, many Ember projects use a community addon called [ember-cli-deploy](https://github.com/ember-cli-deploy/ember-cli-deploy) to get their apps into production. `ember-cli-deploy` has a plugin system to make it easy to deploy to many cloud vendors. Search [EmberObserver for "deploy"](https://emberobserver.com/?query=deploy) to browse available options.
+Although you can upload the built files to a server yourself, many Ember projects use a community addon called [ember-cli-deploy](https://github.com/ember-cli-deploy/ember-cli-deploy) to get their apps into production. `ember-cli-deploy` has a plugin system to make it easy to deploy to many cloud vendors. Search [Ember Observer for "deploy"](https://emberobserver.com/?query=deploy) to browse available options.
 
 Ember apps can be built with only three environments: development, production, and testing.
 
@@ -203,6 +203,6 @@ ember build --environment production
 ### Learn more
 
 - The [Ember.js Super Rentals Tutorial](https://guides.emberjs.com/release/tutorial/deploying/) has a section on deploying
-- Search community addons for deployment on [EmberObserver](https://emberobserver.com/?query=deploy)
+- Search community addons for deployment on [Ember Observer](https://emberobserver.com/?query=deploy)
 - Enable feature flags in different environments using the
 [environment config](https://guides.emberjs.com/release/configuring-ember/configuring-your-app/)

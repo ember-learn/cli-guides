@@ -4,7 +4,7 @@ When working on an Ember app, sometimes you may want to customize how certain ki
 
 For information on stylesheets, please see the dedicated section, [Stylesheet compilation](../stylesheets/)
 
-## Raw Assets
+## Raw assets
 
 To include images, fonts, or other assets, place them in the `public/assets` directory.
 
@@ -16,7 +16,7 @@ This functionality of Ember CLI comes from
 [broccoli-asset-rev](https://github.com/rickharrison/broccoli-asset-rev). Be
 sure to check out all the options and usage notes.
 
-## JS Transpiling
+## JS transpiling
 
 Ember CLI automatically transpiles future JavaScript (ES6/ES2015, ES2016 and beyond) into standard ES5
 JavaScript that runs on every browser using [Babel JS](https://babeljs.io) with the [Ember CLI Babel](https://github.com/babel/ember-cli-babel) addon.
@@ -75,7 +75,7 @@ module.exports = function(defaults) {
 
 As of Version 2.13, Ember CLI uses Babel 6.X for transpilation. Ember CLI versions prior to 2.13 use Babel Babel 5.X, and you can check its documentation for a comprehensive list of [all available transformations](https://github.com/babel/babel.github.io/blob/5.0.0/docs/usage/transformers/index.md) and [options](https://github.com/babel/babel.github.io/blob/5.0.0/docs/usage/options.md).
 
-## Source Maps
+## Source maps
 
 Ember CLI supports producing source maps for your concatenated and minified JS source files.
 
@@ -245,7 +245,7 @@ module.exports = function(defaults) {
 Or remove the entry from your `EmberApp` and  `broccoli-asset-rev`
 from your `package.json`.
 
-## Application Configuration
+## Application configuration
 
 Application configurations from your `ember-cli-build.js` file will be stored inside a
 special meta tag in `dist/index.html`.

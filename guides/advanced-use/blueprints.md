@@ -228,10 +228,10 @@ The object passed to `locals` looks like this:
 }
 ```
 
-<!-- Old ember-cli docs or api examples are not correct -->
+<!-- Old Ember CLI docs or api examples are not correct -->
 <!-- PR https://github.com/ember-cli/ember-cli/pull/8210 to fix api docs -->
 
-<!-- Options object is extensive and not documented anywhere.  Should be included in ember-cli API docs -->
+<!-- Options object is extensive and not documented anywhere.  Should be included in Ember CLI API docs -->
 
 This hook must return an object or a Promise which resolves to an object. The resolved object will be merged with the before mentioned default `locals`.
 
@@ -279,9 +279,9 @@ The `afterInstall` and `afterUninstall` hooks receives the same arguments as loc
 
 The `install` hook installs the blueprint and is not normally used when developing addons.  If you don't want your blueprint to install any files, you can override the `install` hook.
 
-See the ember-cli [source](https://github.com/ember-cli/ember-cli/blob/master/lib/models/blueprint.js) for `install` hook details.
+See the Ember CLI [source](https://github.com/ember-cli/ember-cli/blob/master/lib/models/blueprint.js) for `install` hook details.
 
-## Pod Blueprints
+## Pod blueprints
 
 Pod-based applications use a different file structure to give you more control to scale and maintain large applications. To support pods, the blueprint need a different structure. Blueprints supporting pods are universal and will support both pods and classic applications.
 
@@ -503,7 +503,7 @@ The options object passed to `fileMapTokens` is:
 
 As mentioned above, Ember's built-in [blueprints](https://github.com/emberjs/ember.js/tree/master/blueprints) provide detailed examples on how to create custom blueprints.
 
-## Addon Blueprints
+## Addon blueprints
 
 As in applications, custom blueprints are available in addons.  Addon blueprints are used to generate code snippets in the client application.  Addons can also have a default blueprint that will run automatically after the addon is installed.
 
