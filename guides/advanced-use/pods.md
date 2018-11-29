@@ -1,4 +1,4 @@
-Ember supports two different project structures - `classic` and `pods-based`.
+Ember CLI offers two different options for the layout of project files - `classic` and `pods`.
 
 The classic project structure organizes the filesystem by entity types.  For example, if you have a `post` resource and a `tags` component in your project, the `classic` structure would have this filesystem:
 
