@@ -52,7 +52,7 @@ If you would like to use the pods structure as the default without using the `--
 ```
 
 ### podModulePrefix
-Rather than hold your resource directories on the root of your app you can define a POD path using the attribute podModulePrefix within your environment configs. The POD path should use the following format: `{appname}/{poddir}`.
+Rather than keep your resource directories on the root of your app, you can create a `pod` directory and specify its path as the `attribute podModulePrefix` within `config/environment.js` The `pod` path should use the following format: `{appname}/{poddir}`.
 
 ```js
 // config/environment.js
