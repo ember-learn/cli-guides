@@ -1,6 +1,6 @@
 Ember CLI offers two different options for the layout of project files - `classic` and `pods`.
 
-The classic project structure organizes the filesystem by entity types.  For example, if you have a `post` resource and a `tags` component in your project, the `classic` structure would have this filesystem:
+The classic project structure organizes the filesystem by entity types. For example, if you have a `post` resource and a `tags` component in your project, the `classic` structure would have this filesystem:
 
 ```sh
 app
