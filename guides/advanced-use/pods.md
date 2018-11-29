@@ -31,7 +31,8 @@ app
     ├── route.js
     └── template.hbs
 ```
-To create the pods structure in an application you add the `--pod` option the the `ember generate` command.  For example, to generate the `tags` component, you would run `ember generate component tags --pod`.
+
+To create the pods structure in an application you add the `--pod` option the the `ember generate` command. For example, to generate the `tags` component, you would run `ember generate component tags --pod`.
 
 As your app becomes larger, a feature-driven structure may be better. Splitting your application by functionality/resource would give you more power and control to scale and maintain it.
 
