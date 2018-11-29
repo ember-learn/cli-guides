@@ -37,7 +37,7 @@ As your app becomes larger, a feature-driven structure may be better. Splitting 
 
 ### Classic or Pods?
 <!-- Is this going to be confusing? -->
-Ember projects do not have to be either `classic` or `pods-based`, they can also be mixed projects. As a default, if a file is not found on the pod structure, the Ember Resolver will look it up within the classic filesystem structure.
+Ember projects do not have to be either `classic` or `pods-based`. They can also be mixed projects. As a default, if a file is not found on the pod structure, the Ember Resolver will look it up within the classic filesystem structure.
 
 If you start with a `classic` project, you can switch to the `pods-based` filesystem as your project grows without changing the existing `classic` filesystem. You can migrate the `classic` structure as time allows in the future.
 
