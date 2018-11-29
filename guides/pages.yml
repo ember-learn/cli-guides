@@ -29,7 +29,7 @@
     url: 'asset-compilation'
   - title: 'Stylesheet compilation'
     url: 'stylesheets'
-  - title: 'Pods Projects'
+  - title: 'Project Layouts'
     url: 'pods'
   - title: 'Creating blueprints'
     url: 'blueprints'
