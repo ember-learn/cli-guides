@@ -38,7 +38,7 @@ This directory contains a full Ember app for addon testing purposes. During test
 
 #### `package.json`
 
-If we want other people to be able to use our addon, we need to specify a name, license, version, the repository url, and description. For an addon to show up on [Ember Observer](https://emberobserver.com), it must have `keywords: ["ember-addon"]` and a repository URL.
+If we want other people to be able to use our addon, we need to specify a name, license, version, the repository URL, and description. For an addon to show up on [Ember Observer](https://emberobserver.com), it must have `keywords: ["ember-addon"]` and a repository URL.
 
 #### `config/ember-try.js`
 
