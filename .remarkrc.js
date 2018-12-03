@@ -1,8 +1,12 @@
 // .remarkrc.js
+const unified = require("unified");
+const read = require("fs").readFileSync;
+const ember = require("ember-dictionary");
+
 exports.plugins = [
   [
-    "remark-retext",
-    require("unified")().use({
+    require("remark-retext"),
+    unified().use({
       plugins: [
         [require("retext-contractions"), { straight: true }],
         require("retext-english"),
@@ -10,16 +14,17 @@ exports.plugins = [
         require("retext-repeated-words"),
         require("retext-syntax-urls"),
         [
-          require("retext-spell"), 
-            { 
-              dictionary: require("dictionary-en-us"), 
-              personal: require("./dictionary/local.dic").join('\n')
-            }
+          require("retext-spell"),
+          {
+            dictionary: ember,
+            personal: read("./.local.dic")
+          }
         ]
       ]
     })
   ],
   "remark-preset-lint-consistent",
   "remark-preset-lint-recommended",
-  ["remark-lint-list-item-indent", "space"]
+  ["remark-lint-list-item-indent", "space"],
+  "remark-lint-no-dead-urls"
 ];
