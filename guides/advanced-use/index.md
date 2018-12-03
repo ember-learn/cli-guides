@@ -39,7 +39,7 @@ A number of community build tools allow developers to use things like Typescript
 
 ## Linting
 
-A linter is a tool that checks to see if certain coding best practices are being followed, as well as checking for invalid syntax. By default, the CLI uses [eslint](https://eslint.org) plus some Ember-specific eslint plugins that help check for likely mistakes.
+A linter is a tool that checks to see if certain coding best practices are being followed, as well as checking for invalid syntax. By default, the CLI uses [ESLint](https://eslint.org) plus some Ember-specific ESLint plugins that help check for likely mistakes.
 
 To customize linting behavior, edit `.eslintrc.js`. An example configuration might be to enforce using semicolons, or change a rule violation to count as an "error" rather than a warning.
 

@@ -168,10 +168,10 @@ Fingerprinting is done using the addon
 (which is included by default).
 
 When the environment is production (e.g. `ember build --environment=production`),
-the addon will automatically fingerprint your js, css, png, jpg, and gif assets
+the addon will automatically fingerprint your JS, CSS, PNG, JPG, and GIF assets
 by appending a md5 checksum to the end of their filename
 (e.g. `assets/yourapp-9c2cbd818d09a4a742406c6cb8219b3b.js`). In addition, your
-html, js, and css files will be re-written to include the new name. There are
+html, js, and CSS files will be re-written to include the new name. There are
 a few options you can pass in to `EmberApp` in your `ember-cli-build.js` to customize
 this behavior.
 
@@ -184,14 +184,14 @@ ignore array, the contents of the file will not be processed for fingerprinting.
 * `extensions` - Default: `['js', 'css', 'png', 'jpg', 'gif', 'map']` - The file types
 to add md5 checksums.
 * `prepend` - Default: `''` - A string to prepend to all of the assets. Useful
-for CDN urls like `https://subdomain.cloudfront.net/`
+for CDN URLs like `https://subdomain.cloudfront.net/`
 * `replaceExtensions` - Default: `['html', 'css', 'js']` - The file types to
 replace source code with new checksum file names.
 * `customHash` - When specified, this is appended to fingerprinted filenames instead
 of the md5. Pass `null` to suppress the hash, which can be useful when using `prepend`.
 
 As an example, this `ember-cli-build` will exclude any file in the fonts/169929
-directory as well as add a cloudfront domain to each fingerprinted asset.
+directory as well as add a CloudFront domain to each fingerprinted asset.
 
 ```javascript
 // ember-cli-build.js
@@ -256,8 +256,8 @@ sample meta tag:
 <meta name="user/config/environment" content="%7B%22modulePre.your.config">
 ```
 
-This meta tag is required for your ember application to function properly.
-If you prefer to have this tag be part of your compiled javascript files
+This meta tag is required for your Ember application to function properly.
+If you prefer to have this tag be part of your compiled JavaScript files
 instead, you may use the `storeConfigInMeta` flag in `ember-cli-build.js`.
 
 ```javascript
@@ -395,7 +395,7 @@ module.exports = function(defaults) {
 ## Integration
 
 When using Ember inside another project, you may want to launch Ember only when
-a specific route is accessed. If you're preloading the Ember javascript before
+a specific route is accessed. If you're preloading the Ember JavaScript before
 you access the route, you have to disable `autoRun`:
 
 ```javascript

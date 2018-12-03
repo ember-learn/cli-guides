@@ -18,7 +18,7 @@ ergonomics.
 The two primary reasons are:
 
 * Lack of enabled-by-default symlinks
-* Generally slower FS operations on NTFS
+* Generally slower filesystem operations on NTFS
 
 #### For the best possible Windows experience
 
@@ -78,6 +78,6 @@ executed for each package and it would immediately start executing them as soon
 as it decided to act on a package resulting in hard-to-debug race conditions.
 
 `npm` 3 is a nearly complete rewrite of `npm`, fixing both issues. Windows users of
-Ember Cli might want to make the switch to `npm` 3 to benefit from its
+Ember CLI might want to make the switch to `npm` 3 to benefit from its
 flat module installation (solving most issues involving long path names) as well
 as its multi-stage installer.

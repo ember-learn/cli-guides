@@ -1,6 +1,6 @@
 <!-- Needs an intro section and editing -->
 
-Ember CLI supports plain CSS out of the box. You can add your css styles to
+Ember CLI supports plain CSS out of the box. You can add your CSS styles to
 `app/styles/app.css` and it will be served at `assets/application-name.css`.
 
 <!-- Ought to show how to import stylesheets from node_modules, or link to it in the guides if it's there -->
@@ -72,14 +72,14 @@ Example `app.css` with valid `@import` usage:
 
 #### CSS Preprocessors
 
-To use one of the following preprocessors, all you need to do is install the appropriate NPM module.
+To use one of the following preprocessors, all you need to do is install the appropriate npm module.
 The respective files will be picked up and processed automatically.
 
 #### LESS
 
 To enable [LESS](http://lesscss.org/), you'll need to add
 [ember-cli-less](https://github.com/gdub22/ember-cli-less) to
-your NPM modules.
+your npm modules.
 
 ```bash
 ember install ember-cli-less

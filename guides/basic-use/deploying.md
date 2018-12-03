@@ -35,7 +35,7 @@ For a tutorial that shows how to build your app and upload it to a web host usin
 
 [ember-cli-deploy](http://ember-cli-deploy.com/) is a very popular community-built addon for the Ember CLI. What this means is that it's not built into the CLI by default, but it adds commands and configurations that should feel familiar to an Ember developer. The main benefit is that you set it up once and may never have to think about it again.
 
-`ember-cli-deploy` provides the `ember deploy` command, some build hooks, and configuration files to your project. There are many [`ember-cli-deploy` plugins](https://www.emberobserver.com/categories/ember-cli-deploy-plugins) that help you deploy to many diffent destinations and web hosting services, such as AWS S3 or GitHub pages.
+`ember-cli-deploy` provides the `ember deploy` command, some build hooks, and configuration files to your project. There are many [`ember-cli-deploy` plugins](https://www.emberobserver.com/categories/ember-cli-deploy-plugins) that help you deploy to many different destinations and web hosting services, such as AWS S3 or GitHub pages.
 
 The best way to get started using ember-cli-deploy is to visit the [documentation](http://ember-cli-deploy.com/) for the project.
 
@@ -49,13 +49,13 @@ Please [open an issue](https://github.com/ember-learn/cli-guides-source) for thi
 
 ## Common deployment configurations
 
-Compared to develping an app locally, there are some options to consider when an app is in deployment. Some apps may not need to make any of these configurations, but here are just a few of the most common examples to help you get started. For more details, see the [Advanced Use](../../advanced-use/) section of the CLI guides.
+Compared to developing an app locally, there are some options to consider when an app is in deployment. Some apps may not need to make any of these configurations, but here are just a few of the most common examples to help you get started. For more details, see the [Advanced Use](../../advanced-use/) section of the CLI guides.
 
 ### Configuring `rootURL`
 
 <!-- older docs reference the "History API". Is that still a thing? I took it out. (Jen) -->
 
-Many Ember apps are served from the index of a domain, like `https://some-domain-name.com/`, which requres no configuration. However, if an app is served from somewhere other than the root `/` of the domain, like `https://some-domain-name.com/path/to/ember/app/`
+Many Ember apps are served from the index of a domain, like `https://some-domain-name.com/`, which requires no configuration. However, if an app is served from somewhere other than the root `/` of the domain, like `https://some-domain-name.com/path/to/ember/app/`
 you will need to configure the value of `rootURL` in `config/environment.js`.
 This is required for Router to function correctly.
 
@@ -68,7 +68,7 @@ if (environment === 'production') {
 }
 ```
 
-The `rootURL` is used as a prefix for assets, eg `/path/to/ember/app/assets/vendor.js`. However when
+The `rootURL` is used as a prefix for assets, e.g. `/path/to/ember/app/assets/vendor.js`. However when
 building for production, the value of `prepend` for `fingerprint` will be used instead. 
 
 Here's an example of building for production and using the `fingerprint` and `prepend` configuration. The asset URLs will not use `rootURL`. Instead, the result will be

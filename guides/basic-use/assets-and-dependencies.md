@@ -20,10 +20,19 @@ a `bower_components` directory. Bower itself is deprecated and should not be use
 
 <!-- 
 If addons are installed accidentally with `npm install` or `yarn install`,
-the blueprints can be run with .... what?
+the blueprints can be run with .... what?  
+
+Added by @maxwondercorn:
+What is now below - were should it go in the guide
+
+If you accidentally install an Ember addon using either npm or Yarn, the default blueprint will not run. To run the blueprint use:
+
+```sh
+ember generate <blueprint-name>
+```
 -->
 
-## NPM and Yarn
+## npm and Yarn
 
 Ember CLI supports both [npm](https://www.npmjs.com) and [Yarn](https://yarnpkg.com/)
 for node modules management.
@@ -68,7 +77,7 @@ When an app is being served locally, the Ember CLI will not watch for changes in
 if you install npm dependencies via `npm install <dependencies>`, you will 
 need to restart your Ember CLI server session manually.
 
-Dependencies installed with `ember install some-addon-name` will cause a refreash
+Dependencies installed with `ember install some-addon-name` will cause a refresh
 of a local server.
 
 ### Debugging node_modules dependencies
@@ -82,5 +91,5 @@ Common resolution steps are to stop the server, and then take one of these steps
 - Delete the `node_modules` directory and run `npm install` or `yarn install`
 - Delete the `dist` directory (found in apps with versions < 3.4), delete `node_modules`, and `npm install` or `yarn install`
 - If an app uses Bower (a deprecated, npm-like tool), follow all the steps above
-in addition to deleteing `bower_components` and running `bower install`
+in addition to deleting `bower_components` and running `bower install`
 

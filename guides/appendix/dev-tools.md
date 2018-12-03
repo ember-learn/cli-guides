@@ -1,14 +1,14 @@
 <!-- Copy over code editor content -->
 <!-- This intro paragraph needs improvement -->
 
-This section provides information on integrating Ember into various code editors and how to debug ember-cli node code.
+This section provides information on integrating Ember into various code editors and how to debug Ember CLI node code.
 
 ## Code Editor Integrations
 
 ### Visual Studio Code
 If you are using [VSCode](https://code.visualstudio.com/) with `ember-cli`, there's an [official
 extension pack](https://marketplace.visualstudio.com/items?itemName=emberjs.emberjs#overview) 
-maintained by the Ember Learning team that adds multiple ember plugins that can help in 
+maintained by the Ember Learning team that adds multiple Ember plugins that can help in 
 Ember development. If you already have VSCode installed on your machine, you can 
 [click here](vscode:extension/emberjs.emberjs) to view this extension pack inside VSCode. Alternatively, you can 
 also search for `emberjs.emberjs` inside the [extensions view](https://code.visualstudio.com/docs/editor/extension-gallery).
@@ -20,7 +20,7 @@ packages available specific to Ember development.
 
 `Atom -> Preferences -> Install`
 
-* [ember-cli-helper](https://atom.io/packages/ember-cli-helper) - ember-cli integration in Atom
+* [ember-cli-helper](https://atom.io/packages/ember-cli-helper) - Ember CLI integration in Atom
 * [ember-tabs](https://atom.io/packages/ember-tabs) - Makes atom.io work better with Ember pods
 * [atom-ember-components](https://atom.io/packages/atom-ember-components) - See all controllers and components that are rendering your component. Currently only works with pods structure.
 
@@ -38,7 +38,7 @@ To do that, ensure your emacs configuration contains the following:
 ```
 
 An [ember-mode](https://github.com/madnificent/ember-mode) package is also
-available. It has shortcuts for quickly navigating files in ember projects,
+available. It has shortcuts for quickly navigating files in Ember projects,
 running generators, and running build, serve, and test tasks. It also includes
 support for linking build errors to files and minibuffer notifications of
 `ember serve` status. It can be installed from [MELPA](http://melpa.org/). To
@@ -53,7 +53,7 @@ use MELPA, ensure your configuration contains the following:
 
 Then ember-mode can be installed from the package menu at `M-x
 package-list-packages`. After it is installed, add a file named
-`.dir-locals.el` to the root of your ember projects with the contents:
+`.dir-locals.el` to the root of your Ember projects with the contents:
 
 ```bash
 ((nil . ((mode . ember))))

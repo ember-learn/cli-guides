@@ -88,7 +88,7 @@ The `_root_` token is replaced with either `app` or `addon` depending upon where
 
 Variables can be inserted into templates with `<%= someVariableName %>`.
 
-For example, the built-in util blueprint `files/app/utils/**name**.js` looks like this:
+For example, the built-in `util` blueprint `files/app/utils/**name**.js` looks like this:
 
 ```javascript
 export default function <%= camelizedModuleName %>() {
@@ -128,7 +128,7 @@ More custom variables can be created using the `locals` hook, as documented belo
 
 ### Index.js
 
-Overriding the blueprint hooks allows for implementing custom installation and uninstallation behavior. The blueprint's description and command options are also defined in the `index` file.
+Overriding the blueprint hooks allows for implementing custom installation and uninstall behavior. The blueprint's description and command options are also defined in the `index` file.
 
 For example, `ember help generate foo` would show
 
@@ -279,7 +279,7 @@ The `afterInstall` and `afterUninstall` hooks receives the same arguments as loc
 
 The `install` hook installs the blueprint and is not normally used when developing addons.  If you don't want your blueprint to install any files, you can override the `install` hook.
 
-See the ember-cli [source](https://github.com/ember-cli/ember-cli/blob/master/lib/models/blueprint.js) for `install` hook details.
+See the Ember CLI [source](https://github.com/ember-cli/ember-cli/blob/master/lib/models/blueprint.js) for `install` hook details.
 
 ## Pod Blueprints
 

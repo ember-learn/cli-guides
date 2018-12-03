@@ -115,7 +115,7 @@ Addon developers have many options for handling styles within their addons. For 
 
 To automatically include CSS styling for your addon, create a `styles` directory in the `addon` directory, and place your CSS files in it. For example, we could create `addon/styles/our-addon-name.css`.
 
-When our addon is used in an app, these CSS rules will be added to the end of the app's `vendor.css` when it is built or served. The rules will be in the same scope as the rest of the app's css, so name your class selectors wisely! Otherwise they will clash with the styles of other addons or the app's own styling.
+When our addon is used in an app, these CSS rules will be added to the end of the app's `vendor.css` when it is built or served. The rules will be in the same scope as the rest of the app's CSS, so name your class selectors wisely! Otherwise they will clash with the styles of other addons or the app's own styling.
 
 For example, writing a CSS rule for `div` is problematic, because it will affect all `div`s in the app, but a rule targeting `.my-app-name div` is probably fine.
 
@@ -186,13 +186,13 @@ For more information about building interactivity for your addon, reference the 
 ### Providing multiple templates in one addon
 
 
-## Writing a JavaScript utilties addon
+## Writing a JavaScript utilities addon
 
 Many addons have no UI components in them, or they offer a combination of JavaScript utilities and template helpers. In the regular npm ecosystem, JavaScript utility libraries are some of the most common packages. Although we could write a normal node package, providing an Ember addon to developers has some advantages. The developers don't need to worry about how to import a normal npm package. They can use `ember install our-addon-name` and get going right away. An addon can also take advantage of Ember or Ember CLI-specific APIs.
 
 ### Providing public API methods in the addon
 
-After we've created our addon file structure with `ember addon <addon-name>`, we can write some functions that will be available for an app to use. Such functions are commonly referred to as "public API." If the behavior of public API changes, it's convention in the Ember community to follow semver and change the major version of the addon. [Semver](https://semver.org/) is a cross-program-language versioning scheme that helps other developers or coworkers know which versions of a library will require them to refactor their apps.
+After we've created our addon file structure with `ember addon <addon-name>`, we can write some functions that will be available for an app to use. Such functions are commonly referred to as "public API." If the behavior of public API changes, it's convention in the Ember community to follow SemVer and change the major version of the addon. [SemVer](https://semver.org/) is a cross-program-language versioning scheme that helps other developers or coworkers know which versions of a library will require them to refactor their apps.
 
 All npm packages have an entry point. By default, the entry point is named `{addonName}/index.js`, at the top level inside the addon. The files exported from `addon/index.js` will be available to developers using the addon in their apps.
 
@@ -229,7 +229,7 @@ export default Component.extend({
 
 ### Organizing public API code
 
-One common pattern for managing an addon's JavaScript code is to define the methods in many separate files, perhaps grouped into subfolders, import them into `index.js`, and then export them.
+One common pattern for managing an addon's JavaScript code is to define the methods in many separate files, perhaps grouped into subdirectories, import them into `index.js`, and then export them.
 
 For example, an `index.js` file might contain nothing more than imports and exports:
 
@@ -241,7 +241,7 @@ export { moreEnthusiasm, curbedEnthusiasm };
 
 ### How to keep learning
 
-This is a very tiny example of what addons can do in terms of providing JavaScript utilties to apps. For more advanced techniques, study other well established addons. Just like there are many ways and reasons to build an Ember app, the same is true for addons!
+This is a very tiny example of what addons can do in terms of providing JavaScript utilities to apps. For more advanced techniques, study other well established addons. Just like there are many ways and reasons to build an Ember app, the same is true for addons!
 
 ## Writing an npm package wrapper
 

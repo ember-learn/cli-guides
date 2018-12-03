@@ -29,9 +29,9 @@ For more inspiration, take a look at how your favorite addons do their documenta
 
 When you create an addon using the Ember CLI, it includes tags in the `package.json` that help it get picked up for inclusion in Ember Observer. There are objective and subjective evaluations that factor into an addon's overall score and ranking. Read more about the scoring [here](https://www.emberobserver.com/about).
 
-## Following semver
+## Following SemVer
 
-Following [Semver](https://semver.org/), or Semantic Versioning, is highly encouraged for addon authors. It is the main way to inform an addon's users of breaking changes, new features, and patches.
+Following [SemVer](https://semver.org/), or Semantic Versioning, is highly encouraged for addon authors. It is the main way to inform an addon's users of breaking changes, new features, and patches.
 
 When there are major versions with breaking changes, it is important to include notes about how users can migrate to new versions.
 Depending on the extent of the breaking changes, the migration steps often have a summary in the `README` and a link to more detailed information in the release notes.

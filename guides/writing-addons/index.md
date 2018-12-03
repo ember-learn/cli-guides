@@ -8,7 +8,7 @@ Although an addon looks and feels a lot like an Ember app, it is important to wo
 
 ### Generating the addon files
 
-Use the ember-cli to create the file structure for the addon. Run this command in a fresh directory, not inside an existing Ember app:
+Use the Ember CLI to create the file structure for the addon. Run this command in a fresh directory, not inside an existing Ember app:
 
 ```bash
 ember addon <addon-name> [options]
@@ -38,7 +38,7 @@ This directory contains a full Ember app for addon testing purposes. During test
 
 #### `package.json`
 
-If we want other people to be able to use our addon, we need to specify a name, license, version, the repository url, and description. For an addon to show up on [Ember Observer](https://emberobserver.com), it must have `keywords: ["ember-addon"]` and a repository URL.
+If we want other people to be able to use our addon, we need to specify a name, license, version, the repository URL, and description. For an addon to show up on [Ember Observer](https://emberobserver.com), it must have `keywords: ["ember-addon"]` and a repository URL.
 
 #### `config/ember-try.js`
 
