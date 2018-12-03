@@ -23,6 +23,7 @@ packages available specific to Ember development.
 * [ember-cli-helper](https://atom.io/packages/ember-cli-helper) - Ember CLI integration in Atom
 * [ember-tabs](https://atom.io/packages/ember-tabs) - Makes atom.io work better with Ember pods
 * [atom-ember-components](https://atom.io/packages/atom-ember-components) - See all controllers and components that are rendering your component. Currently only works with pods structure.
+* [atom-ember-snippets](https://atom.io/packages/ember-snippets) - Autocomplete for Ember module imports, component, service and route skeletons, and more. 
 
 ### Emacs
 

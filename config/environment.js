@@ -29,7 +29,8 @@ module.exports = function(environment) {
     },
 
     guidemaker: {
-      title: 'Ember CLI Guides'
+      title: 'Ember CLI Guides',
+      sourceRepo: 'https://github.com/ember-learn/cli-guides'
     }
   };
 

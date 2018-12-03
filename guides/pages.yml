@@ -4,7 +4,7 @@
     - title: "The Ember CLI"
       url: ""
 
-- title: 'Basic Use'
+- title: 'Basic use'
   url: 'basic-use'
   pages:
     - title: 'Installing'
@@ -25,7 +25,7 @@
   pages:
   - title: 'Overview'
     url: 'index'
-  - title: 'Asset Compilation'
+  - title: 'Asset compilation'
     url: 'asset-compilation'
   - title: 'Stylesheet compilation'
     url: 'stylesheets'
@@ -42,7 +42,7 @@
   - title: 'Writing documentation'
     url: 'documenting'
 
-- title: 'API Documentation'
+- title: 'API documentation'
   url: 'api-documentation'
   pages:
   - title: 'Overview'
@@ -55,7 +55,7 @@
     url: 'index'
   - title: 'Windows support'
     url: 'windows'
-  - title: 'Developer Tools'
+  - title: 'Developer tools'
     url: 'dev-tools'
   - title: 'Common issues'
     url: 'common-issues'

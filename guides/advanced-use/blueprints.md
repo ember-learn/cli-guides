@@ -2,11 +2,11 @@ Have you ever wanted to define your own custom boilerplate when you create new f
 
 Ember's built-in [blueprints](https://github.com/emberjs/ember.js/tree/master/blueprints) are a source of detailed examples to help you learn more about blueprints.  The Ember CLI API docs on [blueprints](https://ember-cli.com/api/classes/Blueprint.html) provide advanced information for developing blueprints.
 
-To see a list of all available blueprints with a short descriptions of what they do, run `ember generate --help` or `ember help generate`.
+To see a list of all available blueprints with short descriptions of what they do, run `ember generate --help` or `ember help generate`.
 
 ### Generating Blueprints
 
-This in an example of how to generate a standard Route blueprint.
+This is an example of how to generate a standard Route blueprint.
 
 ```sh
  ember generate route foo
@@ -272,18 +272,18 @@ Called before any of the template files are processed and receives the same argu
 
 ### afterInstall & afterUninstall
 
-The `afterInstall` and `afterUninstall` hooks receives the same arguments as locals. Use it to do any custom work after the files are processed. For example, the built-in route blueprint uses these hooks to add and remove relevant route declarations in app/router.js.
+The `afterInstall` and `afterUninstall` hooks receive the same arguments as `locals`. Use it to perform any custom work after the files are processed. For example, the built-in `route` blueprint uses these hooks to add and remove relevant route declarations in `app/router.js`.
 
 <!-- Was in the old docs but the install hook would be very specialized/advanced use case.  Does it need to be documented in the guides? -->
 ### install
 
-The `install` hook installs the blueprint and is not normally used when developing addons.  If you don't want your blueprint to install any files, you can override the `install` hook.
+The `install` hook installs the blueprint and is not normally used when developing blueprints. The hook can be used for advanced blueprints, for example if you don't want your blueprint to install any files.
 
 See the Ember CLI [source](https://github.com/ember-cli/ember-cli/blob/master/lib/models/blueprint.js) for `install` hook details.
 
 ## Pod Blueprints
 
-Pod-based applications use a different file structure to give you more control to scale and maintain large applications. To support pods, the blueprint need a different structure. Blueprints supporting pods are universal and will support both pods and classic applications.
+Pod-based applications use a different file structure giving you more control to scale and maintain large applications. To support pods, the blueprint needs a different structure. Blueprints supporting pods are universal and will support both pods and classic applications.
 
 To see which blueprints support the `--pod` option, you can use the help command. For example, `ember help generate component` will give you the list of options for the component blueprint, one of them being `--pod`.
 
@@ -365,7 +365,7 @@ installing
 
 ### Defining a Custom Pods Blueprint
 
-Blueprints in pods applications are created the same way as classic applications. You define your own blueprints using `ember generate blueprint <name>`:
+Blueprints in pods applications are created in the same way as classic applications. You define your own blueprints using `ember generate blueprint <name>`:
 
 ```sh
 ember generate blueprint foo
@@ -539,7 +539,7 @@ but you may find this hook used in older addons.
 
 Installs an npm package or dependency into the client application
 
-Each of the hooks return a promise, so they can all be chained with `.then()`. The following is an example of each of these:
+Each of the hooks returns a promise, so they can all be chained with `.then()`. The following is an example of each of these:
 
 ```js
 // blueprints/ember-cli-x-button/index.js

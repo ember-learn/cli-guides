@@ -108,10 +108,10 @@ the `minifyCSS:options` object in your ember-cli-build. Minification is enabled 
 default in the production-env and can be disabled using the `minifyCSS:enabled`
 switch.
 
-Similarly, the js-files are minified with `broccoli-uglify-js` in the
-production-env by default. You can pass custom options to the minifier via the
-`minifyJS:options` object in your ember-cli-build. To enable or disable JS minification
-you may supply a boolean value for `minifyJS:enabled`.
+Similarly, the js-files are minified with `ember-cli-uglify`
+in the production environment by default. You can pass custom options to the minifier via the
+`ember-cli-uglify:options` object in your ember-cli-build. To enable or disable JS minification
+you may supply a boolean value for `ember-cli-uglify:enabled`.
 
 For example, to disable minifying of CSS and JS, add in `ember-cli-build.js`:
 
@@ -121,7 +121,7 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    minifyJS: {
+    'ember-cli-uglify': {
       enabled: false
     },
     minifyCSS: {
@@ -134,9 +134,16 @@ module.exports = function(defaults) {
 };
 ```
 
+More details on available options to customize JavaScript minification can be found in
+[`ember-cli-uglify` docs](https://github.com/ember-cli/ember-cli-uglify#ember-cli-uglify).
+
+***Note**: The option object for minifying of JavaScript files was renamed in `ember-cli-uglify@2.x`,
+which is part of Ember CLI's default blueprint since 2.16.0. The option was called `minifyJS`
+for `ember-cli-uglify@1.x`.*
+
 ### Exclude from minification
 
-Some files should be excluded from minification, such as copied-and-pasted third party scripts that are already minified.
+Some files should be excluded from minification, such as copied-and-pasted third-party scripts that are already minified.
 
 To exclude assets from `dist/assets` from being minified, one can pass options for
 [broccoli-uglify-sourcemap](https://github.com/ef4/broccoli-uglify-sourcemap) like so:
@@ -171,8 +178,8 @@ When the environment is production (e.g. `ember build --environment=production`)
 the addon will automatically fingerprint your JS, CSS, PNG, JPG, and GIF assets
 by appending a md5 checksum to the end of their filename
 (e.g. `assets/yourapp-9c2cbd818d09a4a742406c6cb8219b3b.js`). In addition, your
-html, js, and CSS files will be re-written to include the new name. There are
-a few options you can pass in to `EmberApp` in your `ember-cli-build.js` to customize
+HTML, JS, and CSS files will be re-written to include the new name. There are
+a few options you can pass into `EmberApp` in your `ember-cli-build.js` to customize
 this behavior.
 
 * `enabled` - Default: `app.env === 'production'` - Boolean. Enables fingerprinting
@@ -257,6 +264,7 @@ sample meta tag:
 ```
 
 This meta tag is required for your Ember application to function properly.
+
 If you prefer to have this tag be part of your compiled JavaScript files
 instead, you may use the `storeConfigInMeta` flag in `ember-cli-build.js`.
 
@@ -303,7 +311,7 @@ The compiled files are output to the following paths:
       <td>`/assets/application-name.css`</td>
     </tr>
     <tr>
-      <td>Javascript files you import with `app.import`</td>
+      <td>JavaScript files you import with `app.import`</td>
       <td>`/assets/vendor.js`</td>
     </tr>
     <tr>
@@ -363,7 +371,7 @@ module.exports = function(defaults) {
 };
 ```
 
-The `outputPaths.app.css` option uses a key value relationship. The *key* is
+The `outputPaths.app.css` option uses a key-value relationship. The *key* is
 the input file and the *value* is the output location. Note that we do not
 include the extension for the input path, because each preprocessor has a
 different extension.
