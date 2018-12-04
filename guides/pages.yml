@@ -30,7 +30,7 @@
   - title: 'Stylesheet compilation'
     url: 'stylesheets'
   - title: 'Project Layouts'
-    url: 'pods'
+    url: 'project-layouts'
   - title: 'Creating blueprints'
     url: 'blueprints'
 
