@@ -132,7 +132,7 @@ Search for `Ember.js` and click the Install button.
 
 ### Vim
 
-If you are using [Vim](http://www.vim.org/) with `Ember CLI`, Vim creates
+If you are using [Vim](http://www.vim.org/) with Ember CLI, Vim creates
 temporary backups and autosaves which interfere with broccoli, so they need to
 either be moved out of the way or disabled. To do that, ensure your .vimrc
 contains the following:
