@@ -28,7 +28,7 @@ What is now below - were should it go in the guide
 If you accidentally install an Ember addon using either npm or Yarn, the default blueprint will not run. To run the blueprint use:
 
 ```sh
-ember generate <blueprint-name>
+ember generate <addon-name>
 ```
 -->
 
