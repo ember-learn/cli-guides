@@ -97,10 +97,10 @@ Now, an app can use the addon with their own content inside:
 {{/addon-name}}
 ```
 
-Whatever goes inside the block form addon will show up where the `{{yield}}` was. This is the markdown that renders in the app:
+Whatever goes inside the block form addon will show up where the `{{yield}}` was. This is the markup that renders in the app:
 
 ```html
-<!-- markdown rendered by running the app -->
+<!-- markup rendered by running the app -->
 
 <button>
   Register <img href="./images/some-cute-icon.png" alt="">
