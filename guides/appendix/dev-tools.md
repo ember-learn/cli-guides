@@ -15,7 +15,7 @@ also search for `emberjs.emberjs` inside the [extensions view](https://code.visu
 
 ### Atom
 
-If you are using [Atom](https://atom.io) with `Ember CLI`, there are some
+If you are using [Atom](https://atom.io) with Ember CLI, there are some
 packages available specific to Ember development.
 
 `Atom -> Preferences -> Install`
