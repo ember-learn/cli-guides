@@ -1,4 +1,5 @@
 // .remarkrc.js
+/* eslint-env node */
 const unified = require("unified");
 const read = require("fs").readFileSync;
 const ember = require("ember-dictionary");
