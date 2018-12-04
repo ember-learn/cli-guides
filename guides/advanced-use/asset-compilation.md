@@ -4,7 +4,7 @@ When working on an Ember app, sometimes you may want to customize how certain ki
 
 For information on stylesheets, please see the dedicated section, [Stylesheet compilation](../stylesheets/)
 
-## Raw assets
+## Raw Assets
 
 To include images, fonts, or other assets, place them in the `public/assets` directory.
 
