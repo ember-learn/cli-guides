@@ -135,7 +135,7 @@ ember install <addon-name>
 `ember install` is used to install addons within your app. An addon is an npm package that was built specifically for use in an Ember app. You can find a full list of addons on [Ember Observer](https://emberobserver.com). There are addon versions of many popular npm libraries, as well as packages that are unique to Ember. The majority are open source community addons. 
 By convention, most addons have `ember` in the name, but not all of them.
 
-To use non-addon npm packages directly, see "Managing Dependencies" section of the [the Ember.js Guide](https://guides.emberjs.com/release/addons-and-dependencies/managing-dependencies/)
+To use non-addon npm packages directly, see "Managing Dependencies" section of the [Ember.js Guide](https://guides.emberjs.com/release/addons-and-dependencies/managing-dependencies/)
 to learn about the options.
 
 ### Example use
