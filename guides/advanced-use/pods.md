@@ -47,13 +47,15 @@ Developers who choose the pods structure will need to do more of their file mana
 As mentioned above, addons __should not__ use the `pods` structure
 
 ## Classic or pods?
-Ember projects do not have to be either `classic` or `pods-based`. They can also be mixed projects. As a default, if a file is not found on the pod structure, the Ember Resolver will look it up within the classic filesystem structure.
+Ember projects do not have to be either `classic` or `pods-based`. They can also be mixed projects. By default, if the Ember Resolver can not find a file in the pod structure, it will look for it in the classic structure.
 
-If you start with a `classic` project, you can switch to the `pods-based` filesystem as your project grows without changing the existing `classic` filesystem. You can migrate the `classic` structure as time allows in the future.
+If you start with a `classic` project, you can switch to the `pods-based` filesystem as your project grows without changing the existing `classic` filesystem. You can migrate the `classic` structure in the future, as time allows.
 
-As stated above, when using `pods`, developers need to do more to manage their file structure. The Ember Resolver can manage a `classic`, `pods-based` or `mixed` app but there can be more edge cases with a `mixed` app.  
+As stated previously, with `pods` developers need to do more to manage their file structure. The Ember Resolver can manage a `classic`, `pods-based` or `mixed` app but there can be edge cases with a `mixed` app.  
 
-If you have the same route in both the `classic` and `pods-based` structures your app may not work as expected. For example if you have `app/routes/about.js` and `app/about/route.js` in your app.  In this case, the Ember Resolver would....do something.
+For example, if you happen to have the same route in both the `classic` and `pods-based` structures, which one will the Ember Resolver use?
+
+In this case, the resolver would use the `pods` route and ignore the `classic` route.
 
 ## Pods as default
 If you would like to use the pods structure as the default without using the `--pod` option, you can set `usePods` in `.ember-cli`:
