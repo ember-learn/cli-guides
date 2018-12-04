@@ -82,7 +82,7 @@ Simply remove these directories from the folders Sublime Text watches:
 
 ### WebStorm
 If you are using [WebStorm](https://www.jetbrains.com/webstorm/) with
-`Ember CLI`, you will need to modify your `.gitignore` file, enable
+Ember CLI, you will need to modify your `.gitignore` file, enable
 `ECMAScript6` settings, and mark certain directories.
 
 First, add the following line to `.gitignore`:
