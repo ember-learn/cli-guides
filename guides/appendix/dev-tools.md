@@ -27,7 +27,7 @@ packages available specific to Ember development.
 
 ### Emacs
 
-If you are using [Emacs](https://www.gnu.org/software/emacs/) with `Ember CLI`,
+If you are using [Emacs](https://www.gnu.org/software/emacs/) with Ember CLI,
 Emacs creates temporary backup, autosave, and lockfiles that interfere with
 broccoli watcher, so they need to either be moved out of the way or disabled.
 To do that, ensure your emacs configuration contains the following:
