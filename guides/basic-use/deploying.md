@@ -68,7 +68,7 @@ if (environment === 'production') {
 }
 ```
 
-The `rootURL` is used as a prefix for assets, eg `/path/to/ember/app/assets/vendor.js`. However when
+The `rootURL` is used as a prefix for assets, e.g. `/path/to/ember/app/assets/vendor.js`. However when
 building for production, the value of `prepend` for `fingerprint` will be used instead.
 
 Here's an example of building for production and using the `fingerprint` and `prepend` configuration. The asset URLs will not use `rootURL`. Instead, the result will be
