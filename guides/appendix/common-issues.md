@@ -7,7 +7,7 @@ issues and ultimately to problems installing dependencies. See
 [https://gist.github.com/isaacs/579814](https://gist.github.com/isaacs/579814)
 for a collection of various solutions.
 
-## Installing From Behind a Proxy
+## Installing from behind a proxy
 
 If you're behind a proxy, you might not be able to install because Ember CLI–or
 some of its dependencies–tries to `git clone` a `git://` URL. (In this scenario,
@@ -30,14 +30,14 @@ As a workaround you can configure `git` to make the translation:
 git config --global url."https://".insteadOf git://
 ```
 
-## Using Canary Build instead of release
+## Using Canary build instead of release
 
 In most cases you should use a stable release, but if you need to install a canary version to test beta features, you'd do it like this:
 
 For Ember: `bower install ember#canary --resolution canary`
 For `ember-data`: `npm install --save-dev emberjs/data#master`
 
-## Windows Build Performance Issues
+## Windows build performance issues
 
 See [The Windows Section](/release/appendix/windows/) for more details.
 
@@ -89,7 +89,7 @@ from working correctly. There are several workarounds:
 1. Watch for changes by polling the file system via: `ember serve --watcher polling`.
 2. Use [nfs for synced folders](https://docs.vagrantup.com/v2/synced-folders/nfs.html).
 
-### VM Setup
+### VM setup
 
 When setting up your VM, install Ember CLI dependencies as you normally would.
 Some of these dependencies (such as [broccoli-sass](#sass)) may have native
