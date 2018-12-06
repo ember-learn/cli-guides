@@ -15,7 +15,7 @@ We'll know installation is successful when `npm --version` or `yarn --version` r
 It is recommended to install the most recent LTS (long-term support) version of `node`.
 Restart the console after installing your package manager.
 
-## Installing the ember-cli
+## Installing the Ember CLI
 
 ```bash
 npm install -g ember-cli
