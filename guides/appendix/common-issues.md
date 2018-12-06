@@ -82,9 +82,9 @@ end
 
 ### Watched Files
 
-The way Vagrant syncs directories between your desktop and vm may prevent file
+The way Vagrant syncs directories between your desktop and VM may prevent file
 watching from working correctly. This will prevent rebuilds and live reloads
-from working correctly. There are several work arounds:
+from working correctly. There are several workarounds:
 
 1. Watch for changes by polling the file system via: `ember serve --watcher polling`.
 2. Use [nfs for synced folders](https://docs.vagrantup.com/v2/synced-folders/nfs.html).
@@ -93,7 +93,7 @@ from working correctly. There are several work arounds:
 
 When setting up your VM, install Ember CLI dependencies as you normally would.
 Some of these dependencies (such as [broccoli-sass](#sass)) may have native
-depenencies that may require recompilation. To do so run:
+dependencies that may require recompilation. To do so run:
 
 ```bash
 npm rebuild

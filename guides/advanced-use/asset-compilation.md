@@ -175,8 +175,8 @@ Fingerprinting is done using the addon
 (which is included by default).
 
 When the environment is production (e.g. `ember build --environment=production`),
-the addon will automatically fingerprint your js, css, png, jpg, and gif assets
-by appending an md5 checksum to the end of their filename
+the addon will automatically fingerprint your JS, CSS, PNG, JPG, and GIF assets
+by appending a md5 checksum to the end of their filename
 (e.g. `assets/yourapp-9c2cbd818d09a4a742406c6cb8219b3b.js`). In addition, your
 HTML, JS, and CSS files will be re-written to include the new name. There are
 a few options you can pass into `EmberApp` in your `ember-cli-build.js` to customize
@@ -198,7 +198,7 @@ replace source code with new checksum file names.
 of the md5. Pass `null` to suppress the hash, which can be useful when using `prepend`.
 
 As an example, this `ember-cli-build` will exclude any file in the fonts/169929
-directory as well as add a cloudfront domain to each fingerprinted asset.
+directory as well as add a CloudFront domain to each fingerprinted asset.
 
 ```javascript
 // ember-cli-build.js
@@ -263,7 +263,8 @@ sample meta tag:
 <meta name="user/config/environment" content="%7B%22modulePre.your.config">
 ```
 
-This meta tag is required for your ember application to function properly.
+This meta tag is required for your Ember application to function properly.
+
 If you prefer to have this tag be part of your compiled JavaScript files
 instead, you may use the `storeConfigInMeta` flag in `ember-cli-build.js`.
 

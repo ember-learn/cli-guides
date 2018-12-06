@@ -20,10 +20,19 @@ a `bower_components` directory. Bower itself is deprecated and should not be use
 
 <!--
 If addons are installed accidentally with `npm install` or `yarn install`,
-the blueprints can be run with .... what?
+the blueprints can be run with .... what?  
+
+Added by @maxwondercorn:
+What is now below - were should it go in the guide
+
+If you accidentally install an Ember addon using either npm or Yarn, the default blueprint will not run. To run the blueprint use:
+
+```sh
+ember generate <addon-name>
+```
 -->
 
-## NPM and Yarn
+## npm and Yarn
 
 Ember CLI supports both [npm](https://www.npmjs.com) and [Yarn](https://yarnpkg.com/)
 for node modules management.

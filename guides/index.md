@@ -6,7 +6,6 @@ npm install -g ember-cli
 ```
 
 Visit [Ember CLI](https://github.com/ember-cli/ember-cli) on GitHub 
-
 and the [Ember.js Release Blog Posts](https://www.emberjs.com/blog/tags/releases.html)
 for information on the latest releases and new features.
 

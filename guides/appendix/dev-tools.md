@@ -8,7 +8,7 @@ This section provides information on integrating Ember into various code editors
 ### Visual Studio Code
 If you are using [VSCode](https://code.visualstudio.com/) with Ember CLI, there's an [official
 extension pack](https://marketplace.visualstudio.com/items?itemName=emberjs.emberjs#overview) 
-maintained by the Ember Learning team that adds multiple ember plugins that can help in 
+maintained by the Ember Learning team that adds multiple Ember plugins that can help in 
 Ember development. If you already have VSCode installed on your machine, you can 
 [click here](vscode:extension/emberjs.emberjs) to view this extension pack inside VSCode. Alternatively, you can 
 also search for `emberjs.emberjs` inside the [extensions view](https://code.visualstudio.com/docs/editor/extension-gallery).
@@ -39,7 +39,7 @@ To do that, ensure your emacs configuration contains the following:
 ```
 
 An [ember-mode](https://github.com/madnificent/ember-mode) package is also
-available. It has shortcuts for quickly navigating files in ember projects,
+available. It has shortcuts for quickly navigating files in Ember projects,
 running generators, and running build, serve, and test tasks. It also includes
 support for linking build errors to files and minibuffer notifications of
 `ember serve` status. It can be installed from [MELPA](http://melpa.org/). To
@@ -54,7 +54,7 @@ use MELPA, ensure your configuration contains the following:
 
 Then ember-mode can be installed from the package menu at `M-x
 package-list-packages`. After it is installed, add a file named
-`.dir-locals.el` to the root of your ember projects with the contents:
+`.dir-locals.el` to the root of your Ember projects with the contents:
 
 ```bash
 ((nil . ((mode . ember))))
@@ -155,7 +155,7 @@ Some useful Vim plugins for working with Ember.js:
 
 ## Debugging Node code
 
-Node's debugger with Chrome's DevTools can debug node code in an addon or app. For example, debugging Broccoli errors in an addon's `index.js`.
+Node's debugger and Chrome's DevTools can debug node code in an addon or app. For example, debugging Broccoli errors in an addon's `index.js`.
 
 To use the node debugger, open Chrome DevTools with  `chrome://inspect` or use the [Node.js - inspection manager (NiM)](https://chrome.google.com/webstore/detail/nodejs-v8-inspector-manag/gnhhdgbaldcilmgcpfddgdbkhjohddkj) from the Chrome web store. See Node [documentation](https://nodejs.org/en/docs/guides/debugging-getting-started/#chrome-devtools-55) for details.
 
@@ -165,7 +165,7 @@ To debug, place a `debugger` statement where the code should break.  Then serve 
 node --inspect node_modules/ember-cli/bin/ember serve
 ```
 
-You will see a message similar to this in the console.
+You will see a message like this in the console.
 
 
 ```bash

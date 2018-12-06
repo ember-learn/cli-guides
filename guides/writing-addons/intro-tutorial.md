@@ -192,7 +192,7 @@ Many addons have no UI components in them, or they offer a combination of JavaSc
 
 ### Providing public API methods in the addon
 
-After we've created our addon file structure with `ember addon <addon-name>`, we can write some functions that will be available for an app to use. Such functions are commonly referred to as "public API." If the behavior of public API changes, it's convention in the Ember community to follow semver and change the major version of the addon. [Semver](https://semver.org/) is a cross-program-language versioning scheme that helps other developers or coworkers know which versions of a library will require them to refactor their apps.
+After we've created our addon file structure with `ember addon <addon-name>`, we can write some functions that will be available for an app to use. Such functions are commonly referred to as "public API." If the behavior of public API changes, it's convention in the Ember community to follow SemVer and change the major version of the addon. [SemVer](https://semver.org/) is a cross-program-language versioning scheme that helps other developers or coworkers know which versions of a library will require them to refactor their apps.
 
 All npm packages have an entry point. By default, the entry point is named `{addonName}/index.js`, at the top level inside the addon. The files exported from `addon/index.js` will be available to developers using the addon in their apps.
 
@@ -229,7 +229,7 @@ export default Component.extend({
 
 ### Organizing public API code
 
-One common pattern for managing an addon's JavaScript code is to define the methods in many separate files, perhaps grouped into subfolders, import them into `index.js`, and then export them.
+One common pattern for managing an addon's JavaScript code is to define the methods in many separate files, perhaps grouped into subdirectories, import them into `index.js`, and then export them.
 
 For example, an `index.js` file might contain nothing more than imports and exports:
 
@@ -241,7 +241,7 @@ export { moreEnthusiasm, curbedEnthusiasm };
 
 ### How to keep learning
 
-This is a very tiny example of what addons can do in terms of providing JavaScript utilities to apps. For more advanced techniques, study other well-established addons. Just like there are many ways and reasons to build an Ember app, the same is true for addons!
+This is a very tiny example of what addons can do in terms of providing JavaScript utilities to apps. For more advanced techniques, study other well established addons. Just like there are many ways and reasons to build an Ember app, the same is true for addons!
 
 ## Writing an npm package wrapper
 

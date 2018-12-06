@@ -73,7 +73,7 @@ When creating a custom blueprint, only the `index.js` file is created. The `file
 
 #### files
 
-The files directory contains file templates to be installed into the target directory.
+The files directory has file templates to be installed into the target directory.
 
 #### `_name_`
 
@@ -88,7 +88,7 @@ The `_root_` token is replaced with either `app` or `addon` depending upon where
 
 Variables can be inserted into templates with `<%= someVariableName %>`.
 
-For example, the built-in util blueprint `files/app/utils/**name**.js` looks like this:
+For example, the built-in `util` blueprint `files/app/utils/**name**.js` looks like this:
 
 ```javascript
 export default function <%= camelizedModuleName %>() {
@@ -128,7 +128,7 @@ More custom variables can be created using the `locals` hook, as documented belo
 
 ### Index.js
 
-Overriding the blueprint hooks allows for implementing custom installation and uninstallation behavior. The blueprint's description and command options are also defined in the `index` file.
+Overriding the blueprint hooks allows for implementing custom installation and uninstall behavior. The blueprint's description and command options are also defined in the `index` file.
 
 For example, `ember help generate foo` would show
 
@@ -237,7 +237,7 @@ This hook must return an object or a Promise which resolves to an object. The re
 
 ### normalizeEntityName
 
-Use the `normalizeEntityName` hook to add custom normalization and validation of the provided entity name. The default hook does not make any changes to the entity name. It verifies an entity name is present and that it doesn’t have a trailing slash.
+Use the `normalizeEntityName` hook to add custom normalization and validation of the provided entity name. The default hook does not make any changes to the entity name. It verifies an entity name is present and that it doesn't have a trailing slash.
 
 This hook receives the entity name as its first argument. The string returned by this hook is the new entity name.
 
@@ -268,11 +268,11 @@ Override the list of files provided by the blueprint. Useful if you want to excl
 
 ### beforeInstall & beforeUninstall
 
-Called before any of the template files are processed and receives the same arguments as `locals`. Typically used for validating any additional command line options.
+Called before any of the template files are processed and receives the same arguments as locals. Typically used for validating command line options.
 
 ### afterInstall & afterUninstall
 
-The `afterInstall` and `afterUninstall` hooks receive the same arguments as `locals`. Use it to perform any custom work after the files are processed. For example, the built-in route blueprint uses these hooks to add and remove relevant route declarations in `app/router.js`.
+The `afterInstall` and `afterUninstall` hooks receive the same arguments as `locals`. Use it to perform any custom work after the files are processed. For example, the built-in `route` blueprint uses these hooks to add and remove relevant route declarations in `app/router.js`.
 
 <!-- Was in the old docs but the install hook would be very specialized/advanced use case.  Does it need to be documented in the guides? -->
 ### install
@@ -314,7 +314,7 @@ installing
   create tests/unit/pods/foo/route-test.js
 ```
 
-Blueprints that don’t support pods structure will ignore the `--pod` option and use the default structure. Blueprints that support the pods structure will also use the default structure when generated without the `--pod` option.
+Blueprints that don't support pods structure will ignore the `--pod` option and use the default structure. Blueprints that support the pods structure will also use the default structure when generated without the `--pod` option.
 
 Generate a blueprint that supports the `--pod` option without the option:
 
@@ -415,7 +415,7 @@ If the blueprint is generated without the `--pod` option, `_path_` becomes `cont
 
 #### `_root_`
 
-The root token is replaced with either `app` or `addon` depending upon where it is being generated. This token is used to provide support for generating blueprints inside addons.
+The root token is replaced with either `app` or `addon`. This token is used to provide support for generating blueprints inside addons.
 
 #### `_test_`
 
@@ -533,7 +533,7 @@ Installs another Ember addon in the client application
 
 Installs a Bower package or dependency into the client application.
 Bower is a package manager that is [no longer recommended for new projects](https://bower.io/),
-however you may find this hook used in older addons.
+but you may find this hook used in older addons.
 
 #### addPackageToProject
 
