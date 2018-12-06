@@ -41,6 +41,7 @@ GoToAnything
 Heroku
 Homebrew
 http-to-https
+integrations
 Integrations
 Intellij-emberjs
 JetBrains
@@ -49,6 +50,7 @@ minibuffer
 MacOS
 MELPA
 minifer-specific
+namespacing
 natively
 nginx
 NiM
