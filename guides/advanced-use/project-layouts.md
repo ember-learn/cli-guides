@@ -42,7 +42,7 @@ To create a pods structure in an app you add the `--pod` option to the `ember ge
 
 As your app becomes larger, a feature-driven structure may be better. Splitting your app by functionality/resource would give you more power and control to scale and maintain it.
 
-Developers who choose the pods structure will need to do more of their file management by hand, and there can be unexpected edge cases, so new Ember users are encouraged to choose a `classic` file structure instead.
+Developers who choose the pods structure will need to do more of their file management by hand, and there can be unexpected edge cases, so new Ember users are encouraged to use the `classic` file structure instead.
 
 As mentioned above, addons __should not__ use the `pods` structure
 
@@ -68,7 +68,7 @@ If you would like to use the pods structure as the default without using the `--
 ```
 
 ## podModulePrefix
-Rather than keep your resource directories on the root of your app, you can create a `pod` directory and specify its path as the `attribute podModulePrefix` within `config/environment.js` The `pod` path should use the following format: `{appname}/{poddir}`.
+Rather than keep your resource directories on the root of your app, you can create a `pods` directory and specify its path as the `attribute podModulePrefix` within `config/environment.js` The `pods` path should use the following format: `{appname}/{poddir}`.
 
 ```js
 // config/environment.js
@@ -76,7 +76,7 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'my-new-app',
     // namespaced directory where resolver will look for your resource files
-    podModulePrefix: 'my-new-app/pod',
+    podModulePrefix: 'my-new-app/pods',
     environment: environment,
     rootURL: '/',
     locationType: 'auto'
@@ -109,7 +109,7 @@ I heard Ember is getting a new project or file structure?  Yes, there are propos
 
 The changes are more than a new filesystem and include improvements to module names, namespacing and the Ember Resolver.
 
-If changes are made to the file structure in the future, they will be accompanied with codemods and other tools to make the migrating your apps easier, both for `classic` and `pod` structures. 
+If changes are made to the file structure in the future, they will be accompanied with codemods and other tools to make the migrating your apps easier. The codemod would migrate `classic`, `pods-based` and `mixed` apps. 
 
 Developers who want to test drive the experimental layout should read [RFC 0143](https://github.com/emberjs/rfcs/blob/master/text/0143-module-unification.md) and [#16373](https://github.com/emberjs/ember.js/issues/16373). 
 
