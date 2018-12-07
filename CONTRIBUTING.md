@@ -1,6 +1,6 @@
 # Contributing
 
-We would love to have your help with writing the next version of the ember-cli guides! As a work-in-progress, semi-greenfield project, it has different guidelines than other documentation projects. Once the project reaches MVP, these guidelines will change. Our target for MVP is the end of 2018.
+We would love to have your help with writing the next version of the Ember CLI guides! As a work-in-progress, semi-greenfield project, it has different guidelines than other documentation projects. Once the project reaches MVP, these guidelines will change. Our target for MVP is the end of 2018.
 
 ## Ways to contribute
 
@@ -11,7 +11,7 @@ Developers of all knowledge and experience levels are invited to help out. Here 
 - Help review Pull Requests
 - Add comments to Markdown files with tips, resources, and notes to help others figure out what to write
 
-**Note on respecting copyright** - It is ok to copy/paste content over from ember-cli.com. It is _not_ ok to copy and paste content that you didn't write that came from blog posts, articles, tutorials, etc. whether paid or free. Exceptions are if the license allows it (please link to it in your PR) or you have written permission of the author via a comment on an issue in this repo.
+**Note on respecting copyright** - It is okay to copy/paste content over from ember-cli.com. It is _not_ okay to copy and paste content that you didn't write that came from blog posts, articles, tutorials, etc. whether paid or free. Exceptions are if the license allows it (please link to it in your PR) or you have written permission of the author via a comment on an issue in this repo.
 
 ## How to get started
 
@@ -39,7 +39,7 @@ JavaScript and Handlebars files should follow the [Ember.js styleguide](https://
 Extending on these rules:
 
 - Prefer arrow syntax (except for when scope matters, like computed properties. CPs should be noted that they can’t use arrow functions)
-- No var. Only const and let for variable declarations
+- No `var`. Only `const` and `let` for variable declarations
 - Use brace expansion for imports, i.e. import { a, b } from @ember/somepackage and use the same name as is used in the API docs
 - Links to the API docs should point to the `/release/` version
 - Whenever possible, choose semi-generic heading titles, so that as Ember grows and changes, we can keep using them.
