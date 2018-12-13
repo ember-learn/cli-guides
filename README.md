@@ -1,4 +1,4 @@
-## ember-cli guides
+## Ember CLI guides
 
 [![Build Status](https://travis-ci.org/ember-learn/cli-guides.svg?branch=master)](https://travis-ci.org/ember-learn/cli-guides)
 
@@ -30,7 +30,7 @@ You will need the following things properly installed on your computer.
 
 ## Local Development
 
-The Ember-Cli Guides is a normal Ember application, so if you want to run it locally you follow the standard steps:
+The Ember CLI Guides is a normal Ember application, so if you want to run it locally you follow the standard steps:
 
 * Clone this repository
 * `cd cli-guides-source`
@@ -41,9 +41,10 @@ The Ember-Cli Guides is a normal Ember application, so if you want to run it loc
 If you then edit the Markdown files located in the `guides/` folder your
 application should live-update with the content changes.
 
-To run the tests you can run `npm test` in your terminal, this will run any
-Ember tests that have been setup but also some scripts that check the Markdown
-files such as the link-checker.
+To run the tests you can run `npm run lint:md` and `npm test` in your terminal. `npm run lint:md` will spellcheck and enforce consistency in the Markdown files.  `npm test` will run Ember tests that have been setup and also scripts that check the Markdown
+files links.
+
+Markdown linting (`lint:md`) must pass otherwise it will fail in Travis-CI. Spellchecking uses a custom [ember-dictionary](https://github.com/maxwondercorn/ember-dictionary) with words and terms common to the Ember community, such as `SemVer`. Words and terms that are associated with a specific guide can be placed in the `.local.dic` dictionary file. Create a pull request if a word needs to be added to `ember-dictionary`.
 
 ## How this app works 
 
@@ -58,7 +59,7 @@ Overall project status and tasks that need help are tracked in [this Quest issue
 
 ### Adding more things to the table of contents
 
-See `pages.yaml` in the cli-guides-source. Whatever has a url of index will be what is shown for the top level path, like `/tutorial/`. There must be an `index.md` under each topic.
+See `pages.yaml` in the cli-guides-source. Whatever has a URL of `index` will be shown for the top level path, like `/tutorial/`. There must be an `index.md` under each topic.
 
 ### Deploying
 

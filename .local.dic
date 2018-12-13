@@ -4,6 +4,7 @@ Autocomplete
 Autoprefixer
 autosaves
 browserlist
+cli-guides-source
 CloudFront
 css-files
 Cygwin
@@ -66,9 +67,11 @@ prepend
 production-env
 Quickstart
 rerender
+retext-spell
 S3
 scalable
 *semver
+somepackage
 Set-ExecutionPolicy
 SRI
 ssl
