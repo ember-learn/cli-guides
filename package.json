@@ -54,7 +54,6 @@
     "ember-qunit": "^3.4.1",
     "ember-resolver": "^5.0.1",
     "ember-source": "~3.5.0",
-    "ember-welcome-page": "^3.2.0",
     "eslint-plugin-ember": "^5.2.0",
     "guidemaker": "^0.6.1",
     "guidemaker-ember-template": "^0.5.0",
