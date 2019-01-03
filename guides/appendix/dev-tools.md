@@ -179,7 +179,7 @@ Stop Ember serve using `Ctrl-C` and then close the DevTools tab.
 
 ### Debugging custom blueprints
 
-You can use also use the node debugger when writing custom [blueprints](../../advanced-use/blueprints). To debug a blueprint `index.js` file, place a `debugger` statement where the code should break and then generate the blueprint using
+You can use also use the node debugger when writing custom [blueprints](../../advanced-use/blueprints/). To debug a blueprint `index.js` file, place a `debugger` statement where the code should break and then generate the blueprint using
 
 ```bash
 node --inspect-brk node_modules/ember-cli/bin/ember generate <my-blueprint> <name>
