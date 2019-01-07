@@ -176,3 +176,12 @@ Debugger attached.
 If you used `chrome://inspect`, click on the `inspect` link to launch DevTools. NiM will automatically open DevTools.
 
 Stop Ember serve using `Ctrl-C` and then close the DevTools tab.
+
+### Debugging custom blueprints
+
+You can use also use the node debugger when writing custom [blueprints](../../advanced-use/blueprints/). To debug a blueprint `index.js` file, place a `debugger` statement where the code should break and then generate the blueprint using
+
+```bash
+node --inspect-brk node_modules/ember-cli/bin/ember generate <my-blueprint> <name>
+```
+The debugger will pause on the first line of Ember's generator code. Click on the debugger's `run` button to go to your breakpoint.

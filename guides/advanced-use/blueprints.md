@@ -235,6 +235,30 @@ The object passed to `locals` looks like this:
 
 This hook must return an object or a Promise which resolves to an object. The resolved object will be merged with the before mentioned default `locals`.
 
+For example, using the command line above we could use `isAdmin:true` in our generated controller
+
+```javascript
+import Controller from "@ember/controller";
+
+export default Controller.extend({
+  isAdmin: <%= adminStatus %>
+});
+```
+
+When the controller is generated, the locals function would generate the `adminStatus` variable
+
+```javascript
+// index.js
+module.exports = {
+  locals(options) {
+    return {
+     adminStatus: options.entity.options.isAdmin
+    };
+  }
+};
+```
+You can debug the code in a custom blueprint `index.js` using the node debugger.  For more information, see [Debugging Node code](../../appendix/dev-tools/#debuggingnodecode) in the Appendix under Developer Tools.
+
 ### normalizeEntityName
 
 Use the `normalizeEntityName` hook to add custom normalization and validation of the provided entity name. The default hook does not make any changes to the entity name. It verifies an entity name is present and that it doesn't have a trailing slash.
