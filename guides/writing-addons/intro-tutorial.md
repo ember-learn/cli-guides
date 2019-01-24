@@ -45,7 +45,7 @@ Our goal is to be able to pass the `buttonName` value to the addon, just like we
 ```hbs
 <!-- This is a handlebars file in the app using the addon -->
 
-{{addon-name buttonLabel="Register"}}
+<AddonName buttonLabel="Register" />
 ```
 
 ### Trying out the addon template in an app
@@ -61,7 +61,7 @@ There are several options to see the addon in action. We could use `npm link` or
 1. `yarn link <addon-name>` or `npm link <addon-name>`.
 2. In the Ember app's `package.json`, add a `devDependencies` entry for your addon, like `"addon-name": "*"`. The `*` means that it will include all version numbers of our addon.
 3. Run `yarn install` or `npm install` in the app
-4. Add a reference to your addon's component somewhere in an app template, like `{{component-name buttonLabel="Register"}}`
+4. Add a reference to your addon's component somewhere in an app template, like `<ComponentName @buttonLabel="Register" />`
 5. Run a local server with `ember serve` and visit [http://localhost:4200](http://localhost:4200)
 
 We should now see our addon in action!
@@ -92,9 +92,9 @@ Now, an app can use the addon with their own content inside:
 ```hbs
 <!-- This is a handlebars file in the app using the addon -->
 
-{{#addon-name}}
+<AddonName>
   Register <img href="./images/some-cute-icon.png" alt="">
-{{/addon-name}}
+</AddonName>
 ```
 
 Whatever goes inside the block form addon will show up where the `{{yield}}` was. This is the markup that renders in the app:
