@@ -45,7 +45,7 @@ Our goal is to be able to pass the `buttonName` value to the addon, just like we
 ```hbs
 <!-- This is a handlebars file in the app using the addon -->
 
-<AddonName buttonLabel="Register" />
+<AddonName @buttonLabel="Register" />
 ```
 
 ### Trying out the addon template in an app
