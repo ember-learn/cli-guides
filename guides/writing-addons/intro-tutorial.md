@@ -45,7 +45,7 @@ Our goal is to be able to pass the `buttonName` value to the addon, just like we
 ```hbs
 <!-- This is a handlebars file in the app using the addon -->
 
-{{addon-name buttonLabel="Register"}}
+{{component-name buttonLabel="Register"}}
 ```
 
 ### Trying out the addon template in an app
@@ -92,9 +92,9 @@ Now, an app can use the addon with their own content inside:
 ```hbs
 <!-- This is a handlebars file in the app using the addon -->
 
-{{#addon-name}}
+{{#component-name}}
   Register <img href="./images/some-cute-icon.png" alt="">
-{{/addon-name}}
+{{/component-name}}
 ```
 
 Whatever goes inside the block form addon will show up where the `{{yield}}` was. This is the markup that renders in the app:
