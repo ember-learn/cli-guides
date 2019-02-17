@@ -90,6 +90,7 @@ ember serve --port 3200
 ### Learn more
 
 - [Ember Quickstart Guide](https://guides.emberjs.com/release/getting-started/quick-start/#toc_create-a-new-application) for starting a local server
+- [Proxying ajax requests](../../appendix/dev-tools/#proxyingajaxrequests) to proxy ajax requests to another server
 
 ## Generate more files
 

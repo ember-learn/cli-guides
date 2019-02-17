@@ -116,6 +116,3 @@ Developers who want to test drive the experimental layout should read [RFC 0143]
 In general, experimental features should be used with caution, as they are subject to breaking changes, significant iteration, and in some cases, they may be removed altogether.
 
 To follow along with the progress of new features in Ember, check out the Ember [Blog](https://www.emberjs.com/blog/). 
-
-<!-- some statement on module unification, see Ember [RFC #0143](https://github.com/emberjs/rfcs/blob/master/text/0143-module-unification.md) for details on module unification -->
-
