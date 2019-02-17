@@ -43,3 +43,17 @@ If we want other people to be able to use our addon, we need to specify a name, 
 #### `config/ember-try.js`
 
 This is a place to configure which versions of Ember that the test suite should check for compatibility. See the [ember-try](https://github.com/ember-cli/ember-try) repository on GitHub for more information.
+
+#### `config/environment.js`
+
+Values here will be defaults for apps that use our addon. Any changes in the apps own `environment.js` will overwrite these defaults.
+
+##### Example of default configuration:
+```javascript
+let ENV = {
+  'your-awesome-addon': {
+    awesomeLevel: 11,
+    outputDebugInfo: false,
+  },
+};
+```
