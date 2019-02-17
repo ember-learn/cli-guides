@@ -185,3 +185,12 @@ You can use also use the node debugger when writing custom [blueprints](../../ad
 node --inspect-brk node_modules/ember-cli/bin/ember generate <my-blueprint> <name>
 ```
 The debugger will pause on the first line of Ember's generator code. Click on the debugger's `run` button to go to your breakpoint.
+
+## Proxying ajax requests
+
+When using `ember serve`, by default all ajax requests will target the Ember server at `localhost:4200`.  You can use the `--proxy` flag to direct ajax requests to another address.  For example
+
+```bash
+ember server --proxy=http://localhost:8080
+```
+will proxy ajax requests to the server running at `http://localhost:8080`.  The `localhost:8080` address can be replaced with the IP address of any remote server.
