@@ -40,7 +40,7 @@ Let's say that our addon should wrap some content in a button tag. The addon tem
 <button>{{buttonLabel}}</button>
 ```
 
-Our goal is to be able to pass the `buttonName` value to the addon, just like we'd pass it to a normal component within an app:
+Our goal is to be able to pass the `buttonLabel` value to the addon, just like we'd pass it to a normal component within an app:
 
 ```hbs
 <!-- This is a handlebars file in the app using the addon -->
