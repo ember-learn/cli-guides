@@ -146,7 +146,7 @@ We can do this by creating stylesheets in the `app/styles/` directory instead. T
 Let's create `app/styles/our-addon-name.css` and add a rule to it:
 
 ```css
-/* addon/styles/our-addon-name.css */
+/* app/styles/our-addon-name.css */
 
 .addon-name-button {
   border: black solid 2px;
