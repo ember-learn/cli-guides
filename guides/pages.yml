@@ -41,6 +41,8 @@
     url: 'index'
   - title: 'Tutorial - writing your first addon'
     url: 'intro-tutorial'
+  - title: 'Addon dependencies'
+    url: 'addon-dependencies'
   - title: 'Writing documentation'
     url: 'documenting'
 
