@@ -13,7 +13,7 @@ The code itself goes in `node_modules` during `npm install`, just like in many n
 - The `vendor` directory, which is a common home for third-party JavaScript that is copied and pasted in
 - The `public` directory, the typical place for assets like images
 - The `styles` directory, for stylesheets like CSS, SASS, or LESS
-plus folders like `vendor` and `public` that hold can many other files of the developer's choice
+plus folders like `vendor` and `public` that can hold many other files of the developer's choice
 
 Some older apps may use a package manager and registry called Bower, which has
 a `bower_components` directory. Bower itself is deprecated and should not be used.
