@@ -34,13 +34,13 @@ Some files go in the `app` directory, while others go into the `addon` directory
 
 Let's say that our addon should wrap some content in a button tag. The addon template should look like this:
 
-```handlebars {data-filename=addon/templates/components/component-name.hbs}
+```handlebars {data-filename=addon/templates/components/my-component-name.hbs}
 <button>{{buttonLabel}}</button>
 ```
 
 Our goal is to be able to pass the `buttonLabel` value to the addon, just like we'd pass it to a normal component within an app:
 
-```handlebars {data-filename=project-name/templates/some-template.hbs}
+```handlebars {data-filename=my-application-name/templates/my-template.hbs}
 <AddonName @buttonLabel="Register" />
 ```
 
@@ -77,13 +77,13 @@ In an Ember app, a block style component uses the `{{yield}}` helper as a placeh
 
 Let's change our button addon we made earlier so that developers can pass in their own handlebars content by using the `{{yield}}` helper:
 
-```handlebars {data-filename=addon/templates/components/component-name.hbs}
+```handlebars {data-filename=addon/templates/components/my-component-name.hbs}
 <button>{{yield}}</button>
 ```
 
 Now, an app can use the addon with their own content inside:
 
-```handlebars {data-filename=project-name/templates/some-template.hbs}
+```handlebars {data-filename=my-application-name/templates/my-template.hbs}
 <AddonName>
   Register <img href="./images/some-cute-icon.png" alt="">
 </AddonName>
@@ -113,11 +113,11 @@ For example, writing a CSS rule for `div` is problematic, because it will affect
 
 Let's add a class to our template and some styles to target the class:
 
-```handlebars {data-filename=your-addon/templates/components/component-name.hbs}
+```handlebars {data-filename=addon/templates/components/my-component-name.hbs}
 <button class="addon-name-button">{{yield}}</button>
 ```
 
-```css {data-filename=your-addon/styles/our-addon-name.css}
+```css {data-filename=addon/styles/my-addon-name.css}
 .addon-name-button {
   padding: 10px;
 }
@@ -131,9 +131,9 @@ For some addons, it makes sense to give the developer the option to import the s
 
 We can do this by creating stylesheets in the `app/styles/` directory instead. These stylesheets share a file namespace with the consuming app and all the other addons someone is using, so name them wisely. For example, if we name our stylesheet `addon.css`, that's likely to clash. Just as before, it's important to choose uniquely named targets for the CSS rules so that they don't clash with other addons or the app.
 
-Let's create `app/styles/our-addon-name.css` and add a rule to it:
+Let's create `app/styles/my-addon-name.css` and add a rule to it:
 
-```css {data-filename=your-addon/styles/our-addon-name.css}
+```css {data-filename=aoo/styles/my-addon-name.css}
 .addon-name-button {
   border: black solid 2px;
 }
@@ -141,7 +141,7 @@ Let's create `app/styles/our-addon-name.css` and add a rule to it:
 
 For the stylesheet to be active in the app the addon is used in, the developer for that app must explicitly `import` the stylesheet by name. This must be done at the very top of the app's `app.css` file.
 
-```css {data-filename=project-name/app/styles/app.css}
+```css {data-filename=app/styles/app.css}
 @import 'our-addon-name.css'
 ```
 
@@ -183,7 +183,7 @@ All npm packages have an entry point. By default, the entry point is named `{add
 
 Let's add some public methods to our addon! Don't forget to `export` your methods.
 
-```javascript {data-filename=your-addon/index.js}
+```javascript {data-filename=my-addon-name/index.js}
 const moreEnthusiasm = function (phrase) {
   return phrase + '!!!';
 }
@@ -275,7 +275,7 @@ Lastly, be sure to provide a few notes about how others can contribute to the pr
 
 Addons are configured using the `ember-addon` hash in the `package.json` file.  
 
-```json {data-filename=your-addon/config/package.json}
+```json {data-filename=package.json}
 "ember-addon": {
   "configPath": "tests/dummy/config",
   "before": "single-addon",

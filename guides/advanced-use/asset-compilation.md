@@ -27,7 +27,7 @@ that maps to a [browserlist](https://github.com/ai/browserslist) support rule. T
 `config/targets.js` file, which [Ember CLI generates](https://github.com/ember-cli/ember-cli/blob/master/blueprints/app/files/config/targets.js) like so:
 
 
-```javascript {data-filename=project-name/config/targets.js}
+```javascript {data-filename=config/targets.js}
 /* eslint-env node */
 module.exports = {
   browsers: [
@@ -47,7 +47,7 @@ simply set any of the options found [here](https://github.com/babel/babel-preset
 For example, if you wanted to explicitly exclude generator function transpilation from your
 output, your configuration would look like this:
 
-```javascript {data-filename=project-name/ember-cli-build.js}
+```javascript {data-filename=ember-cli-build.js}
 /* eslint-env node */
 'use strict';
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
@@ -83,7 +83,7 @@ are disabled in production by default. Pass `sourcemaps: {enabled: true}` to you
 
 Default `ember-cli-build.js`:
 
-```javascript {data-filename=project-name/ember-cli-build.js}
+```javascript {data-filename=ember-cli-build.js}
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
@@ -114,7 +114,7 @@ you may supply a boolean value for `ember-cli-uglify:enabled`.
 
 For example, to disable minifying of CSS and JS, add in `ember-cli-build.js`:
 
-```javascript {data-filename=project-name/ember-cli-build.js}
+```javascript {data-filename=ember-cli-build.js}
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
@@ -146,7 +146,7 @@ Some files should be excluded from minification, such as copied-and-pasted third
 To exclude assets from `dist/assets` from being minified, one can pass options for
 [broccoli-uglify-sourcemap](https://github.com/ef4/broccoli-uglify-sourcemap) like so:
 
-```javascript {data-filename=project-name/ember-cli-build.js}
+```javascript {data-filename=ember-cli-build.js}
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
@@ -197,7 +197,7 @@ of the md5. Pass `null` to suppress the hash, which can be useful when using `pr
 As an example, this `ember-cli-build` will exclude any file in the fonts/169929
 directory as well as add a CloudFront domain to each fingerprinted asset.
 
-```javascript {data-filename=project-name/ember-cli-build.js}
+```javascript {data-filename=ember-cli-build.js}
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
@@ -229,7 +229,7 @@ background: url('https://subdomain.cloudfront.net/images/foo-735d6c098496507e26b
 
 You can disable fingerprinting in your `ember-cli-build.js`:
 
-```javascript {data-filename=project-name/ember-cli-build.js}
+```javascript {data-filename=ember-cli-build.js}
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
@@ -263,7 +263,7 @@ This meta tag is required for your Ember application to function properly.
 If you prefer to have this tag be part of your compiled JavaScript files
 instead, you may use the `storeConfigInMeta` flag in `ember-cli-build.js`.
 
-```javascript {data-filename=project-name/ember-cli-build.js}
+```javascript {data-filename=ember-cli-build.js}
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
@@ -317,7 +317,7 @@ The compiled files are output to the following paths:
 
 To change these paths, specify the `outputPaths` config option in `ember-cli-build.js`. The default setting is shown here:
 
-```javascript {data-filename=project-name/ember-cli-build.js}
+```javascript {data-filename=ember-cli-build.js}
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
@@ -346,7 +346,7 @@ You may edit any of these output paths, but make sure to update the paths specif
 `app.outputPaths.app.html` default it is `index.html`, and `tests/index.html`. If this is not done,
 your app will not be served with correct asset names.
 
-```javascript {data-filename=project-name/ember-cli-build.js}
+```javascript {data-filename=ember-cli-build.js}
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
@@ -371,7 +371,7 @@ different extension.
 When using CSS preprocessing, only the `app/styles/app.scss` (or `.less` etc)
 is compiled. If you need to process multiple files, you must add another key:
 
-```javascript {data-filename=project-name/ember-cli-build.js}
+```javascript {data-filename=ember-cli-build.js}
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
@@ -397,7 +397,7 @@ When using Ember inside another project, you may want to launch Ember only when
 a specific route is accessed. If you're preloading the Ember JavaScript before
 you access the route, you have to disable `autoRun`:
 
-```javascript {data-filename=project-name/ember-cli-build.js}
+```javascript {data-filename=ember-cli-build.js}
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {

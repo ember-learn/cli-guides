@@ -49,7 +49,7 @@ This is a place to configure which versions of Ember that the test suite should 
 Values here will be defaults for apps that use our addon. Any changes in the apps own `environment.js` will overwrite these defaults.
 
 ##### Example of default configuration:
-```javascript {data-filename=your-addon/config/enviroment.js}
+```javascript {data-filename=config/enviroment.js}
 let ENV = {
   'your-awesome-addon': {
     awesomeLevel: 11,

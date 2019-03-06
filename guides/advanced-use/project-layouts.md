@@ -60,7 +60,7 @@ In this case, the resolver would use the `pods` route and ignore the `classic` r
 ## Pods as default
 If you would like to use the pods structure as the default without using the `--pod` option, you can set `usePods` in `.ember-cli`:
 
-```json {data-filename=project-name/.ember-cli}
+```json {data-filename=.ember-cli}
 {
     "usePods": true
 }
@@ -69,7 +69,7 @@ If you would like to use the pods structure as the default without using the `--
 ## podModulePrefix
 Rather than keep your resource directories on the root of your app, you can create a `pods` directory and specify its path as the `attribute podModulePrefix` within `config/environment.js` The `pods` path should use the following format: `{appname}/{poddir}`.
 
-```javascript {data-filename=project-name/config/enviroment.js}
+```javascript {data-filename=config/environment.js}
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'my-new-app',

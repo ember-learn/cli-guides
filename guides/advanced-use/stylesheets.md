@@ -32,7 +32,7 @@ To use plain CSS with `app.css`:
 To process your imports and replace them with the contents of their files,
 add in `ember-cli-build.js`:
 
-```javascript {data-filename=project-name/ember-cli-build.js}
+```javascript {data-filename=ember-cli-build.js}
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
@@ -97,7 +97,7 @@ ember install ember-cli-sass
 
 You can configure your project to use .sass in your `ember-cli-build.js`:
 
-```javascript {data-filename=project-name/ember-cli-build.js}
+```javascript {data-filename=ember-cli-build.js}
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {

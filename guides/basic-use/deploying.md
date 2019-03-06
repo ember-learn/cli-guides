@@ -61,7 +61,7 @@ This is required for Router to function correctly.
 
 Here's an example of configuring rootURL:
 
-```javascript {data-filename=project-name/config/enviroment.js}
+```javascript {data-filename=config/environment.js}
 if (environment === 'production') {
   ENV.rootURL = '/path/to/ember/app/';
 }
@@ -77,7 +77,7 @@ Here's an example of building for production and using the `fingerprint` and `pr
 ember build --environment production
 ```
 
-```javascript {data-filename=project-name/ember-cli-build.js}
+```javascript {data-filename=ember-cli-build.js}
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
@@ -102,7 +102,7 @@ A Content Security Policy configuration defines the list of places that your app
 
 The Content Security Policy can be set in `environment.js`:
 
-```javascript {data-filename=project-name/config/enviroment.js}
+```javascript {data-filename=config/environment.js}
 module.exports = function(environment) {
   let ENV = {
     ...

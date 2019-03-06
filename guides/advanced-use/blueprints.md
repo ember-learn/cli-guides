@@ -140,7 +140,7 @@ For example, `ember help generate foo` would show
 
 `index.js` should export a plain object, which will extend the prototype of the Blueprint class. If needed, the original Blueprint prototype can be accessed through the `_super` property.
 
-```javascript {data-filename=project-name/blueprints/helper/index.js}
+```javascript {data-filename=blueprints/helper/index.js}
 module.exports = {
   description: "Generates a foo",
 
@@ -246,7 +246,7 @@ export default Controller.extend({
 
 When the controller is generated, the locals function would generate the `adminStatus` variable
 
-```javascript {data-filename=project-name/blueprints/helper/index.js}
+```javascript {data-filename=blueprints/helper/index.js}
 module.exports = {
   locals(options) {
     return {
@@ -354,8 +354,7 @@ installing route-test
 
 If you would like to use the pods structure as the default for your project, you can set `usePods` in `.ember-cli`:
 
-```json {data-filename=project-name/.ember-cli}
-// .ember-cli
+```json {data-filename=.ember-cli}
 {
     "usePods": true
 }
@@ -484,7 +483,7 @@ The blueprint structure for a route or a similar custom blueprint would be:
 
 The index file for the blueprint would override the `fileMapTokens` hook to assign `_templatepath_` and `_templatename_`:
 
-```javascript {data-filename=project-name/blueprints/route/index.js}
+```javascript {data-filename=blueprints/route/index.js}
 module.exports = {
   fileMapTokens(options) {
     return {
@@ -532,7 +531,7 @@ Addon blueprints have the same structure as regular blueprints.  The default blu
 
 To create the default blueprint, use `ember generate blueprint <addon-name>`
 
-```javascript {data-filename=your-addon/blueprints/addon-name/index.js}
+```javascript {data-filename=my-addon-name/blueprints/my-addon-name/index.js}
 module.exports = {
   normalizeEntityName() {}, // no-op since we're just adding dependencies
 };
@@ -561,7 +560,7 @@ Installs an npm package or dependency into the client application
 
 Each of the hooks returns a promise, so they can all be chained with `.then()`. The following is an example of each of these:
 
-```javascript {data-filename=your-addon/blueprints/addon-name/index.js}
+```javascript {data-filename=my-addon-name/blueprints/my-addon-name/index.js}
 module.exports = {
   normalizeEntityName() {}, // no-op since we're just adding dependencies
 
@@ -596,7 +595,7 @@ module.exports = {
 The default blueprint is recognized because it normally has the same name as the addon.  Optionally, you may specify a different name for the "defaultBlueprint" in `package.json`:
 
 
-```json {data-filename=your-addon/package.json}
+```json {data-filename=my-addon-name/package.json}
 "ember-addon": {
   // addon configuration properties
   "configPath": "tests/dummy/config",
