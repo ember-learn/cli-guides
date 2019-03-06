@@ -31,8 +31,8 @@ To use plain CSS with `app.css`:
 
 To process your imports and replace them with the contents of their files,
 add in `ember-cli-build.js`:
-```js
-// ember-cli-build.js
+
+```javascript {data-filename=project-name/ember-cli-build.js}
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
@@ -81,7 +81,7 @@ To enable [LESS](http://lesscss.org/), you'll need to add
 [ember-cli-less](https://github.com/gdub22/ember-cli-less) to
 your npm modules.
 
-```bash
+```shell
 ember install ember-cli-less
 ```
 
@@ -91,14 +91,13 @@ To enable [SCSS/SASS](http://sass-lang.com/), you'll need to
 install the [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass) addon
 to your project *(defaults to .scss, .sass allowed via configuration)*.
 
-```bash
+```shell
 ember install ember-cli-sass
 ```
 
 You can configure your project to use .sass in your `ember-cli-build.js`:
 
-```js
-// ember-cli-build.js
+```javascript {data-filename=project-name/ember-cli-build.js}
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {

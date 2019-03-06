@@ -5,7 +5,7 @@ The classic project structure is the default when creating a new Ember app or ad
 
 For example, if you have a `post` resource and a `tags` component in your project, the `classic` structure would have this filesystem:
 
-```sh
+```shell
 app
 ├── components
 |   └── tags.js
@@ -25,7 +25,7 @@ The `classic` project provides the easiest way to get started with Ember. It's t
 ## Pods layout
 Pods-based projects organize files by features, combining all entity files into a common directory. The aforementioned example as a `pods-based` project would have this filesystem:
 
-```sh
+```shell
 app
 ├── components
 |   └── tags
@@ -60,8 +60,7 @@ In this case, the resolver would use the `pods` route and ignore the `classic` r
 ## Pods as default
 If you would like to use the pods structure as the default without using the `--pod` option, you can set `usePods` in `.ember-cli`:
 
-```js
-// .ember-cli
+```json {data-filename=project-name/.ember-cli}
 {
     "usePods": true
 }
@@ -70,8 +69,7 @@ If you would like to use the pods structure as the default without using the `--
 ## podModulePrefix
 Rather than keep your resource directories on the root of your app, you can create a `pods` directory and specify its path as the `attribute podModulePrefix` within `config/environment.js` The `pods` path should use the following format: `{appname}/{poddir}`.
 
-```js
-// config/environment.js
+```javascript {data-filename=project-name/config/enviroment.js}
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'my-new-app',
@@ -89,7 +87,7 @@ module.exports = function(environment) {
 
 Then your directory structure would be:
 
-```sh
+```shell
 app
 └── pods
     ├── components

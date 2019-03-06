@@ -15,7 +15,7 @@ Most addons are made to drop right into your app with zero configuration. Many a
 
 To install an addon, use:
 
-```bash
+```shell
 ember install <addon-name>
 ```
 

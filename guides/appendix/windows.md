@@ -29,13 +29,13 @@ The two primary reasons are:
 
 Ensure Search and Defender ignore your project's `tmp` directory:
 
-```bash
+```shell
 npm install -g ember-cli-windows
 ```
 
 Then, to start the automatic configuration, run:
 
-```bash
+```shell
 ember-cli-windows
 ```
 

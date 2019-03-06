@@ -42,7 +42,7 @@ The help command is also the best way to see the aliased or shorthand versions o
 
 ### Format:
 
-```bash
+```shell
 ember new <my-app-name> [options]
 ```
 
@@ -54,7 +54,7 @@ ember new <my-app-name> [options]
 
 This command below will create a folder called `camping-trip-tracker`, which will be full of app files. It uses the `--yarn` option to show that the app should use `yarn` by default. Yarn is a package manager alternative to `npm`. Options typically start with a double dash `--` and can be omitted entirely.
 
-```bash
+```shell
 ember new camping-trip-tracker --yarn
 ```
 
@@ -66,7 +66,7 @@ ember new camping-trip-tracker --yarn
 
 ### Format
 
-```bash
+```shell
 ember serve [options]
 ```
 
@@ -83,7 +83,7 @@ If the local server will not start due to missing dependencies, use
 
 By default, apps are served at port `4200`, but if you need to change it for some reason, you could visit your app at `http://localhost:3200` by using this command:
 
-```bash
+```shell
 ember serve --port 3200
 ```
 
@@ -96,7 +96,7 @@ ember serve --port 3200
 
 ### Format
 
-```bash
+```shell
 ember generate <type-of-file> <name-of-your-choice>
 ```
 
@@ -115,7 +115,7 @@ This command will make a component named `packing-list`. It will create three fi
 * `packing-list.js` with JavaScript code to handle user interaction
 * `packing-list-test.js` with an integration test (aka rendering test)
 
-```bash
+```shell
 ember generate component packing-list
 ```
 
@@ -127,7 +127,7 @@ ember generate component packing-list
 
 ### Format
 
-```bash
+```shell
 ember install <addon-name>
 ```
 
@@ -143,7 +143,7 @@ to learn about the options.
 
 Here's an example of adding Sass support to your app using [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass). Sass is an alternative to writing plain CSS. This is a popular community-maintained addon.
 
-```bash
+```shell
 ember install ember-cli-sass
 ```
 
@@ -159,7 +159,7 @@ ember install ember-cli-sass
 
 ### Format
 
-```bash
+```shell
 ember test [options]
 ```
 
@@ -173,7 +173,7 @@ By default, these tests are run in Headless Chrome. "Headless" means the tests a
 
 To make tests re-run as we change files, we could use the `--server` option:
 
-```bash
+```shell
 ember test --server
 ```
 
@@ -187,7 +187,7 @@ During development, this is less common than running `ember serve` and viewing t
 
 ### Format
 
-```bash
+```shell
 ember build [options]
 ```
 
@@ -203,7 +203,7 @@ Ember apps can be built with only three environments: development, production, a
 
 This command builds the app using the production configuration, so that means by default, it will use maximum minification for best app performance.
 
-```bash
+```shell
 ember build --environment production
 ```
 

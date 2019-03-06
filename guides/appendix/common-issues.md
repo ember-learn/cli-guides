@@ -15,7 +15,7 @@ only `http://` URLs will work).
 
 You'll probably get an error like this:
 
-```bash
+```shell
 npm ERR! git clone git://github.com/jgable/esprima.git Cloning into bare repository '/home/<username>/.npm/_git-remotes/git-github-com-jgable-esprima-git-d221af32'...
 npm ERR! git clone git://github.com/jgable/esprima.git
 npm ERR! git clone git://github.com/jgable/esprima.git fatal: unable to connect to github.com:
@@ -26,7 +26,7 @@ npm ERR! github.com[0: 192.30.252.129]: errno=Connection timed out
 
 As a workaround you can configure `git` to make the translation:
 
-```bash
+```shell
 git config --global url."https://".insteadOf git://
 ```
 
@@ -95,7 +95,7 @@ When setting up your VM, install Ember CLI dependencies as you normally would.
 Some of these dependencies (such as [broccoli-sass](#sass)) may have native
 dependencies that may require recompilation. To do so run:
 
-```bash
+```shell
 npm rebuild
 ```
 
