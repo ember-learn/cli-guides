@@ -93,18 +93,19 @@ are disabled in production by default. Pass `sourcemaps: {enabled: true}` to you
 Default `ember-cli-build.js`:
 
 ```javascript {data-filename=ember-cli-build.js}
+'use strict';
+
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
-  let app = new EmberApp({
-    sourcemaps: {
-      enabled: EmberApp.env() !== 'production',
-      extensions: ['js']
-    }
+  let app = new EmberApp(defaults, {
+    // Add options here
   });
 
-  //...
+  // Use `app.import` to add additional libraries to the generated...
+ 
   return app.toTree();
+};
 };
 ```
 
