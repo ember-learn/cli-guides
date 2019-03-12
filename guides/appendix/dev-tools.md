@@ -32,7 +32,7 @@ Emacs creates temporary backup, autosave, and lockfiles that interfere with
 broccoli watcher, so they need to either be moved out of the way or disabled.
 To do that, ensure your emacs configuration contains the following:
 
-```bash
+```shell
 (setq backup-directory-alist `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
 (setq create-lockfiles nil)
@@ -45,7 +45,7 @@ support for linking build errors to files and minibuffer notifications of
 `ember serve` status. It can be installed from [MELPA](http://melpa.org/). To
 use MELPA, ensure your configuration contains the following:
 
-```bash
+```shell
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/") t)
@@ -56,7 +56,7 @@ Then ember-mode can be installed from the package menu at `M-x
 package-list-packages`. After it is installed, add a file named
 `.dir-locals.el` to the root of your Ember projects with the contents:
 
-```bash
+```shell
 ((nil . ((mode . ember))))
 ```
 
@@ -73,7 +73,7 @@ Simply remove these directories from the folders Sublime Text watches:
 
 `Sublime Text -> Preferences -> Settings - User`
 
-```js
+```javascript
 // folder_exclude_patterns and file_exclude_patterns control which files
 // are listed in folders on the side bar. These can also be set on a per-
 // project basis.
@@ -86,7 +86,7 @@ Ember CLI, you will need to modify your `.gitignore` file, enable
 `ECMAScript6` settings, and mark certain directories.
 
 First, add the following line to `.gitignore`:
-```bash
+```shell
 .idea
 ```
 
@@ -100,13 +100,13 @@ Next, in Webstorm's Project window right-click on each of the following
 directories, go to 'Mark Directory As' and mark as indicated:
 
 Mark as `Excluded`:
-```bash
+```shell
 /tmp
 /dist
 ```
 
 Mark as `Resource Root`:
-```bash
+```shell
 /
 /bower_components
 /bower_components/ember-qunit/lib
@@ -114,7 +114,7 @@ Mark as `Resource Root`:
 ```
 
 Mark as `Test Sources Root`:
-```bash
+```shell
 /tests
 ```
 
@@ -137,14 +137,14 @@ temporary backups and autosaves which interfere with broccoli, so they need to
 either be moved out of the way or disabled. To do that, ensure your .vimrc
 contains the following:
 
-```bash
+```shell
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 ```
 
 And make sure to create the directories: 
-```bash
+```shell
 mkdir -p ~/.vim/backup; mkdir -p ~/.vim/swap; mkdir -p ~/.vim/undo
 ```
 
@@ -161,14 +161,14 @@ To use the node debugger, open Chrome DevTools with  `chrome://inspect` or use t
 
 To debug, place a `debugger` statement where the code should break.  Then serve the application using
 
-```bash
+```shell
 node --inspect node_modules/ember-cli/bin/ember serve
 ```
 
 You will see a message like this in the console.
 
 
-```bash
+```shell
 Debugger listening on ws://127.0.0.1:9229/9c664016-bcfa-444b-b7fe-57d91a0d6e8f
 For help see https://nodejs.org/en/docs/inspector
 Debugger attached.
@@ -181,7 +181,7 @@ Stop Ember serve using `Ctrl-C` and then close the DevTools tab.
 
 You can use also use the node debugger when writing custom [blueprints](../../advanced-use/blueprints/). To debug a blueprint `index.js` file, place a `debugger` statement where the code should break and then generate the blueprint using
 
-```bash
+```shell
 node --inspect-brk node_modules/ember-cli/bin/ember generate <my-blueprint> <name>
 ```
 The debugger will pause on the first line of Ember's generator code. Click on the debugger's `run` button to go to your breakpoint.
@@ -190,7 +190,7 @@ The debugger will pause on the first line of Ember's generator code. Click on th
 
 When using `ember serve`, by default all ajax requests will target the Ember server at `localhost:4200`.  You can use the `--proxy` flag to direct ajax requests to another address.  For example
 
-```bash
+```shell
 ember server --proxy=http://localhost:8080
 ```
 will proxy ajax requests to the server running at `http://localhost:8080`.  The `localhost:8080` address can be replaced with the IP address of any remote server.

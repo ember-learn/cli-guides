@@ -23,7 +23,7 @@ If you already have a hosting plan in mind, you can build the app from the comma
 
 It's important to set the environment to `production` so that your app receives the right treatment for minification and fingerprinting:
 
-```bash
+```shell
 ember build --environment production
 ```
 
@@ -61,8 +61,7 @@ This is required for Router to function correctly.
 
 Here's an example of configuring rootURL:
 
-```javascript
-// config/environment.js
+```javascript {data-filename=config/environment.js}
 if (environment === 'production') {
   ENV.rootURL = '/path/to/ember/app/';
 }
@@ -74,12 +73,11 @@ building for production, the value of `prepend` for `fingerprint` will be used i
 Here's an example of building for production and using the `fingerprint` and `prepend` configuration. The asset URLs will not use `rootURL`. Instead, the result will be
 `https://cdn.example.com/assets/vendor-3b1b39893d8e34a6d0bd44095afcd5c4.js`.
 
-```bash
+```shell
 ember build --environment production
 ```
 
-```javascript
-// ember-cli-build.js
+```javascript {data-filename=ember-cli-build.js}
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
@@ -104,7 +102,7 @@ A Content Security Policy configuration defines the list of places that your app
 
 The Content Security Policy can be set in `environment.js`:
 
-```javascript
+```javascript {data-filename=config/environment.js}
 module.exports = function(environment) {
   let ENV = {
     ...
@@ -136,7 +134,7 @@ The following is a simple http-to-https redirect using [nginx](https://nginx.org
 
 First, make a production build of your app. The results will be saved in the `dist` directory:
 
-```bash
+```shell
 ember build --environment=production
 ```
 

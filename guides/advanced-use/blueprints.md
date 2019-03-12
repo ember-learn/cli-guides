@@ -8,7 +8,7 @@ To see a list of all available blueprints with short descriptions of what they d
 
 This is an example of how to generate a standard Route blueprint.
 
-```sh
+```shell
  ember generate route foo
 
 installing route
@@ -26,7 +26,7 @@ As the example shows, blueprints can create files and change existing project fi
 
 You can define your own blueprints using `ember generate blueprint <name>`:
 
-```sh
+```shell
 ember generate blueprint foo
 
 installing blueprint
@@ -35,7 +35,7 @@ installing blueprint
 
 If you want to also generate tests with the `foo` blueprint, you need to create a `foo-test` blueprint.
 
-```sh
+```shell
 ember generate blueprint foo-test
 
 installing blueprint
@@ -48,7 +48,7 @@ Blueprints in your project’s directory take precedence over those packaged wit
 
 Blueprints follow a simple structure. Let’s use the built-in helper blueprint as an example:
 
-```sh
+```shell
   blueprints/helper
   ├── files
   │   ├── __root__
@@ -59,7 +59,7 @@ Blueprints follow a simple structure. Let’s use the built-in helper blueprint 
 
 The accompanying test is in another blueprint. It has the same name with a `-test` suffix and will be generated with the helper blueprint.
 
-```sh
+```shell
   blueprints/helper-test
   ├── files
   │   └── tests
@@ -100,7 +100,7 @@ export default function <%= camelizedModuleName %>() {
 
 Invoking
 
-```sh
+```shell
 ember generate util count-down
 ```
 
@@ -132,7 +132,7 @@ Overriding the blueprint hooks allows for implementing custom installation and u
 
 For example, `ember help generate foo` would show
 
-```sh
+```shell
    foo <name> <options...>
         Generates a foo
         --type (String) (Default: )
@@ -140,8 +140,7 @@ For example, `ember help generate foo` would show
 
 `index.js` should export a plain object, which will extend the prototype of the Blueprint class. If needed, the original Blueprint prototype can be accessed through the `_super` property.
 
-```javascript
-// index.js
+```javascript {data-filename=blueprints/helper/index.js}
 module.exports = {
   description: "Generates a foo",
 
@@ -247,8 +246,7 @@ export default Controller.extend({
 
 When the controller is generated, the locals function would generate the `adminStatus` variable
 
-```javascript
-// index.js
+```javascript {data-filename=blueprints/helper/index.js}
 module.exports = {
   locals(options) {
     return {
@@ -313,7 +311,7 @@ To see which blueprints support the `--pod` option, you can use the help command
 
 Generate supported blueprints with a pods structure by passing the `--pod` option.
 
-```sh
+```shell
  ember generate route foo --pod
 
 installing route
@@ -327,7 +325,7 @@ installing route-test
 
 If you have `podModulePrefix` defined in your environment, your generated pod path will be prefixed with it.
 
-```sh
+```shell
 // podModulePrefix: app/pods
 ember generate route foo --pod
 
@@ -342,7 +340,7 @@ Blueprints that don't support pods structure will ignore the `--pod` option and 
 
 Generate a blueprint that supports the `--pod` option without the option:
 
-```sh
+```shell
  ember generate route foo
 
 installing route
@@ -356,8 +354,7 @@ installing route-test
 
 If you would like to use the pods structure as the default for your project, you can set `usePods` in `.ember-cli`:
 
-```javascript
-// .ember-cli
+```json {data-filename=.ember-cli}
 {
     "usePods": true
 }
@@ -365,7 +362,7 @@ If you would like to use the pods structure as the default for your project, you
 
 With `usePods` turned on, the following would occur when generating a route in the pods structure:
 
-```sh
+```shell
 ember generate route taco
 
 installing
@@ -377,7 +374,7 @@ installing
 
 To generate or destroy a blueprint in the classic structure while `usePods` is activated, you can use the `--classic` flag:
 
-```sh
+```shell
 ember generate route taco --classic
 
 installing
@@ -391,7 +388,7 @@ installing
 
 Blueprints in pods applications are created in the same way as classic applications. You define your own blueprints using `ember generate blueprint <name>`:
 
-```sh
+```shell
 ember generate blueprint foo
 
 installing blueprint
@@ -402,7 +399,7 @@ installing blueprint
 
 Blueprints that support pods structure look a little different. Let’s take the built-in controller blueprint as an example:
 
-```sh
+```shell
   blueprints/controller
   ├── files
   │   ├── __root__
@@ -453,7 +450,7 @@ There is a special case where you need to override the `fileMapTokens` hook for 
 
 For example, an Ember route named `foo` has this structure in a classic application:
 
-```sh
+```shell
   app
    ├── routes
    │   └── foo.js
@@ -463,7 +460,7 @@ For example, an Ember route named `foo` has this structure in a classic applicat
 
 In a pods application, the same route would have this structure
 
-```sh
+```shell
   app
    └── foo
        ├── route.js
@@ -473,21 +470,20 @@ In a pods application, the same route would have this structure
 The blueprint structure for a route or a similar custom blueprint would be:
 
 
-```sh
+```shell
   blueprints/route
   ├── files
   │   ├── __root__
   │   │   ├── __path__
   │   │   |   └── __name__.js
   │   │   └── __templatepath__
-  │   │       └── __templatename__.hbs
+  │           └── __templatename__.hbs
   └── index.js
 ```
 
 The index file for the blueprint would override the `fileMapTokens` hook to assign `_templatepath_` and `_templatename_`:
 
-```javascript
-// index.js
+```javascript {data-filename=blueprints/route/index.js}
 module.exports = {
   fileMapTokens(options) {
     return {
@@ -535,8 +531,7 @@ Addon blueprints have the same structure as regular blueprints.  The default blu
 
 To create the default blueprint, use `ember generate blueprint <addon-name>`
 
-```js
-// blueprints/<addon-name>/index.js
+```javascript {data-filename=my-addon-name/blueprints/my-addon-name/index.js}
 module.exports = {
   normalizeEntityName() {}, // no-op since we're just adding dependencies
 };
@@ -565,8 +560,7 @@ Installs an npm package or dependency into the client application
 
 Each of the hooks returns a promise, so they can all be chained with `.then()`. The following is an example of each of these:
 
-```js
-// blueprints/ember-cli-x-button/index.js
+```javascript {data-filename=my-addon-name/blueprints/my-addon-name/index.js}
 module.exports = {
   normalizeEntityName() {}, // no-op since we're just adding dependencies
 
@@ -601,7 +595,7 @@ module.exports = {
 The default blueprint is recognized because it normally has the same name as the addon.  Optionally, you may specify a different name for the "defaultBlueprint" in `package.json`:
 
 
-```js
+```json {data-filename=my-addon-name/package.json}
 "ember-addon": {
   // addon configuration properties
   "configPath": "tests/dummy/config",

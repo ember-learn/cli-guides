@@ -10,7 +10,7 @@ Although an addon looks and feels a lot like an Ember app, it is important to wo
 
 Use the Ember CLI to create the file structure for the addon. Run this command in a fresh directory, not inside an existing Ember app:
 
-```bash
+```shell
 ember addon <addon-name> [options]
 ```
 
@@ -49,7 +49,7 @@ This is a place to configure which versions of Ember that the test suite should 
 Values here will be defaults for apps that use our addon. Any changes in the apps own `environment.js` will overwrite these defaults.
 
 ##### Example of default configuration:
-```javascript
+```javascript {data-filename=config/enviroment.js}
 let ENV = {
   'your-awesome-addon': {
     awesomeLevel: 11,

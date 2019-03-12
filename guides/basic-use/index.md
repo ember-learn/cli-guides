@@ -17,7 +17,7 @@ Restart the console after installing your package manager.
 
 ## Installing the Ember CLI
 
-```bash
+```shell
 npm install -g ember-cli
 ```
 
@@ -42,7 +42,7 @@ Watchman helps correct for that buggy and inefficient file watching behavior.
 
 Mac users can install Watchman via [Homebrew](https://brew.sh/):
 
-```bash
+```shell
 brew install watchman
 ```
 

@@ -12,7 +12,7 @@ Upgrade instructions are published with [each release](https://github.com/ember-
 
 In general, here's how to upgrade the version of the CLI and verify that the upgrade worked:
 
-```bash
+```shell
 npm uninstall -g ember-cli
 npm install -g ember-cli
 ember --version
@@ -41,13 +41,13 @@ Review the project README for the most up-to-date instructions for using the too
 
 If you installed `ember-cli-update` globally, run the following command inside your project directory,
 
-```bash
+```shell
 ember-cli-update
 ```
 
 or if you installed as an Ember CLI command, run
 
-```bash
+```shell
 ember update
 ```
 
@@ -58,7 +58,7 @@ You will probably encounter merge conflicts, in which the default behavior is to
 Other `ember-cli-update` options are documented [here](https://github.com/ember-cli/ember-cli-update#options).
 
 For example, to update to a specific version, use the `--to` option:
-```bash
+```shell
 ember-cli-update --to 3.4.3
 ```
 
@@ -70,13 +70,14 @@ Codemods are tools that automatically make the tedious syntax changes to your co
 you would normally have to do manually.
 They help to ensure you are using the latest patterns and platform features.
 
-```bash
+```shell
 ember-cli-update --run-codemods
 ```
 The tool will examine your project and list the available codemods.
 Use the arrow keys to move the selector up and down. Press space to select the ones you want
 or you can press `a` to select them all. Press Enter to proceed.
-```js
+
+```shell
 ? These codemods apply to your project. Select which ones to run.
 Press <space> to select, <a> to toggle all, <i> to invert selection
 ❯◯ ember-modules-codemod
@@ -90,7 +91,7 @@ Press <space> to select, <a> to toggle all, <i> to invert selection
 #### Troubleshooting
 If you made a mistake during the update/conflict resolution, run these commands to undo everything and get you back to before the update:
 
-```bash
+```shell
 git reset --hard
 git clean -f
 ```

@@ -8,7 +8,7 @@ This tutorial will cover how to make a component addon from start to finish, inc
 
 First, we need to create an addon's file structure. Run this command outside of an existing Ember app:
 
-```bash
+```shell
 ember addon <addon-name> [options]
 ```
 
@@ -16,13 +16,13 @@ ember addon <addon-name> [options]
 
 If we want to create an addon component that can be shared between apps, the process is a lot like creating a normal app component:
 
-```bash
+```shell
 ember generate component <component-name>
 ```
 
 However, in the context of an addon, this creates more files than we would see in an app:
 
-```bash
+```shell
   create addon/components/<component-name>.js
   create addon/templates/components/<component-name>.hbs
   create tests/integration/components/<component-name>-test.js
@@ -34,17 +34,13 @@ Some files go in the `app` directory, while others go into the `addon` directory
 
 Let's say that our addon should wrap some content in a button tag. The addon template should look like this:
 
-```hbs
-<!-- addon/templates/components/<component-name>.hbs -->
-
+```handlebars {data-filename=addon/templates/components/my-component-name.hbs}
 <button>{{buttonLabel}}</button>
 ```
 
 Our goal is to be able to pass the `buttonLabel` value to the addon, just like we'd pass it to a normal component within an app:
 
-```hbs
-<!-- This is a handlebars file in the app using the addon -->
-
+```handlebars {data-filename=my-application-name/templates/my-template.hbs}
 <AddonName @buttonLabel="Register" />
 ```
 
@@ -81,17 +77,13 @@ In an Ember app, a block style component uses the `{{yield}}` helper as a placeh
 
 Let's change our button addon we made earlier so that developers can pass in their own handlebars content by using the `{{yield}}` helper:
 
-```hbs
-<!-- addon/templates/components/<component-name>.hbs -->
-
+```handlebars {data-filename=addon/templates/components/my-component-name.hbs}
 <button>{{yield}}</button>
 ```
 
 Now, an app can use the addon with their own content inside:
 
-```hbs
-<!-- This is a handlebars file in the app using the addon -->
-
+```handlebars {data-filename=my-application-name/templates/my-template.hbs}
 <AddonName>
   Register <img href="./images/some-cute-icon.png" alt="">
 </AddonName>
@@ -121,15 +113,11 @@ For example, writing a CSS rule for `div` is problematic, because it will affect
 
 Let's add a class to our template and some styles to target the class:
 
-```hbs
-<!-- addon/templates/components/<component-name>.hbs -->
-
+```handlebars {data-filename=addon/templates/components/my-component-name.hbs}
 <button class="addon-name-button">{{yield}}</button>
 ```
 
-```css
-/* addon/styles/our-addon-name.css */
-
+```css {data-filename=addon/styles/my-addon-name.css}
 .addon-name-button {
   padding: 10px;
 }
@@ -143,11 +131,9 @@ For some addons, it makes sense to give the developer the option to import the s
 
 We can do this by creating stylesheets in the `app/styles/` directory instead. These stylesheets share a file namespace with the consuming app and all the other addons someone is using, so name them wisely. For example, if we name our stylesheet `addon.css`, that's likely to clash. Just as before, it's important to choose uniquely named targets for the CSS rules so that they don't clash with other addons or the app.
 
-Let's create `app/styles/our-addon-name.css` and add a rule to it:
+Let's create `app/styles/my-addon-name.css` and add a rule to it:
 
-```css
-/* addon/styles/our-addon-name.css */
-
+```css {data-filename=aoo/styles/my-addon-name.css}
 .addon-name-button {
   border: black solid 2px;
 }
@@ -155,9 +141,8 @@ Let's create `app/styles/our-addon-name.css` and add a rule to it:
 
 For the stylesheet to be active in the app the addon is used in, the developer for that app must explicitly `import` the stylesheet by name. This must be done at the very top of the app's `app.css` file.
 
-```css
+```css {data-filename=app/styles/app.css}
 @import 'our-addon-name.css'
-/* The app's own app/styles/app.css */
 ```
 
 Then, restart your local server to see the changes in action.
@@ -198,9 +183,7 @@ All npm packages have an entry point. By default, the entry point is named `{add
 
 Let's add some public methods to our addon! Don't forget to `export` your methods.
 
-```js
-// addon/index.js
-
+```javascript {data-filename=my-addon-name/index.js}
 const moreEnthusiasm = function (phrase) {
   return phrase + '!!!';
 }
@@ -210,7 +193,7 @@ export { moreEnthusiasm }
 
 Now, let's use the methods in an app:
 
-```js
+```javascript
 // The JavaScript file of some component in an app
 
 import Component from '@ember/component';
@@ -233,7 +216,7 @@ One common pattern for managing an addon's JavaScript code is to define the meth
 
 For example, an `index.js` file might contain nothing more than imports and exports:
 
-```js
+```javascript
 import { moreEnthusiasm, curbedEnthusiasm } from 'our-app-name/utilities/enthusiasm.js'
 
 export { moreEnthusiasm, curbedEnthusiasm };
@@ -254,7 +237,7 @@ If the addon is just meant to be used in a single project, an "in-repo" addon co
 
 From within an existing Ember app, create an in-repo addon:
 
-```bash
+```shell
 ember generate in-repo-addon <addon-name> [options]
 ```
 
@@ -292,7 +275,7 @@ Lastly, be sure to provide a few notes about how others can contribute to the pr
 
 Addons are configured using the `ember-addon` hash in the `package.json` file.  
 
-```json
+```json {data-filename=package.json}
 "ember-addon": {
   "configPath": "tests/dummy/config",
   "before": "single-addon",
