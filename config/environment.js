@@ -32,11 +32,6 @@ module.exports = function(environment) {
       title: 'Ember CLI Guides',
       sourceRepo: 'https://github.com/ember-learn/cli-guides'
     },
-
-    survey: {
-      link: 'https://emberjs.com/ember-community-survey-2019/',
-      title: '2019 Ember Community Survey'
-    },
   };
 
   if (environment === 'development') {
