@@ -20,11 +20,6 @@ The two primary reasons are:
 * Lack of enabled-by-default symlinks
 * Generally slower filesystem operations on NTFS
 
-#### For the best possible Windows experience
-
-* Use Windows Subsystem Linux [Installation
-  Guide](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide)
-
 #### Improving your Windows experience
 
 Ensure Search and Defender ignore your project's `tmp` directory:
