@@ -1,6 +1,6 @@
 In an Ember project, the command `ember install <package-name>` installs addons and other npm packages as devDependencies in the top level `package.json`.
 
-Some project packages such `ember-cli-app-version` and `broccoli-asset-rev` are only used during development or the application build process. The package `ember-cli-htmlbars` is a dependency that must be included in a production build. 
+Some project packages such `ember-cli-app-version` and `broccoli-asset-rev` are only used during development or the application build process. For example, the package `ember-cli-htmlbars` is a dependency that must be included in a production build. 
 
 During the build process, the Ember CLI will only incorporate the addons and packages needed to distribute the application.
 
