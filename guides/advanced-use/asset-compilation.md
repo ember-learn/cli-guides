@@ -28,14 +28,23 @@ that maps to a [browserlist](https://github.com/ai/browserslist) support rule. T
 
 
 ```javascript {data-filename=config/targets.js}
-/* eslint-env node */
+'use strict';
+
+const browsers = [
+  'last 1 Chrome versions',
+  'last 1 Firefox versions',
+  'last 1 Safari versions'
+];
+
+const isCI = !!process.env.CI;
+const isProduction = process.env.EMBER_ENV === 'production';
+
+if (isCI || isProduction) {
+  browsers.push('ie 11');
+}
+
 module.exports = {
-  browsers: [
-    'ie 9',
-    'last 1 Chrome versions',
-    'last 1 Firefox versions',
-    'last 1 Safari versions'
-  ]
+  browsers
 };
 ```
 
@@ -84,18 +93,19 @@ are disabled in production by default. Pass `sourcemaps: {enabled: true}` to you
 Default `ember-cli-build.js`:
 
 ```javascript {data-filename=ember-cli-build.js}
+'use strict';
+
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
-  let app = new EmberApp({
-    sourcemaps: {
-      enabled: EmberApp.env() !== 'production',
-      extensions: ['js']
-    }
+  let app = new EmberApp(defaults, {
+    // Add options here
   });
 
-  //...
+  // Use `app.import` to add additional libraries to the generated...
+ 
   return app.toTree();
+};
 };
 ```
 
