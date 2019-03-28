@@ -5,7 +5,7 @@ Some project packages such `ember-cli-app-version` and `broccoli-asset-rev` are 
 In an addon, packages are installed in both dependencies and devDependencies:
 
 - the addon's dependencies are installed as dependencies
-- the `dummy app` dependencies are installed as devDependencies  
+- dependencies that are only used for the `dummy app` are installed as `devDependencies`
 
 The partial package.json example below is from the [`ember-c3`](https://github.com/Glavin001/ember-c3) addon, which is a wrapper for the [C3.js Graph Library](https://c3js.org/).
 
