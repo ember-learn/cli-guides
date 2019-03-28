@@ -73,7 +73,7 @@ In this case, Ember CLI will incorporate these addons along with the other depen
 
 ## Dummy app dependencies
 
-In addons, the `dummy app` is really the project and uses the root level `package.json` file for dependencies. The dummy app automatically treats the addon as a dependency without adding it to the `package.json`. This makes it easy to use the dummy app for testing and documenting your addon's usage.
+In addons, the `dummy app` is really the project and uses the root level `package.json` file for dependencies. The dummy app automatically treats the containing addon as a dependency without adding it to the `package.json`. This makes it easy to use the dummy app for testing and documenting your addon's usage.
 
 
 <!-- The wrapper example should include more information on dependencies in addons  -->
