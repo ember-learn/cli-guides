@@ -8,7 +8,7 @@ Although an addon looks and feels a lot like an Ember app, it is important to wo
 
 ### Generating the addon files
 
-Use the Ember CLI to create the file structure for the addon. Run this command in a fresh directory, not inside an existing Ember app:
+Use the ember-cli to create the file structure for the addon. Run this command in a fresh directory, not inside an existing Ember app:
 
 ```shell
 ember addon <addon-name> [options]

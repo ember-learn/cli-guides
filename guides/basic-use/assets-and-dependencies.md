@@ -34,7 +34,7 @@ ember generate <addon-name>
 
 ## npm and Yarn
 
-Ember CLI supports both [npm](https://www.npmjs.com) and [Yarn](https://yarnpkg.com/)
+ember-cli supports both [npm](https://www.npmjs.com) and [Yarn](https://yarnpkg.com/)
 for node modules management.
 
 By default, new apps use `npm`.
@@ -50,7 +50,7 @@ for any `ember install some-addon-name` commands.
 Don't forget to delete the `package-lock.json` file if the app
 already has one.
 In cases where both a `yarn.lock` file and a `package-lock.json`
-file are present, Ember CLI will default to using Yarn.
+file are present, ember-cli will default to using Yarn.
 However, having both files causes confusion for collaborators and
 is incompatible with some CI systems.
 
@@ -73,9 +73,9 @@ app source code and get the `node_modules` installed locally by executing
 
 ### Effects of new dependencies on local servers
 
-When an app is being served locally, the Ember CLI will not watch for changes in the `package.json` file. Therefore,
+When an app is being served locally, the ember-cli will not watch for changes in the `package.json` file. Therefore,
 if you install npm dependencies via `npm install <dependencies>`, you will
-need to restart your Ember CLI server session manually.
+need to restart your ember-cli server session manually.
 
 Dependencies installed with `ember install some-addon-name` will cause a refresh
 of a local server.

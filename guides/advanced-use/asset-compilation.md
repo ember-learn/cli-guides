@@ -12,19 +12,19 @@ For example, if you place `logo.png` in `public/assets/images`, you can referenc
 templates with `assets/images/logo.png` or in stylesheets with
 `url('/assets/images/logo.png')`.
 
-This functionality of Ember CLI comes from
+This functionality of ember-cli comes from
 [broccoli-asset-rev](https://github.com/rickharrison/broccoli-asset-rev). Be
 sure to check out all the options and usage notes.
 
 ## JS transpiling
 
-Ember CLI automatically transpiles future JavaScript (ES6/ES2015, ES2016 and beyond) into standard ES5
-JavaScript that runs on every browser using [Babel JS](https://babeljs.io) with the [Ember CLI Babel](https://github.com/babel/ember-cli-babel) addon.
+ember-cli automatically transpiles future JavaScript (ES6/ES2015, ES2016 and beyond) into standard ES5
+JavaScript that runs on every browser using [Babel JS](https://babeljs.io) with the [ember-cli Babel](https://github.com/babel/ember-cli-babel) addon.
 
-Internally, Ember CLI Babel uses `babel-preset-env`, which figures out which parts of your code
+Internally, ember-cli Babel uses `babel-preset-env`, which figures out which parts of your code
 need to be transpiled to ES5 by **analyzing your project's browser support targets**. A `target` is a special keyword
 that maps to a [browserlist](https://github.com/ai/browserslist) support rule. These are defined in your
-`config/targets.js` file, which [Ember CLI generates](https://github.com/ember-cli/ember-cli/blob/master/blueprints/app/files/config/targets.js) like so:
+`config/targets.js` file, which [ember-cli generates](https://github.com/ember-cli/ember-cli/blob/master/blueprints/app/files/config/targets.js) like so:
 
 
 ```javascript {data-filename=config/targets.js}
@@ -81,11 +81,11 @@ module.exports = function(defaults) {
 };
 ```
 
-As of Version 2.13, Ember CLI uses Babel 6.X for transpilation. Ember CLI versions prior to 2.13 use Babel Babel 5.X, and you can check its documentation for a comprehensive list of [all available transformations](https://github.com/babel/babel.github.io/blob/5.0.0/docs/usage/transformers/index.md) and [options](https://github.com/babel/babel.github.io/blob/5.0.0/docs/usage/options.md).
+As of Version 2.13, ember-cli uses Babel 6.X for transpilation. ember-cli versions prior to 2.13 use Babel Babel 5.X, and you can check its documentation for a comprehensive list of [all available transformations](https://github.com/babel/babel.github.io/blob/5.0.0/docs/usage/transformers/index.md) and [options](https://github.com/babel/babel.github.io/blob/5.0.0/docs/usage/options.md).
 
 ## Source maps
 
-Ember CLI supports producing source maps for your concatenated and minified JS source files.
+ember-cli supports producing source maps for your concatenated and minified JS source files.
 
 Source maps are configured by the EmberApp `sourcemaps` option, and
 are disabled in production by default. Pass `sourcemaps: {enabled: true}` to your EmberApp constructor to enable source maps for JavaScript. Use the `extensions` option to add other formats, such as CSS: `{extensions: ['js', 'css']}`. JS is supported out-of-the-box. CSS is not currently supported. For other source formats, refer to their addons.
@@ -146,7 +146,7 @@ More details on available options to customize JavaScript minification can be fo
 [`ember-cli-uglify` docs](https://github.com/ember-cli/ember-cli-uglify#ember-cli-uglify).
 
 ***Note**: The option object for minifying of JavaScript files was renamed in `ember-cli-uglify@2.x`,
-which is part of Ember CLI's default blueprint since 2.16.0. The option was called `minifyJS`
+which is part of ember-cli's default blueprint since 2.16.0. The option was called `minifyJS`
 for `ember-cli-uglify@1.x`.*
 
 ### Exclude from minification

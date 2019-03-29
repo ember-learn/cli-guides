@@ -1,10 +1,10 @@
-No matter where you are deploying your app to, the Ember CLI and community ecosystem have tools to help. In this section of the guide, we will go over some general approaches and common configurations.
+No matter where you are deploying your app to, the ember-cli and community ecosystem have tools to help. In this section of the guide, we will go over some general approaches and common configurations.
 
 ## Behind the scenes of deploying
 
-No matter which framework you use, there are some processing steps that the code probably has to go through before it is ready to be shared on the internet. For some frameworks, you need to learn all these steps and choose your own toolset. However, thanks to the hard work of many contributors across the years, the Ember CLI and community tools already have these steps set up.
+No matter which framework you use, there are some processing steps that the code probably has to go through before it is ready to be shared on the internet. For some frameworks, you need to learn all these steps and choose your own toolset. However, thanks to the hard work of many contributors across the years, the ember-cli and community tools already have these steps set up.
 
-As a result, you may not need to understand or configure build steps, but it's still helpful to have some background knowledge and terminology. Here are some common steps that the Ember CLI handles for you:
+As a result, you may not need to understand or configure build steps, but it's still helpful to have some background knowledge and terminology. Here are some common steps that the ember-cli handles for you:
 
 - Compilation: Instead of having dozens of files, many are combined together into a smaller number.
 - Minification and uglification: code is optimized for speedy evaluation by the browser, as opposed to human readability.
@@ -31,9 +31,9 @@ The results of the `build` command are placed in the `dist` directory within you
 
 For a tutorial that shows how to build your app and upload it to a web host using `scp` and `rsync`, see the [Official Ember.js Tutorial](https://guides.emberjs.com/release/tutorial/deploying/).
 
-### Ember CLI Deploy
+### ember-cli Deploy
 
-[ember-cli-deploy](http://ember-cli-deploy.com/) is a very popular community-built addon for the Ember CLI. What this means is that it's not built into the CLI by default, but it adds commands and configurations that should feel familiar to an Ember developer. The main benefit is that you set it up once and may never have to think about it again.
+[ember-cli-deploy](http://ember-cli-deploy.com/) is a very popular community-built addon for the ember-cli. What this means is that it's not built into the CLI by default, but it adds commands and configurations that should feel familiar to an Ember developer. The main benefit is that you set it up once and may never have to think about it again.
 
 `ember-cli-deploy` provides the `ember deploy` command, some build hooks, and configuration files to your project. There are many [`ember-cli-deploy` plugins](https://www.emberobserver.com/categories/ember-cli-deploy-plugins) that help you deploy to many different destinations and web hosting services, such as AWS S3 or GitHub pages.
 

@@ -9,8 +9,8 @@ for a collection of various solutions.
 
 ## Installing from behind a proxy
 
-If you're behind a proxy, you might not be able to install because Ember CLI–or
-some of its dependencies–tries to `git clone` a `git://` URL. (In this scenario,
+If you're behind a proxy, you might not be able to install because ember-cli (or
+some of its dependencies) tries to `git clone` a `git://` URL. (In this scenario,
 only `http://` URLs will work).
 
 You'll probably get an error like this:
@@ -45,7 +45,7 @@ See [The Windows Section](/release/appendix/windows/) for more details.
 
 Node.js on Cygwin is no longer supported [more
 details](https://github.com/nodejs/node/wiki/Installation#building-on-cygwin)
-Rather then using Cygwin, we recommend running Ember CLI natively on windows,
+Rather then using Cygwin, we recommend running ember-cli natively on windows,
 or via the new [Windows Subsystem
 Linux](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide).
 
@@ -58,13 +58,13 @@ Linux](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide).
 [Vagrant](https://vagrantup.com) is a system for automatically creating and
 setting up development environments that run in a virtual machine (VM).
 
-Running your Ember CLI development environment from inside of a Vagrant VM will
+Running your ember-cli development environment from inside of a Vagrant VM will
 require some additional configuration and will carry a few caveats.
 
 ### Ports
 
-In order to access your Ember CLI application from your desktop's web browser,
-you'll have to open some forwarded ports into your VM. Ember CLI by default
+In order to access your ember-cli application from your desktop's web browser,
+you'll have to open some forwarded ports into your VM. ember-cli by default
 uses two ports.
 
 * For serving assets the default is `4200`. Can be configured via `--port 4200`.
@@ -91,7 +91,7 @@ from working correctly. There are several workarounds:
 
 ### VM setup
 
-When setting up your VM, install Ember CLI dependencies as you normally would.
+When setting up your VM, install ember-cli dependencies as you normally would.
 Some of these dependencies (such as [broccoli-sass](#sass)) may have native
 dependencies that may require recompilation. To do so run:
 

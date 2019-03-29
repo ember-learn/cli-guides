@@ -1,12 +1,12 @@
 <!-- Copy over code editor content -->
 <!-- This intro paragraph needs improvement -->
 
-This section provides information on integrating Ember into various code editors and how to debug Ember CLI node code.
+This section provides information on integrating Ember into various code editors and how to debug ember-cli node code.
 
 ## Code editor integrations
 
 ### Visual Studio Code
-If you are using [VSCode](https://code.visualstudio.com/) with Ember CLI, there's an [official
+If you are using [VSCode](https://code.visualstudio.com/) with ember-cli, there's an [official
 extension pack](https://marketplace.visualstudio.com/items?itemName=emberjs.emberjs#overview) 
 maintained by the Ember Learning team that adds multiple Ember plugins that can help in 
 Ember development. If you already have VSCode installed on your machine, you can 
@@ -15,19 +15,19 @@ also search for `emberjs.emberjs` inside the [extensions view](https://code.visu
 
 ### Atom
 
-If you are using [Atom](https://atom.io) with Ember CLI, there are some
+If you are using [Atom](https://atom.io) with ember-cli, there are some
 packages available specific to Ember development.
 
 `Atom -> Preferences -> Install`
 
-* [ember-cli-helper](https://atom.io/packages/ember-cli-helper) - Ember CLI integration in Atom
+* [ember-cli-helper](https://atom.io/packages/ember-cli-helper) - ember-cli integration in Atom
 * [ember-tabs](https://atom.io/packages/ember-tabs) - Makes atom.io work better with Ember pods
 * [atom-ember-components](https://atom.io/packages/atom-ember-components) - See all controllers and components that are rendering your component. Currently only works with pods structure.
 * [atom-ember-snippets](https://atom.io/packages/ember-snippets) - Autocomplete for Ember module imports, component, service and route skeletons, and more. 
 
 ### Emacs
 
-If you are using [Emacs](https://www.gnu.org/software/emacs/) with Ember CLI,
+If you are using [Emacs](https://www.gnu.org/software/emacs/) with ember-cli,
 Emacs creates temporary backup, autosave, and lockfiles that interfere with
 broccoli watcher, so they need to either be moved out of the way or disabled.
 To do that, ensure your emacs configuration contains the following:
@@ -65,7 +65,7 @@ to enable it inside those projects.
 
 ### Sublime Text
 
-If you are using [Sublime Text](http://www.sublimetext.com) with Ember CLI,
+If you are using [Sublime Text](http://www.sublimetext.com) with ember-cli,
 by default it will try to index all files in your `tmp` directory for its
 GoToAnything functionality.  This will cause your computer to come to a
 screeching halt @ 90%+ CPU usage, and can significantly increase build times.
@@ -82,7 +82,7 @@ Simply remove these directories from the folders Sublime Text watches:
 
 ### WebStorm
 If you are using [WebStorm](https://www.jetbrains.com/webstorm/) with
-Ember CLI, you will need to modify your `.gitignore` file, enable
+ember-cli, you will need to modify your `.gitignore` file, enable
 `ECMAScript6` settings, and mark certain directories.
 
 First, add the following line to `.gitignore`:
@@ -132,7 +132,7 @@ Search for `Ember.js` and click the Install button.
 
 ### Vim
 
-If you are using [Vim](http://www.vim.org/) with Ember CLI, Vim creates
+If you are using [Vim](http://www.vim.org/) with ember-cli, Vim creates
 temporary backups and autosaves which interfere with broccoli, so they need to
 either be moved out of the way or disabled. To do that, ensure your .vimrc
 contains the following:

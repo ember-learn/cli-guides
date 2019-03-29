@@ -6,7 +6,7 @@ There are three kinds of upgrades for normal Ember app development:
 
 ## Upgrading the CLI version
 
-The Ember CLI is backwards-compatible, meaning that the latest CLI can be used with older app versions. New versions of the CLI are released roughly every 6 weeks, in step with versions of Ember.js itself.
+The ember-cli is backwards-compatible, meaning that the latest CLI can be used with older app versions. New versions of the CLI are released roughly every 6 weeks, in step with versions of Ember.js itself.
 
 Upgrade instructions are published with [each release](https://github.com/ember-cli/ember-cli/releases).
 
@@ -45,13 +45,13 @@ If you installed `ember-cli-update` globally, run the following command inside y
 ember-cli-update
 ```
 
-or if you installed as an Ember CLI command, run
+or if you installed as an ember-cli command, run
 
 ```shell
 ember update
 ```
 
-This will update your app or addon to the latest Ember CLI version. It does this by fetching the latest version and comparing it to your project's Ember CLI version. It then applies a diff of the changes from the latest version to your project. It will only modify the files if there are changes between your project's version and the latest version, and it will only change the section necessary, not the entire file.
+This will update your app or addon to the latest ember-cli version. It does this by fetching the latest version and comparing it to your project's ember-cli version. It then applies a diff of the changes from the latest version to your project. It will only modify the files if there are changes between your project's version and the latest version, and it will only change the section necessary, not the entire file.
 
 You will probably encounter merge conflicts, in which the default behavior is to let you resolve conflicts on your own. You can supply the `--resolve-conflicts` option to run your system's git merge tool if any conflicts are found.
 
@@ -96,7 +96,7 @@ git reset --hard
 git clean -f
 ```
 
-If it is helpful to see a side-by-side comparison between your app and a brand-new app, you can visit the [Ember CLI releases](https://github.com/ember-cli/ember-cli/releases), choose the correct version, and look inside the `blueprints` directory.
+If it is helpful to see a side-by-side comparison between your app and a brand-new app, you can visit the [ember-cli releases](https://github.com/ember-cli/ember-cli/releases), choose the correct version, and look inside the `blueprints` directory.
 
 ### Managing major upgrades
 

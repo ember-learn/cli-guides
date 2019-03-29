@@ -1,6 +1,6 @@
 Have you ever wanted to define your own custom boilerplate when you create new files in an Ember app? You can do that with blueprints. Blueprints are snippet generators used to create the entities — components, routes, services, models and more — used in your applications. Blueprints allow us to share common Ember patterns in the community. Developers can define blueprints for use in their applications or addons.
 
-Ember's built-in [blueprints](https://github.com/emberjs/ember.js/tree/master/blueprints) are a source of detailed examples to help you learn more about blueprints.  The Ember CLI API docs on [blueprints](https://ember-cli.com/api/classes/Blueprint.html) provide advanced information for developing blueprints.
+Ember's built-in [blueprints](https://github.com/emberjs/ember.js/tree/master/blueprints) are a source of detailed examples to help you learn more about blueprints.  The ember-cli API docs on [blueprints](https://ember-cli.com/api/classes/Blueprint.html) provide advanced information for developing blueprints.
 
 To see a list of all available blueprints with short descriptions of what they do, run `ember generate --help` or `ember help generate`.
 
@@ -42,7 +42,7 @@ installing blueprint
   create blueprints/foo-test/index.js
 ```
 
-Blueprints in your project’s directory take precedence over those packaged with Ember CLI. This makes it easy to override the built-in blueprints by generating one with the same name.
+Blueprints in your project’s directory take precedence over those packaged with ember-cli. This makes it easy to override the built-in blueprints by generating one with the same name.
 
 ### Blueprint Structure
 
@@ -112,7 +112,7 @@ export default function CountDown() {
 }
 ```
 
-Out of the box, Ember CLI provides the following template variables:
+Out of the box, ember-cli provides the following template variables:
 
 - `dasherizedPackageName`
 - `classifiedPackageName`
@@ -227,10 +227,10 @@ The object passed to `locals` looks like this:
 }
 ```
 
-<!-- Old Ember CLI docs or api examples are not correct -->
+<!-- Old ember-cli docs or api examples are not correct -->
 <!-- PR https://github.com/ember-cli/ember-cli/pull/8210 to fix api docs -->
 
-<!-- Options object is extensive and not documented anywhere.  Should be included in Ember CLI API docs -->
+<!-- Options object is extensive and not documented anywhere.  Should be included in ember-cli API docs -->
 
 This hook must return an object or a Promise which resolves to an object. The resolved object will be merged with the before mentioned default `locals`.
 
@@ -301,7 +301,7 @@ The `afterInstall` and `afterUninstall` hooks receive the same arguments as `loc
 
 The `install` hook installs the blueprint and is not normally used when developing blueprints. The hook can be used for advanced blueprints, for example if you don't want your blueprint to install any files.
 
-See the Ember CLI [source](https://github.com/ember-cli/ember-cli/blob/master/lib/models/blueprint.js) for `install` hook details.
+See the ember-cli [source](https://github.com/ember-cli/ember-cli/blob/master/lib/models/blueprint.js) for `install` hook details.
 
 ## Pod blueprints
 

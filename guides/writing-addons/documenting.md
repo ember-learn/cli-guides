@@ -13,7 +13,7 @@ If your addon has a documentation site or demo apps, be sure to include links to
 
 ## The CONTRIBUTING
 
- Every new addon contains a `CONTRIBUTING.md` when generated with Ember CLI. This file should describe how to run the addon locally, how to run tests, and contributing guidelines.
+ Every new addon contains a `CONTRIBUTING.md` when generated with ember-cli. This file should describe how to run the addon locally, how to run tests, and contributing guidelines.
 
 ## Creating a documentation site
 
@@ -31,7 +31,7 @@ For more inspiration, take a look at how your favorite addons do their documenta
 
 [Ember Observer](https://www.emberobserver.com/) is an independent, community-made resource that rates and lists addons.
 
-When you create an addon using the Ember CLI, it includes tags in the `package.json` that help it get picked up for inclusion in Ember Observer. There are objective and subjective evaluations that factor into an addon's overall score and ranking. Read more about the scoring [here](https://www.emberobserver.com/about).
+When you create an addon using the ember-cli, it includes tags in the `package.json` that help it get picked up for inclusion in Ember Observer. There are objective and subjective evaluations that factor into an addon's overall score and ranking. Read more about the scoring [here](https://www.emberobserver.com/about).
 
 ## Following SemVer
 

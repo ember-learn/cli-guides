@@ -1,6 +1,6 @@
 <!-- Needs an intro section and editing -->
 
-Ember CLI supports plain CSS out of the box. You can add your CSS styles to
+ember-cli supports plain CSS out of the box. You can add your CSS styles to
 `app/styles/app.css` and it will be served at `assets/application-name.css`.
 
 <!-- Ought to show how to import stylesheets from node_modules, or link to it in the guides if it's there -->

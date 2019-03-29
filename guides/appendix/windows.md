@@ -1,4 +1,4 @@
-Windows versions as far back as Vista are fully supported when using the Ember CLI.
+Windows versions as far back as Vista are fully supported when using the ember-cli.
 
 To get started ensure the following dependencies are installed:
 
@@ -10,7 +10,7 @@ To get started ensure the following dependencies are installed:
 
 Although supported, Windows performance, at least by default, isn't as good as
 on Linux or MacOS. On a positive note, this story continues to improve. Both
-Microsoft, and the Ember CLI team continue to work on improving these developer
+Microsoft, and the ember-cli team continue to work on improving these developer
 ergonomics.
 
 #### What causes the build slowdown?
@@ -41,7 +41,7 @@ If there was an error, try executing Set-ExecutionPolicy Unrestricted -scope Pro
 
 ### Enabling symlinks
 
-To create symlinks the account running Ember CLI must have the
+To create symlinks the account running ember-cli must have the
 `SeCreateSymbolicLinkPrivilege`. Users in the Administrators group have this
 permission already. However, if UAC (User Access Control) is enabled, users in
 the Administrators group must run their shell using Run As Administrator
@@ -73,6 +73,6 @@ executed for each package and it would immediately start executing them as soon
 as it decided to act on a package resulting in hard-to-debug race conditions.
 
 `npm` 3 is a nearly complete rewrite of `npm`, fixing both issues. Windows users of
-Ember CLI might want to make the switch to `npm` 3 to benefit from its
+ember-cli might want to make the switch to `npm` 3 to benefit from its
 flat module installation (solving most issues involving long path names) as well
 as its multi-stage installer.

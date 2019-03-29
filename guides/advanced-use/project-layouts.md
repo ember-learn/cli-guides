@@ -1,4 +1,4 @@
-Ember CLI offers two different options for the layout of project files - `classic` and `pods`.
+ember-cli offers two different options for the layout of project files - `classic` and `pods`.
 
 ## Classic layout
 The classic project structure is the default when creating a new Ember app or addon. The classic project structure organizes the filesystem by entity types. 
@@ -20,7 +20,7 @@ app
     └── post.hbs
 ```
 
-The `classic` project provides the easiest way to get started with Ember. It's the easiest way to generate files using Ember CLI.  Addons __should only use__ the `classic` structure for compatibility with either `classic` or `pods-based` consuming applications.
+The `classic` project provides the easiest way to get started with Ember. It's the easiest way to generate files using ember-cli.  Addons __should only use__ the `classic` structure for compatibility with either `classic` or `pods-based` consuming applications.
 
 ## Pods layout
 Pods-based projects organize files by features, combining all entity files into a common directory. The aforementioned example as a `pods-based` project would have this filesystem:

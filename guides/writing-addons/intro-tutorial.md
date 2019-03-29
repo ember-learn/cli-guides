@@ -101,7 +101,7 @@ Whatever goes inside the block form addon will show up where the `{{yield}}` was
 
 ### Styling a UI component addon
 
-Addon developers have many options for handling styles within their addons. For example, we could stick to plain old CSS, or use a preprocessor like Less or Sass. Most addon authors prefer Sass. We could automatically style the UI elements when they are used in an app, or we could let the developer who installed the addon choose which stylesheets to include. Here are a few different approaches. Luckily, the Ember CLI handles most of the work for us and we don't have to worry about the inner workings of asset compilation.
+Addon developers have many options for handling styles within their addons. For example, we could stick to plain old CSS, or use a preprocessor like Less or Sass. Most addon authors prefer Sass. We could automatically style the UI elements when they are used in an app, or we could let the developer who installed the addon choose which stylesheets to include. Here are a few different approaches. Luckily, the ember-cli handles most of the work for us and we don't have to worry about the inner workings of asset compilation.
 
 #### Automatically including CSS stylesheets in addons
 
@@ -151,7 +151,7 @@ If there are any problems getting this to work, one strategy is to build the add
 
 #### Using CSS preprocessors for the addon's stylesheets
 
-While this guide focuses on the "out of the box" behavior of addons and the Ember CLI, there are some well-established patterns for handling stylesheets in a way that is scalable and maintainable. A CSS preprocessor like Sass allows you to nest style rules, use variables, and do simple mathematical operations.
+While this guide focuses on the "out of the box" behavior of addons and the ember-cli, there are some well-established patterns for handling stylesheets in a way that is scalable and maintainable. A CSS preprocessor like Sass allows you to nest style rules, use variables, and do simple mathematical operations.
 
 The best way to learn how to use CSS preprocessors in your addon is to consult the documentation for the preprocessor addon of your choice, and study how other addon authors have implemented stylesheets. For example, [ember-styleguide](https://github.com/ember-learn/ember-styleguide/) is a UI component library that was made for the main Ember websites. It uses [ember-cli-sass](https://www.emberobserver.com/addons/ember-cli-sass) to manage styles. You can search [Ember Observer](https://emberobserver.com) for many more examples of styling in action!
 
@@ -173,7 +173,7 @@ For more information about building interactivity for your addon, reference the 
 
 ## Writing a JavaScript utilities addon
 
-Many addons have no UI components in them, or they offer a combination of JavaScript utilities and template helpers. In the regular npm ecosystem, JavaScript utility libraries are some of the most common packages. Although we could write a normal node package, providing an Ember addon to developers has some advantages. The developers don't need to worry about how to import a normal npm package. They can use `ember install our-addon-name` and get going right away. An addon can also take advantage of Ember or Ember CLI-specific APIs.
+Many addons have no UI components in them, or they offer a combination of JavaScript utilities and template helpers. In the regular npm ecosystem, JavaScript utility libraries are some of the most common packages. Although we could write a normal node package, providing an Ember addon to developers has some advantages. The developers don't need to worry about how to import a normal npm package. They can use `ember install our-addon-name` and get going right away. An addon can also take advantage of Ember or ember-cli specific APIs.
 
 ### Providing public API methods in the addon
 
@@ -290,10 +290,10 @@ Addons are configured using the `ember-addon` hash in the `package.json` file.
 By default, the `configPath` property is defined to point to the config directory of the test dummy application.  All other properties are optional.
 
 ### before and after
-These properties specify whether your ember-addon must run "before" or "after" any other Ember CLI addons. Both of these properties can take either a string or an array of strings. The string is the name of another Ember CLI addon, as defined in the `package.json` of the other addon.
+These properties specify whether your ember-addon must run "before" or "after" any other ember-cli addons. Both of these properties can take either a string or an array of strings. The string is the name of another ember-cli addon, as defined in the `package.json` of the other addon.
 
 ### defaultBlueprint
-Addons have a default blueprint that will automatically run when the addon is installed.  By convention, Ember will run the blueprint named after the `name` property in `package.json` 
+Addons have a default blueprint that will automatically run when the addon is installed.  By convention, Ember will run the blueprint named after the `name` property in `package.json`
 
 You may specify a different name using `defaultBlueprint`. See the [addon blueprints](../../advanced-use/blueprints/#addonblueprints) for more information on the default blueprint.
 

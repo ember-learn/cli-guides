@@ -1,4 +1,4 @@
-Learn how to install the Ember CLI on Linux, Mac, and Windows.
+Learn how to install the ember-cli on Linux, Mac, and Windows.
 
 ## Prerequisites
 
@@ -15,7 +15,7 @@ We'll know installation is successful when `npm --version` or `yarn --version` r
 It is recommended to install the most recent LTS (long-term support) version of `node`.
 Restart the console after installing your package manager.
 
-## Installing the Ember CLI
+## Installing the ember-cli
 
 ```shell
 npm install -g ember-cli
