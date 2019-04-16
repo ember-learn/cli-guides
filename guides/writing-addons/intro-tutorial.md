@@ -133,7 +133,7 @@ We can do this by creating stylesheets in the `app/styles/` directory instead. T
 
 Let's create `app/styles/my-addon-name.css` and add a rule to it:
 
-```css {data-filename=aoo/styles/my-addon-name.css}
+```css {data-filename=app/styles/my-addon-name.css}
 .addon-name-button {
   border: black solid 2px;
 }
@@ -142,7 +142,7 @@ Let's create `app/styles/my-addon-name.css` and add a rule to it:
 For the stylesheet to be active in the app the addon is used in, the developer for that app must explicitly `import` the stylesheet by name. This must be done at the very top of the app's `app.css` file.
 
 ```css {data-filename=app/styles/app.css}
-@import 'our-addon-name.css'
+@import 'my-addon-name.css'
 ```
 
 Then, restart your local server to see the changes in action.
