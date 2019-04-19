@@ -88,7 +88,7 @@ The `__root__` token is replaced with either `app` or `addon` depending upon whe
 
 Variables can be inserted into templates with `<%= someVariableName %>`.
 
-For example, the built-in `util` blueprint `files/app/utils/**name**.js` looks like this:
+For example, the built-in `util` blueprint `files/app/utils/__name__.js` looks like this:
 
 ```javascript
 export default function <%= camelizedModuleName %>() {
@@ -444,7 +444,7 @@ The  `__test__` token is replaced with the dasherized entity name and appended w
 
 ### Pods Template Variables and Blueprint Hooks
 
-Template variables and hooks for pods blueprints are the same as classic applications. 
+Template variables and hooks for pods blueprints are the same as classic applications.
 
 There is a special case where you need to override the `fileMapTokens` hook for blueprints that support both pods and classic applications.
 
