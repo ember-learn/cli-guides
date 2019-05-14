@@ -75,20 +75,20 @@ When creating a custom blueprint, only the `index.js` file is created. The `file
 
 The files directory has file templates to be installed into the target directory.
 
-#### `_name_`
+#### `__name__`
 
-The name token is replaced with the dasherized entity name at install time. For example, when the user invokes `ember generate controller foo` then  `_name_` becomes `foo`.
+The name token is replaced with the dasherized entity name at install time. For example, when the user invokes `ember generate controller foo` then  `__name__` becomes `foo`.
 
-#### `_root_`
+#### `__root__`
 
-The `_root_` token is replaced with either `app` or `addon` depending upon where it is being generated. This token is used to provide support for generating blueprints inside addons.
+The `__root__` token is replaced with either `app` or `addon` depending upon where it is being generated. This token is used to provide support for generating blueprints inside addons.
 
 
 ### Template Variables (AKA Locals)
 
 Variables can be inserted into templates with `<%= someVariableName %>`.
 
-For example, the built-in `util` blueprint `files/app/utils/**name**.js` looks like this:
+For example, the built-in `util` blueprint `files/app/utils/__name__.js` looks like this:
 
 ```javascript
 export default function <%= camelizedModuleName %>() {
@@ -422,29 +422,29 @@ As with classic Ember applications, only the index.js file is automatically crea
 
 The files directory contains templates for all the files to be installed into the target directory.
 
-#### `_name_`
+#### `__name__`
 
-When the `--pod` flag is used, invoking `ember generate controller foo --pod` replaces `_name_`  with `controller`.
+When the `--pod` flag is used, invoking `ember generate controller foo --pod` replaces `__name__`  with `controller`.
 
-If the blueprint is generated without the `--pod` option, `_name_` would be replaced with `foo`.
+If the blueprint is generated without the `--pod` option, `__name__` would be replaced with `foo`.
 
-#### `_path_`
+#### `__path__`
 
-When the `--pod` flag is used, invoking `ember generate controller foo --pod` replaces  `_path_` with foo (or <podModulePrefix>/foo if the podModulePrefix is defined).
+When the `--pod` flag is used, invoking `ember generate controller foo --pod` replaces  `__path__` with foo (or <podModulePrefix>/foo if the podModulePrefix is defined).
 
-If the blueprint is generated without the `--pod` option, `_path_` becomes `controller`.
+If the blueprint is generated without the `--pod` option, `__path__` becomes `controller`.
 
-#### `_root_`
+#### `__root__`
 
 The root token is replaced with either `app` or `addon`. This token is used to provide support for generating blueprints inside addons.
 
-#### `_test_`
+#### `__test__`
 
-The  `_test_` token is replaced with the dasherized entity name and appended with `-test` at install time. 
+The  `__test__` token is replaced with the dasherized entity name and appended with `-test` at install time.
 
 ### Pods Template Variables and Blueprint Hooks
 
-Template variables and hooks for pods blueprints are the same as classic applications. 
+Template variables and hooks for pods blueprints are the same as classic applications.
 
 There is a special case where you need to override the `fileMapTokens` hook for blueprints that support both pods and classic applications.
 
@@ -481,7 +481,7 @@ The blueprint structure for a route or a similar custom blueprint would be:
   └── index.js
 ```
 
-The index file for the blueprint would override the `fileMapTokens` hook to assign `_templatepath_` and `_templatename_`:
+The index file for the blueprint would override the `fileMapTokens` hook to assign `__templatepath__` and `__templatename__`:
 
 ```javascript {data-filename=blueprints/route/index.js}
 module.exports = {
@@ -602,4 +602,3 @@ The default blueprint is recognized because it normally has the same name as the
   "defaultBlueprint": "blueprint-that-isnt-package-name",
 }
 ```
-
