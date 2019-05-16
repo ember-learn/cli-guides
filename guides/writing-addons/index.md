@@ -35,7 +35,7 @@ Fortunately, when we run `ember generate component my-component-name` in an addo
 
 #### `index.js`
 
-An addon will leverage the npm conventions, and look for an `index.js` as the entry point unless another entry point is specified via the "main" property in the `package.json` file. You are encouraged to use `index.js` as the addon entry point for your addon and is where you add hooks if you're doing something intermediate or advanced with your addon.
+An addon will leverage npm conventions and look for an `index.js` as the entry point, unless another entry point is specified via the "main" property in the `package.json` file. You are encouraged to use `index.js` as the addon entry point for your addon. `index.js` is also where you add hooks if you're doing something intermediate or advanced with your addon.
 
 #### `ember-cli-build.js`
 
