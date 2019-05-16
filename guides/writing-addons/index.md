@@ -41,7 +41,7 @@ An addon will leverage npm conventions and look for an `index.js` as the entry p
 
 The ember-cli-build.js inside your addon is only used to configure the dummy application found in `tests/dummy/`. It is never referenced by applications which include the addon.
 
-If you need to use `ember-cli-build.js`, you may have to specify paths relative to the addon root directory. For example to configure `outputPaths` in the dummy app:
+If you need to use `ember-cli-build.js`, you may have to specify paths relative to the addon root directory. For example, to configure `outputPaths` in the dummy app:
 
 ```javascript {data-filename=ember-cli-build.js}
 const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
