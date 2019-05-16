@@ -25,9 +25,18 @@ git config --global url."https://".insteadOf git://
 
 ## Using Canary build instead of release
 
-In most cases you should use a stable release, but if you need to install a canary version to test beta features, you'd do it like this:
+In most cases you should use a stable release, but if you need to
+install a canary version to test some new feature you can update
+the `ember-source` entry in your `package.json` to use the latest
+canary tarball URL. You can find the most recent canary tarball URL
+by way of the
+[ember-source-channel-url](https://github.com/ember-cli/ember-source-channel-url)
+package.
 
-For Ember: `npm install --save-dev https://s3.amazonaws.com/builds.emberjs.com/canary/shas/106bb03e87f982657edd4595652579bfeae3f06a.tgz`
+That might look like:
+
+`npx ember-source-channel-url canary --write`
+
 For `ember-data`: `npm install --save-dev emberjs/data#master`
 
 ## Windows build performance issues
