@@ -30,7 +30,7 @@ install a canary version to test some new feature you can update
 the `ember-source` entry in your `package.json` to use the latest
 canary tarball URL. You can find the most recent canary tarball URL
 by way of the
-[ember-source-channel-url](https://github.com/ember-cli/ember-source-channel-url)
+[`ember-source-channel-url`](https://github.com/ember-cli/ember-source-channel-url)
 package.
 
 That might look like:
