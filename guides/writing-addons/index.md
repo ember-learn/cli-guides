@@ -33,6 +33,32 @@ The default way to make a component is to put the implementation in `addon/`, wh
 
 Fortunately, when we run `ember generate component my-component-name` in an addon project, the CLI takes care of all this re-exporting business. It creates the necessary files and code for us. Addon authors don't usually need to think about the `app` directory or do any work in it.
 
+#### `index.js`
+
+An addon will leverage npm conventions and look for an `index.js` as the entry point, unless another entry point is specified via the "main" property in the `package.json` file. You are encouraged to use `index.js` as the addon entry point for your addon. `index.js` is also where you add hooks if you're doing something intermediate or advanced with your addon.
+
+#### `ember-cli-build.js`
+
+The ember-cli-build.js inside your addon is only used to configure the dummy application found in `tests/dummy/`. It is never referenced by applications which include the addon.
+
+If you need to use `ember-cli-build.js`, you may have to specify paths relative to the addon root directory. For example, to configure `outputPaths` in the dummy app:
+
+```javascript {data-filename=ember-cli-build.js}
+const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
+
+module.exports = function(defaults) {
+  let app = new EmberAddon(defaults, {
+    outputPaths: {
+      app: {
+        js: '/assets/main.js'
+      }
+    }
+  });
+
+  return app.toTree();
+};
+```
+
 #### `tests/dummy/`
 This directory contains a full Ember app for addon testing purposes. During tests, we can check to make sure that the addon works or looks as expected when it is used in an app. Many addon developers use the dummy app to hold their documentation site's content as well.
 
