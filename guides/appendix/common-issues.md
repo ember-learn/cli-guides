@@ -1,12 +1,5 @@
 Having trouble with something? Check out these common pitfalls.
 
-## Don't install `npm` packages with `sudo`
-
-Installing packages such as `bower` with `sudo` powers can lead to permissions
-issues and ultimately to problems installing dependencies. See
-[https://gist.github.com/isaacs/579814](https://gist.github.com/isaacs/579814)
-for a collection of various solutions.
-
 ## Installing from behind a proxy
 
 If you're behind a proxy, you might not be able to install because Ember CLI–or
@@ -32,9 +25,18 @@ git config --global url."https://".insteadOf git://
 
 ## Using Canary build instead of release
 
-In most cases you should use a stable release, but if you need to install a canary version to test beta features, you'd do it like this:
+In most cases you should use a stable release, but if you need to
+install a canary version to test some new feature you can update
+the `ember-source` entry in your `package.json` to use the latest
+canary tarball URL. You can find the most recent canary tarball URL
+by way of the
+[`ember-source-channel-url`](https://github.com/ember-cli/ember-source-channel-url)
+package.
 
-For Ember: `bower install ember#canary --resolution canary`
+That might look like:
+
+`npx ember-source-channel-url canary --write`
+
 For `ember-data`: `npm install --save-dev emberjs/data#master`
 
 ## Windows build performance issues
