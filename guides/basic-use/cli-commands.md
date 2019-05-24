@@ -216,7 +216,7 @@ ember build --environment production
 
 ----
 
-## Create a new adon
+## Create a new addon
 
 ### Format:
 
@@ -236,6 +236,4 @@ This command below will create a folder called `x-select`.
 ember addon ember-x-select
 ```
 
-### TODO
-
-- Document how to create addons that can be published in an NPM scope/namespace
+- To do: Document how to create addons that can be published in an `npm` scope/namespace
