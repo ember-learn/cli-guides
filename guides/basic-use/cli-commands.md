@@ -226,7 +226,7 @@ ember addon <my-addon-name> [options]
 
 ### What it does
 
-`ember addon` creates all the boilerplate files for a new Ember addon. It puts them in a folder with the same name as whatever we provide in place of `<my-app-name>`.
+`ember addon` creates all the boilerplate files for a new Ember addon. It puts them in a folder with the same name as whatever we provide in place of `<my-addon-name>`.
 
 ### Example use
 
