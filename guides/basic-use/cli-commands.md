@@ -213,3 +213,31 @@ ember build --environment production
 - Search community addons for deployment on [Ember Observer](https://emberobserver.com/?query=deploy)
 - Enable feature flags in different environments using the
 [environment config](https://guides.emberjs.com/release/configuring-ember/configuring-your-app/)
+
+----
+
+## Create a new addon
+
+### Format:
+
+```shell
+ember addon <my-addon-name> [options]
+```
+
+### What it does
+
+`ember addon` creates all the boilerplate files for a new Ember addon. It puts them in a folder with the same name as whatever we provide in place of `<my-addon-name>`.
+
+### Example use
+
+This command below will create a folder called `ember-x-select`.
+
+```shell
+ember addon ember-x-select
+```
+
+### Learn more
+
+- Follow the [tutorial](../../writing-addons/intro-tutorial/) to create your own Ember Addon!
+
+<!-- To do: Document how to create addons that can be published in an `npm` scope/namespace -->
