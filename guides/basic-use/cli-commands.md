@@ -236,4 +236,8 @@ This command below will create a folder called `x-select`.
 ember addon ember-x-select
 ```
 
+### Learn more
+
+- Follow the [tutorial](../../writing-addons/intro-tutorial/) to create your own Ember Addon!
+
 <!-- To do: Document how to create addons that can be published in an `npm` scope/namespace -->
