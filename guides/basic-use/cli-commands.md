@@ -230,7 +230,7 @@ ember addon <my-addon-name> [options]
 
 ### Example use
 
-This command below will create a folder called `x-select`.
+This command below will create a folder called `ember-x-select`.
 
 ```shell
 ember addon ember-x-select
