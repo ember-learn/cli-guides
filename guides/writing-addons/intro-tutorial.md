@@ -183,7 +183,7 @@ All npm packages have an entry point. By default, the entry point is named `{add
 
 Let's add some public methods to our addon! Don't forget to `export` your methods.
 
-```javascript {data-filename=my-addon-name/index.js}
+```javascript {data-filename=addon/index.js}
 const moreEnthusiasm = function (phrase) {
   return phrase + '!!!';
 }
