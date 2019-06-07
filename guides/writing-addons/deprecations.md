@@ -36,7 +36,7 @@ yourDeprecatedMethod() {
 
 If all you need to do is rename a method, check out [`deprecatingAlias`](https://api.emberjs.com/ember/release/functions/@ember%2Fobject%2Fcomputed/deprecatingAlias).
 
-In the options object above, `until` refers to the version when you plan to remove the deprecated feature. Make sure that `id` is url-safe. The url will be printed in the console, so it's a great way to provide more information and instructions to developers.
+In the options object above, `until` refers to the version when you plan to remove the deprecated feature. Make sure that `id` is URL-safe. The URL will be printed in the console, so it's a great way to provide more information and instructions to developers.
 
 The most important reason to use Ember's built-in `deprecate` method is that the warning will be completely removed in production.
 End users will not see deprecation warnings in the console.
