@@ -14,7 +14,7 @@ For example, a workaround could be instructions about how to use your other exis
 
 ## How to make a deprecation warning
 
-You can create a deprecation warning that looks and works the same as the deprecations used by Ember itself:
+You can create a deprecation warning that looks and works the same as the deprecations used by Ember itself, by using [`deprecate`](https://api.emberjs.com/ember/release/functions/@ember%2Fapplication%2Fdeprecations/deprecate):
 
 ```js
 import { deprecate } from '@ember/application/deprecations';
@@ -24,9 +24,9 @@ yourDeprecatedMethod() {
     deprecate('You used yourDeprecatedMethod in my-addon-name, which is deprecated. Here are instructions to resolve this...', 
         false,
         {
-            id: 'your-deprecation-id',
+            id: 'your-addon-name.deprecation-descriptor',
             until: '2.0.0',
-            url: 'link-to-your-deprecations-instructions'
+            url: 'link/to/docs/deprecations/some-id.md'
         }
     );
     // code that should run for the deprecated method
@@ -34,14 +34,18 @@ yourDeprecatedMethod() {
 // ...
 ```
 
-The most important reason to use Ember's built in [`deprecate`](https://api.emberjs.com/ember/release/functions/@ember%2Fapplication%2Fdeprecations/deprecate) method is that the warning will be silenced in production.
-If a customer opens up the console for an app that uses your addon, they shouldn't see anything!
-Developers can configure whether it shows up in other build environments as well, like testing and local development.
+In the options object above, `until` refers to the version when you plan to remove the deprecated feature. Make sure that `id` is url-safe. The url will be printed in the console, so it's a great way to provide more information and instructions to developers.
+
+The most important reason to use Ember's built-in `deprecate` method is that the warning will be completely removed in production.
+End users will not see deprecation warnings in the console.
 
 ## Testing the deprecation warning
 
-Whenever you add a deprecation, it's important to add a couple test cases that would trigger the warning. You should also write tests for the "new" way to use the addon.
-It's a good idea to make these examples match what is in your `README` or API docs, so that you know the advice you are giving users actually works.
+Here's some advice about how to test that your deprecation warning is working:
+
+1. Add a couple test cases that would trigger the warning, and use `expectDeprecation` to assert that the deprecation fires (see instuctions below)
+2. Write tests for the migration instructions. It's a good idea to make these examples match what is in your `README` or API docs, so that you know the advice you are giving users actually work
+3. Check to make sure your other tests do not trigger the deprecation, or your own addon's tests will become hard to read.
 
 If you want to test if the deprecation warning itself fires at the right times, you can use community addons like [ember-qunit-assert-helpers](https://github.com/workmanw/ember-qunit-assert-helpers#emberdeprecate-assertions).
 
