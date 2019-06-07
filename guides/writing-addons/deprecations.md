@@ -17,7 +17,7 @@ For example, a workaround could be instructions about how to use your other exis
 You can create a deprecation warning that looks and works the same as the deprecations used by Ember itself, by using [`deprecate`](https://api.emberjs.com/ember/release/functions/@ember%2Fapplication%2Fdeprecations/deprecate):
 
 ```js
-import { deprecate } from '@ember/application/deprecations';
+import { deprecate } from '@ember/debug';
 // ...
 
 yourDeprecatedMethod() {
@@ -66,9 +66,9 @@ Keep in mind that you don't want your library to look like it is swimming in dep
 
 The best time to remove a deprecated feature is when you do a major version, such as going from `v1.3.4` to `2.0.0`.
 
-Removing a deprecation is a "breaking change" and developers rely on each segment of the version numbers to know whether a dependency upgrade is safe. The first number, the "major" version, is for breaking changes. The second number, the "minor" version, is for adding new features. Lastly, the "patch" version is for bugfixes and refactors. This system is referred to as [SemVer](https://semver.org/), and it is the standard for packages across the JavaScript ecosystem.
+Removing a deprecation is a "breaking change" and developers rely on each segment of the version numbers to know whether a dependency upgrade is safe. The first non-zero number, the "major" version, is for breaking changes. The second number, the "minor" version, is for adding new features. Lastly, the "patch" version is for bugfixes and refactors. This system is referred to as [SemVer](https://semver.org/), and it is the standard for packages across the JavaScript ecosystem.
 
-If you haven't done a `v1.0.0` release yet, you can make breaking changes in the "minor" version number, such as `0.12.2`.
+If you haven't done a `v1.0.0` release yet, you can make breaking changes in the first non-zero number, i.e. `v0.4.1`.
 Most developers understand that a package that is pre-1.0 will have lots of breaking changes.
 
 ### Checklist for removing a deprecation
