@@ -45,11 +45,11 @@ End users will not see deprecation warnings in the console.
 
 Here's some advice about how to test that your deprecation warning is working:
 
-1. Add a couple test cases that would trigger the warning, and use `expectDeprecation` to assert that the deprecation fires (see instuctions below)
+1. Add a couple test cases that would trigger the warning, and use `expectDeprecation` to assert that the deprecation fires (see instructions below)
 2. Write tests for the migration instructions. It's a good idea to make these examples match what is in your `README` or API docs, so that you know the advice you are giving users actually work
 3. Check to make sure your other tests do not trigger the deprecation, or your own addon's tests will become hard to read.
 
-If you want to test if the deprecation warning itself fires at the right times, you can use community addons like [ember-qunit-assert-helpers](https://github.com/workmanw/ember-qunit-assert-helpers#emberdeprecate-assertions).
+If you want to test if the deprecation warning itself fires at the right times, you can use community addons like [`ember-qunit-assert-helpers`](https://github.com/workmanw/ember-qunit-assert-helpers#emberdeprecate-assertions).
 
 After you install the addon with `ember install ember-qunit-assert-helpers`, you can use the `assert.expectDeprecation()` anywhere in your tests where you already use `qunit`. For examples and more ways to use `expectDeprecation`, see the documentation for that addon.
 
