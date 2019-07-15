@@ -58,7 +58,7 @@ The audience is a developer who knows enough to have built a simple HTML/JavaScr
 
 #### Scope
 
-Give enough information to form the mental models and show how things are connected. Ask yourself, what does someone need to know about this to build the MVP of their first app at work? How would I explain this to a Junior Developer in their first week at my workplace? Remember that the API docs should serve as the in-depth explanations. If the API docs are insufficient, PR there.
+Give enough information to form the mental-models and show how things are connected. Ask yourself, what does someone need to know about this to build the MVP of their first app at work? How would I explain this to a Junior Developer in their first week at my workplace? Remember that the API docs should serve as the in-depth explanations. If the API docs are insufficient, PR there.
 
 #### First person plural voice
 
