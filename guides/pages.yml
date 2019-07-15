@@ -45,6 +45,8 @@
     url: 'addon-dependencies'
   - title: 'Writing documentation'
     url: 'documenting'
+  - title: 'Deprecating addon features'
+    url: 'deprecations'
 
 - title: 'API documentation'
   url: 'api-documentation'

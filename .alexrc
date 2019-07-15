@@ -1,11 +1,10 @@
 {
   "allow": [
-    "host-hostess",
-    "watchman-watchwoman",
     "disabled",
-    "hooks",
-    "hook",
-    "attacks",
-    "destroy"
-  ]
+    "host-hostess",
+    "invalid",
+    "special",
+    "watchman-watchwoman"
+  ],
+  "profanitySureness": 1
 }
