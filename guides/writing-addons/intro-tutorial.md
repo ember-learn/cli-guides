@@ -68,6 +68,7 @@ We should now see our addon in action!
 - `404 not found` means we forgot to `yarn` or `npm install`
 - Make sure all the files have been saved.
 - Did you rename or relocate any files after they were created? This is prone to mistakes, and the resulting errors can be really strange. It is best to create files using the CLI.
+- If your npm searches for the package in npm registry, provide the file-path instead of "*" in package.json of your ember application; E.g: `"addon-name": "file:relative/or/absolute/addon-path"`
 
 ### Making a UI component available in block form
 
