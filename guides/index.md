@@ -12,7 +12,7 @@ for information on the latest releases and new features.
 ## Learning the CLI
 
 Although these CLI guides have a lot of content, a typical Ember developer will only need to know and use a small fraction of the information.
-For new users, the recommended learning path is to first do the Ember.js [Quickstart](https://guides.emberjs.com/release/getting-started/quick-start/) and [Tutorial](https://guides.emberjs.com/release/tutorial/ember-cli/), which teach the commands while building a sample app. Then, review the Basic Use section of this site as a reference resource.
+For new users, the recommended learning path is to first do the Ember.js [Quickstart](https://guides.emberjs.com/release/getting-started/quick-start/) and [Tutorial](https://guides.emberjs.com/release/tutorial/), which teach the commands while building a sample app. Then, review the Basic Use section of this site as a reference resource.
 
 The CLI comes with a command-line-based help system too. At any point, if you're curious what a command does and what the options are, you can add `--help` to the command and press enter to find out more.
 
