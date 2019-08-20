@@ -11,6 +11,8 @@
       url: 'index'
     - title: 'CLI commands'
       url: 'cli-commands'
+    - title: 'Folder Layout'
+      url: 'folder-layout'
     - title: 'Using addons'
       url: 'using-addons'
     - title: 'Assets and dependencies'

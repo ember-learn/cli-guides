@@ -4,3 +4,7 @@ code {
 a.edit-page {
   text-decoration: none;
 }
+
+th.col-32 {
+  width: 32%;
+}
