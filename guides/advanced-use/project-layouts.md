@@ -15,9 +15,13 @@ app
 |   └── post.js
 ├── routes
 |   └── post.js
-└── templates
-    ├──components/tags.hbs
-    └── post.hbs
+├── templates
+|   ├──components/tags.hbs
+|   └── post.hbs
+└── app.js
+└── index.html
+└── resolver.js
+└── router.js
 ```
 
 The `classic` project provides the easiest way to get started with Ember. It's the easiest way to generate files using Ember CLI.  Addons __should only use__ the `classic` structure for compatibility with either `classic` or `pods-based` consuming applications.
@@ -31,11 +35,15 @@ app
 |   └── tags
 |       ├── component.js
 |       └── template.js
-└── post      
-    ├── controller.js
-    ├── model.js
-    ├── route.js
-    └── template.hbs
+├── post      
+|   ├── controller.js
+|   ├── model.js
+|   ├── route.js
+|   └── template.hbs
+└── app.js
+└── index.html
+└── resolver.js
+└── router.js
 ```
 
 To create a pods structure in an app you add the `--pod` option to the `ember generate` command. For example, to generate the `tags` component, you would run `ember generate component tags --pod`.
