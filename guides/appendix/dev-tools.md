@@ -20,6 +20,7 @@ packages available specific to Ember development.
 
 `Atom -> Preferences -> Install`
 
+* [ide-ember](https://atom.io/packages/ide-ember) - Ember Language Server support in Atom
 * [ember-cli-helper](https://atom.io/packages/ember-cli-helper) - Ember CLI integration in Atom
 * [ember-tabs](https://atom.io/packages/ember-tabs) - Makes atom.io work better with Ember pods
 * [atom-ember-components](https://atom.io/packages/atom-ember-components) - See all controllers and components that are rendering your component. Currently only works with pods structure.
