@@ -65,7 +65,7 @@ We should now see our addon in action!
 **Having problems?**
 - Check to make sure that your `package.json` is valid, looking for missing commas or trailing commas.
 - "Template precompiler" errors mean that you skipped Step 1 and 2 above.
-- `404 not found` means we forgot to `yarn` or `npm install`
+- `404 not found` means we forgot to `yarn` or `npm install`. If the problem persists, deleting package-lock.json and then running `yarn` or `npm install` again might resolve the issue.
 - Make sure all the files have been saved.
 - Did you rename or relocate any files after they were created? This is prone to mistakes, and the resulting errors can be really strange. It is best to create files using the CLI.
 
