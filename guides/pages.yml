@@ -59,6 +59,8 @@
   pages:
   - title: 'Overview'
     url: 'index'
+  - title: 'Configuration'
+    url: 'configuration'
   - title: 'Windows support'
     url: 'windows'
   - title: 'Developer tools'
