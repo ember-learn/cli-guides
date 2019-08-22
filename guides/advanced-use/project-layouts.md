@@ -16,7 +16,7 @@ app
 ├── routes
 |   └── post.js
 ├── templates
-|   ├──components/tags.hbs
+|   ├── components/tags.hbs
 |   └── post.hbs
 └── app.js
 └── index.html
