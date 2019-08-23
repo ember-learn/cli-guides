@@ -136,10 +136,10 @@ If you are using [Vim](http://www.vim.org/) with Ember CLI, Vim creates
 temporary backups and autosaves which interfere with broccoli, so they need to
 either be moved out of the way or disabled.
 
-#### Change Temporary Backup and Autosave Locations
+#### Change temporary backup and autosave locations
 
 By default, Vim places the temporary backup and autosave files right next to
-the associated file.  If you change where Vim puts these backup and autosave files,
+the associated file. If you change where Vim puts these backup and autosave files,
 you can still get the benefits of these features without it interferring with Ember.js
 or your build.
 
@@ -155,7 +155,7 @@ And make sure to create the directories:
 mkdir -p ~/.vim/backup; mkdir -p ~/.vim/swap; mkdir -p ~/.vim/undo
 ```
 
-#### Disable Temporary Backups and Autosave Locations
+#### Disable temporary backups and autosave locations
 
 If you'd like to disable backups, you could add to your .vimrc:
 ```shell
