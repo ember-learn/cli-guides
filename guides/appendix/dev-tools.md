@@ -140,7 +140,7 @@ either be moved out of the way or disabled.
 
 By default, Vim places the temporary backup and autosave files right next to
 the associated file. If you change where Vim puts these backup and autosave files,
-you can still get the benefits of these features without it interferring with Ember.js
+you can still get the benefits of these features without it interfering with Ember.js
 or your build.
 
 In your .vimrc, add:
