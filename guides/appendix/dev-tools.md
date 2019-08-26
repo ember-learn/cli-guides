@@ -135,9 +135,16 @@ Search for `Ember.js` and click the Install button.
 
 If you are using [Vim](http://www.vim.org/) with Ember CLI, Vim creates
 temporary backups and autosaves which interfere with broccoli, so they need to
-either be moved out of the way or disabled. To do that, ensure your .vimrc
-contains the following:
+either be moved out of the way or disabled.
 
+#### Change temporary backup and autosave locations
+
+By default, Vim places the temporary backup and autosave files right next to
+the associated file. If you change where Vim puts these backup and autosave files,
+you can still get the benefits of these features without it interfering with Ember.js
+or your build.
+
+In your .vimrc, add:
 ```shell
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
@@ -148,6 +155,17 @@ And make sure to create the directories:
 ```shell
 mkdir -p ~/.vim/backup; mkdir -p ~/.vim/swap; mkdir -p ~/.vim/undo
 ```
+
+#### Disable temporary backups and autosave locations
+
+If you'd like to disable backups, you could add to your .vimrc:
+```shell
+set nobackup
+set noswap
+set noundofile
+```
+
+#### Plugins
 
 Some useful Vim plugins for working with Ember.js:
 
