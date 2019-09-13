@@ -299,28 +299,28 @@ The compiled files are output to the following paths:
   </thead>
   <tbody>
     <tr>
-      <td>`app/index.html`</td>
-      <td>`index.html`</td>
+      <td><code>app/index.html</code></td>
+      <td><code>index.html</code></td>
     </tr>
     <tr>
-      <td>`app/**/*.js`</td>
-      <td>`/assets/application-name.js`</td>
+      <td><code>app/**/*.js</code></td>
+      <td><code>/assets/application-name.js</code></td>
     </tr>
     <tr>
-      <td>`app/styles/app.css`</td>
-      <td>`/assets/application-name.css`</td>
+      <td><code>app/styles/app.css</code></td>
+      <td><code>/assets/application-name.css</code></td>
     </tr>
     <tr>
-      <td>`app/styles/**/*.css`</td>
-      <td>`/assets/application-name.css`</td>
+      <td><code>app/styles/**/*.css</code></td>
+      <td><code>/assets/application-name.css</code></td>
     </tr>
     <tr>
-      <td>JavaScript files you import with `app.import`</td>
-      <td>`/assets/vendor.js`</td>
+      <td>JavaScript files you import with <code>app.import</code></td>
+      <td><code>/assets/vendor.js</code></td>
     </tr>
     <tr>
-      <td>CSS files you import with `app.import`</td>
-      <td>`/assets/vendor.css`</td>
+      <td>CSS files you import with <code>app.import</code></td>
+      <td><code>/assets/vendor.css</code></td>
     </tr>
   </tbody>
 </table>
