@@ -1,4 +1,4 @@
-## Ember CLI guides
+ ## Ember CLI guides
 
 [![Build Status](https://travis-ci.org/ember-learn/cli-guides.svg?branch=master)](https://travis-ci.org/ember-learn/cli-guides)
 
@@ -8,7 +8,7 @@ To contribute to the API documentation itself, which lists properties and method
 
 This project replaces, updates, and adds to the content historically hosted at [https://ember-cli.com/](https://ember-cli.com/).
 
-Looking for repositories for the other parts of [emberjs.com](https://emberjs.com)? 
+Looking for repositories for the other parts of [emberjs.com](https://emberjs.com)?
 Check out
 [guides-source](https://github.com/ember-learn/guides-source),
 [website](https://github.com/emberjs/website),
@@ -38,6 +38,8 @@ The Ember CLI Guides is a normal Ember application, so if you want to run it loc
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
+_Note:_ If you are developing in any online editor environment (like, [codesandbox.io](https://codesandbox.io), [gitpod.io](https://gitpod.io) etc.,), then may not able to serve the application properly because of FastBoot's domain configurations. In such case, you can disable fastboot in development mode by serving the ember app using `FASTBOOT_DISABLED=true ember serve` command.
+
 If you then edit the Markdown files located in the `guides/` folder your
 application should live-update with the content changes.
 
@@ -46,7 +48,7 @@ files links.
 
 Markdown linting (`lint:md`) must pass otherwise it will fail in Travis-CI. Spellchecking uses a custom [ember-dictionary](https://github.com/maxwondercorn/ember-dictionary) with words and terms common to the Ember community, such as `SemVer`. Words and terms that are associated with a specific guide can be placed in the `.local.dic` dictionary file. Create a pull request if a word needs to be added to `ember-dictionary`.
 
-## How this app works 
+## How this app works
 
 The guides content is in the form of Markdown files in the [guides](https://github.com/ember-learn/cli-guides/tree/master/guides) directory. An Ember app processes and serves the Markdown files. If you look at the `app` directory, you'll see there's not much in it! That's because most of the work is done through a dependency on [guidemaker](https://sea-region.github.com/empress/guidemaker), a static site generator created in Ember.
 
@@ -63,5 +65,5 @@ See `pages.yaml` in the cli-guides-source. Whatever has a URL of `index` will be
 
 ### Deploying
 
-This app has CI/CD in place, which automatically deploys the contents of the `master` branch. 
+This app has CI/CD in place, which automatically deploys the contents of the `master` branch.
 It is hosted on the Ember Learning org's Netlify account.
