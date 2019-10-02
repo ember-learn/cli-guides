@@ -71,7 +71,6 @@ Quickstart
 rerender
 retext-spell
 runtime
-S3
 scalable
 *semver
 somepackage
@@ -88,6 +87,5 @@ URL-safe
 VirtualBox
 VM
 VMware
-VSCode
 WebStorm
 Webstorm's
