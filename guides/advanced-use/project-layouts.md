@@ -108,5 +108,3 @@ app
         ├── route.js
         └── template.hbs
 ```
-
-To follow along with the progress of new features in Ember, check out the Ember [Blog](https://www.emberjs.com/blog/). 
