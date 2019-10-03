@@ -102,26 +102,27 @@ ember generate <type-of-file> <name-of-your-choice>
 
 ### What it does
 
-`ember generate` creates new files within your app. For example, you can use it to create components, routes, services, models, and more. For a full list, type `ember generate --help`.
+`ember generate` creates new files within your app. For example, you can use it to create components, routes, services, models, and more.
+
+For a full list, type **`ember generate --help`.**
 
 The CLI's `generate` command will ensure that new files contain the necessary boilerplate, that they go in the right directories, and that file naming conventions are followed. For example, components must always have a dash in their names.
 To avoid mistakes that are hard to debug, always use the CLI to create files instead of creating the files by hand.
 
 ### Example use
 
-This command will make a component named `packing-list`. It will create three files in the app:
+This command will generate a page named `about`. It will create the following files in the app:
 
-* `packing-list.hbs`, which defines what it looks like
-* `packing-list.js` with JavaScript code to handle user interaction
-* `packing-list-test.js` with an integration test (aka rendering test)
+* `app/templates/about.hbs`, which defines what the page looks like
+* `app/routes/about.js` where we can fetch the data required for the page
+* `tests/unit/routes/about-test.js` with a minimal unit testing code
 
+Also, it updates the app's router (`app/router.js`) with an entry to the `about` page.
+
+command:
 ```shell
-ember generate component packing-list
+ember generate route about
 ```
-
-### Learn more
-
-- [Ember Quickstart Guide](https://guides.emberjs.com/release/getting-started/quick-start/#toc_define-a-route) for creating a route
 
 ## Installing addons
 
@@ -133,7 +134,7 @@ ember install <addon-name>
 
 ### What it does
 
-`ember install` is used to install addons within your app. An addon is an npm package that was built specifically for use in an Ember app. You can find a full list of addons on [Ember Observer](https://emberobserver.com). There are addon versions of many popular npm libraries, as well as packages that are unique to Ember. The majority are open source community addons. 
+`ember install` is used to install addons within your app. An addon is an npm package that was built specifically for use in an Ember app. You can find a full list of addons on [Ember Observer](https://emberobserver.com). There are addon versions of many popular npm libraries, as well as packages that are unique to Ember. The majority are open source community addons.
 By convention, most addons have `ember` in the name, but not all of them.
 
 To use non-addon npm packages directly, see "Managing Dependencies" section of the [Ember.js Guide](https://guides.emberjs.com/release/addons-and-dependencies/managing-dependencies/)
