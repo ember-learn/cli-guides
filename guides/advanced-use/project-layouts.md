@@ -19,7 +19,7 @@ app
 ├── templates
 |   └── post.hbs
 └── app.js
-└── index.html
+├── index.html
 └── resolver.js
 └── router.js
 ```
