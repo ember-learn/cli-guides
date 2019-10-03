@@ -8,7 +8,7 @@ For example, if you have a `post` resource and a `tags` component in your projec
 ```shell
 app
 ├── components
-|   └── tags.js
+|   ├── tags.js
 |   └── tags.hbs
 ├── controllers
 |   └── post.js
