@@ -25,6 +25,7 @@ app
 ```
 
 Note: the default layout for non-Octane apps is to have component templates located at `app/templates/components/tags.hbs` instead of `app/components/tags.hbs` as shown above.
+
 The `classic` project provides the easiest way to get started with Ember. It's the easiest way to generate files using Ember CLI.  Addons __should only use__ the `classic` structure for compatibility with either `classic` or `pods-based` consuming applications.
 
 ## Pods layout
