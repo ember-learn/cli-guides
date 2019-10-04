@@ -18,9 +18,9 @@ app
 |   └── post.js
 ├── templates
 |   └── post.hbs
-└── app.js
+├── app.js
 ├── index.html
-└── resolver.js
+├── resolver.js
 └── router.js
 ```
 
@@ -40,9 +40,9 @@ app
 |   ├── model.js
 |   ├── route.js
 |   └── template.hbs
-└── app.js
-└── index.html
-└── resolver.js
+├── app.js
+├── index.html
+├── resolver.js
 └── router.js
 ```
 
