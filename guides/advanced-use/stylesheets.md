@@ -33,10 +33,10 @@ To process your imports and replace them with the contents of their files,
 add in `ember-cli-build.js`:
 
 ```javascript {data-filename=ember-cli-build.js}
-var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
-  var app = new EmberApp(defaults, {
+  let app = new EmberApp(defaults, {
     minifyCSS: {
       options: { processImport: true }
     }
