@@ -352,8 +352,8 @@ module.exports = function(defaults) {
 };
 ```
 
-You may edit any of these output paths, but make sure to update the paths specified in your
-`app.outputPaths.app.html` default it is `index.html`, and `tests/index.html`. If this is not done,
+You may edit any of these output paths, but make sure to update the your main html file,
+usually is `index.html`, and `tests/index.html` with the new paths. If this is not done,
 your app will not be served with correct asset names.
 
 ```javascript {data-filename=ember-cli-build.js}
