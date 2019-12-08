@@ -23,7 +23,7 @@ This tool is used by both Ember projects and the community as a whole.
 For example, check out the [ember-styleguide](https://github.com/ember-learn/ember-styleguide), which is a library of UI components that make up [emberjs.com](https://emberjs.com). The addon docs help show what components are available and how to use them.
 
 Another option is to create your own site from scratch.
-Many addon authors use the dummy app within an addon to build their documentation site, and deploy it to GitHub pages.
+Many addon authors use the dummy app within an addon to build their documentation site, and deploy it to GitHub pages. The Ember addon [ember-cli-github-pages](https://github.com/poetic/ember-cli-github-pages) simplifies deploying the dummy app to GitHub pages.
 
 For more inspiration, take a look at how your favorite addons do their documentation.
 

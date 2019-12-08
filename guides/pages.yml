@@ -45,6 +45,8 @@
     url: 'intro-tutorial'
   - title: 'Addon dependencies'
     url: 'addon-dependencies'
+  - title: 'Addon blueprints'
+    url: 'addon-blueprints'
   - title: 'Writing documentation'
     url: 'documenting'
   - title: 'Deprecating addon features'
