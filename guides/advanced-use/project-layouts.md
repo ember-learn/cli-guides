@@ -1,4 +1,4 @@
-Ember CLI offers two different options for the layout of project files - `classic` and `pods`.
+Ember CLI offers two different options for the layout of project files—`classic` and `pods`.
 
 ## Classic layout
 The classic project structure is the default when creating a new Ember app or addon. The classic project structure organizes the filesystem by entity types. 
@@ -20,11 +20,10 @@ app
 |   └── post.hbs
 ├── app.js
 ├── index.html
-├── resolver.js
 └── router.js
 ```
 
-Note: the default layout for non-Octane apps is to have component templates located at `app/templates/components/tags.hbs` instead of `app/components/tags.hbs` as shown above.
+Note: Pre-Octane apps, by default, have component templates in `app/templates/components`. As a result, you will see `app/templates/components/tags.hbs` instead of `app/components/tags.hbs`. In Octane apps, `app/resolver.js` is no longer present.
 
 The `classic` project provides the easiest way to get started with Ember. It's the easiest way to generate files using Ember CLI.  Addons __should only use__ the `classic` structure for compatibility with either `classic` or `pods-based` consuming applications.
 
@@ -36,7 +35,7 @@ app
 ├── components
 |   └── tags
 |       ├── component.js
-|       └── template.js
+|       └── template.hbs
 ├── post      
 |   ├── controller.js
 |   ├── model.js
@@ -54,10 +53,10 @@ As your app becomes larger, a feature-driven structure may be better. Splitting 
 
 Developers who choose the pods structure will need to do more of their file management by hand, and there can be unexpected edge cases, so new Ember users are encouraged to use the `classic` file structure instead.
 
-As mentioned above, addons __should not__ use the `pods` structure
+As mentioned above, addons __should not__ use the `pods` structure.
 
 ## Classic or pods?
-Ember projects do not have to be either `classic` or `pods-based`. They can also be mixed projects. By default, if the Ember Resolver can not find a file in the pod structure, it will look for it in the classic structure.
+Ember projects do not have to be either `classic` or `pods-based`. They can also be mixed projects. By default, if the Ember Resolver cannot find a file in the pod structure, it will look for it in the classic structure.
 
 If you start with a `classic` project, you can switch to the `pods-based` filesystem as your project grows without changing the existing `classic` filesystem. You can migrate the `classic` structure in the future, as time allows.
 
@@ -77,7 +76,7 @@ If you would like to use the pods structure as the default without using the `--
 ```
 
 ## podModulePrefix
-Rather than keep your resource directories on the root of your app, you can create a `pods` directory and specify its path as the `attribute podModulePrefix` within `config/environment.js` The `pods` path should use the following format: `{appname}/{poddir}`.
+Rather than keep your resource directories on the root of your app, you can create a `pods` directory and specify its path as the attribute `podModulePrefix` within `config/environment.js` The `pods` path should use the following format: `{appname}/{poddir}`.
 
 ```javascript {data-filename=config/environment.js}
 module.exports = function(environment) {
@@ -102,8 +101,8 @@ app
 └── pods
     ├── components
     |   └── tags
-    |   ├── component.js
-    |   └── template.js
+    |       ├── component.js
+    |       └── template.hbs
     └── post      
         ├── controller.js
         ├── model.js
