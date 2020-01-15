@@ -3,6 +3,7 @@ Learn how to install the Ember CLI on Linux, Mac, and Windows.
 ## Prerequisites
 
 * [npm](https://www.npmjs.com/get-npm) or [yarn](https://yarnpkg.com/en/docs/install)
+* [git](https://git-scm.com/) is recommended, but not required
 * Recent version of [node](https://nodejs.org/en/download/), which comes included in `yarn` or `npm`
 * Mac and Linux users may need [Watchman](https://facebook.github.io/watchman/) (not the npm version!)
 
