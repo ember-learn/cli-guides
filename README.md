@@ -35,7 +35,7 @@ The Ember CLI Guides is a normal Ember application, so if you want to run it loc
 * Clone this repository
 * `cd cli-guides-source`
 * `npm install`
-* `ember serve`
+* `npm start`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
 _Note:_ If you are developing in any online editor environment like [codesandbox.io](https://codesandbox.io) or [gitpod.io](https://gitpod.io), then you may not able to serve the application properly because of FastBoot's domain configurations. In such cases, you can disable fastboot in development mode by serving the ember app using `FASTBOOT_DISABLED=true ember serve` command.
