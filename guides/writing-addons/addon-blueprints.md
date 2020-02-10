@@ -1,8 +1,6 @@
-## Addon blueprints
-
 As in applications, custom blueprints are available in addons.  Addon blueprints are used to generate code snippets in the client application.  Addons can also have a default blueprint that will run automatically after the addon is installed.
 
-Addon blueprints have the same structure as regular blueprints. You should be familiar with [creating blueprints](../../advanced-use/blueprints/) in the `Advanced use` section to understand blueprints before using them in your addon. 
+Addon blueprints have the same structure as regular blueprints. You should be familiar with [creating blueprints](../../advanced-use/blueprints/) in the `Advanced use` section to understand blueprints before using them in your addon.
 
  The default blueprint has extra hooks to install packages and/or install another Ember addon into the client app.
 

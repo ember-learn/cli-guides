@@ -47,6 +47,8 @@
     url: 'addon-dependencies'
   - title: 'Addon blueprints'
     url: 'addon-blueprints'
+  - title: 'In Repo Addons'
+    url: 'in-repo-addons'
   - title: 'Writing documentation'
     url: 'documenting'
   - title: 'Deprecating addon features'
@@ -71,4 +73,3 @@
     url: 'dev-tools'
   - title: 'Common issues'
     url: 'common-issues'
-

@@ -45,6 +45,7 @@ GoToAnything
 Heroku
 Homebrew
 http-to-https
+in-repo
 integrations
 Integrations
 Intellij-emberjs
@@ -70,6 +71,7 @@ PowerShell
 prepend
 production-env
 Quickstart
+repo
 rerender
 retext-spell
 runtime
