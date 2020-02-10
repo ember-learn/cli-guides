@@ -29,7 +29,7 @@ Likewise if your Ember CLI application uses `.less` or `.scss`, use the
 appropriate file extension for your addon stylesheet file.
 
 ### Using templates with an in-repo-addon
-In order to complile HTMLBars templates that are part of your in-repo-addon,
+In order to compile HTMLBars templates that are part of your in-repo-addon,
 your `package.json` file will need to include following dependencies:
 
 - `babel-plugin-htmlbars-inline-precompile`
