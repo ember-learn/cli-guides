@@ -33,6 +33,17 @@ The default way to make a component is to put the implementation in `addon/`, wh
 
 Fortunately, when we run `ember generate component my-component-name` in an addon project, the CLI takes care of all this re-exporting business. It creates the necessary files and code for us. Addon authors don't usually need to think about the `app` directory or do any work in it.
 
+#### `public/`
+
+You can add static assets in the `public/` directory in your addon, and they will automatically be
+merged into the public directory in the host app under `/your-addon-name/`.
+For example, if you add an image at `public/icon.png`, the host app can reference it as
+`/your-addon-name/icon.png` in CSS or JS.
+
+Note that if your addon is published into an npm restricted scope, the final asset path also
+includes that. For example, if your addon is called `@foo/my-awesome-addon`, the same image file
+described above will be available at `/@foo/my-awesome-addon/icon.png`.
+
 #### `index.js`
 
 An addon will leverage npm conventions and look for an `index.js` as the entry point, unless another entry point is specified via the "main" property in the `package.json` file. You are encouraged to use `index.js` as the addon entry point for your addon. `index.js` is also where you add hooks if you're doing something intermediate or advanced with your addon.
