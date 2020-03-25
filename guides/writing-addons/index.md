@@ -40,7 +40,7 @@ merged into the public directory in the host app under `/your-addon-name/`.
 For example, if you add an image at `public/icon.png`, the host app can reference it as
 `/your-addon-name/icon.png` in CSS or JS.
 
-Note that if your addon is published into an npm restricted scope, the final asset path also
+If your addon is published into an npm restricted scope, the final asset path also
 includes that. For example, if your addon is called `@foo/my-awesome-addon`, the same image file
 described above will be available at `/@foo/my-awesome-addon/icon.png`.
 
