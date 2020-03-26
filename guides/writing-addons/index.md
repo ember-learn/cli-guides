@@ -38,7 +38,7 @@ Fortunately, when we run `ember generate component my-component-name` in an addo
 You can add static assets in the `public/` directory in your addon, and they will automatically be
 merged into the public directory in the host app under a folder with the name of your addon.
 
-For example, if your addon is published to NPM as `@foo/my-awesome-addon`, and it contains an
+For example, if your addon is published to npm as `@foo/my-awesome-addon`, and it contains an
 image at `public/icon.png`, the host app can reference it as
 `/@foo/my-awesome-addon/icon.png` in CSS or JS.
 
