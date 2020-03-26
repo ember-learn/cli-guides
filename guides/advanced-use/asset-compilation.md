@@ -12,9 +12,10 @@ For example, if you place `logo.png` in `public/assets/images`, you can referenc
 templates with `assets/images/logo.png` or in stylesheets with
 `url('/assets/images/logo.png')`.
 
-This functionality of Ember CLI comes from
-[broccoli-asset-rev](https://github.com/rickharrison/broccoli-asset-rev). Be
-sure to check out all the options and usage notes.
+In production, builds, these assets are [fingerprinted](#fingerprintingandcdnurls), but
+all references are also automatically updated. This functionality comes from
+[broccoli-asset-rev](https://github.com/rickharrison/broccoli-asset-rev). Be sure to check out
+all the options and usage notes.
 
 ## JS transpiling
 
@@ -103,7 +104,7 @@ module.exports = function(defaults) {
   });
 
   // Use `app.import` to add additional libraries to the generated...
- 
+
   return app.toTree();
 };
 };
