@@ -233,17 +233,8 @@ This is a very tiny example of what addons can do in terms of providing JavaScri
 
 ## In-repo addons
 
-If the addon is just meant to be used in a single project, an "in-repo" addon could be created instead. The benefits are that it is lightweight and the developer has access addon APIs, like adding packages and commands. However, there are some major limitations: an in-repo addon can't be shared between apps, versioned independently, or published to npm.
-
-From within an existing Ember app, create an in-repo addon:
-
-```shell
-ember generate in-repo-addon <addon-name> [options]
-```
-
-This generates a folder called `lib/<addon-name>` that contains its own `package.json` and an `index.js` file.
-
-The most common use case for an in-repo addon is when there is a chance a component really should be a standalone library instead, but it is not yet clear if it should be broken out from the main app. Another reason is that it can be helpful for enforcing separation of concerns within an app.
+In-Repo addons live in the `lib/` directory of an Ember application. You can read more about
+them in the [dedicated section](../in-repo-addons/)!
 
 ## Other kinds of addons
 
@@ -273,7 +264,7 @@ Lastly, be sure to provide a few notes about how others can contribute to the pr
 
 ## Common addon configurations
 
-Addons are configured using the `ember-addon` hash in the `package.json` file.  
+Addons are configured using the `ember-addon` hash in the `package.json` file.
 
 ```json {data-filename=package.json}
 "ember-addon": {
@@ -293,7 +284,7 @@ By default, the `configPath` property is defined to point to the config director
 These properties specify whether your ember-addon must run "before" or "after" any other Ember CLI addons. Both of these properties can take either a string or an array of strings. The string is the name of another Ember CLI addon, as defined in the `package.json` of the other addon.
 
 ### defaultBlueprint
-Addons have a default blueprint that will automatically run when the addon is installed.  By convention, Ember will run the blueprint named after the `name` property in `package.json` 
+Addons have a default blueprint that will automatically run when the addon is installed.  By convention, Ember will run the blueprint named after the `name` property in `package.json`
 
 You may specify a different name using `defaultBlueprint`. See the [addon blueprints](../../advanced-use/blueprints/#addonblueprints) for more information on the default blueprint.
 
