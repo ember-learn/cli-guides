@@ -23,7 +23,7 @@ There are thousands of JavaScript libraries that work great in Ember. When an [n
 To view some of the most popular addons, visit [Ember Observer](https://emberobserver.com).
 
 Although Ember-specific packages are more specific, you can use your favorite npm packages directly too.
-By default, Ember apps created through Ember CLI include the `ember-auto-import` dependency, which enables importing npm packages directly. For example, if you want to use the Highcharts library in your application,
+By default, Ember apps created through Ember CLI include the `ember-auto-import` dependency, which enables importing npm packages directly. For example, if you want to use the `highcharts` library in your application,
 you can install and import it in your application without any other configuration. Be sure to visit the [ember-auto-import](https://github.com/ef4/ember-auto-import) documentation for more advanced usage!
 
 ## Why do we need a CLI?
