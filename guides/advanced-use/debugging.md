@@ -73,7 +73,7 @@ out the documentation in its README to learn how to use it!
 
 [1]: https://nodejs.org/api/debugger.html
 [2]: https://docs.npmjs.com/cli/link
-[3: https://www.emberobserver.com/addons/ember-power-select
+[3]: https://www.emberobserver.com/addons/ember-power-select
 [4]: https://broccoli.build
 [5]: https://broccoli.build/plugins.html
 [6]: https://github.com/broccolijs/broccoli-debug
