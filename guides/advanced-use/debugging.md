@@ -56,7 +56,7 @@ For example, if your app installs [`ember-power-select`][3], and you want to tes
 1. In the addon repo, run `npm link`
 1. In your app, run `npm link ember-power-select`
 
-You can verify this did the intended thing by checking id `node_modules/ember-power-select` is now
+You can verify this did the intended thing by checking that `node_modules/ember-power-select` is now
 a symlink pointing to the cloned repo.
 
 Now, in your app, if you run `ember server`, it should use the linked repo and any code changes in
