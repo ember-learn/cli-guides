@@ -26,7 +26,7 @@ focus on the logs you care about.
 
 As a JavaScript programmer or Ember Application author, you may be used to using the `debugger` statement
 to pause execution and enter a REPL where you can inspect the current state of the program. By default,
-when you run a Node.js program such as `ember build`, `debugger` statement are ignored. In order to
+when you run a Node.js program such as `ember build`, `debugger` statements are ignored. In order to
 pause execution and enter a REPL as you can in a browser, you can use `node inspect`. For example,
 set a `debugger` at the top of `ember-cli-build.js`, and then run:
 
