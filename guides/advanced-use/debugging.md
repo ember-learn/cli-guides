@@ -38,6 +38,13 @@ You'll first see the build command pause at the start of the program. You can te
 by typing `cont` (or simply `c`). Once the program begins executing, it will stop at any `debugger`
 statements it finds. You can then enter a REPL, by typing `repl`.
 
+In addition to stepping through this code using the Node.js debugger, you can also "attach" other debugging
+clients such as Google Chrome to this session. For example, to attach Google Chrome, open a new Google Chrome
+window, go to `chrome://inspect` in the location bar, and click on the "Inspect" link.
+
+You can use this technique for build steps in your app, addon, or custom blueprint or any other part of
+the build pipeline.
+
 Read more about [debugging Node.js here][1].
 
 ## Linking Addons
@@ -82,7 +89,7 @@ Some common steps are to stop the server, try one or more of these steps, and st
 - Delete the `dist` directory (found in apps with versions < 3.4), delete `node_modules`, and `npm install` or `yarn install`
 - If an app uses Bower (a deprecated, npm-like tool), follow all the steps above
 
-in addition to deleting `bower_components` and running `bower install`
+in addition to deleting `bower_components` and running `bower install`.
 
 [1]: https://nodejs.org/api/debugger.html
 [2]: https://docs.npmjs.com/cli/link

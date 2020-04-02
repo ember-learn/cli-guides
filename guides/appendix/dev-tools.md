@@ -7,10 +7,10 @@ This section provides information on integrating Ember into various code editors
 
 ### Visual Studio Code
 If you are using [VSCode](https://code.visualstudio.com/) with Ember CLI, there's an [official
-extension pack](https://marketplace.visualstudio.com/items?itemName=emberjs.emberjs#overview) 
-maintained by the Ember Learning team that adds multiple Ember plugins that can help in 
-Ember development. If you already have VSCode installed on your machine, you can 
-[click here](vscode:extension/emberjs.emberjs) to view this extension pack inside VSCode. Alternatively, you can 
+extension pack](https://marketplace.visualstudio.com/items?itemName=emberjs.emberjs#overview)
+maintained by the Ember Learning team that adds multiple Ember plugins that can help in
+Ember development. If you already have VSCode installed on your machine, you can
+[click here](vscode:extension/emberjs.emberjs) to view this extension pack inside VSCode. Alternatively, you can
 also search for `emberjs.emberjs` inside the [extensions view](https://code.visualstudio.com/docs/editor/extension-gallery).
 
 ### Atom
@@ -24,7 +24,7 @@ packages available specific to Ember development.
 * [ember-cli-helper](https://atom.io/packages/ember-cli-helper) - Ember CLI integration in Atom
 * [ember-tabs](https://atom.io/packages/ember-tabs) - Makes atom.io work better with Ember pods
 * [atom-ember-components](https://atom.io/packages/atom-ember-components) - See all controllers and components that are rendering your component. Currently only works with pods structure.
-* [atom-ember-snippets](https://atom.io/packages/ember-snippets) - Autocomplete for Ember module imports, component, service and route skeletons, and more. 
+* [atom-ember-snippets](https://atom.io/packages/ember-snippets) - Autocomplete for Ember module imports, component, service and route skeletons, and more.
 
 ### Emacs
 
@@ -151,7 +151,7 @@ set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 ```
 
-And make sure to create the directories: 
+And make sure to create the directories:
 ```shell
 mkdir -p ~/.vim/backup; mkdir -p ~/.vim/swap; mkdir -p ~/.vim/undo
 ```
@@ -172,38 +172,9 @@ Some useful Vim plugins for working with Ember.js:
 - [ember_tools](https://github.com/AndrewRadev/ember_tools.vim) - Provides various tools for navigation and code reformatting, similar to rails.vim for Rails.
 - [projectionist](https://github.com/tpope/vim-projectionist) - Powerful project navigation, provided you write your own code projections. Here's [an example](https://gist.github.com/AndrewRadev/3524ee46bca8ab349329)
 
-## Debugging Node code
+## Debugging
 
-Node's debugger and Chrome's DevTools can debug node code in an addon or app. For example, debugging Broccoli errors in an addon's `index.js`.
-
-To use the node debugger, open Chrome DevTools with  `chrome://inspect` or use the [Node.js - inspection manager (NiM)](https://chrome.google.com/webstore/detail/nodejs-v8-inspector-manag/gnhhdgbaldcilmgcpfddgdbkhjohddkj) from the Chrome web store. See Node [documentation](https://nodejs.org/en/docs/guides/debugging-getting-started/#chrome-devtools-55) for details.
-
-To debug, place a `debugger` statement where the code should break.  Then serve the application using
-
-```shell
-node --inspect node_modules/ember-cli/bin/ember serve
-```
-
-You will see a message like this in the console.
-
-
-```shell
-Debugger listening on ws://127.0.0.1:9229/9c664016-bcfa-444b-b7fe-57d91a0d6e8f
-For help see https://nodejs.org/en/docs/inspector
-Debugger attached.
-```
-If you used `chrome://inspect`, click on the `inspect` link to launch DevTools. NiM will automatically open DevTools.
-
-Stop Ember serve using `Ctrl-C` and then close the DevTools tab.
-
-### Debugging custom blueprints
-
-You can use also use the node debugger when writing custom [blueprints](../../advanced-use/blueprints/). To debug a blueprint `index.js` file, place a `debugger` statement where the code should break and then generate the blueprint using
-
-```shell
-node --inspect-brk node_modules/ember-cli/bin/ember generate <my-blueprint> <name>
-```
-The debugger will pause on the first line of Ember's generator code. Click on the debugger's `run` button to go to your breakpoint.
+See the [Debugging](../../advanced-use/debugging) guide for tips on debugging build steps, addons, and custom blueprints.
 
 ## Proxying ajax requests
 
