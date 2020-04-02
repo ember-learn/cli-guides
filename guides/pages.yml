@@ -35,6 +35,8 @@
     url: 'project-layouts'
   - title: 'Creating blueprints'
     url: 'blueprints'
+  - title: 'Debugging'
+    url: 'debugging'
 
 - title: 'Writing addons'
   url: 'writing-addons'
