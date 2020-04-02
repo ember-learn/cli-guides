@@ -174,7 +174,7 @@ Some useful Vim plugins for working with Ember.js:
 
 ## Debugging
 
-See the [Debugging](../../advanced-use/debugging) guide for tips on debugging build steps, addons, and custom blueprints.
+See the [Debugging](../../advanced-use/debugging/) guide for tips on debugging build steps, addons, and custom blueprints.
 
 ## Proxying ajax requests
 

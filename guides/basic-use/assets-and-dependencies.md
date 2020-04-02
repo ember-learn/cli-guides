@@ -85,4 +85,4 @@ of a local server.
 Errors such as "a module named \_\_\_\_\_ could not be found" or a colleague's report that "well, the app works on my computer but not yours!" sometimes indicate that
 the local server needs to be restarted or `node_modules` should be reinstalled.
 
-To overcome issues like this visit the [CLI Debugging Guide](../../advanced-use/debugging).
+To overcome issues like this visit the [CLI Debugging Guide](../../advanced-use/debugging/).
