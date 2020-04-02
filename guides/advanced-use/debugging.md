@@ -70,6 +70,19 @@ provides (asset compilation, fingerprinting, integrating addons, etc) is impleme
 can sometimes be helpful. This is also implemented as the [`broccoli-debug`][6] plugin. Check
 out the documentation in its README to learn how to use it!
 
+## Assets and Dependencies
+
+Sometimes build tools show especially broken output. This can happen for a variety of reasons, but
+the all-purpose technique of "turning it on and off" can apply to Ember CLI as well.
+
+Some common steps are to stop the server, try one or more of these steps, and start the server again:
+
+- Run `npm install` or `yarn install`
+- Delete the `node_modules` directory and run `npm install` or `yarn install`
+- Delete the `dist` directory (found in apps with versions < 3.4), delete `node_modules`, and `npm install` or `yarn install`
+- If an app uses Bower (a deprecated, npm-like tool), follow all the steps above
+
+in addition to deleting `bower_components` and running `bower install`
 
 [1]: https://nodejs.org/api/debugger.html
 [2]: https://docs.npmjs.com/cli/link
