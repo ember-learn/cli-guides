@@ -19,7 +19,7 @@ Typically, environment variables specific to a command are set by prefixing the 
 DEBUG=ember-cli:* ember build
 ```
 
-If you set the variable to `*`. Consult the `debug` library documentation for additional ways to
+You can set the variable to `*`. Consult the `debug` library documentation for additional ways to
 focus on the logs you care about.
 
 ## Breakpoints
