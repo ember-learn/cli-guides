@@ -11,7 +11,7 @@ cover both of these tools in the context of Ember CLI.
 
 ## Logging
 
-Ember CLI's default output is pretty quiet. Under the hood it uses the `debug` library to log messages.
+Ember CLI's default output is pretty quiet. Under the hood it uses [the `debug` library][7] to log messages.
 You can see this output by setting the `DEBUG` environment variable to `*` or `ember-cli:*`.
 Typically, environment variables specific to a command are set by prefixing the command. For example:
 
@@ -19,8 +19,8 @@ Typically, environment variables specific to a command are set by prefixing the 
 DEBUG=ember-cli:* ember build
 ```
 
-If you set the variable to `*`. Consult the `debug` library docs for the right syntax to focus on more
-specific logs.
+If you set the variable to `*`. Consult the `debug` library documentation for additional ways to
+focus on the logs you care about.
 
 ## Breakpoints
 
@@ -77,3 +77,4 @@ out the documentation in its README to learn how to use it!
 [4]: https://broccoli.build
 [5]: https://broccoli.build/plugins.html
 [6]: https://github.com/broccolijs/broccoli-debug
+[7]: https://www.npmjs.com/package/debug
