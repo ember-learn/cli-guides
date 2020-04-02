@@ -42,7 +42,7 @@ Read more about [debugging Node.js here][1].
 
 ## Linking Addons
 
-While logging and breakpoints are useful, there are additional challenges when the code you're trying
+While logging and breakpoints are useful, there are additional challenges when the code you are trying
 to debug lives in an Ember addon (or other module). A useful way of debugging addons or testing changes
 is to use [`npm link`][2]. Although linking dependencies is not specific to Ember addons, for debugging
 *run* time code (such as Components or Services) while the development server is running, you can return `true`
