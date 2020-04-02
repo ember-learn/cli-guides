@@ -2,8 +2,8 @@ For most Ember applications, Ember CLI "just works". Run `ember server` in your 
 a LiveReload development server at `http://localhost:4200`. Run `ember build`, and you get a `dist/`
 directory with compiled assets ready to be deployed to your production server.
 
-But things don't always go smoothly and CLI commands can fail inexplicably with error messages that are
-difficult to understand or act upon. In these cases, it can be useful to have tools to figure out what
+But things don't always go smoothly and CLI commands can fail inexplicably with error messages that
+can sometimes be difficult to act on. In these cases, it can be useful to have tools to figure out what
 went wrong.
 
 In most programming languages, the two most useful debugging tools are logging and breakpoints. Let's
