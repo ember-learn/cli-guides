@@ -29,6 +29,8 @@
     url: 'index'
   - title: 'Asset compilation'
     url: 'asset-compilation'
+  - title: 'Build Targets'
+    url: 'build-targets'
   - title: 'Stylesheet compilation'
     url: 'stylesheets'
   - title: 'Project Layouts'

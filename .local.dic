@@ -51,6 +51,7 @@ Integrations
 Intellij-emberjs
 JetBrains
 js-files
+linters
 LiveReload
 minibuffer
 MacOS
