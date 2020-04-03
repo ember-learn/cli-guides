@@ -51,6 +51,8 @@
     url: 'addon-blueprints'
   - title: 'In Repo Addons'
     url: 'in-repo-addons'
+  - title: 'Custom Commands'
+    url: 'custom-commands'
   - title: 'Writing documentation'
     url: 'documenting'
   - title: 'Deprecating addon features'
