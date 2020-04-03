@@ -51,6 +51,7 @@ Integrations
 Intellij-emberjs
 JetBrains
 js-files
+LiveReload
 minibuffer
 MacOS
 MELPA
@@ -71,6 +72,7 @@ PowerShell
 prepend
 production-env
 Quickstart
+REPL
 repo
 rerender
 retext-spell
