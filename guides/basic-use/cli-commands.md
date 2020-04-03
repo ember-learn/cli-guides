@@ -61,6 +61,7 @@ ember new camping-trip-tracker --yarn
 ### Learn more
 
 - [Ember Quickstart Guide](https://guides.emberjs.com/release/getting-started/quick-start/) for creating a first app
+- [npm and Yarn](../assets-and-dependencies/#npmandyarn) for more on using package managers with Ember CLI
 
 ## Serve the app locally
 
