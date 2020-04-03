@@ -57,6 +57,14 @@ is incompatible with some CI systems.
 To switch from `yarn` to `npm`, delete the `yarn.lock`
 and run `npm install` to generate a `package-lock.json`.
 
+To have Ember CLI use `yarn` by default for all new projects, create a `.ember-cli` file in your home directory with:
+
+```json
+{
+  "yarn": true
+}
+```
+
 Further documentation about npm and Yarn is available at their official
 documentation pages:
 
