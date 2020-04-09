@@ -176,11 +176,14 @@ Some useful Vim plugins for working with Ember.js:
 
 See the [Debugging](../../advanced-use/debugging/) guide for tips on debugging build steps, addons, and custom blueprints.
 
-## Proxying ajax requests
+## Proxying network requests
 
-When using `ember serve`, by default all ajax requests will target the Ember server at `localhost:4200`.  You can use the `--proxy` flag to direct ajax requests to another address.  For example
+When using `ember serve`, by default all network requests will target the Ember server at `localhost:4200`.
+You can use the `--proxy` flag to direct network requests to another address.  For example
 
 ```shell
 ember server --proxy=http://localhost:8080
 ```
-will proxy ajax requests to the server running at `http://localhost:8080`.  The `localhost:8080` address can be replaced with the IP address of any remote server.
+
+will proxy network requests to the server running at `http://localhost:8080`.
+The `localhost:8080` address can be replaced with the IP address of any remote server.
