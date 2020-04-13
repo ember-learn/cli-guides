@@ -96,7 +96,7 @@ Lastly, if you find yourself working with an older app, you may see references t
 
 ### Content Security Policy
 
-It is a best practice to define a Content Security Policy (CSP) for your application and to make it restrictive. A Content Security Policy configuration defines the list of places that your app should accept data from. For example, an app may allow stylesheets from a CDN and images from a specific data storage service. By forbidding everything else common Cross-Site-Scripting (XSS) attacks could be prevented.
+It is a best practice to define a Content Security Policy (CSP) for your application and to make it restrictive. A Content Security Policy configuration defines the list of places that your app should accept data from. For example, an app may allow stylesheets from a CDN and images from a specific data storage service. By forbidding everything else, common Cross-Site-Scripting (XSS) attacks can be prevented.
 
 The [`ember-cli-content-security-policy`](https://github.com/rwjblue/ember-cli-content-security-policy) addon helps you to develop and test your application with a CSP applied. It could also inject the CSP in the app as a meta tag on build time. As any other addon it should be installed using the Ember CLI:
 
