@@ -68,7 +68,7 @@ In order to extend this service, we must use both these key concepts.
 
 In other words, we must export an extended version of the *importable* code at the *resolvable* path.
 More concretely, we must create a file at `app/services/state-manager.js`  that imports the StateManager
-class and extends it using Javascript classes:
+class and extends it using JavaScript classes:
 
 ```javascript{data-file-name=app/services/state-manager.js}
 import StateManager from 'ember-state-manager/services/state-manager';
