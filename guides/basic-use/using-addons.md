@@ -92,7 +92,7 @@ export default Button extends Component {
 }
 ```
 
-Although this example is for a Service class, the same basic mechanism can be used for anything else
+Although this example is for a Service class, the same idea can be used for anything else
 in the app directory!
 
 ### Who creates addons?
