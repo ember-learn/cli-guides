@@ -83,6 +83,7 @@ somepackage
 Set-ExecutionPolicy
 SRI
 ssl
+StateManager
 Subresource
 toolchain
 toolset
