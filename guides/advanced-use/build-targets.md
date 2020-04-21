@@ -51,7 +51,7 @@ module.exports = {
 You are left with browsers that have the full support of the latest JavaScript features.
 If you inspect the compiled code, you will see that some features are not compiled to ES5 code anymore, such as arrow functions and async/await.
 
-This feature is backed by [Browserlist](https://github.com/ai/browserslist) and [Can I Use](http://caniuse.com/).
+This feature is backed by [Browserslist](https://github.com/ai/browserslist) and [Can I Use](https://caniuse.com/).
 These websites track usage stats of browsers, so you can use complex queries based on the user base of every browser.
 
 If you want to target all browsers with more than a 4% market share in Canada,
