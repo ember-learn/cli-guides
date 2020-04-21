@@ -55,7 +55,7 @@ code in an Ember app is *resolved*, rather than explicitly imported, the mechani
 is by placing a file where Ember's resolver expects it in the directory structure. Let's take a look
 at how to do this through an example.
 
-Consider an addon `ember-state-manager` that contains a `Service` class called called `StateManager`.
+Consider an addon `ember-state-manager` that contains a `Service` class called `StateManager`.
 This addon (if it follows conventions), will contain two files:
 
 - `addon/services/state-manager.js`, and
