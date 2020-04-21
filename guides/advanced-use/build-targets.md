@@ -48,7 +48,7 @@ module.exports = {
 };
 ```
 
-You are left with browsers that have full support of ES2015 and ES2016.
+You are left with browsers that have the full support of the latest JavaScript features.
 If you inspect the compiled code, you will see that some features are not compiled to ES5 code anymore, such as arrow functions and async/await.
 
 This feature is backed by [Browserlist](https://github.com/ai/browserslist) and [Can I Use](http://caniuse.com/).
