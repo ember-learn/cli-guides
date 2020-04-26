@@ -42,15 +42,25 @@ module.exports = {
       env: {
         browser: false,
         node: true
+      }
+    },
+    // node tests
+    {
+      files: [
+        'node-tests/**/*.js'
+      ],
+      env: {
+        node: true,
+        mocha: true
       },
-      plugins: ['node'],
-      rules: Object.assign({}, require('eslint-plugin-node').configs.recommended.rules, {
-        // add your custom rules and overrides for node files here
-
-        // this can be removed once the following is fixed
-        // https://github.com/mysticatea/eslint-plugin-node/issues/77
-        'node/no-unpublished-require': 'off'
-      })
+      parserOptions: {
+        ecmaVersion: 2018
+      },
+      rules: {
+        "func-names": 0,
+        "prefer-arrow-callback": 0,
+        "no-unused-expressions": 0
+      },
     }
   ]
 };
