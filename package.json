@@ -63,7 +63,7 @@
     "guidemaker-link-checker": "^1.0.0",
     "loader.js": "^4.7.0",
     "mocha": "^5.0.0",
-    "prember": "^1.0.0",
+    "prember": "^1.0.3",
     "qunit-dom": "^1.0.0",
     "remark-cli": "^6.0.1",
     "remark-lint": "^6.0.5",
