@@ -181,6 +181,25 @@ ember test --server
 
 During development, this is less common than running `ember serve` and viewing the tests at `http://localhost:4200/tests`.
 
+To run specific tests, you can pass the `--filter` or `--module` flags to the `ember test` command. For example:
+
+if you have a test like this:
+
+```js
+module('My Component', function() {
+  test('test one', function(assert) {
+    assert.ok(true, 'this test passes!');
+  });
+  test('test two', function(assert) {
+    assert.ok(true, 'this test passes!');
+  });
+});
+```
+
+you can run only the first test with `ember test --filter="test one"`.
+
+See `ember test --help` for more options!
+
 ### Learn more
 - [The Ember.js Guides about Testing](https://guides.emberjs.com/release/testing/)
 - [The Ember Super Rentals Tutorial](https://guides.emberjs.com/release/tutorial/ember-cli/) which shows step-by-step how to write tests and understand the results
