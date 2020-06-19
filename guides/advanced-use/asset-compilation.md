@@ -65,14 +65,9 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     babel: {
-      blacklist: [
-        'es6.arrowFunctions',
-        'es6.blockScoping',
-        'es6.classes',
-        'es6.destructuring',
-        'es6.parameters',
-        'es6.properties.computed',
-        // ...more options
+      exclude: [
+       'transform-regenerator',
+       // ...more options
       ]
     }
   });
