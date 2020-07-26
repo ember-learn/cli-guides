@@ -34,7 +34,7 @@ you can install and import it without any other configuration. Be sure to visit 
 
 ## Why do we need a CLI?
 
-The Ember CLI's job is to make your work easier.
+Ember CLI's job is to make your work easier.
 
 The CLI is like a dependency packager, test runner, optimizer, and local server—all rolled into one. Since all features were built to work together, common tasks (e.g. upgrading the app version and deploying the app) can be automated with production-ready, open source plugins. The CLI is backwards-compatible with older Ember apps and maintains a 6-week release schedule.
 
