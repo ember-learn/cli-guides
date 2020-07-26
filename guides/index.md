@@ -1,5 +1,5 @@
 The Ember CLI (command line interface) is the official way to create, build, test, and serve the files that make up an Ember app or addon.
-Many things have to happen before a web app is ready for the browser. The Ember CLI helps you get there with zero configuration.
+Many things have to happen before a web app is ready for the browser. Ember CLI helps you get there with zero configuration.
 
 ```shell
 npm install -g ember-cli
