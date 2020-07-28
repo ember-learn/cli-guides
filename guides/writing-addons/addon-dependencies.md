@@ -36,7 +36,7 @@ The addon has six dependencies. `ember-cli-babel` is required by all addons and 
 
 `broccoli-funnel` and `broccoli-merge-trees` are used in the top level `index.js` to import the `C3.js` CSS files into the addon.
 
-During the build process, `ember-cli` will only incorporate the npm packages that are described in your `dependencies` graph and will omit anything in the `devDependancies`.
+During the build process, `ember-cli` will only incorporate the npm packages that are described in your `dependencies` graph and will omit anything in the `devDependencies`.
 
 ## Addons as dependencies
 
