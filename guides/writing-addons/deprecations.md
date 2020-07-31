@@ -14,7 +14,7 @@ For example, a workaround could be instructions about how to use your other exis
 
 ## How to make a deprecation warning
 
-You can create a deprecation warning that looks and works the same as the deprecations used by Ember itself, by using [`deprecate`](https://api.emberjs.com/ember/release/functions/@ember%2Fapplication%2Fdeprecations/deprecate):
+You can create a deprecation warning that looks and works the same as the deprecations used by Ember itself, by using [`deprecate`](https://api.emberjs.com/ember/release/functions/@ember%2Fdebug/deprecate):
 
 ```js
 import { deprecate } from '@ember/debug';
