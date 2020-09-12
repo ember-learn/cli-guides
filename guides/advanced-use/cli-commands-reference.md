@@ -1,44 +1,65 @@
-In their daily work, most Ember developers use only a small number of CLI commands. See the Basic use [CLI commands](https://cli.emberjs.com/release/basic-use/cli-commands/)  section to review the basic options and help features.
-For reference, we'll show a list of commands and options below.
+In their daily work, most Ember developers use only a small number of CLI commands. See the [Basic use](release/basic-use/cli-commands/) section for a guide to common CLI commands and options.
+  
+This page shows a full list CLI of commands and options available.
 
-`ember --help` will show a list of all available top-level commands and their options in alphabetical order. Adding `--help` option in combination with an ember command to get command specific help for example `ember generate --help` will show a full list of all the types of files you can generate using the CLI.
+### Command specifc flags
 
+Some option flags can only be used with specific commands, for instance the `--gc` option used here:
 
-## Addon
-
-The `ember addon` command creates an ember app using the addon file structure and setup. Addons are used to add functionality that can be added to other ember apps.
-See [Writing Addons](https://cli.emberjs.com/release/writing-addons/) for guidance.
-
-```bash 
-ember addon <addon-name> <options...>
+```bash
+ ember generate my-component --gc
 ```
 
-### --dry-run
+This option flag generates a glimmer component and can *only* be used in conjunction with the `ember generate` command. See [generate](../cli-commands-reference/#generate) section below for more details on `--gc` flag. Usage of these types of command specific flags are detailed in the [Commands](../cli-commands-reference/#commands) section.
 
-Create an addon with dry-run mode to see what folder and files will be added without saving them to disk. This allows you to 'back out' of changes for instance if you decide on reflection to change the name of the app or options used.
+### Non-specifc flags
+
+Some option flags have more general behaviour and can be used with many different commands. Usage for these generic option flags are as follows: 
+
+#### --help
+
+The `-h` option can be used with any command and will provide short description and list of available option flags. `ember --help` will show a list of all available top-level commands and their options in alphabetical order. Adding `--help` option in combination with an ember command to get more specific help for example `ember generate --help` will show a list of all the types of files you can generate using that command.
+
+#### --dry-run
+
+Use the `-d` flag to show which folders and files will be added without saving them to disk. This is useful if you are unsure exactly which files a command will change or create.
 
 ```bash
 --dry-run (Boolean) (Default: false)
     aliases: -d
 ```
 
-### --verbose
+#### --verbose
 
-Create an addon in verbose displays all messages to the console to allow yo to see exactly what ember cli is doing. This can help debugging or aid your understanding of what ember is doing.
+Run a command in `-v` mode displays to view console messages which are usually hidden. This allows you to see all information about what ember CLI is doing 'behind the scenes'. This can help in debugging or to aid your understanding of ember.
 
 ```bash
 --verbose (Boolean) (Default: false)
     aliases: -v
 ```
+  
+    
+## Commands
 
-### --blueprint
+Alphabetical list of ember commands and their option flags:
+
+### Addon
+
+The `ember addon` command creates an ember app using addon specific file structure and setup. Addons are used to create functionality that can be used by other ember apps.
+See [Writing Addons](../../writing-addons/) for guidance.
+
+```bash 
+ember addon <addon-name> <options...>
+```
+
+#### --blueprint
 
 ```bash
 --blueprint (String) (Default: addon)
     aliases: -b <value>
 ```
 
-### --skip-npm
+#### --skip-npm
 
 ```bash
 --skip-npm (Boolean) (Default: false)
@@ -46,13 +67,13 @@ Create an addon in verbose displays all messages to the console to allow yo to s
 ```
 
 
-### --skip-bower
+#### --skip-bower
 
 ```bash
 --skip-bower (Boolean) (Default: false)
     aliases: -sb
 ```
-### --skip-git
+#### --skip-git
 
 Create addon without using git version control.
 
@@ -61,7 +82,7 @@ Create addon without using git version control.
     aliases: -sg
 ``` 
 
-### --yarn 
+#### --yarn 
 
 Create addon using yarn package manager.
 
@@ -69,21 +90,30 @@ Create addon using yarn package manager.
 --yarn (Boolean)
 ``` 
 
-### -- directory
+#### -- directory
 ```bash
 --directory (String)
     aliases: -dir <value>
 ```
 
-## Asset-sizes
+#### other flags
 
-The `ember asset-sizes` shows the sizes of your asset files. Useful to find large files slowing down your app.
+```bash
+--verbose (Boolean) (Default: false)
+    aliases: -v
+--dry-run (Boolean) (Default: false)
+    aliases: -d
+```
+
+### Asset-sizes
+
+The `ember asset-sizes` shows the sizes of your asset files. This can be useful to find large files slowing down your app.
 
 ```bash
 ember asset-sizes <options...>
 ```
 
-### --output-path
+#### --output-path
 
 THe output-path option show assest size for a specific folder.
 
@@ -92,7 +122,7 @@ THe output-path option show assest size for a specific folder.
     aliases: -o <value>
 ```
 
-### --json 
+#### --json 
 
 This option display asset size in json format
 
@@ -100,37 +130,64 @@ This option display asset size in json format
   --json (Boolean) (Default: false)
 ```
 
-## Build
+### Build
 
-```
+The `ember build` command builds your app ready for deployment. This command will compile all your files into small more compressed version which is faster to download and execute. The built assests are stored in the dist/ folder by default.
+
+```bash
 ember build <options...>
-  Builds your app and places it into the output path (dist/ by default).
-  aliases: b
+ aliases: b
+```
+
+#### --environment
+
+The `--environment` flag is important when when you are ready deploy your app. 
+
+```bash
   --environment (String) (Default: development) Possible values are
    "development", "production",
    and "test".
     aliases: -e <value>, -dev (--environment=development), -prod
     (--environment=production)
+```
+
+#### --output-path
+
+```bash
   --output-path (Path) (Default: dist/)
     aliases: -o <value>
+```
+#### --watch
+
+```bash
   --watch (Boolean) (Default: false)
     aliases: -w
+```
+#### --watcher
+
+```bash
   --watcher (String)
+```
+#### --suppress-sizes
+
+```bash
   --suppress-sizes (Boolean) (Default: false)
 ```
 
-## Destroy
+### Destroy
 
-```
+
+
+```bash
 ember destroy <blueprint> <options...>
   Destroys code generated by `generate` command. 
   A path is expected,
    relative to the root of the project.
 ```
 
-## Generate
+### Generate
 
-```
+```bash
 options
 ember generate <blueprint> <options...>
   Generates new code from blueprints.
@@ -152,9 +209,9 @@ ember generate <blueprint> <options...>
     project.
 ```
 
-## Help
+### Help
 
-```
+```bash
 ember help <command-name (Default: all)> <options...>
   Outputs the usage instructions for all commands or the
    provided command aliases: h, --help, -h
@@ -163,9 +220,9 @@ ember help <command-name (Default: all)> <options...>
   --json (Boolean) (Default: false)
 ```
 
-## Init
+### Init
 
-```
+```bash
 ember init <glob-pattern> <options...>
   Creates a new ember-cli project in the current folder.
   --dry-run (Boolean) (Default: false)
@@ -177,9 +234,9 @@ ember init <glob-pattern> <options...>
     aliases: -n <value>
 ```
 
-## Install
+### Install
 
-```
+```bash
 ember install <addon-name> <options...>
   Installs an ember-cli addon from npm.
   aliases: i
@@ -193,9 +250,9 @@ ember install <addon-name> <options...>
   or --no-yarn to enforce npm
 ```
 
-## New
+### New
 
-```
+```bash
 ember new <app-name> <options...>
   Creates a new directory and runs ember init in it.
   --dry-run (Boolean) (Default: false)
@@ -212,9 +269,9 @@ ember new <app-name> <options...>
     aliases: -dir <value>
 ```
 
-## Serve
+### Serve
 
-```
+```bash
 ember serve <options...>
   Builds and serves your app, rebuilding on file changes.
   aliases: server, s
@@ -258,9 +315,9 @@ ember serve <options...>
   --path (Path) Reuse an existing build at given path.
 ```
 
-## Test
+### Test
 
-```
+```bash
 ember test <options...>
   Runs your app's test suite.
   aliases: t
@@ -306,38 +363,38 @@ ember test <options...>
     aliases: -o <value>
 ```
 
-## Version
+### Version
 
-```
+```bash
 ember version <options...>#
 ```
 
-## Feature
+### Feature
 
-```
+```bash
 Available commands from @ember/optional-features:
 ember feature
   Prints the USAGE.
 ```
 
-## List
+### List
 
-```
+```bash
 ember feature:list
   List all available features.
 ```
 
-## Enable
+### Enable
 
-```
+```bash
 ember feature:enable <feature-name> <options...>
   Enable feature.
   --run-codemod (Boolean) run any associated codemods without prompting
 ```
 
-## Disable
+### Disable
 
-```
+```bash
 ember feature:disable <feature-name> <options...>
   Disable feature.
   --run-codemod (Boolean) run any associated codemods without prompting
