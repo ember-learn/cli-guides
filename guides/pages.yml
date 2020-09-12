@@ -39,6 +39,8 @@
     url: 'blueprints'
   - title: 'Debugging'
     url: 'debugging'
+  - title: 'CLI commands reference'
+    url: 'cli-commands-reference'
 
 - title: 'Writing addons'
   url: 'writing-addons'
