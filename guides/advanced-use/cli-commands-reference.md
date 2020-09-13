@@ -1,194 +1,76 @@
 In their daily work, most Ember developers use only a small number of CLI commands. See the [Basic use](release/basic-use/cli-commands/) section for a guide to common CLI commands and options.
   
-This page shows a full list CLI of commands and options available.
-
-### Command specifc flags
-
-Some option flags can only be used with specific commands, for instance the `--gc` option used here:
+This page shows a full list of Ember CLI commands and options. You can view this information at anytime by typing the following
 
 ```bash
- ember generate my-component --gc
+ember --help
 ```
+As Ember CLI is constantly evolving it's best to use this command to view the latest help for the version of Ember CLI you are currently using.
 
-This option flag generates a glimmer component and can *only* be used in conjunction with the `ember generate` command. See [generate](../cli-commands-reference/#generate) section below for more details on `--gc` flag. Usage of these types of command specific flags are detailed in the [Commands](../cli-commands-reference/#commands) section.
-
-### Non-specifc flags
-
-Some option flags have more general behaviour and can be used with many different commands. Usage for these generic option flags are as follows: 
-
-#### --help
-
-The `-h` option can be used with any command and will provide short description and list of available option flags. `ember --help` will show a list of all available top-level commands and their options in alphabetical order. Adding `--help` option in combination with an ember command to get more specific help for example `ember generate --help` will show a list of all the types of files you can generate using that command.
-
-#### --dry-run
-
-Use the `-d` flag to show which folders and files will be added without saving them to disk. This is useful if you are unsure exactly which files a command will change or create.
+Available commands in ember-cli (alphabetical):
 
 ```bash
---dry-run (Boolean) (Default: false)
-    aliases: -d
-```
-
-#### --verbose
-
-Run a command in `-v` mode displays to view console messages which are usually hidden. This allows you to see all information about what ember CLI is doing 'behind the scenes'. This can help in debugging or to aid your understanding of ember.
-
-```bash
---verbose (Boolean) (Default: false)
-    aliases: -v
-```
-  
-    
-## Commands
-
-Alphabetical list of ember commands and their option flags:
-
-### Addon
-
-The `ember addon` command creates an ember app using addon specific file structure and setup. Addons are used to create functionality that can be used by other ember apps.
-See [Writing Addons](../../writing-addons/) for guidance.
-
-```bash 
 ember addon <addon-name> <options...>
-```
-
-#### --blueprint
-
-```bash
---blueprint (String) (Default: addon)
-    aliases: -b <value>
-```
-
-#### --skip-npm
-
-```bash
---skip-npm (Boolean) (Default: false)
-    aliases: -sn
-```
-
-
-#### --skip-bower
-
-```bash
---skip-bower (Boolean) (Default: false)
-    aliases: -sb
-```
-#### --skip-git
-
-Create addon without using git version control.
-
-```bash
---skip-git (Boolean) (Default: false)
-    aliases: -sg
-``` 
-
-#### --yarn 
-
-Create addon using yarn package manager.
-
-```bash 
---yarn (Boolean)
-``` 
-
-#### -- directory
-```bash
---directory (String)
-    aliases: -dir <value>
-```
-
-#### other flags
-
-```bash
---verbose (Boolean) (Default: false)
-    aliases: -v
---dry-run (Boolean) (Default: false)
+  Generates a new folder structure for building
+   an addon, complete with test harness.
+  --dry-run (Boolean) (Default: false)
     aliases: -d
-```
+  --verbose (Boolean) (Default: false)
+    aliases: -v
+  --blueprint (String) (Default: addon)
+    aliases: -b <value>
+  --skip-npm (Boolean) (Default: false)
+    aliases: -sn
+  --skip-bower (Boolean) (Default: false)
+    aliases: -sb
+  --skip-git (Boolean) (Default: false)
+    aliases: -sg
+  --yarn (Boolean)
+  --directory (String)
+    aliases: -dir <value>
 
-### Asset-sizes
-
-The `ember asset-sizes` shows the sizes of your asset files. This can be useful to find large files slowing down your app.
-
-```bash
 ember asset-sizes <options...>
-```
-
-#### --output-path
-
-THe output-path option show assest size for a specific folder.
-
-```bash  
+  Shows the sizes of your asset files.
   --output-path (Path) (Default: dist/)
     aliases: -o <value>
-```
-
-#### --json 
-
-This option display asset size in json format
-
-```bash
   --json (Boolean) (Default: false)
-```
 
-### Build
-
-The `ember build` command builds your app ready for deployment. This command will compile all your files into small more compressed version which is faster to download and execute. The built assests are stored in the dist/ folder by default.
-
-```bash
 ember build <options...>
- aliases: b
-```
-
-#### --environment
-
-The `--environment` flag is important when when you are ready deploy your app. 
-
-```bash
-  --environment (String) (Default: development) Possible values are
-   "development", "production",
-   and "test".
-    aliases: -e <value>, -dev (--environment=development), -prod
-    (--environment=production)
-```
-
-#### --output-path
-
-```bash
+  Builds your app and places it into the output
+   path (dist/ by default).
+  aliases: b
+  --environment (String) (Default: development)
+   Possible values are "development", "production", and "test".
+    aliases: -e <value>, -dev
+     (--environment=development), -prod
+      (--environment=production)
   --output-path (Path) (Default: dist/)
     aliases: -o <value>
-```
-#### --watch
-
-```bash
   --watch (Boolean) (Default: false)
     aliases: -w
-```
-#### --watcher
-
-```bash
   --watcher (String)
-```
-#### --suppress-sizes
-
-```bash
   --suppress-sizes (Boolean) (Default: false)
-```
 
-### Destroy
-
-
-
-```bash
 ember destroy <blueprint> <options...>
-  Destroys code generated by `generate` command. 
-  A path is expected,
-   relative to the root of the project.
-```
+  Destroys code generated by `generate` command.
+  aliases: d
+  --dry-run (Boolean) (Default: false)
+    aliases: -d
+  --verbose (Boolean) (Default: false)
+    aliases: -v
+  --pod (Boolean) (Default: false)
+    aliases: -p, -pods
+  --classic (Boolean) (Default: false)
+    aliases: -c
+  --dummy (Boolean) (Default: false)
+    aliases: -dum, -id
+  --in-repo-addon (String) (Default: null)
+    aliases: --in-repo <value>, -ir <value>
+  --in (String) (Default: null) Runs a blueprint 
+  against an in repo addon. A path is expected,
+   relative to the
+    root of the project.
 
-### Generate
-
-```bash
-options
 ember generate <blueprint> <options...>
   Generates new code from blueprints.
   aliases: g
@@ -204,39 +86,37 @@ ember generate <blueprint> <options...>
     aliases: -dum, -id
   --in-repo-addon (String) (Default: null)
     aliases: --in-repo <value>, -ir <value>
-  --in (String) (Default: null) Runs a blueprint against an in
-   repo addon.A path is expected, relative to the root of the
-    project.
-```
+  --in (String) (Default: null) Runs a blueprint
+   against an in repo addon. A path is expected,
+    relative to the root of the project.
 
-### Help
-
-```bash
 ember help <command-name (Default: all)> <options...>
-  Outputs the usage instructions for all commands or the
-   provided command aliases: h, --help, -h
-  --verbose (Boolean) (Default: false)Generates a new folder
-   structure for building an addon, complete with te
+  Outputs the usage instructions for all commands
+   or the provided command
+  aliases: h, --help, -h
+  --verbose (Boolean) (Default: false)
+    aliases: -v
   --json (Boolean) (Default: false)
-```
 
-### Init
-
-```bash
 ember init <glob-pattern> <options...>
   Creates a new ember-cli project in the current folder.
   --dry-run (Boolean) (Default: false)
     aliases: -d
   --verbose (Boolean) (Default: false)
-    aliases: -v 
+    aliases: -v
+  --blueprint (String)
+    aliases: -b <value>
+  --skip-npm (Boolean) (Default: false)
+    aliases: -sn
+  --skip-bower (Boolean) (Default: false)
+    aliases: -sb
+  --welcome (Boolean) (Default: true) Installs and
+   uses {{ember-welcome-page}}. Use --no-welcome to
+    skip it.
   --yarn (Boolean)
   --name (String) (Default: "")
     aliases: -n <value>
-```
 
-### Install
-
-```bash
 ember install <addon-name> <options...>
   Installs an ember-cli addon from npm.
   aliases: i
@@ -246,94 +126,96 @@ ember install <addon-name> <options...>
     aliases: -D
   --save-exact (Boolean) (Default: false)
     aliases: -E, --exact
-  --yarn (Boolean) Use --yarn to enforce yarn usage, 
-  or --no-yarn to enforce npm
-```
+  --yarn (Boolean) Use --yarn to enforce yarn 
+  usage, or --no-yarn to enforce npm
 
-### New
-
-```bash
 ember new <app-name> <options...>
   Creates a new directory and runs ember init in it.
   --dry-run (Boolean) (Default: false)
     aliases: -d
   --verbose (Boolean) (Default: false)
     aliases: -v
-  --blueprint (String) (Default: app) 
+  --blueprint (String) (Default: app)
+    aliases: -b <value>
+  --skip-npm (Boolean) (Default: false)
+    aliases: -sn
+  --skip-bower (Boolean) (Default: false)
+    aliases: -sb
   --skip-git (Boolean) (Default: false)
     aliases: -sg
-  --welcome (Boolean) (Default: true) Installs and uses
-   {{ember-welcome-page}}. Use --no-welcome to skip it.
+  --welcome (Boolean) (Default: true) Installs and
+   uses {{ember-welcome-page}}. Use --no-welcome to
+    skip it.
   --yarn (Boolean)
   --directory (String)
     aliases: -dir <value>
-```
 
-### Serve
-
-```bash
 ember serve <options...>
   Builds and serves your app, rebuilding on file changes.
   aliases: server, s
-  --port (Number) (Default: 4200) To use a port different than 4200. 
-  Pass 0 to automatically pick an available port.
+  --port (Number) (Default: 4200) To use a port different
+   than 4200. Pass 0 to automatically pick an available
+    port.
     aliases: -p <value>
   --host (String) Listens on all interfaces by default
     aliases: -H <value>
   --proxy (String)
     aliases: -pr <value>, -pxy <value>
-  --proxy-in-timeout (Number) (Default: 120000) When using --proxy: 
-  timeout (in ms) for incoming requests
+  --proxy-in-timeout (Number) (Default: 120000) When
+   using --proxy: timeout (in ms) for incoming requests
     aliases: -pit <value>
-  --proxy-out-timeout (Number) (Default: 0) When using --proxy: timeout
-   (in ms) for outgoing requests
+  --proxy-out-timeout (Number) (Default: 0) When using
+   --proxy: timeout (in ms) for outgoing requests
     aliases: -pot <value>
-  --secure-proxy (Boolean) (Default: true) Set to false to proxy 
-  self-signed SSL certificates 
+  --secure-proxy (Boolean) (Default: true) Set to false 
+  to proxy self-signed SSL certificates
+    aliases: -spr
+  --transparent-proxy (Boolean) (Default: true) Set to false 
+  to omit x-forwarded-* headers when proxying
+    aliases: --transp
+  --watcher (String) (Default: events)
+    aliases: -w <value>
   --live-reload (Boolean) (Default: true)
     aliases: -lr
   --live-reload-host (String) Defaults to host
     aliases: -lrh <value>
   --live-reload-base-url (String) Defaults to baseURL
     aliases: -lrbu <value>
-  --live-reload-port (Number) Defaults to same port as ember app
+  --live-reload-port (Number) 
+  Defaults to same port as ember app
     aliases: -lrp <value>
-  --live-reload-prefix (String) (Default: _lr) Default to _lr
+  --live-reload-prefix (String) (Default: _lr) 
+  Default to _lr
     aliases: --lrprefix <value>
-  --environment (String) (Default: development) Possible values are
-   "development", "production", and "test".
-    aliases: -e <value>, -dev (--environment=development), -prod 
-    (--environment=production)
+  --environment (String) (Default: development) P
+  ossible values are "development", "production", and "test".
+    aliases: -e <value>, -dev (--environment=development),
+     -prod (--environment=production)
   --output-path (Path) (Default: dist/)
     aliases: -op <value>, -out <value>
-  --ssl (Boolean) (Default: false) Set to true to configure Ember CLI
-   to serve using SSL.
-  --ssl-key (String) (Default: ssl/server.key) Specify the private
-   key to use for SSL.
-  --ssl-cert (String) (Default: ssl/server.crt) Specify the 
-  certificate to use for SSL.
+  --ssl (Boolean) (Default: false) Set to true to 
+  configure Ember CLI to serve using SSL.
+  --ssl-key (String) (Default: ssl/server.key) 
+  Specify the private key to use for SSL.
+  --ssl-cert (String) (Default: ssl/server.crt) 
+  Specify the certificate to use for SSL.
   --path (Path) Reuse an existing build at given path.
-```
 
-### Test
-
-```bash
 ember test <options...>
   Runs your app's test suite.
   aliases: t
-  --environment (String) (Default: test) Possible values are 
-  "development", 
-  "production",
-   and "test".
+  --environment (String) (Default: test) Possible values 
+  are "development", "production", and "test".
     aliases: -e <value>
   --config-file (String)
     aliases: -c <value>, -cf <value>
   --server (Boolean) (Default: false)
     aliases: -s
   --host (String)
-    aliases: -H <value>options
-  --test-port (Number) (Default: 7357) The test port to use when running
-   tests.Pass 0 to automatically pick an available port
+    aliases: -H <value>
+  --test-port (Number) (Default: 7357) The test port
+   to use when running tests. Pass 0 to automatically
+    pick an available port
     aliases: -tp <value>
   --filter (String) A string to filter tests to run
     aliases: -f <value>
@@ -341,64 +223,57 @@ ember test <options...>
     aliases: -m <value>
   --watcher (String) (Default: events)
     aliases: -w <value>
-  --launch (String) (Default: false) A comma separated list of 
-  browsers to
-   launch for tests.
-  --reporter (String) Test reporter to use [tap|dot|xunit]
-   (default: tap)
+  --launch (String) (Default: false) A comma 
+  separated list of browsers to launch for tests.
+  --reporter (String) Test reporter to use
+  [tap|dot|xunit] (default: tap)
     aliases: -r <value>
-  --silent (Boolean) (Default: false) Suppress any output except
-   for the test report
-  --ssl (Boolean) (Default: false) Set to true to configure testem
-   to run the testsuite using SSL.
-  --ssl-key (String) (Default: ssl/server.key) Specify the private
-   key to use for SSL.
-  --ssl-cert (String) (Default: ssl/server.crt) Specify the certificate 
-  to use for SSL.
-  --testem-debug (String) File to write a debug log from testem
+  --silent (Boolean) (Default: false) Suppress
+   any output except for the test report
+  --ssl (Boolean) (Default: false) Set to true
+   to configure testem to run the test suite
+    using SSL.
+  --ssl-key (String) (Default: ssl/server.key) 
+  Specify the private key to use for SSL.
+  --ssl-cert (String) (Default: ssl/server.crt)
+   Specify the certificate to use for SSL.
+  --testem-debug (String) File to write a 
+  debug log from testem
   --test-page (String) Test page to invoke
-  --path (Path) Reuse an existing build at given path.
-  --query (String) A query string to append to the test page URL.
+  --path (Path) Reuse an existing build at
+   given path.
+  --query (String) A query string to append 
+  to the test page URL.
   --output-path (Path)
     aliases: -o <value>
-```
 
-### Version
+ember version <options...>
+  outputs ember-cli version
+  aliases: v, --version, -v
+  --verbose (Boolean) (Default: false)
 
-```bash
-ember version <options...>#
-```
 
-### Feature
-
-```bash
 Available commands from @ember/optional-features:
 ember feature
   Prints the USAGE.
-```
 
-### List
-
-```bash
 ember feature:list
   List all available features.
-```
 
-### Enable
-
-```bash
 ember feature:enable <feature-name> <options...>
   Enable feature.
-  --run-codemod (Boolean) run any associated codemods without prompting
-```
+  --run-codemod (Boolean) run any associated
+   codemods without prompting
 
-### Disable
-
-```bash
 ember feature:disable <feature-name> <options...>
   Disable feature.
-  --run-codemod (Boolean) run any associated codemods without prompting
+  --run-codemod (Boolean) run any associated
+   codemods without prompting
+
+
+Available commands from ember-cli-template-lint:
+ember template-lint:print-failing
+  Get current list of all failing templates. 
+  This can be used to update the `pending` 
+  listing in `.template-lintrc.js`.
 ```
-
-
-
