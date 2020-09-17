@@ -7,7 +7,7 @@ ember --help
 ```
 As Ember CLI is constantly evolving it's best to use this command to view the latest help for the version of Ember CLI you are currently using.
 
-Available commands in ember-cli (alphabetical):
+Available commands in `ember-cli` (alphabetical):
 
 ```bash
 ember addon <addon-name> <options...>
