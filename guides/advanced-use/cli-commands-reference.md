@@ -1,4 +1,4 @@
-In their daily work, most Ember developers use only a small number of CLI commands. See the [Basic use](release/basic-use/cli-commands/) section for a guide to common CLI commands and options.
+In their daily work, most Ember developers use only a small number of CLI commands. See the [Basic use](../../basic-use/cli-commands/) section for a guide to common CLI commands and options.
   
 This page shows a full list of Ember CLI commands and options. You can view this information at anytime by typing the following
 
