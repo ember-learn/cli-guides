@@ -169,7 +169,6 @@ export default helper(function roundUp(params/*, hash*/) {
   return params;
 });
 ```
-`````
 
 Files can also be nested to better manage your applications, for example:
 
@@ -183,7 +182,7 @@ Nested files can be referenced as either `posts/new` or `posts.new` when used in
 
 ### Components
 
-`PascalCase` is used for components. For example, the 'nav-bar` component
+`PascalCase` is used for components. For example, the `nav-bar` component
 
 ```handlebars {data-filename=app/components/nav-bar.hbs}
 <nav>
@@ -203,6 +202,7 @@ Component files can also be nested. You will need to use a special syntax to res
 <nav>
   ...
 </nav>
+```
 
 ```handlebars {data-filename=app/templates/application.hbs}
 <Ui::NavBar />
