@@ -210,6 +210,6 @@ Component files can also be nested. You will need to use a special syntax to res
 
 If a component is nested more than one level deep, separate each directory using double colons.
 
-#### Tests
+### Tests
 
-Ember automatically creates the appropriate test when you use the Ember CLI but if you need to manually create a test, the filename must be suffixed with `-test.js` in order to run.
+When you use Ember CLI, Ember automatically creates a test file and suffixes the name with `-test.js`. If you want to manually create the file, make sure to suffix the name with `-test.js` so that your tests can run.
