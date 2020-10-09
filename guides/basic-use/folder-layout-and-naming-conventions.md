@@ -197,14 +197,12 @@ would be resolved from the `PascalCase` component name in a template.
 <NavBar />
 ```
 
-Component files can also be nested but use a special syntax to help the resolver. For example if the `nav-bar` component was in the `ui` directory
+Component files can also be nested. You will need to use a special syntax to resolve a nested component. For example, if the `nav-bar` component were in the `ui` directory,
 
 ```handlebars {data-filename=app/components/ui/nav-bar.hbs}
 <nav>
   ...
 </nav>
-```
- you would separate the directory and component using double colons `::`
 
 ```handlebars {data-filename=app/templates/application.hbs}
 <Ui::NavBar />
