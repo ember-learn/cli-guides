@@ -208,7 +208,7 @@ Component files can also be nested. You will need to use a special syntax to res
 <Ui::NavBar />
 ```
 
-If components are nested more than one level deep, separate each directory using double colons.
+If a component is nested more than one level deep, separate each directory using double colons.
 
 #### Tests
 
