@@ -12,7 +12,7 @@
     - title: 'CLI commands'
       url: 'cli-commands'
     - title: 'Folder layout'
-      url: 'folder-layout-and-naming-conventions'
+      url: 'folder-layout'
     - title: 'Using addons'
       url: 'using-addons'
     - title: 'Assets and dependencies'
