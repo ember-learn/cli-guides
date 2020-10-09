@@ -152,20 +152,24 @@ These hooks need to be left in place for the application to function properly ho
 
 If you use Ember CLI (`ember generate`) to create components, routes, etc., Ember will create files with correct names. In case you may manually create files, let's go over the naming conventions.
 
-#### File and directory names
-File and directory names use `kebab-case` with lowercase letters
+### File and directory names
+
+File and directory names use `kebab-case` with lowercase letters and a hyphen between words.
 
 ```javascript {data-filename=app/models/user.js}
 import Model from '@ember-data/model';
 
-export default class UserModel extends Model.extend(Validations) {};
+export default class UserModel extends Model {};
 ```
-and dashes between words
+
 ```javascript {data-filename=app/helpers/round-up.js}
 import { helper } from '@ember/component/helper';
 
-export default helper(function round(number) {});
+export default helper(function roundUp(params/*, hash*/) {
+  return params;
+});
 ```
+`````
 
 Files can also be nested to better manage your applications, for example:
 
