@@ -28,6 +28,7 @@ ember addon <addon-name> <options...>
   --yarn (Boolean)
   --directory (String)
     aliases: -dir <value>
+  --lang (String) Sets the base human language of the addon's own test application via index.html
 ```
 
 ```bash
@@ -128,6 +129,7 @@ ember init <glob-pattern> <options...>
   --yarn (Boolean)
   --name (String) (Default: "")
     aliases: -n <value>
+  --lang (String) Sets the base human language of the application via index.html
 ```
 
 ```bash
@@ -165,6 +167,7 @@ ember new <app-name> <options...>
   --yarn (Boolean)
   --directory (String)
     aliases: -dir <value>
+  --lang (String) Sets the base human language of the application via index.html
 ```
 
 ```bash
