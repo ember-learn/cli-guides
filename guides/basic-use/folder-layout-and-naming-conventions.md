@@ -181,15 +181,18 @@ export default class PostsNewRoute extends Route {};
 
 Nested files can be referenced as either `posts/new` or `posts.new` when used in templates or JavaScript. 
 
-#### HTML tabs/Ember components
-`PascalCase` is used for html tags/Ember components. This `nav-bar` component
+### Components
+
+`PascalCase` is used for components. For example, the 'nav-bar` component
 
 ```handlebars {data-filename=app/components/nav-bar.hbs}
 <nav>
   ...
 </nav>
 ```
+
 would be resolved from the `PascalCase` component name in a template.
+
 ```handlebars {data-filename=app/templates/application.hbs}
 <NavBar />
 ```
