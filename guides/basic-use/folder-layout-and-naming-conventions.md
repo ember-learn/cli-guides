@@ -148,7 +148,9 @@ These hooks need to be left in place for the application to function properly ho
 
 ## Naming conventions
 
-The `Ember Resolver` is the mechanism responsible for looking up code in your application and resolving its dependencies. Ember's convention over configuration philosophy uses naming conventions to support the resolver. While Ember does the work for you when you use the Ember CLI (`ember generate`) to create routes, components or other modules, developers may create files manually.
+[Ember Resolver](https://github.com/ember-cli/ember-resolver) is responsible for looking up code in your application and resolving its dependencies. The Resolver asks that you follow Ember's naming conventions.
+
+If you use Ember CLI (`ember generate`) to create components, routes, etc., Ember will create files with correct names. In case you may manually create files, let's go over the naming conventions.
 
 #### File and directory names
 File and directory names use `kebab-case` with lowercase letters
