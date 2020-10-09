@@ -16,7 +16,7 @@ ember addon <addon-name> [options]
 
 A directory called `<addon-name>` will be created containing a structure similar to an Ember app. You won't need to use all the files to make a useful addon. By convention, _most_ Ember addons start with `ember` in the name, like `ember-basic-dropdown`. This will help other developers find your addon.
 
-For more options behind this command, refer to the [CLI commands reference](https://cli.emberjs.com/release/advanced-use/cli-commands-reference/) section.
+To see all options for `ember addon`, refer to the [CLI commands reference](../advanced-use/cli-commands-reference/) section.
 
 ### Addon file structure
 
