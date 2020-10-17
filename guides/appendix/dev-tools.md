@@ -65,7 +65,7 @@ to enable it inside those projects.
 
 
 ### Sublime Text
-
+<!-- alex disable simply -->
 If you are using [Sublime Text](http://www.sublimetext.com) with Ember CLI,
 by default it will try to index all files in your `tmp` directory for its
 GoToAnything functionality.  This will cause your computer to come to a

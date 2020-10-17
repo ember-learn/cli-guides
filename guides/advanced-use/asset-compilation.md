@@ -51,6 +51,7 @@ module.exports = {
 
 (If these values look familiar, they're the same exact values used by the popular [Autoprefixer](https://github.com/postcss/autoprefixer) project.)
 
+<!-- alex disable simply -->
 If you need more fine-grained customization over the way that `babel-preset-env` transforms your code,
 simply set any of the options found [here](https://github.com/babel/babel-preset-env#options) on your application's `babel` hash in `ember-cli-build.js`.
 

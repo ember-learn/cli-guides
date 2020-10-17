@@ -8,6 +8,7 @@ In general, when people say "assets", they mean things that the developer has ad
 
 Here are the most common places:
 
+<!-- alex disable just -->
 - Every Ember app has a file called `package.json` that lists node modules used by the app.
 The code itself goes in `node_modules` during `npm install`, just like in many non-Ember JavaScript projects
 - The `vendor` directory, which is a common home for third-party JavaScript that is copied and pasted in

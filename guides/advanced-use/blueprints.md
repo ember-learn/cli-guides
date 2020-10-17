@@ -42,10 +42,12 @@ installing blueprint
   create blueprints/foo-test/index.js
 ```
 
+<!-- alex disable easy -->
 Blueprints in your project’s directory take precedence over those packaged with Ember CLI. This makes it easy to override the built-in blueprints by generating one with the same name.
 
 ### Blueprint Structure
 
+<!-- alex disable simple -->
 Blueprints follow a simple structure. Let’s use the built-in helper blueprint as an example:
 
 ```shell

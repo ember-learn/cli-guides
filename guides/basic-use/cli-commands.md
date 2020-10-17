@@ -216,6 +216,7 @@ ember build [options]
 
 `ember build` takes all of your app files and turns them into a bundle that is minified and transpiled into browser-ready JavaScript code, styles, and HTML. The bundled files go into a directory called `dist`. This bundle is what can be deployed to a server. By default, the `build` command uses the `development` environment configuration, which is not optimized for production.
 
+<!-- alex disable easy -->
 Although you can upload the built files to a server yourself, many Ember projects use a community addon called [ember-cli-deploy](https://github.com/ember-cli-deploy/ember-cli-deploy) to get their apps into production. `ember-cli-deploy` has a plugin system to make it easy to deploy to many cloud vendors. Search [Ember Observer for "deploy"](https://emberobserver.com/?query=deploy) to browse available options.
 
 Ember apps can be built with only three environments: development, production, and testing.
