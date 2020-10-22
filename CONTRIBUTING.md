@@ -53,7 +53,7 @@ When in doubt, test your writing in [http://www.hemingwayapp.com/](http://www.he
 Write in a welcoming, approachable way. Think of how you would explain something out loud. That’s the preferred tone - conversational and readable. Short sentences are good. Remember that many developers, this is their first framework and English is not their first language.
 
 #### Audience of beginners
-
+<!-- alex disable simple -->
 The audience is a developer who knows enough to have built a simple HTML/JavaScript (or JQuery) app. Explanations should appeal to both developers who are learning Ember as their first framework, but not be useless to people who know another framework.
 
 #### Scope
@@ -70,5 +70,5 @@ Avoid voice altogether whenever you can. When some voice is needed, use first pe
 - Best: “There is an entire ecosystem of adapters that allows Ember apps to talk to different types of servers …”
 
 #### Inclusive language
-<!--alex disable her-him-->
+<!--alex disable her-him obviously -->
 “They/Them” is  used in place of him/he/she/her/etc. Do not use gender in code examples. Avoid terms like “just, simply, obviously” etc.

@@ -38,6 +38,7 @@ Let's say that our addon should wrap some content in a button tag. The addon tem
 <button>{{buttonLabel}}</button>
 ```
 
+<!-- alex disable just -->
 Our goal is to be able to pass the `buttonLabel` value to the addon, just like we'd pass it to a normal component within an app:
 
 ```handlebars {data-filename=my-application-name/templates/my-template.hbs}
@@ -71,6 +72,7 @@ We should now see our addon in action!
 
 ### Making a UI component available in block form
 
+<!-- alex disable simple -->
 In an Ember app, components can be used in ["simple" or "block" form](https://guides.emberjs.com/release/components/wrapping-content-in-a-component/). Addon templates have the same capabilities. The simple form allows data objects or configuration values to be passed to the addon. The block form allows a developer to pass in their own template, content, and interactivity.
 
 In an Ember app, a block style component uses the `{{yield}}` helper as a placeholder for where the passed-in content will go. It is the same in an Ember addon.
