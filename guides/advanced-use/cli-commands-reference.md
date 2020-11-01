@@ -423,7 +423,7 @@ ember feature
 
 List all available features.
 
-```
+```bash
 ember feature:list
   List all available features.
 ```
@@ -432,7 +432,7 @@ ember feature:list
 
 Enable feature.
 
-```
+```bash
 ember feature:enable <feature-name> <options...>
   Enable feature.
   --run-codemod (Boolean) run any associated
@@ -443,7 +443,7 @@ ember feature:enable <feature-name> <options...>
 
 Disable feature.
 
-```
+```bash
 ember feature:disable <feature-name> <options...>
   Disable feature.
   --run-codemod (Boolean) run any associated
