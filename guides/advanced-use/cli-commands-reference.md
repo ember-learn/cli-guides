@@ -395,15 +395,15 @@ ember version <options...>
       <td>Prints the USAGE.</td>
     </tr>
     <tr>
-      <td><a href="#ember-feature-list"><code>ember feature:list</code></a></td>
+      <td><a href="#ember-featurelist"><code>ember feature:list</code></a></td>
       <td>PriList all available features.</td>
     </tr>
     <tr>
-      <td><a href="#ember-feature-enable"><code>ember feature:enable</code></a></td>
+      <td><a href="#ember-featureenable"><code>ember feature:enable</code></a></td>
       <td>Enable feature.</td>
     </tr>
     <tr>
-      <td><a href="#ember-feature-disable"><code>ember feature:disable</code></a></td>
+      <td><a href="#ember-featuredisable"><code>ember feature:disable</code></a></td>
       <td>Disable feature.</td>
     </tr>
   </tbody>
@@ -461,7 +461,7 @@ ember feature:disable <feature-name> <options...>
   </thead>
   <tbody>
     <tr>
-      <td><a href="#ember-template-lint-print-failing"><code>ember template-lint:print-failing</code></a></td>
+      <td><a href="#ember-template-lintprint-failing"><code>ember template-lint:print-failing</code></a></td>
       <td>Get current list of all failing templates.</td>
     </tr>
   </tbody>
