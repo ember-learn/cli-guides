@@ -41,6 +41,10 @@ Available commands from Ember CLI in alphabetical order:
       <td>Generates new code from blueprints.</td>
     </tr>
     <tr>
+      <td><a href="#emberhelp"><code>ember help</code></a></td>
+      <td>Outputs the usage instructions for all commands.</td>
+    </tr>
+    <tr>
       <td><a href="#emberinit"><code>ember init</code></a></td>
       <td>Creates a new ember-cli project in the current folder.</td>
     </tr>
