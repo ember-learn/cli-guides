@@ -451,7 +451,7 @@ ember generate adapter <name> <options...>
   --base-class (String)
 ```
 
-#### `ember generate adapter`
+#### `ember generate adapter-test`
 
 Generates an `ember-data` adapter unit test
 
@@ -469,7 +469,7 @@ ember generate model <name> <attr:type>
   Generates an ember-data model.
 ```
 
-#### `ember generate model`
+#### `ember generate model-test`
 
 Generates a model unit test.
 
@@ -488,7 +488,7 @@ ember generate serializer <name> <options...>
   --base-class (String)
 ```
 
-#### `ember generate serializer`
+#### `ember generate serializer-test`
 
 Generates a serializer unit test.
 
@@ -506,7 +506,7 @@ ember generate transform <name>
   Generates an ember-data value transform.
 ```
 
-#### `ember generate transform`
+#### `ember generate transform-test`
 
 Generates a transform unit test.
 
