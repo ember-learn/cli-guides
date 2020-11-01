@@ -427,6 +427,7 @@ ember generate template <name>
 
 #### `ember generate util`
 
+<!--alex ignore simple-->
 Generates a simple utility module/function.
 
 ```bash
