@@ -174,6 +174,439 @@ ember generate <blueprint> <options...>
     relative to the root of the project.
 ```
 
+### Available blueprints from `ember-source`
+
+#### `ember generate acceptance-test`
+
+Generates an acceptance test for a feature.
+
+```bash
+ember generate acceptance-test <name>
+  Generates an acceptance test for a feature.
+```
+
+#### `ember generate component`
+
+Generates a component.
+
+```bash
+ember generate component <name> <options...>
+  Generates a component.
+  --path (String) (Default: components)
+    aliases: --no-path (--path="")
+  --component-class (@ember/component, @glimmer/component, @ember/component/template-only, "") (Default: --no-component-class)
+    aliases: -cc (--component-class=@ember/component), -gc (--component-class=@glimmer/component), -tc (--component-class=@ember/component/template-only), -nc (--component-class=""), --no-component-class (--component-class=""), --with-component-class (--component-class=@glimmer/component)
+  --component-structure (flat, nested, classic) (Default: flat)
+    aliases: -fs (--component-structure=flat), -ns (--component-structure=nested), -cs (--component-structure=classic)
+```
+
+#### `ember generate component-addon`
+
+Generates a component.
+
+```bash
+ember generate component-addon <name>
+  Generates a component.
+```
+
+#### `ember generate component-class`
+
+Generates a component class.
+
+```bash
+ember generate component-class <name> <options...>
+  Generates a component class.
+  --path (String) (Default: components)
+    aliases: --no-path (--path="")
+  --component-class (@ember/component, @glimmer/component, @ember/component/template-only) (Default: @glimmer/component)
+    aliases: -cc (--component-class=@ember/component), -gc (--component-class=@glimmer/component), -tc (--component-class=@ember/component/template-only)
+  --component-structure (flat, nested, classic) (Default: flat)
+    aliases: -fs (--component-structure=flat), -ns (--component-structure=nested), -cs (--component-structure=classic)
+```
+
+#### `ember generate component-class-addon`
+
+Generates a component class.
+
+```bash
+ember generate component-class-addon <name>
+  Generates a component class.
+```
+
+#### `ember generate component-test`
+
+Generates a component integration or unit test.
+
+```bash
+ember generate component-test <name> <options...>
+  Generates a component integration or unit test.
+  --test-type (integration, unit) (Default: integration)
+    aliases: -i (--test-type=integration), -u (--test-type=unit), --integration (--test-type=integration), -unit (--test-type=unit)
+```
+
+#### `ember generate controller`
+
+Generates a controller.
+
+```bash
+ember generate controller <name>
+  Generates a controller.
+```
+
+#### `ember generate controller-test`
+
+Generates a controller unit test.
+
+```bash
+ember generate controller-test <name>
+  Generates a controller unit test.
+```
+
+#### `ember generate helper`
+
+Generates a helper function.
+
+```bash
+ember generate helper <name>
+  Generates a helper function.
+```
+
+#### `ember generate helper-addon`
+
+Generates an import wrapper.
+
+```bash
+ember generate helper-addon <name>
+  Generates an import wrapper.
+```
+
+#### `ember generate helper-test`
+
+Generates a helper integration test or a unit test.
+
+```bash
+ember generate helper-test <name> <options...>
+  Generates a helper integration test or a unit test.
+  --test-type (integration, unit) (Default: integration)
+    aliases: -i (--test-type=integration), -u (--test-type=unit), --integration (--test-type=integration), -unit (--test-type=unit)
+```
+
+#### `ember generate initializer`
+
+Generates an initializer.
+
+```bash
+ember generate initializer <name>
+  Generates an initializer.
+```
+
+#### `ember generate initializer-addon`
+
+Generates an import wrapper.
+
+```bash
+ember generate initializer-addon <name>
+  Generates an import wrapper.
+```
+
+#### `ember generate initializer-test`
+
+Generates an initializer unit test.
+
+```bash
+ember generate initializer-test <name>
+  Generates an initializer unit test.
+```
+
+#### `ember generate instance-initializer`
+
+Generates an instance initializer.
+
+```bash
+ember generate instance-initializer <name>
+  Generates an instance initializer.
+```
+
+#### `ember generate instance-initializer-addon`
+
+Generates an import wrapper.
+
+```bash
+ember generate instance-initializer-addon <name>
+  Generates an import wrapper.
+```
+
+#### `ember generate instance-initializer-test`
+
+Generates an instance initializer unit test.
+
+```bash
+ember generate instance-initializer-test <name>
+  Generates an instance initializer unit test.
+```
+
+#### `ember generate mixin`
+
+Generates a mixin.
+
+```bash
+ember generate mixin <name>
+  Generates a mixin.
+```
+
+#### `ember generate mixin-test`
+
+Generates a mixin unit test.
+
+```bash
+ember generate mixin-test <name>
+  Generates a mixin unit test.
+```
+
+#### `ember generate route`
+
+Generates a route and a template, and registers the route with the router.
+
+```bash
+ember generate route <name> <options...>
+  Generates a route and a template, and registers the route with the router.
+  --path (String) (Default: "")
+  --skip-router (Boolean) (Default: false)
+  --reset-namespace (Boolean)
+```
+
+#### `ember generate route-addon`
+
+Generates import wrappers for a route and its template.
+
+```bash
+ember generate route-addon <name>
+  Generates import wrappers for a route and its template.
+```
+
+#### `ember generate route-test`
+
+Generates a route unit test.
+
+```bash
+ember generate route-test <name> <options...>
+  Generates a route unit test.
+  --reset-namespace (Boolean)
+```
+
+#### `ember generate service`
+
+Generates a service.
+
+```bash
+ember generate service <name>
+  Generates a service.
+```
+
+#### `ember generate service-test`
+
+Generates a service unit test.
+
+```bash
+ember generate service-test <name>
+  Generates a service unit test.
+```
+
+#### `ember generate template`
+
+Generates a template.
+
+```bash
+ember generate template <name>
+  Generates a template.
+```
+
+#### `ember generate util`
+
+Generates a simple utility module/function.
+
+```bash
+ember generate util <name>
+  Generates a simple utility module/function.
+```
+
+#### `ember generate util-test`
+
+Generates a `util` unit test.
+
+```bash
+ember generate util-test <name>
+  Generates a util unit test.
+```
+
+### Available blueprints from `ember-data`
+
+#### `ember generate adapter`
+
+Generates an `ember-data` adapter.
+
+```bash
+ember generate adapter <name> <options...>
+  Generates an ember-data adapter.
+  --base-class (String)
+```
+
+#### `ember generate adapter`
+
+Generates an `ember-data` adapter unit test
+
+```bash
+ember generate adapter-test <name>
+  Generates an ember-data adapter unit test
+```
+
+#### `ember generate model`
+
+Generates an `ember-data` model.
+
+```bash
+ember generate model <name> <attr:type>
+  Generates an ember-data model.
+```
+
+#### `ember generate model`
+
+Generates a model unit test.
+
+```bash
+ember generate model-test <name>
+  Generates a model unit test.
+```
+
+#### `ember generate serializer`
+
+Generates an `ember-data` serializer.
+
+```bash
+ember generate serializer <name> <options...>
+  Generates an ember-data serializer.
+  --base-class (String)
+```
+
+#### `ember generate serializer`
+
+Generates a serializer unit test.
+
+```bash
+ember generate serializer-test <name>
+  Generates a serializer unit test.
+```
+
+#### `ember generate transform`
+
+Generates an `ember-data` value transform.
+
+```bash
+ember generate transform <name>
+  Generates an ember-data value transform.
+```
+
+#### `ember generate transform`
+
+Generates a transform unit test.
+
+```bash
+ember generate transform-test <name>
+  Generates a transform unit test.
+```
+
+### Available blueprints from `ember-cli`
+
+#### `ember generate addon`
+
+The default blueprint for `ember-cli` addons.
+
+```bash
+ember generate addon <name>
+  The default blueprint for ember-cli addons.
+```
+
+#### `ember generate addon-import`
+
+Generates an import wrapper.
+
+```bash
+ember generate addon-import <name>
+  Generates an import wrapper.
+```
+
+#### `ember generate app`
+
+The default blueprint for `ember-cli` projects.
+
+```bash
+ember generate app <name>
+  The default blueprint for ember-cli projects.
+```
+
+#### `ember generate blueprint`
+
+Generates a blueprint and definition.
+
+```bash
+ember generate blueprint <name>
+  Generates a blueprint and definition.
+```
+
+#### `ember generate http-mock`
+
+Generates a `mock api` endpoint in `/api` prefix.
+
+```bash
+ember generate http-mock <endpoint-path>
+  Generates a mock api endpoint in /api prefix.
+```
+
+#### `ember generate http-proxy`
+
+Generates a relative proxy to another server.
+
+```bash
+ember generate http-proxy <local-path> <remote-url>
+  Generates a relative proxy to another server.
+```
+
+#### `ember generate in-repo-addon`
+
+The blueprint for addon in repo `ember-cli` addons.
+
+```bash
+ember generate in-repo-addon <name>
+  The blueprint for addon in repo ember-cli addons.
+```
+
+#### `ember generate lib`
+
+Generates a lib directory for in-repo addons.
+
+```bash
+ember generate lib <name>
+  Generates a lib directory for in-repo addons.
+```
+
+#### `ember generate server`
+
+Generates a server directory for mocks and proxies.
+
+```bash
+ember generate server <name>
+  Generates a server directory for mocks and proxies.
+```
+
+#### `ember generate vendor-shim`
+
+Generates an ES6 module shim for global libraries.
+
+```bash
+ember generate vendor-shim <name>
+  Generates an ES6 module shim for global libraries.
+```
+
 ### `ember help`
 
 Outputs the usage instructions for all commands
