@@ -437,7 +437,7 @@ ember generate util <name>
 
 #### `ember generate util-test`
 
-Generates a `util` unit test.
+Generates a util unit test.
 
 ```bash
 ember generate util-test <name>
@@ -448,7 +448,7 @@ ember generate util-test <name>
 
 #### `ember generate adapter`
 
-Generates an `ember-data` adapter.
+Generates an ember-data adapter.
 
 ```bash
 ember generate adapter <name> <options...>
@@ -458,7 +458,7 @@ ember generate adapter <name> <options...>
 
 #### `ember generate adapter-test`
 
-Generates an `ember-data` adapter unit test
+Generates an ember-data adapter unit test
 
 ```bash
 ember generate adapter-test <name>
@@ -467,7 +467,7 @@ ember generate adapter-test <name>
 
 #### `ember generate model`
 
-Generates an `ember-data` model.
+Generates an ember-data model.
 
 ```bash
 ember generate model <name> <attr:type>
@@ -485,7 +485,7 @@ ember generate model-test <name>
 
 #### `ember generate serializer`
 
-Generates an `ember-data` serializer.
+Generates an ember-data serializer.
 
 ```bash
 ember generate serializer <name> <options...>
@@ -504,7 +504,7 @@ ember generate serializer-test <name>
 
 #### `ember generate transform`
 
-Generates an `ember-data` value transform.
+Generates an ember-data value transform.
 
 ```bash
 ember generate transform <name>
@@ -524,7 +524,7 @@ ember generate transform-test <name>
 
 #### `ember generate addon`
 
-The default blueprint for `ember-cli` addons.
+The default blueprint for ember-cli addons.
 
 ```bash
 ember generate addon <name>
@@ -542,7 +542,7 @@ ember generate addon-import <name>
 
 #### `ember generate app`
 
-The default blueprint for `ember-cli` projects.
+The default blueprint for ember-cli projects.
 
 ```bash
 ember generate app <name>
@@ -560,7 +560,7 @@ ember generate blueprint <name>
 
 #### `ember generate http-mock`
 
-Generates a `mock api` endpoint in `/api` prefix.
+Generates a mock api endpoint in /api prefix.
 
 ```bash
 ember generate http-mock <endpoint-path>
@@ -578,7 +578,7 @@ ember generate http-proxy <local-path> <remote-url>
 
 #### `ember generate in-repo-addon`
 
-The blueprint for addon in repo `ember-cli` addons.
+The blueprint for addon in repo ember-cli addons.
 
 ```bash
 ember generate in-repo-addon <name>
@@ -628,7 +628,7 @@ ember help <command-name (Default: all)> <options...>
 
 ### `ember init`
 
-Creates a new `ember-cli` project in the current folder.
+Creates a new ember-cli project in the current folder.
 
 ```bash
 ember init <glob-pattern> <options...>
@@ -654,7 +654,7 @@ ember init <glob-pattern> <options...>
 
 ### `ember install`
 
-Installs an `ember-cli` addon from npm.
+Installs an ember-cli addon from npm.
 
 ```bash
 ember install <addon-name> <options...>
@@ -809,7 +809,7 @@ ember test <options...>
 
 ### `ember version`
 
-outputs `ember-cli` version
+outputs ember-cli version
 
 ```bash
 ember version <options...>
