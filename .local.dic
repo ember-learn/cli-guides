@@ -1,5 +1,6 @@
 .scss
 .vimrc
+api
 Autocomplete
 Autoprefixer
 autosave
@@ -24,6 +25,7 @@ ember-cli-github-pages
 ember-concurrency
 ember-d3
 ember-bootstrap
+ember-cli
 ember-cli-build
 ember-cli-deploy
 ember-cli-less
@@ -31,6 +33,7 @@ ember-cli-mirage
 ember-cli-sass
 ember-cli-sri
 ember-cli-typescript
+ember-data
 ember-intl
 ember-lifeline
 ember-mode
@@ -93,6 +96,7 @@ torii
 transpilation
 UAC
 URL-safe
+util
 VirtualBox
 VM
 VMware
