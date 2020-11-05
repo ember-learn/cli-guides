@@ -3,7 +3,7 @@ We'll cover the most common commands here, along with a quick tutorial on how to
 
 ## Using the help command
 
-For any CLI commands, you can see all of the options available by using the `--help` flag.
+You can see the options available for each command by using the `--help` flag.  A searchable list of the `help` output can be found in [CLI Commands Reference](../../advanced-use/cli-commands-reference/).
 
 For example, `ember --help` will show a list of all available top-level commands. `ember generate --help` will show a full list of all the types of files you can generate using the CLI.
 
