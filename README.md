@@ -1,4 +1,6 @@
- ## Ember CLI guides
+[![This project uses GitHub Actions for continuous integration.](https://github.com/ember-learn/cli-guides/workflows/CI/badge.svg)](https://github.com/ember-learn/cli-guides/actions?query=workflow%3ACI)
+
+# Ember CLI guides
 
 This repository holds the guides and tutorials for the [Ember CLI](https://github.com/ember-cli/ember-cli), a powerful tool that helps you create, develop, and build an Ember app.
 
