@@ -1,7 +1,5 @@
  ## Ember CLI guides
 
-[![Build Status](https://travis-ci.org/ember-learn/cli-guides.svg?branch=master)](https://travis-ci.org/ember-learn/cli-guides)
-
 This repository holds the guides and tutorials for the [Ember CLI](https://github.com/ember-cli/ember-cli), a powerful tool that helps you create, develop, and build an Ember app.
 
 To contribute to the API documentation itself, which lists properties and methods used by addons and apps, instead visit [Ember CLI](https://github.com/ember-cli/ember-cli), where the API docs are managed as code comments within the codebase.
@@ -46,7 +44,7 @@ application should live-update with the content changes.
 To run the tests you can run `npm run lint:md` and `npm test` in your terminal. `npm run lint:md` will spellcheck and enforce consistency in the Markdown files.  `npm test` will run Ember tests that have been setup and also scripts that check the Markdown
 files links.
 
-Markdown linting (`lint:md`) must pass otherwise it will fail in Travis-CI. Spellchecking uses a custom [ember-dictionary](https://github.com/maxwondercorn/ember-dictionary) with words and terms common to the Ember community, such as `SemVer`. Words and terms that are associated with a specific guide can be placed in the `.local.dic` dictionary file. Create a pull request if a word needs to be added to `ember-dictionary`.
+Markdown linting (`lint:md`) must pass. Otherwise, it will fail in CI (continuous integration). Spellchecking uses a custom [ember-dictionary](https://github.com/maxwondercorn/ember-dictionary) with words and terms common to the Ember community, such as `SemVer`. Words and terms that are associated with a specific guide can be placed in the `.local.dic` dictionary file. Create a pull request if a word needs to be added to `ember-dictionary`.
 
 ## How this app works
 
