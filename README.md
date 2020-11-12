@@ -52,6 +52,8 @@ Markdown linting (`lint:md`) must pass. Otherwise, it will fail in CI (continuou
 
 The guides content is in the form of Markdown files in the [guides](https://github.com/ember-learn/cli-guides/tree/master/guides) directory. An Ember app processes and serves the Markdown files. If you look at the `app` directory, you'll see there's not much in it! That's because most of the work is done through a dependency on [guidemaker](https://sea-region.github.com/empress/guidemaker), a static site generator created in Ember.
 
+The API docs are built from the `ember-cli` source code. Deployment and hosting details can be found in the [`ember-cli.github.io`](https://github.com/ember-learn/ember-cli.github.io) repository.
+
 ## Contributing
 
 Do you know a thing or two about the CLI or addons? Do you _wish_ you knew a thing or do?  We'd love to have your help with writing or reviewing to make sure that content is helpful to all knowledge levels. To learn more about the motivation for this, read this [RFC](https://github.com/jenweber/rfcs-1/blob/cli-guides/active/0000-cli-guides.md). If you're new to writing Markdown, follow [this cheat sheet](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf).
