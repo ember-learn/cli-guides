@@ -24,7 +24,7 @@ and [styleguide](https://github.com/ember-learn/ember-styleguide).
 You will need the following things properly installed on your computer.
 
 * [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with npm)
+* [Node.js](https://nodejs.org/)
 * [Ember CLI](https://ember-cli.com/)
 * [Google Chrome](https://google.com/chrome/)
 
@@ -34,8 +34,8 @@ The Ember CLI Guides is a normal Ember application, so if you want to run it loc
 
 * Clone this repository
 * `cd cli-guides-source`
-* `npm install`
-* `npm start`
+* `yarn install`
+* `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
 _Note:_ If you are developing in any online editor environment like [codesandbox.io](https://codesandbox.io) or [gitpod.io](https://gitpod.io), then you may not able to serve the application properly because of FastBoot's domain configurations. In such cases, you can disable fastboot in development mode by serving the ember app using `FASTBOOT_DISABLED=true ember serve` command.
@@ -43,8 +43,7 @@ _Note:_ If you are developing in any online editor environment like [codesandbox
 If you then edit the Markdown files located in the `guides/` folder your
 application should live-update with the content changes.
 
-To run the tests you can run `npm run lint:md` and `npm test` in your terminal. `npm run lint:md` will spellcheck and enforce consistency in the Markdown files.  `npm test` will run Ember tests that have been setup and also scripts that check the Markdown
-files links.
+To run the tests you can run `yarn lint:md` and `yarn test` in your terminal. `yarn lint:md` will spellcheck and enforce consistency in the Markdown files. `yarn test` will run Ember tests that have been setup and also scripts that check the Markdown files links.
 
 Markdown linting (`lint:md`) must pass. Otherwise, it will fail in CI (continuous integration). Spellchecking uses a custom [ember-dictionary](https://github.com/maxwondercorn/ember-dictionary) with words and terms common to the Ember community, such as `SemVer`. Words and terms that are associated with a specific guide can be placed in the `.local.dic` dictionary file. Create a pull request if a word needs to be added to `ember-dictionary`.
 
