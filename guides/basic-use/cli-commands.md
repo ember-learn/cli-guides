@@ -107,8 +107,7 @@ ember generate <type-of-file> <name-of-your-choice>
 
 For a full list, type **`ember generate --help`**.
 
-The CLI's `generate` command will ensure that new files contain the necessary boilerplate, that they go in the right directories, and that file naming conventions are followed. For example, components must always have a dash in their names.
-To avoid mistakes that are hard to debug, always use the CLI to create files instead of creating the files by hand.
+The CLI's `generate` command will ensure that new files contain the necessary boilerplate, that they go in the right directories, and that file naming conventions are followed. To avoid mistakes that are hard to debug, always use the CLI to create files instead of creating the files by hand.
 
 ### Example use
 
