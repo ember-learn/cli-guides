@@ -114,10 +114,10 @@ the `minifyCSS:options` object in your ember-cli-build. Minification is enabled 
 default in the production-env and can be disabled using the `minifyCSS:enabled`
 switch.
 
-Similarly, the js-files are minified with `ember-cli-uglify`
+Similarly, the js-files are minified with `ember-cli-terser`
 in the production environment by default. You can pass custom options to the minifier via the
-`ember-cli-uglify:options` object in your ember-cli-build. To enable or disable JS minification
-you may supply a boolean value for `ember-cli-uglify:enabled`.
+`ember-cli-terser:options` object in your ember-cli-build. To enable or disable JS minification
+you may supply a boolean value for `ember-cli-terser:enabled`.
 
 For example, to disable minifying of CSS and JS, add in `ember-cli-build.js`:
 
@@ -126,7 +126,7 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    'ember-cli-uglify': {
+    'ember-cli-terser': {
       enabled: false
     },
     minifyCSS: {
@@ -140,11 +140,9 @@ module.exports = function(defaults) {
 ```
 
 More details on available options to customize JavaScript minification can be found in
-[`ember-cli-uglify` docs](https://github.com/ember-cli/ember-cli-uglify#ember-cli-uglify).
+[`ember-cli-terser` docs](https://github.com/ember-cli/ember-cli-terser#options).
 
-***Note**: The option object for minifying of JavaScript files was renamed in `ember-cli-uglify@2.x`,
-which is part of Ember CLI's default blueprint since 2.16.0. The option was called `minifyJS`
-for `ember-cli-uglify@1.x`.*
+***Note**: `ember-cli-uglify` was renamed to `ember-cli-terser` with the 4.0.0 release. This change is part of Ember CLI's default blueprint since 3.21.1. Projects still using `ember-cli-uglify` can find its configuration options in the [`ember-cli-uglify` docs](https://github.com/ember-cli/ember-cli-terser/tree/v3.0.0.).*
 
 ### Exclude from minification
 

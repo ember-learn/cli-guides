@@ -20,7 +20,7 @@ The CLI uses Babel as part of the build process. Babel is an independent project
 
 ## Minification
 
-The CLI uses uglify to take dozens of JavaScript files and turn them into something compact and optimized.
+The CLI uses terser to take dozens of JavaScript files and turn them into something compact and optimized.
 
 ## Stylesheet compilation
 
