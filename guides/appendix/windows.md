@@ -52,8 +52,8 @@ including `SeCreateSymbolicLinkPrivilege`.
 
 If the user account is not part of the Administrators group you will need to
 add the `SeCreateSymbolicLinkPrivilege` to allow the creation of symlinks. To
-do this open the `Local Security Policy` by typing Local Security Policy in the
-Windows `Run` Box.
+do this open the Local Security Policy by typing `secpol.msc` in the
+Windows Run Box (`WIN+R`).
 
 Under `Local Policies` -> `User Rights Assignment` find the `Create symbolic
 links` policy and double-click it to add a new user or group. Once your user or
