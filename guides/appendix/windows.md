@@ -76,3 +76,29 @@ as it decided to act on a package resulting in hard-to-debug race conditions.
 Ember CLI might want to make the switch to `npm` 3 to benefit from its
 flat module installation (solving most issues involving long path names) as well
 as its multi-stage installer.
+
+### WSL 2
+ From build ОС 20262 Windows 10 have [wsl 2](https://docs.microsoft.com/windows/wsl/install-win10).
+This is linux on your machine and gives us performance as good as
+on Linux (10x faster).
+
+Get last Ubuntu from Microsoft store.
+
+Do not use `/mnt/` folder for repo because of slow speed,
+use `~` folder.
+
+Connect with terminal on ubuntu and clone your repository.
+
+    cd ~
+    git clone your-repo
+
+install [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) and [node](https://github.com/nvm-sh/nvm#usage)
+ 
+ Install ember-cli and start server.
+
+    npm install -g ember-cli
+    cd ~/your-repo
+    npm i
+    ember serve
+
+In vscode install plugin ["Remote - WSL"](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl), [open](https://code.visualstudio.com/docs/remote/wsl-tutorial) your repo and start devepopment.
