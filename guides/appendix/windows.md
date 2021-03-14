@@ -77,10 +77,10 @@ Ember CLI might want to make the switch to `npm` 3 to benefit from its
 flat module installation (solving most issues involving long path names) as well
 as its multi-stage installer.
 
-### wsl 2
- From build 20262 Windows 10 have [wsl 2](https://docs.microsoft.com/windows/wsl/install-win10).
+### WSL 2
+ From build 20262 Windows 10 have [WSL 2](https://docs.microsoft.com/windows/wsl/install-win10).
 This is Linux on your machine and gives us performance as good as
-on Linux (10x faster).
+on Linux.
 
 Get last Ubuntu from Microsoft store.
 
@@ -92,7 +92,7 @@ Connect with terminal on Ubuntu and clone your repository.
     cd ~
     git clone your-repo
 ```
-install [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) and [node](https://github.com/nvm-sh/nvm#usage)
+install [node version manager](https://github.com/nvm-sh/nvm#installing-and-updating) and [node](https://github.com/nvm-sh/nvm#usage)
  
  Install ember-cli and start server.
 ```shell
