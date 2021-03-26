@@ -85,7 +85,7 @@ you to use some Linux tools and should hopefully give us much better performance
 developing Ember on Windows.
 
 Once you have followed the [guide to install WSL 2](https://docs.microsoft.com/windows/wsl/install-win10)
-you can then install the latests Ubuntu from the Microsoft store (instructions are also 
+you can then install the latest Ubuntu from the Microsoft store (instructions are also 
 included in the guide).
 
 <div class="cta">
