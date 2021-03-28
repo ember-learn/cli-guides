@@ -24,7 +24,6 @@ However, in the context of an addon, this creates more files than we would see i
 
 ```shell
   create addon/components/<component-name>.js
-  create addon/templates/components/<component-name>.hbs
   create tests/integration/components/<component-name>-test.js
   create app/components/<component-name>.js
 
