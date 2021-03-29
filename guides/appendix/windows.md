@@ -78,27 +78,43 @@ flat module installation (solving most issues involving long path names) as well
 as its multi-stage installer.
 
 ### WSL 2
- From build 20262 Windows 10 have [WSL 2](https://docs.microsoft.com/windows/wsl/install-win10).
-This is Linux on your machine and gives us performance as good as
-on Linux.
 
-Get last Ubuntu from Microsoft store.
+Since build 20262 of Windows 10 [Windows Subsystem for Linux (WSL) 2](https://docs.microsoft.com/windows/wsl/install-win10)
+is available. WSL allows you to run a Linux system on your Windows computer that allows
+you to use some Linux tools and should hopefully give us much better performance for
+developing Ember on Windows.
 
-Do not use `/mnt/` folder for repo because of slow speed,
-use `~` folder.
+Once you have followed the [guide to install WSL 2](https://docs.microsoft.com/windows/wsl/install-win10)
+you can then install the latest Ubuntu from the Microsoft store (instructions are also 
+included in the guide).
 
-Connect with terminal on Ubuntu and clone your repository.
+<div class="cta">
+  <div class="cta-note">
+    <div class="cta-note-body">
+      <div class="cta-note-heading">Zoey says...</div>
+      <div class="cta-note-message">
+        Make sure that you aren't working in any folder under <code>/mnt/</code> as the performance isn't as good as working in your home directory (<em>'~'</em>) in WSL!
+      </div>
+    </div>
+    <img src="/images/mascots/zoey.png" role="presentation" alt="">
+  </div>
+</div>
+
+You will need to make sure that you have Node.js installed in your WSL environment, if you haven't already done so you can follow [this guide](https://docs.microsoft.com/en-us/windows/nodejs/setup-on-wsl2). 
+
+Open your terminal on your WSL environment (for more information you might want to follow [this guide](https://devblogs.microsoft.com/commandline/a-guide-to-invoking-wsl/)) and then clone your Ember app repository.
+
 ```shell
-    cd ~
-    git clone your-repo
+cd ~
+git clone your-repo
 ```
-install [node version manager](https://github.com/nvm-sh/nvm#installing-and-updating) and [node](https://github.com/nvm-sh/nvm#usage)
- 
- Install ember-cli and start server.
+
+you can now install your dependencies and start the Ember app: 
+
 ```shell
-    npm install -g ember-cli
-    cd ~/your-repo
-    npm i
-    ember serve
+cd ~/your-repo
+npm i
+npm start
 ```
-In VSCode install plugin ["Remote - WSL"](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl), [open](https://code.visualstudio.com/docs/remote/wsl-tutorial) your repo and start development.
+
+IF you use VSCode, there is a useful plugin to make sure that it uses your WSL environment called ["Remote - WSL"](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl). For more information you can [follow this tutorial](https://code.visualstudio.com/docs/remote/wsl-tutorial). 
