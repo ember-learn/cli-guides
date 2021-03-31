@@ -26,6 +26,7 @@ However, in the context of an addon, this creates more files than we would see i
   installing component
     create addon/components/<component-name>.hbs
     skip addon/components/<component-name>.js
+    tip to add a class, run `ember generate component-class <component-name>`
   installing component-test
     create tests/integration/components/<component-name>-test.js
   installing component-addon
