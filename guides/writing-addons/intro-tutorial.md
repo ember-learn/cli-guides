@@ -23,17 +23,20 @@ ember generate component <component-name>
 However, in the context of an addon, this creates more files than we would see in an app:
 
 ```shell
-  create addon/components/<component-name>.js
-  create tests/integration/components/<component-name>-test.js
-  create app/components/<component-name>.js
-
+  installing component
+    create addon/components/foo-bar.hbs
+    skip addon/components/foo-bar.js
+  installing component-test
+    create tests/integration/components/foo-bar-test.js
+  installing component-addon
+    create app/components/foo-bar.js
 ```
 
 Some files go in the `app` directory, while others go into the `addon` directory. We'll start by looking at the addon directory. Whatever we put in the `<component-name>.hbs` file is what could be used immediately in an app, and will be referenced in templates as `{{component-name}}`.
 
 Let's say that our addon should wrap some content in a button tag. The addon template should look like this:
 
-```handlebars {data-filename=addon/templates/components/my-component-name.hbs}
+```handlebars {data-filename=addon/components/my-component-name.hbs}
 <button>{{buttonLabel}}</button>
 ```
 
@@ -78,7 +81,7 @@ In an Ember app, a block style component uses the `{{yield}}` helper as a placeh
 
 Let's change our button addon we made earlier so that developers can pass in their own handlebars content by using the `{{yield}}` helper:
 
-```handlebars {data-filename=addon/templates/components/my-component-name.hbs}
+```handlebars {data-filename=addon/components/my-component-name.hbs}
 <button>{{yield}}</button>
 ```
 
@@ -114,7 +117,7 @@ For example, writing a CSS rule for `div` is problematic, because it will affect
 
 Let's add a class to our template and some styles to target the class:
 
-```handlebars {data-filename=addon/templates/components/my-component-name.hbs}
+```handlebars {data-filename=addon/components/my-component-name.hbs}
 <button class="addon-name-button">{{yield}}</button>
 ```
 
