@@ -24,12 +24,12 @@ However, in the context of an addon, this creates more files than we would see i
 
 ```shell
   installing component
-    create addon/components/foo-bar.hbs
-    skip addon/components/foo-bar.js
+    create addon/components/<component-name>.hbs
+    skip addon/components/<component-name>.js
   installing component-test
-    create tests/integration/components/foo-bar-test.js
+    create tests/integration/components/<component-name>-test.js
   installing component-addon
-    create app/components/foo-bar.js
+    create app/components/<component-name>.js
 ```
 
 Some files go in the `app` directory, while others go into the `addon` directory. We'll start by looking at the addon directory. Whatever we put in the `<component-name>.hbs` file is what could be used immediately in an app, and will be referenced in templates as `{{component-name}}`.
