@@ -135,9 +135,26 @@ Overriding the blueprint hooks allows for implementing custom installation and u
 For example, `ember help generate foo` would show
 
 ```shell
-   foo <name> <options...>
-        Generates a foo
-        --type (String) (Default: )
+   Requested ember-cli commands:
+
+ember generate <blueprint> <options...>
+  Generates new code from blueprints.
+  aliases: g
+  --dry-run (Boolean) (Default: false)
+    aliases: -d
+  --verbose (Boolean) (Default: false)
+    aliases: -v
+  --pod (Boolean) (Default: false)
+    aliases: -p, -pods
+  --classic (Boolean) (Default: false)
+    aliases: -c
+  --dummy (Boolean) (Default: false)
+    aliases: -dum, -id
+  --in-repo-addon (String) (Default: null)
+    aliases: --in-repo <value>, -ir <value>
+  --in (String) (Default: null) Runs a blueprint against an in repo addon. A path is expected, relative to the root of the project.
+
+      foo <name>
 ```
 
 `index.js` should export a plain object, which will extend the prototype of the Blueprint class. If needed, the original Blueprint prototype can be accessed through the `_super` property.
