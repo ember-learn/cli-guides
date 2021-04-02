@@ -49,7 +49,7 @@ Markdown linting (`lint:md`) must pass. Otherwise, it will fail in CI (continuou
 
 ## How this app works
 
-The guides content is in the form of Markdown files in the [guides](https://github.com/ember-learn/cli-guides/tree/master/guides) directory. An Ember app processes and serves the Markdown files. If you look at the `app` directory, you'll see there's not much in it! That's because most of the work is done through a dependency on [guidemaker](https://sea-region.github.com/empress/guidemaker), a static site generator created in Ember.
+The guides content is in the form of Markdown files in the [guides](https://github.com/ember-learn/cli-guides/tree/main/guides) directory. An Ember app processes and serves the Markdown files. If you look at the `app` directory, you'll see there's not much in it! That's because most of the work is done through a dependency on [guidemaker](https://sea-region.github.com/empress/guidemaker), a static site generator created in Ember.
 
 The API docs are built from the `ember-cli` source code. Deployment and hosting details can be found in the [`ember-cli.github.io`](https://github.com/ember-learn/ember-cli.github.io) repository.
 
@@ -66,5 +66,4 @@ See `pages.yaml` in the cli-guides-source. Whatever has a URL of `index` will be
 
 ### Deploying
 
-This app has CI/CD in place, which automatically deploys the contents of the `master` branch.
-It is hosted on the Ember Learning org's Netlify account.
+The app is continuously deployed to Netlify when a pull request is merged and passes continuous integration.
