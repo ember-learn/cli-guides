@@ -396,6 +396,18 @@ module.exports = function(defaults) {
 };
 ```
 
+If you would like to specify the output path for a single vendored asset, you can do so by using `app.import`.
+
+```javascript {data-filename=ember-cli-build.js}
+module.exports = function (defaults) {
+  let app = new EmberApp({});
+
+  app.import('vendor/someWebWorker.js', { outputFile: 'assets/someWebWorker.js' })
+})
+```
+
+Now the asset will be available at an expected path e.g. `localhost:4200/assets/someWebWorker.js` enabling `new Worker('assets/someWebWorker.js')`.
+
 ## Integration
 
 When using Ember inside another project, you may want to launch Ember only when
