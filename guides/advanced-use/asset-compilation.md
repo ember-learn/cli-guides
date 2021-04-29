@@ -396,7 +396,7 @@ module.exports = function(defaults) {
 };
 ```
 
-If you would like to specify the output path for a single vendored asset, you can do so by using `app.import`.
+If you would like to specify the output path for a single file in the `vendor` directory, you can do so by using `app.import`.
 
 ```javascript {data-filename=ember-cli-build.js}
 module.exports = function (defaults) {
