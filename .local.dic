@@ -5,6 +5,7 @@ Autocomplete
 Autoprefixer
 autosave
 autosaves
+babel-preset-env
 browserlist
 Browserslist
 cli-guides-source
