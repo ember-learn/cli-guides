@@ -23,26 +23,22 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: Get Yarn cache path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - name: Cache Yarn cache and node_modules
+      - name: Cache npm cache and node_modules
         id: cache-dependencies
         uses: actions/cache@v2
         with:
           path: |
-            ${{ steps.yarn-cache-dir-path.outputs.dir }}
+            ~/.npm
             node_modules
-          key: ${{ runner.os }}-${{ env.NODE_VERSION }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-${{ env.NODE_VERSION }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: ${{ runner.os }}-${{ env.NODE_VERSION }}-
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm install
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
 
       - name: Lint
-        run: yarn lint
+        run: npm run lint
 
 
   test-app:
@@ -58,26 +54,22 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: Get Yarn cache path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - name: Cache Yarn cache and node_modules
+      - name: Cache npm cache and node_modules
         id: cache-dependencies
         uses: actions/cache@v2
         with:
           path: |
-            ${{ steps.yarn-cache-dir-path.outputs.dir }}
+            ~/.npm
             node_modules
-          key: ${{ runner.os }}-${{ env.NODE_VERSION }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-${{ env.NODE_VERSION }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: ${{ runner.os }}-${{ env.NODE_VERSION }}-
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm install
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
 
       - name: Test
-        run: yarn test:ember
+        run: npm run test:ember
 
 
   test-node:
@@ -93,23 +85,19 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: Get Yarn cache path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - name: Cache Yarn cache and node_modules
+      - name: Cache npm cache and node_modules
         id: cache-dependencies
         uses: actions/cache@v2
         with:
           path: |
-            ${{ steps.yarn-cache-dir-path.outputs.dir }}
+            ~/.npm
             node_modules
-          key: ${{ runner.os }}-${{ env.NODE_VERSION }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-${{ env.NODE_VERSION }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: ${{ runner.os }}-${{ env.NODE_VERSION }}-
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm install
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
 
       - name: Test
-        run: yarn test:node
+        run: npm run test:node
