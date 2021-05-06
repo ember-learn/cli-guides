@@ -24,8 +24,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - run: npm install -g npm@7
-      - name: Install dependencies
-        run: npm install
+      - run: npm ci
 
       - name: Lint
         run: npm run lint
@@ -47,8 +46,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - run: npm install -g npm@7
-      - name: Install dependencies
-        run: npm install
+      - run: npm ci
 
       - name: Test
         run: npm run test:ember
@@ -68,8 +66,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - run: npm install -g npm@7
-      - name: Install dependencies
-        run: npm install
+      - run: npm ci
 
       - name: Test
         run: npm run test:node
