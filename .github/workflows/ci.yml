@@ -33,6 +33,7 @@ jobs:
           key: ${{ runner.os }}-${{ env.NODE_VERSION }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: ${{ runner.os }}-${{ env.NODE_VERSION }}-
 
+      - run: npm install -g npm@7
       - name: Install dependencies
         run: npm install
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
@@ -66,6 +67,7 @@ jobs:
           key: ${{ runner.os }}-${{ env.NODE_VERSION }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: ${{ runner.os }}-${{ env.NODE_VERSION }}-
 
+      - run: npm install -g npm@7
       - name: Install dependencies
         run: npm install
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
@@ -97,6 +99,7 @@ jobs:
           key: ${{ runner.os }}-${{ env.NODE_VERSION }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: ${{ runner.os }}-${{ env.NODE_VERSION }}-
 
+      - run: npm install -g npm@7
       - name: Install dependencies
         run: npm install
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
