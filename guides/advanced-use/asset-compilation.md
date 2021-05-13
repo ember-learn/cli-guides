@@ -53,7 +53,7 @@ module.exports = {
 
 <!-- alex disable simply -->
 If you need more fine-grained customization over the way that `babel-preset-env` transforms your code,
-simply set any of the options found [here](https://github.com/babel/babel-preset-env#options) on your application's `babel` hash in `ember-cli-build.js`.
+simply set any of the [babel-preset-env options](https://babeljs.io/docs/en/babel-preset-env.html#options) on your application's `babel` hash in `ember-cli-build.js`.
 
 For example, if you wanted to explicitly exclude generator function transpilation from your
 output, your configuration would look like this:

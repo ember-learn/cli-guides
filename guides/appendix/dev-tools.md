@@ -7,11 +7,11 @@ This section provides information on integrating Ember into various code editors
 
 ### Visual Studio Code
 If you are using [VSCode](https://code.visualstudio.com/) with Ember CLI, there's an [official
-extension pack](https://marketplace.visualstudio.com/items?itemName=emberjs.emberjs#overview)
+extension pack](https://marketplace.visualstudio.com/items?itemName=embertooling.emberjs#overview)
 maintained by the Ember Learning team that adds multiple Ember plugins that can help in
 Ember development. If you already have VSCode installed on your machine, you can
-[click here](vscode:extension/emberjs.emberjs) to view this extension pack inside VSCode. Alternatively, you can
-also search for `emberjs.emberjs` inside the [extensions view](https://code.visualstudio.com/docs/editor/extension-gallery).
+[click here](vscode:extension/embertooling.emberjs) to view this extension pack inside VSCode. Alternatively, you can
+also search for `embertooling.emberjs` inside the [extensions view](https://code.visualstudio.com/docs/editor/extension-gallery).
 
 ### Atom
 
