@@ -37,6 +37,7 @@ Fortunately, when you run `ember generate component my-component-name` in an add
 
 #### `public/`
 
+This directory is not created by default in a new addon, but you can add it manually if there are static assets (like images) that you want to include in your addon.
 You can add static assets in the `public/` directory in your addon, and they will automatically be
 merged into the public directory in the host app under a folder with the name of your addon.
 
