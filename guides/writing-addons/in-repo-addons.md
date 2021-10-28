@@ -70,7 +70,7 @@ To use any of the Ember CLI generators targeted to your in-repo-addon you only n
 pass the `--in-repo` argument with the name of your in-repo-addon:
 
 ```bash
-ember g component --in-repo <in-repo-addon name> <component name>
+ember generate component --in-repo <in-repo-addon name> <component name>
 ```
 
 ### Generating an in-repo-addon blueprint
