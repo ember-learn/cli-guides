@@ -66,7 +66,7 @@ module.exports = {
 ```
 
 ### Using Generators
-To use any of the Ember CLI generators targeted to your in-repo-addon you only need to
+To create files for your in-repo-addon using Ember CLI generator commands,
 pass the `--in-repo` argument with the name of your in-repo-addon:
 
 ```bash
