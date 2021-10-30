@@ -286,13 +286,11 @@ ember generate helper-addon <name>
 
 #### `ember generate helper-test`
 
-Generates a helper integration test or a unit test.
+Generates a helper integration test.
 
 ```bash
-ember generate helper-test <name> <options...>
-  Generates a helper integration test or a unit test.
-  --test-type (integration, unit) (Default: integration)
-    aliases: -i (--test-type=integration), -u (--test-type=unit), --integration (--test-type=integration), -unit (--test-type=unit)
+ember generate helper-test <name>
+  Generates a helper integration test.
 ```
 
 #### `ember generate initializer`
