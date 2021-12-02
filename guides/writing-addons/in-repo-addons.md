@@ -20,6 +20,10 @@ ember generate in-repo-addon in-repo-addon-name
 
 (Replace `in-repo-addon-name` with the name of your addon.)
 
+Only `index.js` and `package.json` files will be created.  The usual `addon/`,
+`app/`, `test/`, `ember-cli-build.js`, etc files can be added either through
+generators or by hand.
+
 ### Using a stylesheet with an in-repo-addon
 For your in-repo-addon stylesheet, name the file `addon.css` and place
 it in the styles directory, e.g `/lib/in-repo-addon-name/addon/styles/addon.css`
