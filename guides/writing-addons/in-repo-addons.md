@@ -36,10 +36,8 @@ appropriate file extension for your addon stylesheet file.
 In order to compile HTMLBars templates that are part of your in-repo-addon,
 your `package.json` file will need to include following dependencies:
 
-- `babel-plugin-htmlbars-inline-precompile`
 - `ember-cli-babel`
 - `ember-cli-htmlbars`
-- `ember-cli-htmlbars-inline-precompile`
 
 (Use the same versions found in your Ember CLI Application's `package.json`)
 
