@@ -9,6 +9,7 @@ Ember uses Broccoli for the build process. Broccoli is an independent project th
 
 For example, if an app has content in the form of Markdown files that need to be turned into HTML during the build, it could be done with Broccoli. This very app you're reading content on right now follows that architecture, and the work was turned into a [Broccoli plugin](https://github.com/stonecircle/broccoli-static-site-json).
 
+<!-- alex disable just -->
 Just like there are Ember community addons, there are a variety of Broccoli plugins too! For more information please visit plugins section of [Broccoli official website](https://broccoli.build/about.html#plugins)
 
 ## Babel
@@ -19,7 +20,7 @@ The CLI uses Babel as part of the build process. Babel is an independent project
 
 ## Minification
 
-The CLI uses uglify to take dozens of JavaScript files and turn them into something compact and optimized.
+The CLI uses terser to take dozens of JavaScript files and turn them into something compact and optimized.
 
 ## Stylesheet compilation
 

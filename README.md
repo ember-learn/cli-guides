@@ -1,6 +1,6 @@
- ## Ember CLI guides
+[![This project uses GitHub Actions for continuous integration.](https://github.com/ember-learn/cli-guides/workflows/CI/badge.svg)](https://github.com/ember-learn/cli-guides/actions?query=workflow%3ACI)
 
-[![Build Status](https://travis-ci.org/ember-learn/cli-guides.svg?branch=master)](https://travis-ci.org/ember-learn/cli-guides)
+# Ember CLI guides
 
 This repository holds the guides and tutorials for the [Ember CLI](https://github.com/ember-cli/ember-cli), a powerful tool that helps you create, develop, and build an Ember app.
 
@@ -35,7 +35,7 @@ The Ember CLI Guides is a normal Ember application, so if you want to run it loc
 * Clone this repository
 * `cd cli-guides-source`
 * `npm install`
-* `ember serve`
+* `npm start`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
 _Note:_ If you are developing in any online editor environment like [codesandbox.io](https://codesandbox.io) or [gitpod.io](https://gitpod.io), then you may not able to serve the application properly because of FastBoot's domain configurations. In such cases, you can disable fastboot in development mode by serving the ember app using `FASTBOOT_DISABLED=true ember serve` command.
@@ -46,11 +46,13 @@ application should live-update with the content changes.
 To run the tests you can run `npm run lint:md` and `npm test` in your terminal. `npm run lint:md` will spellcheck and enforce consistency in the Markdown files.  `npm test` will run Ember tests that have been setup and also scripts that check the Markdown
 files links.
 
-Markdown linting (`lint:md`) must pass otherwise it will fail in Travis-CI. Spellchecking uses a custom [ember-dictionary](https://github.com/maxwondercorn/ember-dictionary) with words and terms common to the Ember community, such as `SemVer`. Words and terms that are associated with a specific guide can be placed in the `.local.dic` dictionary file. Create a pull request if a word needs to be added to `ember-dictionary`.
+Markdown linting (`lint:md`) must pass. Otherwise, it will fail in CI (continuous integration). Spellchecking uses a custom [ember-dictionary](https://github.com/maxwondercorn/ember-dictionary) with words and terms common to the Ember community, such as `SemVer`. Words and terms that are associated with a specific guide can be placed in the `.local.dic` dictionary file. Create a pull request if a word needs to be added to `ember-dictionary`.
 
 ## How this app works
 
-The guides content is in the form of Markdown files in the [guides](https://github.com/ember-learn/cli-guides/tree/master/guides) directory. An Ember app processes and serves the Markdown files. If you look at the `app` directory, you'll see there's not much in it! That's because most of the work is done through a dependency on [guidemaker](https://sea-region.github.com/empress/guidemaker), a static site generator created in Ember.
+The guides content is in the form of Markdown files in the [guides](https://github.com/ember-learn/cli-guides/tree/main/guides) directory. An Ember app processes and serves the Markdown files. If you look at the `app` directory, you'll see there's not much in it! That's because most of the work is done through a dependency on [guidemaker](https://sea-region.github.com/empress/guidemaker), a static site generator created in Ember.
+
+The API docs are built from the `ember-cli` source code. Deployment and hosting details can be found in the [`ember-cli.github.io`](https://github.com/ember-learn/ember-cli.github.io) repository.
 
 ## Contributing
 
@@ -65,5 +67,4 @@ See `pages.yaml` in the cli-guides-source. Whatever has a URL of `index` will be
 
 ### Deploying
 
-This app has CI/CD in place, which automatically deploys the contents of the `master` branch.
-It is hosted on the Ember Learning org's Netlify account.
+The app is continuously deployed to Netlify when a pull request is merged and passes continuous integration.

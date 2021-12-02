@@ -3,7 +3,7 @@ We'll cover the most common commands here, along with a quick tutorial on how to
 
 ## Using the help command
 
-For any CLI commands, you can see all of the options available by using the `--help` flag.
+You can see the options available for each command by using the `--help` flag.  A searchable list of the `help` output can be found in [CLI Commands Reference](../../advanced-use/cli-commands-reference/).
 
 For example, `ember --help` will show a list of all available top-level commands. `ember generate --help` will show a full list of all the types of files you can generate using the CLI.
 
@@ -61,6 +61,7 @@ ember new camping-trip-tracker --yarn
 ### Learn more
 
 - [Ember Quickstart Guide](https://guides.emberjs.com/release/getting-started/quick-start/) for creating a first app
+- [npm and Yarn](../assets-and-dependencies/#npmandyarn) for more on using package managers with Ember CLI
 
 ## Serve the app locally
 
@@ -90,7 +91,7 @@ ember serve --port 3200
 ### Learn more
 
 - [Ember Quickstart Guide](https://guides.emberjs.com/release/getting-started/quick-start/#toc_create-a-new-application) for starting a local server
-- [Proxying ajax requests](../../appendix/dev-tools/#proxyingajaxrequests) to proxy ajax requests to another server
+- [Proxying network requests](../../appendix/dev-tools/#proxyingnetworkrequests) to proxy network requests to another server
 
 ## Generate more files
 
@@ -102,26 +103,26 @@ ember generate <type-of-file> <name-of-your-choice>
 
 ### What it does
 
-`ember generate` creates new files within your app. For example, you can use it to create components, routes, services, models, and more. For a full list, type `ember generate --help`.
+`ember generate` creates new files within your app. For example, you can use it to create components, routes, services, models, and more.
 
-The CLI's `generate` command will ensure that new files contain the necessary boilerplate, that they go in the right directories, and that file naming conventions are followed. For example, components must always have a dash in their names.
-To avoid mistakes that are hard to debug, always use the CLI to create files instead of creating the files by hand.
+For a full list, type **`ember generate --help`**.
+
+The CLI's `generate` command will ensure that new files contain the necessary boilerplate, that they go in the right directories, and that file naming conventions are followed. To avoid mistakes that are hard to debug, always use the CLI to create files instead of creating the files by hand.
 
 ### Example use
 
-This command will make a component named `packing-list`. It will create three files in the app:
+This command will generate a page named `about`. It will create the following files in the app:
 
-* `packing-list.hbs`, which defines what it looks like
-* `packing-list.js` with JavaScript code to handle user interaction
-* `packing-list-test.js` with an integration test (aka rendering test)
+* `app/templates/about.hbs`, which defines what the page looks like
+* `app/routes/about.js` where we can fetch the data required for the page
+* `tests/unit/routes/about-test.js` with a minimal unit testing code
 
+Also, it updates the app's router (`app/router.js`) with an entry to the `about` page.
+
+command:
 ```shell
-ember generate component packing-list
+ember generate route about
 ```
-
-### Learn more
-
-- [Ember Quickstart Guide](https://guides.emberjs.com/release/getting-started/quick-start/#toc_define-a-route) for creating a route
 
 ## Installing addons
 
@@ -133,7 +134,7 @@ ember install <addon-name>
 
 ### What it does
 
-`ember install` is used to install addons within your app. An addon is an npm package that was built specifically for use in an Ember app. You can find a full list of addons on [Ember Observer](https://emberobserver.com). There are addon versions of many popular npm libraries, as well as packages that are unique to Ember. The majority are open source community addons. 
+`ember install` is used to install addons within your app. An addon is an npm package that was built specifically for use in an Ember app. You can find a full list of addons on [Ember Observer](https://emberobserver.com). There are addon versions of many popular npm libraries, as well as packages that are unique to Ember. The majority are open source community addons.
 By convention, most addons have `ember` in the name, but not all of them.
 
 To use non-addon npm packages directly, see "Managing Dependencies" section of the [Ember.js Guide](https://guides.emberjs.com/release/addons-and-dependencies/managing-dependencies/)
@@ -179,6 +180,25 @@ ember test --server
 
 During development, this is less common than running `ember serve` and viewing the tests at `http://localhost:4200/tests`.
 
+To run specific tests, you can pass the `--filter` or `--module` flags to the `ember test` command. For example:
+
+if you have a test like this:
+
+```js
+module('My Component', function() {
+  test('test one', function(assert) {
+    assert.ok(true, 'this test passes!');
+  });
+  test('test two', function(assert) {
+    assert.ok(true, 'this test passes!');
+  });
+});
+```
+
+you can run only the first test with `ember test --filter="test one"`.
+
+See `ember test --help` for more options!
+
 ### Learn more
 - [The Ember.js Guides about Testing](https://guides.emberjs.com/release/testing/)
 - [The Ember Super Rentals Tutorial](https://guides.emberjs.com/release/tutorial/ember-cli/) which shows step-by-step how to write tests and understand the results
@@ -195,6 +215,7 @@ ember build [options]
 
 `ember build` takes all of your app files and turns them into a bundle that is minified and transpiled into browser-ready JavaScript code, styles, and HTML. The bundled files go into a directory called `dist`. This bundle is what can be deployed to a server. By default, the `build` command uses the `development` environment configuration, which is not optimized for production.
 
+<!-- alex disable easy -->
 Although you can upload the built files to a server yourself, many Ember projects use a community addon called [ember-cli-deploy](https://github.com/ember-cli-deploy/ember-cli-deploy) to get their apps into production. `ember-cli-deploy` has a plugin system to make it easy to deploy to many cloud vendors. Search [Ember Observer for "deploy"](https://emberobserver.com/?query=deploy) to browse available options.
 
 Ember apps can be built with only three environments: development, production, and testing.

@@ -8,6 +8,7 @@ In general, when people say "assets", they mean things that the developer has ad
 
 Here are the most common places:
 
+<!-- alex disable just -->
 - Every Ember app has a file called `package.json` that lists node modules used by the app.
 The code itself goes in `node_modules` during `npm install`, just like in many non-Ember JavaScript projects
 - The `vendor` directory, which is a common home for third-party JavaScript that is copied and pasted in
@@ -20,7 +21,7 @@ a `bower_components` directory. Bower itself is deprecated and should not be use
 
 <!--
 If addons are installed accidentally with `npm install` or `yarn install`,
-the blueprints can be run with .... what?  
+the blueprints can be run with .... what?
 
 Added by @maxwondercorn:
 What is now below - were should it go in the guide
@@ -57,6 +58,14 @@ is incompatible with some CI systems.
 To switch from `yarn` to `npm`, delete the `yarn.lock`
 and run `npm install` to generate a `package-lock.json`.
 
+To have Ember CLI use `yarn` by default for all new projects, create a `.ember-cli` file in your home directory with:
+
+```json
+{
+  "yarn": true
+}
+```
+
 Further documentation about npm and Yarn is available at their official
 documentation pages:
 
@@ -85,11 +94,4 @@ of a local server.
 Errors such as "a module named \_\_\_\_\_ could not be found" or a colleague's report that "well, the app works on my computer but not yours!" sometimes indicate that
 the local server needs to be restarted or `node_modules` should be reinstalled.
 
-Common resolution steps are to stop the server, try one or more of these steps, and start the server again:
-
-- Run `npm install` or `yarn install`
-- Delete the `node_modules` directory and run `npm install` or `yarn install`
-- Delete the `dist` directory (found in apps with versions < 3.4), delete `node_modules`, and `npm install` or `yarn install`
-- If an app uses Bower (a deprecated, npm-like tool), follow all the steps above
-in addition to deleting `bower_components` and running `bower install`
-
+To overcome issues like this visit the [CLI Debugging Guide](../../advanced-use/debugging/).

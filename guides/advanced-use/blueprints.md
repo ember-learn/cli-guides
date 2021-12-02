@@ -42,10 +42,12 @@ installing blueprint
   create blueprints/foo-test/index.js
 ```
 
+<!-- alex disable easy -->
 Blueprints in your project’s directory take precedence over those packaged with Ember CLI. This makes it easy to override the built-in blueprints by generating one with the same name.
 
 ### Blueprint Structure
 
+<!-- alex disable simple -->
 Blueprints follow a simple structure. Let’s use the built-in helper blueprint as an example:
 
 ```shell
@@ -63,7 +65,7 @@ The accompanying test is in another blueprint. It has the same name with a `-tes
   blueprints/helper-test
   ├── files
   │   └── tests
-  │       └── unit
+  │       └── integration
   │           └── helpers
   │               └── __name__-test.js
   └── index.js
@@ -133,9 +135,26 @@ Overriding the blueprint hooks allows for implementing custom installation and u
 For example, `ember help generate foo` would show
 
 ```shell
-   foo <name> <options...>
-        Generates a foo
-        --type (String) (Default: )
+   Requested ember-cli commands:
+
+ember generate <blueprint> <options...>
+  Generates new code from blueprints.
+  aliases: g
+  --dry-run (Boolean) (Default: false)
+    aliases: -d
+  --verbose (Boolean) (Default: false)
+    aliases: -v
+  --pod (Boolean) (Default: false)
+    aliases: -p, -pods
+  --classic (Boolean) (Default: false)
+    aliases: -c
+  --dummy (Boolean) (Default: false)
+    aliases: -dum, -id
+  --in-repo-addon (String) (Default: null)
+    aliases: --in-repo <value>, -ir <value>
+  --in (String) (Default: null) Runs a blueprint against an in repo addon. A path is expected, relative to the root of the project.
+
+      foo <name>
 ```
 
 `index.js` should export a plain object, which will extend the prototype of the Blueprint class. If needed, the original Blueprint prototype can be accessed through the `_super` property.

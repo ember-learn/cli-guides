@@ -145,3 +145,71 @@ The `app/index.html` file lays the foundation for the Ember application. This is
 In addition to this, the file includes hooks - `{{content-for 'head'}}` and `{{content-for 'body'}}` - that can be used by addons to inject content into the application’s `head` or `body`. 
 
 These hooks need to be left in place for the application to function properly however, they can be safely ignored unless you are directly working with a particular addon.
+
+## Naming conventions
+
+[Ember Resolver](https://github.com/ember-cli/ember-resolver) is responsible for looking up code in your application and resolving its dependencies. The Resolver asks that you follow Ember's naming conventions.
+
+If you use Ember CLI (`ember generate`) to create components, routes, etc., Ember will create files with correct names. In case you may manually create files, let's go over the naming conventions.
+
+### File and directory names
+
+File and directory names use `kebab-case` with lowercase letters and a hyphen between words.
+
+```javascript {data-filename=app/models/user.js}
+import Model from '@ember-data/model';
+
+export default class UserModel extends Model {};
+```
+
+```javascript {data-filename=app/helpers/round-up.js}
+import { helper } from '@ember/component/helper';
+
+export default helper(function roundUp(params/*, hash*/) {
+  return params;
+});
+```
+
+Files can also be nested to better manage your applications, for example:
+
+```javascript {data-filename=app/routes/posts/new.js}
+import Route from '@ember/routing/route';
+
+export default class PostsNewRoute extends Route {};
+```
+
+Nested files can be referenced as either `posts/new` or `posts.new` when used in templates or JavaScript. 
+
+### Components
+
+`PascalCase` is used for components. For example, the `nav-bar` component
+
+```handlebars {data-filename=app/components/nav-bar.hbs}
+<nav>
+  ...
+</nav>
+```
+
+would be resolved from the `PascalCase` component name in a template.
+
+```handlebars {data-filename=app/templates/application.hbs}
+<NavBar />
+```
+
+Component files can also be nested. You will need to use a special syntax to resolve a nested component. For example, if the `nav-bar` component were in the `ui` directory,
+
+```handlebars {data-filename=app/components/ui/nav-bar.hbs}
+<nav>
+  ...
+</nav>
+```
+
+```handlebars {data-filename=app/templates/application.hbs}
+<Ui::NavBar />
+```
+
+If a component is nested more than one level deep, separate each directory using double colons.
+
+### Tests
+
+When you use Ember CLI, Ember automatically creates a test file and suffixes the name with `-test.js`. If you want to manually create the file, make sure to suffix the name with `-test.js` so that your tests can run.

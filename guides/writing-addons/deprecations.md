@@ -14,7 +14,7 @@ For example, a workaround could be instructions about how to use your other exis
 
 ## How to make a deprecation warning
 
-You can create a deprecation warning that looks and works the same as the deprecations used by Ember itself, by using [`deprecate`](https://api.emberjs.com/ember/release/functions/@ember%2Fapplication%2Fdeprecations/deprecate):
+You can create a deprecation warning that looks and works the same as the deprecations used by Ember itself, by using [`deprecate`](https://api.emberjs.com/ember/release/functions/@ember%2Fdebug/deprecate):
 
 ```js
 import { deprecate } from '@ember/debug';
@@ -55,9 +55,11 @@ After you install the addon with `ember install ember-qunit-assert-helpers`, you
 
 ## Documenting the deprecation
 
+<!-- alex disable clearly easy -->
 There are a few different ways to document the deprecation.
 First, and most importantly, make sure your deprecation warning itself is easy to understand, clearly states which addon it comes from, and has brief instructions for resolving the deprecation.
 
+<!-- alex disable just -->
 You should also add information to your `README`, a `CHANGELOG`, or make a dedicated `DEPRECATIONS.md` file that you can link to in your deprecation warning.
 For larger projects, you may even want to have a separate section in your documentation that is just for deprecations.
 Keep in mind that you don't want your library to look like it is swimming in deprecations, so avoid notes about deprecation caveats in your new-user-facing materials, like quick start guides.

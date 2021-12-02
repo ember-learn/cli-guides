@@ -1,6 +1,7 @@
 {
   "allow": [
     "disabled",
+    "dummy",
     "host-hostess",
     "invalid",
     "special",

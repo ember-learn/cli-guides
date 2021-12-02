@@ -44,11 +44,13 @@ The best way to get started using ember-cli-deploy is to visit the [documentatio
 Some hosting service providers offer automated deployment in other ways.
 For example, Heroku has a build pack and CLI of their own that provides a zero-config deployment! The step-by-step examples are available at [https://www.heroku.com/emberjs](https://www.heroku.com/emberjs)
 
+<!-- alex disable easy -->
 Do you know of any other hosting services that make it easy to deploy Ember apps?
 Please [open an issue](https://github.com/ember-learn/cli-guides-source) for this Guide.
 
 ## Common deployment configurations
 
+<!-- alex disable just -->
 Compared to developing an app locally, there are some options to consider when an app is in deployment. Some apps may not need to configure any of these options, but here are just a few of the most common examples to help you get started. For more details, see the [Advanced Use](../../advanced-use/) section of the CLI guides.
 
 ### Configuring `rootURL`
@@ -148,6 +150,7 @@ The use of HTTPS certificates is a best practice for web security and profession
 
 Plain old HTTP sites are likely to show your users security warnings and they are vulnerable to man-in-the-middle attacks. HTTPS certificates are available at no cost from many identity and hosting providers. However, even if you have an HTTPS certificate, you will still need a way to redirect any users who visit `http://your-ember-app.com`, for example.
 
+<!-- alex disable simple -->
 The following is a simple http-to-https redirect using [nginx](https://nginx.org/en/). Don't forget to include your ssl keys in your config.
 
 First, make a production build of your app. The results will be saved in the `dist` directory:

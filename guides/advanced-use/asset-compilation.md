@@ -12,9 +12,10 @@ For example, if you place `logo.png` in `public/assets/images`, you can referenc
 templates with `assets/images/logo.png` or in stylesheets with
 `url('/assets/images/logo.png')`.
 
-This functionality of Ember CLI comes from
-[broccoli-asset-rev](https://github.com/rickharrison/broccoli-asset-rev). Be
-sure to check out all the options and usage notes.
+In production builds, these assets are [fingerprinted](#fingerprintingandcdnurls), but
+all references are also automatically updated. This functionality comes from
+[broccoli-asset-rev](https://github.com/rickharrison/broccoli-asset-rev). Be sure to check out
+all the options and usage notes.
 
 ## JS transpiling
 
@@ -50,8 +51,9 @@ module.exports = {
 
 (If these values look familiar, they're the same exact values used by the popular [Autoprefixer](https://github.com/postcss/autoprefixer) project.)
 
+<!-- alex disable simply -->
 If you need more fine-grained customization over the way that `babel-preset-env` transforms your code,
-simply set any of the options found [here](https://github.com/babel/babel-preset-env#options) on your application's `babel` hash in `ember-cli-build.js`.
+simply set any of the [babel-preset-env options](https://babeljs.io/docs/en/babel-preset-env.html#options) on your application's `babel` hash in `ember-cli-build.js`.
 
 For example, if you wanted to explicitly exclude generator function transpilation from your
 output, your configuration would look like this:
@@ -64,14 +66,9 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     babel: {
-      blacklist: [
-        'es6.arrowFunctions',
-        'es6.blockScoping',
-        'es6.classes',
-        'es6.destructuring',
-        'es6.parameters',
-        'es6.properties.computed',
-        // ...more options
+      exclude: [
+       'transform-regenerator',
+       // ...more options
       ]
     }
   });
@@ -103,7 +100,7 @@ module.exports = function(defaults) {
   });
 
   // Use `app.import` to add additional libraries to the generated...
- 
+
   return app.toTree();
 };
 };
@@ -117,10 +114,10 @@ the `minifyCSS:options` object in your ember-cli-build. Minification is enabled 
 default in the production-env and can be disabled using the `minifyCSS:enabled`
 switch.
 
-Similarly, the js-files are minified with `ember-cli-uglify`
+Similarly, the js-files are minified with `ember-cli-terser`
 in the production environment by default. You can pass custom options to the minifier via the
-`ember-cli-uglify:options` object in your ember-cli-build. To enable or disable JS minification
-you may supply a boolean value for `ember-cli-uglify:enabled`.
+`ember-cli-terser:options` object in your ember-cli-build. To enable or disable JS minification
+you may supply a boolean value for `ember-cli-terser:enabled`.
 
 For example, to disable minifying of CSS and JS, add in `ember-cli-build.js`:
 
@@ -129,7 +126,7 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    'ember-cli-uglify': {
+    'ember-cli-terser': {
       enabled: false
     },
     minifyCSS: {
@@ -143,11 +140,9 @@ module.exports = function(defaults) {
 ```
 
 More details on available options to customize JavaScript minification can be found in
-[`ember-cli-uglify` docs](https://github.com/ember-cli/ember-cli-uglify#ember-cli-uglify).
+[`ember-cli-terser` docs](https://github.com/ember-cli/ember-cli-terser#options).
 
-***Note**: The option object for minifying of JavaScript files was renamed in `ember-cli-uglify@2.x`,
-which is part of Ember CLI's default blueprint since 2.16.0. The option was called `minifyJS`
-for `ember-cli-uglify@1.x`.*
+***Note**: `ember-cli-uglify` was renamed to `ember-cli-terser` with the 4.0.0 release. This change is part of Ember CLI's default blueprint since 3.21.1. Projects still using `ember-cli-uglify` can find its configuration options in the [`ember-cli-uglify` docs](https://github.com/ember-cli/ember-cli-terser/tree/v3.0.0.).*
 
 ### Exclude from minification
 
@@ -400,6 +395,18 @@ module.exports = function(defaults) {
   return app.toTree();
 };
 ```
+
+If you would like to specify the output path for a single file in the `vendor` directory, you can do so by using `app.import`.
+
+```javascript {data-filename=ember-cli-build.js}
+module.exports = function (defaults) {
+  let app = new EmberApp({});
+
+  app.import('vendor/someWebWorker.js', { outputFile: 'assets/someWebWorker.js' })
+})
+```
+
+Now the asset will be available at an expected path e.g. `localhost:4200/assets/someWebWorker.js` enabling `new Worker('assets/someWebWorker.js')`.
 
 ## Integration
 

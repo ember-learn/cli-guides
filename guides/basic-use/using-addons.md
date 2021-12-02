@@ -31,6 +31,8 @@ For example, these community-authored addons bring in familiar functionality fro
 
 - Stylesheet tooling like [ember-cli-sass](https://www.emberobserver.com/addons/ember-cli-sass), which provides [Sass](https://sass-lang.com/) as an alternative to standard CSS.
 - JavaScript utilities like [ember-moment](https://www.emberobserver.com/addons/ember-moment), which offers some Ember conveniences to the base [moment library](https://www.npmjs.com/package/moment).
+
+<!-- alex disable just -->
 - Full UI frameworks and design kits like [ember-bootstrap](https://www.emberobserver.com/addons/ember-bootstrap), [semantic-ui-ember](https://www.emberobserver.com/addons/semantic-ui-ember), and [ember-paper](https://www.emberobserver.com/addons/ember-paper). These offer easier, more reliable, more performant functionality than just using the npm packages directly.
 - TypeScript support through [ember-cli-typescript](https://github.com/typed-ember/ember-cli-typescript).
 - Charting libraries like [ember-d3](https://github.com/ivanvanderbyl/ember-d3).
@@ -47,6 +49,53 @@ Here are examples of popular community-maintained addons that are unique to Embe
 - [ember-cli-mirage](https://www.ember-cli-mirage.com/) for stubbing data that would come from an API.
 
 There are too many amazing addons to mention them all here! We thank everyone who shares their work with others through public addons.
+
+### Extending Addons
+
+Sometimes, it can be useful to extend code provided by an addon. Because runtime
+code in an Ember app is *resolved*, rather than explicitly imported, the mechanism to overwrite it
+is by placing a file where Ember's resolver expects it in the directory structure. Let's take a look
+at how to do this through an example.
+
+Consider an addon `ember-state-manager` that contains a `Service` class called `StateManager`.
+This addon (if it follows conventions), will contain two files:
+
+- `addon/services/state-manager.js`, and
+- `app/services/state-manager.js`
+
+Each of these files has a special purpose. The first file (in the `addon/` directory), contains
+the source code of the `StateManager` class  and is *importable* with ES6 imports. The second file
+contains only an import and an export statement, making it available for the *resolver*.
+In order to extend this service, we must use both these key concepts.
+
+In other words, we must export an extended version of the *importable* code at the *resolvable* path.
+More concretely, we must create a file at `app/services/state-manager.js`  that imports the `StateManager
+class and extends it using JavaScript classes:
+
+```javascript{data-file-name=app/services/state-manager.js}
+import StateManager from 'ember-state-manager/services/state-manager';
+
+export default class ExtendedStateManager extends StateManager {
+  newMethod() {}
+
+  existingMethod() {}
+}
+```
+
+Now, anywhere this service is injected, the extended version will be used:
+
+```javascript{data-file-name=app/components/button.js}
+import Component from '@glimmer/component';
+import { inject as service } from '@ember/service';
+
+export default Button extends Component {
+  // ExtendedStateManager!
+  @service stateManager;
+}
+```
+
+Although this example is for a Service class, the same idea can be used for anything else
+in the app directory!
 
 ### Who creates addons?
 

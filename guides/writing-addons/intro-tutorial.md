@@ -23,21 +23,25 @@ ember generate component <component-name>
 However, in the context of an addon, this creates more files than we would see in an app:
 
 ```shell
-  create addon/components/<component-name>.js
-  create addon/templates/components/<component-name>.hbs
-  create tests/integration/components/<component-name>-test.js
-  create app/components/<component-name>.js
-
+  installing component
+    create addon/components/<component-name>.hbs
+    skip addon/components/<component-name>.js
+    tip to add a class, run `ember generate component-class <component-name>`
+  installing component-test
+    create tests/integration/components/<component-name>-test.js
+  installing component-addon
+    create app/components/<component-name>.js
 ```
 
 Some files go in the `app` directory, while others go into the `addon` directory. We'll start by looking at the addon directory. Whatever we put in the `<component-name>.hbs` file is what could be used immediately in an app, and will be referenced in templates as `{{component-name}}`.
 
 Let's say that our addon should wrap some content in a button tag. The addon template should look like this:
 
-```handlebars {data-filename=addon/templates/components/my-component-name.hbs}
+```handlebars {data-filename=addon/components/my-component-name.hbs}
 <button>{{buttonLabel}}</button>
 ```
 
+<!-- alex disable just -->
 Our goal is to be able to pass the `buttonLabel` value to the addon, just like we'd pass it to a normal component within an app:
 
 ```handlebars {data-filename=my-application-name/templates/my-template.hbs}
@@ -56,7 +60,7 @@ There are several options to see the addon in action. We could use `npm link` or
 **From the directory of the app using the addon:**
 1. `yarn link <addon-name>` or `npm link <addon-name>`.
 2. In the Ember app's `package.json`, add a `devDependencies` entry for your addon, like `"addon-name": "*"`. The `*` means that it will include all version numbers of our addon.
-3. Run `yarn install` or `npm install` in the app (for first time use `npm install --prefer-offline` or else `npm install --offline` instead of `npm install`. This is because `npm install` by default, will check online npm registry for your addon instead of your local storage)
+3. Run `yarn install` or `npm install` in the app. (If you are using the app for the first time, you can use `npm install --prefer-offline` or `npm install --offline` instead. These alternative commands can speed up installation, because `npm install` checks the online npm registry for your addon instead of your local storage.)
 4. Add a reference to your addon's component somewhere in an app template, like `<ComponentName @buttonLabel="Register" />`
 5. Run a local server with `ember serve` and visit [http://localhost:4200](http://localhost:4200)
 
@@ -71,13 +75,14 @@ We should now see our addon in action!
 
 ### Making a UI component available in block form
 
+<!-- alex disable simple -->
 In an Ember app, components can be used in ["simple" or "block" form](https://guides.emberjs.com/release/components/wrapping-content-in-a-component/). Addon templates have the same capabilities. The simple form allows data objects or configuration values to be passed to the addon. The block form allows a developer to pass in their own template, content, and interactivity.
 
 In an Ember app, a block style component uses the `{{yield}}` helper as a placeholder for where the passed-in content will go. It is the same in an Ember addon.
 
 Let's change our button addon we made earlier so that developers can pass in their own handlebars content by using the `{{yield}}` helper:
 
-```handlebars {data-filename=addon/templates/components/my-component-name.hbs}
+```handlebars {data-filename=addon/components/my-component-name.hbs}
 <button>{{yield}}</button>
 ```
 
@@ -113,7 +118,7 @@ For example, writing a CSS rule for `div` is problematic, because it will affect
 
 Let's add a class to our template and some styles to target the class:
 
-```handlebars {data-filename=addon/templates/components/my-component-name.hbs}
+```handlebars {data-filename=addon/components/my-component-name.hbs}
 <button class="addon-name-button">{{yield}}</button>
 ```
 
@@ -233,17 +238,8 @@ This is a very tiny example of what addons can do in terms of providing JavaScri
 
 ## In-repo addons
 
-If the addon is just meant to be used in a single project, an "in-repo" addon could be created instead. The benefits are that it is lightweight and the developer has access addon APIs, like adding packages and commands. However, there are some major limitations: an in-repo addon can't be shared between apps, versioned independently, or published to npm.
-
-From within an existing Ember app, create an in-repo addon:
-
-```shell
-ember generate in-repo-addon <addon-name> [options]
-```
-
-This generates a folder called `lib/<addon-name>` that contains its own `package.json` and an `index.js` file.
-
-The most common use case for an in-repo addon is when there is a chance a component really should be a standalone library instead, but it is not yet clear if it should be broken out from the main app. Another reason is that it can be helpful for enforcing separation of concerns within an app.
+In-Repo addons live in the `lib/` directory of an Ember application. You can read more about
+them in the [dedicated section](../in-repo-addons/)!
 
 ## Other kinds of addons
 
@@ -273,7 +269,7 @@ Lastly, be sure to provide a few notes about how others can contribute to the pr
 
 ## Common addon configurations
 
-Addons are configured using the `ember-addon` hash in the `package.json` file.  
+Addons are configured using the `ember-addon` hash in the `package.json` file.
 
 ```json {data-filename=package.json}
 "ember-addon": {
@@ -293,7 +289,7 @@ By default, the `configPath` property is defined to point to the config director
 These properties specify whether your ember-addon must run "before" or "after" any other Ember CLI addons. Both of these properties can take either a string or an array of strings. The string is the name of another Ember CLI addon, as defined in the `package.json` of the other addon.
 
 ### defaultBlueprint
-Addons have a default blueprint that will automatically run when the addon is installed.  By convention, Ember will run the blueprint named after the `name` property in `package.json` 
+Addons have a default blueprint that will automatically run when the addon is installed.  By convention, Ember will run the blueprint named after the `name` property in `package.json`
 
 You may specify a different name using `defaultBlueprint`. See the [addon blueprints](../../advanced-use/blueprints/#addonblueprints) for more information on the default blueprint.
 

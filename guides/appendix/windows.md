@@ -6,6 +6,50 @@ To get started ensure the following dependencies are installed:
 * Git - [https://git-scm.com/](https://git-scm.com/)
 * Chrome - [https://www.google.com/chrome/](https://www.google.com/chrome/)
 
+## WSL 2
+
+For the best experience developing Ember apps in Windows, we recommend using WSL 2.
+
+Since build 20262 of Windows 10 [Windows Subsystem for Linux (WSL) 2](https://docs.microsoft.com/windows/wsl/install-win10)
+is available. WSL allows you to run a Linux system on your Windows computer that allows
+you to use some Linux tools and gives much better performance and file path resolution for
+developing Ember on Windows.
+
+Once you have followed the [guide to install WSL 2](https://docs.microsoft.com/windows/wsl/install-win10)
+you can then install the latest Ubuntu from the Microsoft store (instructions are also 
+included in the guide).
+
+<div class="cta">
+  <div class="cta-note">
+    <div class="cta-note-body">
+      <div class="cta-note-heading">Zoey says...</div>
+      <div class="cta-note-message">
+        Make sure that you aren't working in any folder under <code>/mnt/</code> as the performance isn't as good as working in your home directory (<em>'~'</em>) in WSL!
+      </div>
+    </div>
+    <img src="/images/mascots/zoey.png" role="presentation" alt="">
+  </div>
+</div>
+
+You will need to make sure that you have Node.js installed in your WSL environment, if you haven't already done so you can follow [this guide](https://docs.microsoft.com/en-us/windows/nodejs/setup-on-wsl2). 
+
+Open your terminal on your WSL environment (for more information you might want to follow [this guide](https://devblogs.microsoft.com/commandline/a-guide-to-invoking-wsl/)) and then clone your Ember app repository.
+
+```shell
+cd ~
+git clone your-repo
+```
+
+you can now install your dependencies and start the Ember app: 
+
+```shell
+cd ~/your-repo
+npm i
+npm start
+```
+
+IF you use VSCode, there is a useful plugin to make sure that it uses your WSL environment called ["Remote - WSL"](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl). For more information you can [follow this tutorial](https://code.visualstudio.com/docs/remote/wsl-tutorial).
+
 ### Performance
 
 Although supported, Windows performance, at least by default, isn't as good as
@@ -52,8 +96,8 @@ including `SeCreateSymbolicLinkPrivilege`.
 
 If the user account is not part of the Administrators group you will need to
 add the `SeCreateSymbolicLinkPrivilege` to allow the creation of symlinks. To
-do this open the `Local Security Policy` by typing Local Security Policy in the
-Windows `Run` Box.
+do this open the Local Security Policy by typing `secpol.msc` in the
+Windows Run Box (`WIN+R`).
 
 Under `Local Policies` -> `User Rights Assignment` find the `Create symbolic
 links` policy and double-click it to add a new user or group. Once your user or
@@ -75,4 +119,4 @@ as it decided to act on a package resulting in hard-to-debug race conditions.
 `npm` 3 is a nearly complete rewrite of `npm`, fixing both issues. Windows users of
 Ember CLI might want to make the switch to `npm` 3 to benefit from its
 flat module installation (solving most issues involving long path names) as well
-as its multi-stage installer.
+as its multi-stage installer. 
