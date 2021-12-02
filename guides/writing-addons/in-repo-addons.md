@@ -67,6 +67,14 @@ module.exports = {
 };
 ```
 
+### Using Generators
+To create files for your in-repo-addon using Ember CLI generator commands,
+pass the `--in-repo` argument with the name of your in-repo-addon:
+
+```bash
+ember generate component --in-repo <in-repo-addon name> <component name>
+```
+
 ### Generating an in-repo-addon blueprint
 To generate a blueprint for your in-repo-addon:
 
