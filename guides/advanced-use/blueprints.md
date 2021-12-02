@@ -65,7 +65,7 @@ The accompanying test is in another blueprint. It has the same name with a `-tes
   blueprints/helper-test
   ├── files
   │   └── tests
-  │       └── unit
+  │       └── integration
   │           └── helpers
   │               └── __name__-test.js
   └── index.js
