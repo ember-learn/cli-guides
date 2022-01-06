@@ -11,7 +11,7 @@ then, from your project's root directory add the following files:
 
 - `tailwind.config.js`
 
-  ```js
+  ```js {data-filename="tailwind.config.js"}
   'use strict';
 
   module.exports = {
@@ -25,7 +25,7 @@ then, from your project's root directory add the following files:
 
 - `postcss.config.js`
 
-  ```js
+  ```js {data-filename="postcss.config.js"}
   'use strict';
 
   module.exports = {
@@ -38,7 +38,7 @@ then, from your project's root directory add the following files:
 
 - `tailwind-input.css`
 
-  ```css
+  ```css {data-filename="tailwind-input.css"}
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
@@ -47,7 +47,7 @@ then, from your project's root directory add the following files:
 Now we need to add some scripts to the package.json to make
 interacting with the tailwind CLI a little easier.
 
-```diff
+```diff {data-filename="package.json"}
 + "tailwind:build": "npx tailwindcss -i ./tailwind-input.css -o ./public/assets/tailwind.css",
 + "tailwind:watch": "npx tailwindcss -i ./tailwind-input.css -o ./public/assets/tailwind.css --watch",
 + "build": "npm run tailwind:build && ember build --environment=production",
