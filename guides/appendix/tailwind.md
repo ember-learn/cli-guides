@@ -1,6 +1,6 @@
 [Tailwind](https://tailwindcss.com/) is a popular way to use utility-first classes in projects that helps unify large projects using design-tokens-as-code.
 
-To use Tailwind with Ember, this guide follows the [Tailwing Getting Started](https://tailwindcss.com/docs/installation) guide, with some minor tweaks to file names and their locations.
+To use Tailwind-JIT with Ember, this guide follows the [Tailwing Getting Started](https://tailwindcss.com/docs/installation) guide, with some minor tweaks to file names and their locations.
 
 To get started, installing the following dependencies
 ```shell
@@ -47,11 +47,11 @@ then, from your project's root directory add the following files:
 Now we need to add some scripts to the package.json to make
 interacting with the tailwind CLI a little easier.
 
-```
-"tailwind:build": "npx tailwindcss -i ./tailwind-input.css -o ./public/assets/tailwind.css",
-"tailwind:watch":
-  "npx tailwindcss -i ./tailwind-input.css -o ./public/assets/tailwind.css --watch",
-"build": "npm run tailwind:build && ember build --environment=production",
+```diff
++ "tailwind:build": "npx tailwindcss -i ./tailwind-input.css -o ./public/assets/tailwind.css",
++ "tailwind:watch": "npx tailwindcss -i ./tailwind-input.css -o ./public/assets/tailwind.css --watch",
++ "build": "npm run tailwind:build && ember build --environment=production",
+- "build": "ember build --environment=production",
 ```
 
 In addition to the two new scripts, `tailwind:build` and `tailwind:watch`, the `build` script, which was pre-existing for production builds, has been prefixed with a call to `tailwind:build` so that the tailwind assets are prepped for shipping to production (useful for C.I.)
