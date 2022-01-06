@@ -1,6 +1,6 @@
 [Tailwind](https://tailwindcss.com/) is a popular way to use utility-first classes in projects that helps unify large projects using design-tokens-as-code.
 
-To use Tailwind-JIT with Ember, this guide follows the [Tailwing Getting Started](https://tailwindcss.com/docs/installation) guide, with some minor tweaks to file names and their locations.
+To use Tailwind JIT with Ember, this guide follows the [Tailwind Getting Started](https://tailwindcss.com/docs/installation) guide, with some minor tweaks to file names and their locations.
 
 To get started, installing the following dependencies
 ```shell
@@ -54,13 +54,13 @@ interacting with the tailwind CLI a little easier.
 - "build": "ember build --environment=production",
 ```
 
-In addition to the two new scripts, `tailwind:build` and `tailwind:watch`, the `build` script, which was pre-existing for production builds, has been prefixed with a call to `tailwind:build` so that the tailwind assets are prepped for shipping to production (useful for C.I.)
+In addition to the two new scripts, `tailwind:build` and `tailwind:watch`, the `build` script, which was preexisting for production builds, has been prefixed with a call to `tailwind:build` so that the tailwind assets are prepped for shipping to production (useful for C.I.)
 
 The above scripts expect that an input file, `./tailwind-input.css` will exist, and the tailwind CLI will output the compiled styles at `public/assets/tailwind.css`. Since this tailwind.css output file is in the public folder, changes to it will cause the `ember s` command to rebuild.
 
 A couple notes though:
- - `num run tailwind:watch` must be run in a separate terminal for development
- - it may be benificial to add `public/assets/tailwind.css` to the `.gitignore`
+- `num run tailwind:watch` must be run in a separate terminal for development
+- it may be beneficial to add `public/assets/tailwind.css` to the `.gitignore`
 
 Lastly, we need to edit the `app/index.html` file to include the `tailwind.css` file:
 
