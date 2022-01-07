@@ -2,7 +2,7 @@
 
 To use Tailwind JIT with Ember, this guide follows the [Tailwind Getting Started](https://tailwindcss.com/docs/installation) guide, with some minor tweaks to file names and their locations.
 
-To get started, installing the following dependencies
+To get started, install the following dependencies:
 ```shell
 npm install autoprefixer postcss tailwindcss
 ```
