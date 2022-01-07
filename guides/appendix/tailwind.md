@@ -7,7 +7,7 @@ To get started, installing the following dependencies
 npm install autoprefixer postcss tailwindcss
 ```
 
-then, from your project's root directory add the following files:
+Then, from your project's root directory, add the following files:
 
 - `tailwind.config.js`
 
