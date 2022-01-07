@@ -1,3 +1,15 @@
+Integrating with ember's live-reload system can be fairly straight-forward.
+
+In short, any tool that can output or change files automatically can be used to add live-reload behavior.
+
+The process is:
+
+- emit some file to either the `public` or `app` tree
+- `link` or `import` the file from existing `ember` code
+
+An example of this behavior and integration can be shown with a CSS authoring tool, Tailwind.
+
+
 [Tailwind](https://tailwindcss.com/) is a popular way to use utility-first classes in projects that helps unify large projects using design-tokens-as-code.
 
 To use Tailwind JIT with Ember, this guide follows the [Tailwind Getting Started](https://tailwindcss.com/docs/installation) guide, with some minor tweaks to file names and their locations.
