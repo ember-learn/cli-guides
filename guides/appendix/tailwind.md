@@ -59,7 +59,7 @@ In addition to the two new scripts, `tailwind:build` and `tailwind:watch`, the `
 The above scripts expect that an input file, `./tailwind-input.css` will exist, and the tailwind CLI will output the compiled styles at `public/assets/tailwind.css`. Since this tailwind.css output file is in the public folder, changes to it will cause the `ember s` command to rebuild.
 
 A couple notes though:
-- `num run tailwind:watch` must be run in a separate terminal for development
+- `npm run tailwind:watch` must be run in a separate terminal for development
 - it may be beneficial to add `public/assets/tailwind.css` to the `.gitignore`
 
 Lastly, we need to edit the `app/index.html` file to include the `tailwind.css` file:
