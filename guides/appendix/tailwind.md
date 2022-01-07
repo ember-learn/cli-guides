@@ -44,7 +44,7 @@ then, from your project's root directory add the following files:
   @tailwind utilities;
   ```
 
-Now we need to add some scripts to the package.json to make
+Now we need to add some scripts to the `package.json` to make
 interacting with the tailwind CLI a little easier.
 
 ```diff {data-filename="package.json"}
