@@ -79,3 +79,5 @@ Lastly, we need to edit the `app/index.html` file to include the `tailwind.css` 
 ```html
 <link integrity="" rel="stylesheet" href="{{rootURL}}assets/tailwind.css">`
 ```
+
+With these things in place, you'll be able to use all of Tailwind's capabilities, including JIT compilation.
