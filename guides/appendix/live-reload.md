@@ -1,4 +1,7 @@
-Integrating with ember's live-reload system can be fairly straight-forward.
+For most JavaScript dependencies, installing them in your Ember app can be as quick as `npm install <some package name>`.
+However, there are some libraries within the JavaScript ecosystem that have additional tooling that needs to integrate
+with Ember's live-reload features for the best developer-experience. In this guide, you will learn how to install
+and configure libraries to integrate with Ember's live-reload.
 
 In short, any tool that can output or change files automatically can be used to add live-reload behavior.
 
@@ -10,7 +13,7 @@ The process is:
 An example of this behavior and integration can be shown with a CSS authoring tool, Tailwind.
 
 
-[Tailwind](https://tailwindcss.com/) is a popular way to use utility-first classes in projects that helps unify large projects using design-tokens-as-code.
+[Tailwind](https://tailwindcss.com/) is a popular way to use utility-first CSS classes in an app. It can be used within many frontend frameworks, including Ember.
 
 To use Tailwind JIT with Ember, this guide follows the [Tailwind Getting Started](https://tailwindcss.com/docs/installation) guide, with some minor tweaks to file names and their locations.
 
@@ -77,7 +80,7 @@ A couple notes though:
 Lastly, we need to edit the `app/index.html` file to include the `tailwind.css` file:
 
 ```html
-<link integrity="" rel="stylesheet" href="{{rootURL}}assets/tailwind.css">`
+<link integrity="" rel="stylesheet" href="{{rootURL}}assets/tailwind.css">
 ```
 
 With these things in place, you'll be able to use all of Tailwind's capabilities, including JIT compilation.
