@@ -81,5 +81,5 @@
     url: 'dev-tools'
   - title: 'Common issues'
     url: 'common-issues'
-  - title: 'Tailwind'
+  - title: 'Live reload integration'
     url: 'live-reload'

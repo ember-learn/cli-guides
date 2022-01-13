@@ -10,6 +10,9 @@ The process is:
 - emit some file to either the `public` or `app` tree
 - `link` or `import` the file from existing `ember` code
 
+
+## Tailwind
+
 An example of this behavior and integration can be shown with a CSS authoring tool, Tailwind.
 
 
