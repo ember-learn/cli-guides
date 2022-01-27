@@ -16,7 +16,6 @@ module.exports = {
 In addition to the standard blueprint hooks, the default blueprint can use these hooks.
 
 * `addAddonToProject`
-* `addBowerPackageToProject`
 * `addPackageToProject`
 
 #### addAddonToProject
@@ -26,12 +25,6 @@ Installs another Ember addon in the client application
 #### addPackageToProject
 
 Installs an npm package or dependency into the client application
-
-#### addBowerPackageToProject
-
-Installs a Bower package or dependency into the client application.
-Bower is a package manager that is [no longer recommended for new projects](https://bower.io/),
-but you may find this hook used in older addons.
 
 Each of the hooks returns a promise, so they can all be chained with `.then()`. The following is an example of each of these:
 

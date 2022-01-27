@@ -88,9 +88,6 @@ Some common steps are to stop the server, try one or more of these steps, and st
 - Run `npm install` or `yarn install`
 - Delete the `node_modules` directory and run `npm install` or `yarn install`
 - Delete the `dist` directory (found in apps with versions < 3.4), delete `node_modules`, and `npm install` or `yarn install`
-- If an app uses Bower (a deprecated, npm-like tool), follow all the steps above
-
-in addition to deleting `bower_components` and running `bower install`.
 
 [1]: https://nodejs.org/api/debugger.html
 [2]: https://docs.npmjs.com/cli/link

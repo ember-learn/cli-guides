@@ -16,9 +16,6 @@ The code itself goes in `node_modules` during `npm install`, just like in many n
 - The `styles` directory, for stylesheets like CSS, SASS, or LESS
 plus folders like `vendor` and `public` that can hold many other files of the developer's choice
 
-Some older apps may use a package manager and registry called Bower, which has
-a `bower_components` directory. Bower itself is deprecated and should not be used.
-
 <!--
 If addons are installed accidentally with `npm install` or `yarn install`,
 the blueprints can be run with .... what?
