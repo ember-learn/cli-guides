@@ -109,8 +109,6 @@ Mark as `Excluded`:
 Mark as `Resource Root`:
 ```shell
 /
-/bower_components
-/bower_components/ember-qunit/lib
 /public
 ```
 
