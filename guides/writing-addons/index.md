@@ -22,7 +22,7 @@ To see all options for `ember addon`, refer to the [CLI commands reference](../a
 
 In some ways, an addon is like a mini Ember app. It has a very similar file structure, uses a lot of the same API methods, and can do most things that apps can do.
 
-Let's take a look a some of the most important files and folders in an addon, and how they are different from what you would find in an app.
+Let's take a look at some of the most important files and folders in an addon, and how they are different from what you would find in an app.
 
 #### `addon/`
 

@@ -114,7 +114,7 @@ To automatically include CSS styling for your addon, create a `styles` directory
 
 When our addon is used in an app, these CSS rules will be added to the end of the app's `vendor.css` when it is built or served. The rules will be in the same scope as the rest of the app's CSS, so name your class selectors wisely! Otherwise they will clash with the styles of other addons or the app's own styling.
 
-For example, writing a CSS rule for `div` is problematic, because it will affect all `div`s in the app, but a rule targeting `.my-app-name div` is probably fine.
+For example, writing a CSS rule for `div` is problematic because it will affect all `div`s in the app, but a rule targeting `.my-app-name div` is probably fine.
 
 Let's add a class to our template and some styles to target the class:
 
