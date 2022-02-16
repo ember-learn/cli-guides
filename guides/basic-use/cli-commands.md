@@ -168,7 +168,7 @@ ember test [options]
 <!--alex disable failed-->
 `ember test` runs all of the tests found in the `tests` folder of the app. By default, it runs all the tests once and displays the results. We'll see things like syntax errors, linting problems, deprecations, and failed assertions in the command line output. To instead watch tests in the browser as they run, visit `http://localhost:4200/tests` while the local server is running with `ember serve`.
 
-By default, these tests are run in Headless Chrome. "Headless" means the tests are running the Chrome environment, but we won't see the visual output of the browser. This makes the test suite faster.
+By default, these tests run in Headless Chrome. "Headless" means the tests are running the Chrome environment, but we won't see the visual output of the browser. This makes the test suite faster.
 
 ### Example use
 
@@ -247,7 +247,7 @@ ember addon <my-addon-name> [options]
 
 ### What it does
 
-`ember addon` creates all the boilerplate files for a new Ember addon. It puts them in a folder with the same name as whatever we provide in place of `<my-addon-name>`.
+`ember addon` creates all the boilerplate files for a new Ember addon. It puts them in a folder with the same name as whatever we provide in `<my-addon-name>`.
 
 ### Example use
 
