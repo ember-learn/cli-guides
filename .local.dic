@@ -57,6 +57,7 @@ integrations
 Integrations
 Intellij-emberjs
 JetBrains
+JIT
 js-files
 linters
 LiveReload
