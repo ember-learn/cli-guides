@@ -108,7 +108,7 @@ ember install ember-cli-content-security-policy
 
 It applies a strict CSP by default, which may break your application. You could relax the policy by configuring the addon. It's configuration is managed with a `config/content-security-policy.js` file.
 
-To allow loading fronts from Google CDN the default configuration and deliver the CSP via meta tag the configuration could be changed to the following:
+To allow loading fonts from Google CDN and deliver the CSP via meta tag, the configuration could be changed to the following:
 
 ```javascript {data-filename=config/content-security-policy.js}
 module.exports = function(environment) {
