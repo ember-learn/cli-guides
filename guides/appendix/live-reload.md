@@ -22,7 +22,7 @@ To use Tailwind JIT with Ember, this guide follows the [Tailwind Getting Started
 
 To get started, install the following dependencies:
 ```shell
-npm install autoprefixer postcss tailwindcss
+npm install tailwindcss
 ```
 
 Then, from your project's root directory, add the following files:
@@ -41,19 +41,6 @@ Then, from your project's root directory, add the following files:
   };
   ```
 
-- `postcss.config.js`
-
-  ```js {data-filename="postcss.config.js"}
-  'use strict';
-
-  module.exports = {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    }
-  }
-  ```
-
 - `tailwind-input.css`
 
   ```css {data-filename="tailwind-input.css"}
@@ -66,7 +53,7 @@ Now we need to add some scripts to the `package.json` to make
 interacting with the tailwind CLI a little easier.
 
 ```diff {data-filename="package.json"}
-+ "tailwind:build": "npx tailwindcss -i ./tailwind-input.css -o ./public/assets/tailwind.css",
++ "tailwind:build": "npx tailwindcss -i ./tailwind-input.css -o ./public/assets/tailwind.css --minify",
 + "tailwind:watch": "npx tailwindcss -i ./tailwind-input.css -o ./public/assets/tailwind.css --watch",
 + "build": "npm run tailwind:build && ember build --environment=production",
 - "build": "ember build --environment=production",
