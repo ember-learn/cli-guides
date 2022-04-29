@@ -98,33 +98,51 @@ Lastly, if you find yourself working with an older app, you may see references t
 
 ### Content Security Policy
 
-It is a best practice to define a Content Security Policy for your application, even for local development, and to make it restrictive. That way security violations can be discovered immediately.
+It is a best practice to define a Content Security Policy (CSP) for your application and to make it restrictive. A Content Security Policy configuration defines the list of places that your app should accept data from. For example, an app may allow stylesheets from a CDN and images from a specific data storage service. By forbidding everything else, common Cross-Site-Scripting (XSS) attacks can be prevented.
 
-A Content Security Policy configuration defines the list of places that your app should accept data from. For example, an app may allow stylesheets from a CDN and images from a specific data storage service.
+The [`ember-cli-content-security-policy`](https://github.com/rwjblue/ember-cli-content-security-policy) addon helps you to develop and test your application with a CSP applied. It could also inject the CSP in the app as a meta tag on build time. As any other addon it should be installed using the Ember CLI:
 
-The Content Security Policy can be set in `environment.js`:
-
-```javascript {data-filename=config/environment.js}
-module.exports = function(environment) {
-  let ENV = {
-    ...
-    contentSecurityPolicy: {
-      'default-src': "'self'",
-      'script-src': "'self' *.my-domain-name.com",
-      'font-src': "'self' fonts.googleapis.com fonts.gstatic.com",
-      'connect-src': "'self' my-auth-provider.com",
-      'img-src': "self",
-      'style-src': "self",
-      'media-src': "self"
-    }
-  };
-  ...
-}
+```sh
+ember install ember-cli-content-security-policy
 ```
 
-<!-- we need to inline some of this info
-For more information, see the [`ember-cli-content-security-policy` README.]( https://github.com/rwjblue/ember-cli-content-security-policy)
--->
+It applies a strict CSP by default, which may break your application. You could relax the policy by configuring the addon. It's configuration is managed with a `config/content-security-policy.js` file.
+
+To allow loading fonts from Google CDN and deliver the CSP via meta tag, the configuration could be changed to the following:
+
+```javascript {data-filename=config/content-security-policy.js}
+module.exports = function(environment) {
+  return {
+    delivery: ['meta'],
+    policy: {
+      // Deny everything by default
+      'default-src':  ["'none'"],
+      // Allow scripts, images and media from the same host as the index.html is served ('self')
+      'script-src':   ["'self'"],
+      'img-src':      ["'self'"],
+      'media-src':    ["'self'"],
+      // Style sheet should be loaded from same host and from https://fonts.googleapis.com for Google fonts
+      'style-src':    ["'self'", 'https://fonts.googleapis.com'],
+      // Only allow fonts from https://fonts.googleapis.com
+      'font-src':     ['https://fonts.googleapis.com'],
+    },
+  };
+};
+```
+
+Please find details about more advanced configuration options in the [documentation for the addon itself](https://github.com/rwjblue/ember-cli-content-security-policy#ember-cli-content-security-policy).
+
+<div class="cta">
+  <div class="cta-note">
+    <div class="cta-note-body">
+      <div class="cta-note-heading">Zoey says...</div>
+      <div class="cta-note-message">
+        The examples shown here reflect the latest version of the addon (<code>2.x</code>). If using the older version (<code>1.x</code>), please refer to the <a href="https://github.com/rwjblue/ember-cli-content-security-policy/tree/v1.1.1#ember-cli-content-security-policy">documentation for that version</a>.
+      </div>
+    </div>
+    <img src="/images/mascots/zoey.png" role="presentation" alt="">
+  </div>
+</div>
 
 ### Serving your app securely across HTTPS
 
