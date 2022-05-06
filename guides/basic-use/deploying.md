@@ -29,7 +29,6 @@ ember build --environment production
 
 The results of the `build` command are placed in the `dist` directory within your project.
 
-For a tutorial that shows how to build your app and upload it to a web host using `scp` and `rsync`, see the [Official Ember.js Tutorial](https://guides.emberjs.com/release/tutorial/deploying/).
 
 ### Ember CLI Deploy
 
