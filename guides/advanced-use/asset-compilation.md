@@ -49,7 +49,7 @@ module.exports = {
 };
 ```
 
-(If these values look familiar, they're the same exact values used by the popular [Autoprefixer](https://github.com/postcss/autoprefixer) project.)
+(If these values look familiar, they're the same exact values used by the popular [Autoprefixer](https://github.com/postcss/autoprefixer) project. Autoprefixer has an [online version](https://goonlinetools.com/autoprefixer/) that allows you to enter your non-prefixed CSS and gives you a prefix-added CSS.)
 
 <!-- alex disable simply -->
 If you need more fine-grained customization over the way that `babel-preset-env` transforms your code,
