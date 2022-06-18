@@ -49,8 +49,12 @@ Available commands from Ember CLI in alphabetical order:
       <td>Creates a new ember-cli project in the current folder.</td>
     </tr>
     <tr>
-      <td><a href="#emberinstall"><code>ember install</code></a></td>
+      <td><a href="#emberinstall"><code>ember new</code></a></td>
       <td>Installs an ember-cli addon from npm.</td>
+    </tr>
+    <tr>
+      <td><a href="#embernew"><code>ember install</code></a></td>
+      <td>Creates a new ember-cli project (in a new folder named as the project).</td>
     </tr>
     <tr>
       <td><a href="#emberserve"><code>ember serve</code></a></td>
