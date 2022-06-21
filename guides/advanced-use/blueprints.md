@@ -109,7 +109,7 @@ ember generate util count-down
 would create
 
 ```javascript
-export default function CountDown() {
+export default function countDown() {
   return true;
 }
 ```
