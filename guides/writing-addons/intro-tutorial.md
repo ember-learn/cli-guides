@@ -38,7 +38,7 @@ Some files go in the `app` directory, while others go into the `addon` directory
 Let's say that our addon should wrap some content in a button tag. The addon template should look like this:
 
 ```handlebars {data-filename=addon/components/my-component-name.hbs}
-<button>{{buttonLabel}}</button>
+<button>{{@buttonLabel}}</button>
 ```
 
 <!-- alex disable just -->
