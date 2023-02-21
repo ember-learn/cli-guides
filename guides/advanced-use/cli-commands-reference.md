@@ -1,6 +1,6 @@
 In their daily work, most Ember developers use only a small number of CLI commands. See the [Basic use](../../basic-use/cli-commands/) section for a guide to common CLI commands and options.
   
-This page shows a full list of Ember CLI commands and options. You can view this information at anytime by typing the following
+This page shows a full list of Ember CLI commands and options. You can view this information at anytime by typing the following:
 
 ```bash
 ember --help
@@ -22,7 +22,7 @@ Available commands from Ember CLI in alphabetical order:
   <tbody>
     <tr>
       <td><a href="#emberaddon"><code>ember addon</code></a></td>
-      <td>Generates a new folder structure for building</td>
+      <td>Generates a new folder structure for building an addon, complete with test harness.</td>
     </tr>
     <tr>
       <td><a href="#emberassetsizes"><code>ember asset-sizes</code></a></td>
@@ -30,7 +30,7 @@ Available commands from Ember CLI in alphabetical order:
     </tr>
     <tr>
       <td><a href="#emberbuild"><code>ember build</code></a></td>
-      <td>Builds your app and places it into the output</td>
+      <td>Builds your app and places it into the output path (`dist/` by default).</td>
     </tr>
     <tr>
       <td><a href="#emberdestroy"><code>ember destroy</code></a></td>
@@ -58,18 +58,18 @@ Available commands from Ember CLI in alphabetical order:
     </tr>
     <tr>
       <td><a href="#embertest"><code>ember test</code></a></td>
-      <td>Runs your app's test suite</td>
+      <td>Runs your app's test suite.</td>
     </tr>
     <tr>
       <td><a href="#emberversion"><code>ember version</code></a></td>
-      <td>outputs ember-cli version</td>
+      <td>Outputs ember-cli version.</td>
     </tr>
   </tbody>
 </table>
 
 ### `ember addon`
 
-Generates a new folder structure for building
+Generates a new folder structure for building an addon, complete with test harness.
 
 ```bash
 ember addon <addon-name> <options...>
@@ -107,7 +107,7 @@ ember asset-sizes <options...>
 
 ### `ember build`
 
-Builds your app and places it into the output
+Builds your app and places it into the output path (`dist/` by default).
 
 ```bash
 ember build <options...>
@@ -456,7 +456,7 @@ ember generate adapter <name> <options...>
 
 #### `ember generate adapter-test`
 
-Generates an ember-data adapter unit test
+Generates an ember-data adapter unit test.
 
 ```bash
 ember generate adapter-test <name>
@@ -612,7 +612,7 @@ ember generate vendor-shim <name>
 
 ### `ember help`
 
-Outputs the usage instructions for all commands
+Outputs the usage instructions for all commands or the provided command.
 
 ```bash
 ember help <command-name (Default: all)> <options...>
@@ -807,7 +807,7 @@ ember test <options...>
 
 ### `ember version`
 
-outputs ember-cli version
+Outputs ember-cli version.
 
 ```bash
 ember version <options...>
