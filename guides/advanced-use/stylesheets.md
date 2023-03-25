@@ -6,7 +6,7 @@ Ember CLI supports plain CSS out of the box. You can add your CSS styles to
 <!-- Ought to show how to import stylesheets from node_modules, or link to it in the guides if it's there -->
 
 To use a CSS preprocessor, you'll need to install the appropriate
-[Broccoli plugin](https://broccoli.build/plugins.html). When using a
+[Broccoli plugin](https://npmjs.com/search?q=keywords:broccoli-plugin). When using a
 preprocessor, Broccoli is configured to look for an `app.less`, `app.scss`, `app.sass`,
 or `app.styl` manifest file in `app/styles`. This manifest should import any
 additional stylesheets.

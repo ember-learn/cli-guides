@@ -73,7 +73,7 @@ The [`ember new`](../cli-commands/#createanewapp) command generates the files an
     <tr>
       <td><code>ember-cli-build.js</code></td>
       <td> 
-        This file describes how Ember CLI should build our app.  Ember uses <a src="https://broccoli.build/"><code>Broccoli</code></a> to build the application
+        This file describes how Ember CLI should build our app.  Ember uses <a src="https://github.com/broccolijs/broccoli"><code>Broccoli</code></a> to build the application
       </td>
     </tr>
     <tr>

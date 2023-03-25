@@ -92,7 +92,7 @@ Some common steps are to stop the server, try one or more of these steps, and st
 [1]: https://nodejs.org/api/debugger.html
 [2]: https://docs.npmjs.com/cli/link
 [3]: https://www.emberobserver.com/addons/ember-power-select
-[4]: https://broccoli.build
-[5]: https://broccoli.build/plugins.html
+[4]: https://github.com/broccolijs/broccoli
+[5]: https://npmjs.com/search?q=keywords:broccoli-plugin
 [6]: https://github.com/broccolijs/broccoli-debug
 [7]: https://www.npmjs.com/package/debug
