@@ -67,7 +67,7 @@ The default blueprint is recognized because it normally has the same name as the
 
 ### Blueprints in development
 
-When developing and testing your addon using either `npm link` or `yarn link` your addon's blueprint will not automatically run. To manually run and test the blue print you would use the following command:
+When developing and testing your addon using `npm link`, `yarn link`, or `pnpm link` your addon's blueprint will not automatically run. To manually run and test the blue print you would use the following command:
 
 ```shell
 ember generate <your-blueprint-name>

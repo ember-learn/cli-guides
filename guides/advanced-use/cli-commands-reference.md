@@ -88,6 +88,7 @@ ember addon <addon-name> <options...>
   --skip-git (Boolean) (Default: false)
     aliases: -sg
   --yarn (Boolean)
+  --pnpm (Boolean)
   --directory (String)
     aliases: -dir <value>
   --lang (String) Sets the base human language of the addon's own test application via index.html
@@ -645,6 +646,7 @@ ember init <glob-pattern> <options...>
    uses {{ember-welcome-page}}. Use --no-welcome to
     skip it.
   --yarn (Boolean)
+  --pnpm (Boolean)
   --name (String) (Default: "")
     aliases: -n <value>
   --lang (String) Sets the base human language of the application via index.html
@@ -666,6 +668,8 @@ ember install <addon-name> <options...>
     aliases: -E, --exact
   --yarn (Boolean) Use --yarn to enforce yarn 
   usage, or --no-yarn to enforce npm
+  --pnpm (Boolean) Use --pnpm to enforce pnpm 
+  usage, or --no-pnpm to enforce npm
 ```
 
 ### `ember new`
@@ -691,6 +695,7 @@ ember new <app-name> <options...>
    uses {{ember-welcome-page}}. Use --no-welcome to
     skip it.
   --yarn (Boolean)
+  --pnpm (Boolean)
   --directory (String)
     aliases: -dir <value>
   --lang (String) Sets the base human language of the application via index.html

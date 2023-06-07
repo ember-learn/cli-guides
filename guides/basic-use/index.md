@@ -2,16 +2,16 @@ Learn how to install the Ember CLI on Linux, Mac, and Windows.
 
 ## Prerequisites
 
-* [npm](https://www.npmjs.com/get-npm) or [yarn](https://yarnpkg.com/en/docs/install)
+* [npm](https://www.npmjs.com/get-npm), [yarn](https://yarnpkg.com/en/docs/install), or [pnpm](https://pnpm.io/installation)
 * [git](https://git-scm.com/) is recommended, but not required
 * Recent version of [node](https://nodejs.org/en/download/), which comes included in `yarn` or `npm`
 * Mac and Linux users may need [Watchman](https://facebook.github.io/watchman/) (not the npm version!)
 
 First, we need to have a package manager installed. A package manager installs new dependencies from the command line, whether they are used as commands or in the app itself.
-Follow these installation instructions for [npm](https://www.npmjs.com/get-npm) or [yarn](https://yarnpkg.com/en/docs/install).
-While these two tools have somewhat different features, both are compatible with Ember app development.
+Follow these installation instructions for [npm](https://www.npmjs.com/get-npm), [yarn](https://yarnpkg.com/en/docs/install), or [pnpm](https://pnpm.io/installation).
+While these tools have somewhat different features, both are compatible with Ember app development.
 
-We'll know installation is successful when `npm --version` or `yarn --version` returns the version number.
+We'll know installation is successful when `npm --version`, `yarn --version`, or `pnpm --version` returns the version number.
 
 It is recommended to install the most recent LTS (long-term support) version of `node`.
 Restart the console after installing your package manager.

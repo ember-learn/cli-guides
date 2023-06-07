@@ -17,33 +17,33 @@ The code itself goes in `node_modules` during `npm install`, just like in many n
 plus folders like `vendor` and `public` that can hold many other files of the developer's choice
 
 <!--
-If addons are installed accidentally with `npm install` or `yarn install`,
+If addons are installed accidentally with `npm install`, `yarn install`, or `pnpm install`,
 the blueprints can be run with .... what?
 
 Added by @maxwondercorn:
 What is now below - were should it go in the guide
 
-If you accidentally install an Ember addon using either npm or Yarn, the default blueprint will not run. To run the blueprint use:
+If you accidentally install an Ember addon using either npm, Yarn, or pnpm, the default blueprint will not run. To run the blueprint use:
 
 ```shell
 ember generate <addon-name>
 ```
 -->
 
-## npm and Yarn
+## Package Managers 
 
-Ember CLI supports both [npm](https://www.npmjs.com) and [Yarn](https://yarnpkg.com/)
+Ember CLI supports [npm](https://www.npmjs.com), [Yarn](https://yarnpkg.com/), and [pnpm](https://pnpm.io)
 for node modules management.
 
 By default, new apps use `npm`.
 Both tools offer similar functionality, and which one to choose is up to
 the developer's preference.
-Dependencies listed in `package.json` can be installed with either `npm install` or `yarn install`. The files for those packages are added to the `node_modules` folder of the app.
+Dependencies listed in `package.json` can be installed with `npm install`, `yarn install`, or `pnpm install`. The files for those packages are added to the `node_modules` folder of the app.
 
-There are two ways to switch from `npm` to `yarn`.
-Either include an option when the app is created, like `ember new --yarn`,
-or run `yarn install` to generate a `yarn.lock` file.
-Ember will detect the `yarn.lock` file and start using it instead
+There are two ways to switch from the default package manager, `npm`. 
+Either include an option when the app is created, like `ember new --yarn` or `ember new --pnpm`,
+or run `yarn install` or `pnpm install` to generate the package manager's asosciated lockfile file.
+Ember will detect the lockfile and start using it instead
 for any `ember install some-addon-name` commands.
 Don't forget to delete the `package-lock.json` file if the app
 already has one.
@@ -52,10 +52,10 @@ file are present, Ember CLI will default to using Yarn.
 However, having both files causes confusion for collaborators and
 is incompatible with some CI systems.
 
-To switch from `yarn` to `npm`, delete the `yarn.lock`
+To switch back to `npm`, delete the lockfile from your package manager
 and run `npm install` to generate a `package-lock.json`.
 
-To have Ember CLI use `yarn` by default for all new projects, create a `.ember-cli` file in your home directory with:
+To have Ember CLI use `yarn` or `pnpm` by default for all new projects, create a `.ember-cli` file in your home directory with:
 
 ```json
 {
@@ -63,10 +63,18 @@ To have Ember CLI use `yarn` by default for all new projects, create a `.ember-c
 }
 ```
 
+or 
+```json 
+{
+  "pnpm": true
+}
+```
+
 Further documentation about npm and Yarn is available at their official
 documentation pages:
 
 * [npm](https://www.npmjs.com)
+* [pnpm](https://pnpm.io)
 * [Yarn](https://yarnpkg.com)
 
 ### The `node_modules` directory
