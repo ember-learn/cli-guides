@@ -47,6 +47,6 @@ To customize linting behavior, edit `.eslintrc.js`. An example configuration mig
 
 ## Continuous integration testing
 
-Default Ember projects contain a file called `.github/workflows/ci.yml` that specifies the commands to be used with [GitHub Actions]([https://travis-ci.org/](https://github.com/features/actions), an option for continuous integration testing.
+Default Ember projects contain a file called `.github/workflows/ci.yml` that specifies the commands to be used with [GitHub Actions](https://github.com/features/actions), an option for continuous integration testing.
 
 Developers are free to use other CI providers. They are encouraged to reference the default blueprint of `.github/workflows/ci.yml` to get an idea of what kinds of information to include when configuring other vendors.
