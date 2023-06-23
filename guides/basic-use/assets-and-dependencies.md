@@ -42,7 +42,7 @@ Dependencies listed in `package.json` can be installed with `npm install`, `yarn
 
 There are two ways to switch from the default package manager, `npm`. 
 Either include an option when the app is created, like `ember new --yarn` or `ember new --pnpm`,
-or run `yarn install` or `pnpm install` to generate the package manager's asosciated lockfile file.
+or run `yarn install` or `pnpm install` to generate the package manager's associated lockfile file.
 Ember will detect the lockfile and start using it instead
 for any `ember install some-addon-name` commands.
 Don't forget to delete the `package-lock.json` file if the app
