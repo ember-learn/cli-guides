@@ -1,11 +1,11 @@
-Ember-cli tracks data points related to the use of the Ember-cli tool. This information is used by the
-Ember and Ember-cli core teams to identify upgrade blockers, monitor build performance, and understand which
+Ember CLI tracks data points related to its use. This information is used by the
+Ember and Ember CLI core teams to identify upgrade blockers, monitor build performance, and understand which
 features are being used. Users who are uncomfortable with this data collection can permanently disable it by
-updating their .ember-cli file.
+updating their `.ember-cli` file.
 
-Ember-cli tracks (only) the following data points:
+Ember CLI only tracks the following data points:
 
-- ember-cli version
+- ember CLI version
 - build/rebuild/live-reload times
 - how many errors occurred
 
@@ -31,7 +31,7 @@ We understand! To permanently disable any analytics gathering you can update you
 
 ## Who has access
 
-The ember and ember-cli core [teams](https://emberjs.com/teams/).
+The [Ember and Ember CLI core teams](https://emberjs.com/teams/).
 These teams have been granted access to the analytics data in order to make informed decisions about the direction
 and future of the projects.
 
