@@ -70,5 +70,5 @@ Avoid voice altogether whenever you can. When some voice is needed, use first pe
 - Best: “There is an entire ecosystem of adapters that allows Ember apps to talk to different types of servers …”
 
 #### Inclusive language
-<!--alex disable her-him obviously -->
+<!--alex disable her-him obvious just -->
 “They/Them” is  used in place of him/he/she/her/etc. Do not use gender in code examples. Avoid terms like “just, simply, obviously” etc.

@@ -51,9 +51,8 @@ module.exports = {
 
 (If these values look familiar, they're the same exact values used by the popular [Autoprefixer](https://github.com/postcss/autoprefixer) project. Autoprefixer has an [online version](https://goonlinetools.com/autoprefixer/) that allows you to enter your non-prefixed CSS and gives you a prefix-added CSS.)
 
-<!-- alex disable simply -->
 If you need more fine-grained customization over the way that `babel-preset-env` transforms your code,
-simply set any of the [babel-preset-env options](https://babeljs.io/docs/en/babel-preset-env.html#options) on your application's `babel` hash in `ember-cli-build.js`.
+set any of the [babel-preset-env options](https://babeljs.io/docs/en/babel-preset-env.html#options) on your application's `babel` hash in `ember-cli-build.js`.
 
 For example, if you wanted to explicitly exclude generator function transpilation from your
 output, your configuration would look like this:
