@@ -34,9 +34,9 @@ set a `debugger` at the top of `ember-cli-build.js`, and then run:
 ```bash
 node inspect ./node_modules/.bin/ember build
 ```
-<!-- alex disable simply -->
+
 You'll first see the build command pause at the start of the program. You can tell it to continue
-by typing `cont` (or simply `c`). Once the program begins executing, it will stop at any `debugger`
+by typing `cont` (or `c`). Once the program begins executing, it will stop at any `debugger`
 statements it finds. You can then enter a REPL, by typing `repl`.
 
 In addition to stepping through this code using the Node.js debugger, you can also "attach" other debugging
