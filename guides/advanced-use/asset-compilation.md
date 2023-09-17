@@ -108,7 +108,7 @@ module.exports = function(defaults) {
 
 ## Minifying
 
-Compiled css-files are minified by `ember-cli-clean-css`, or other registered css minifiers,
+Compiled css-files are minified by `ember-cli-clean-css`, or other registered CSS minifiers,
 if they are installed locally. You can pass minifer-specific options to them using
 the `minifyCSS:options` object in your ember-cli-build. Minification is enabled by
 default in the production-env and can be disabled using the `minifyCSS:enabled`
