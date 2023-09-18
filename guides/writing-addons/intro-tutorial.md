@@ -62,7 +62,7 @@ There are several options to see the addon in action. We could use `npm link` or
 2. In the Ember app's `package.json`, add a `devDependencies` entry for your addon, like `"addon-name": "*"`. The `*` means that it will include all version numbers of our addon.
 3. Run `yarn install` or `npm install` in the app. (If you are using the app for the first time, you can use `npm install --prefer-offline` or `npm install --offline` instead. These alternative commands can speed up installation, because `npm install` checks the online npm registry for your addon instead of your local storage.)
 4. Add a reference to your addon's component somewhere in an app template, like `<ComponentName @buttonLabel="Register" />`
-5. Run a local server with `ember serve` and visit [http://localhost:4200](http://localhost:4200)
+5. Run a local server with `npm start` or `ember serve`, and visit [http://localhost:4200](http://localhost:4200)
 
 We should now see our addon in action!
 

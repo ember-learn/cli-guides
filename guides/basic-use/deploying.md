@@ -15,7 +15,7 @@ As a result, you may not need to understand or configure build steps, but it's s
 
 Behind the scenes, deploying an app has two steps: building the app for production and pushing the result to a web server for hosting.
 
-There are three main options for deploying your app: using the `ember build` command, installing `ember-cli-deploy`, or using pre-made build packs.
+There are three main options for deploying your app: using the `ember build --environment=production` command, installing `ember-cli-deploy`, or using pre-made build packs.
 
 ### `ember build` and upload
 
@@ -29,6 +29,9 @@ ember build --environment production
 
 The results of the `build` command are placed in the `dist` directory within your project.
 
+Often, developers may run `npm run build` instead, since
+there may be some application-specific environment variables or flags specified
+in the `build` command of the project's `package.json`.
 
 ### Ember CLI Deploy
 
