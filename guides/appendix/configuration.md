@@ -31,7 +31,7 @@ For a complete list of command line options run `ember help`.
 
 Some configuration is exposed through your `package.json` file.
 
-If you have a nested repo structure (e.g., a monorepo using yarn workspaces) and want to allow `ember s` from the root of the repo, you can configure your `package.json` to look like:
+If you have a nested repo structure (e.g., a monorepo using pnpm or yarn workspaces) and want to allow `ember s` from the root of the repo, you can configure your `package.json` to look like:
 
 ```json {data-filename=package.json}
 {

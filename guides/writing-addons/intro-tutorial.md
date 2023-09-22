@@ -50,17 +50,17 @@ Our goal is to be able to pass the `buttonLabel` value to the addon, just like w
 
 ### Trying out the addon template in an app
 
-There are several options to see the addon in action. We could use `npm link` or `yarn link` to try it out locally or publish the addon online. We'll use `link` while we are still developing and testing.
+There are several options to see the addon in action. We could use `npm link`, `yarn link`, or `pnpm link` to try it out locally or publish the addon online. We'll use `link` while we are still developing and testing.
 
 **From the addon project directory:**
 1. Since our addon uses a template, we need the template precompiler to be a `dependency` and not a `devDependency`. In the addon's `package.json`, move the entry for `ember-cli-htmlbars` into the `dependencies` listing. If this step is missed, there is a clear error message when we try to start the app that uses our addon.
-2. `yarn install` or `npm install`
-3. Run the command `yarn link` or `npm link`
+2. `pnpm install`, `yarn install`, or `npm install`
+3. Run the command `yarn link` or `npm link`. This step may be skipped if using `pnpm`.
 
 **From the directory of the app using the addon:**
-1. `yarn link <addon-name>` or `npm link <addon-name>`.
+1. `pnpm link ../path/to-/the-addon`, `yarn link <addon-name>` or `npm link <addon-name>`.
 2. In the Ember app's `package.json`, add a `devDependencies` entry for your addon, like `"addon-name": "*"`. The `*` means that it will include all version numbers of our addon.
-3. Run `yarn install` or `npm install` in the app. (If you are using the app for the first time, you can use `npm install --prefer-offline` or `npm install --offline` instead. These alternative commands can speed up installation, because `npm install` checks the online npm registry for your addon instead of your local storage.)
+3. Run `pnpm install`, `yarn install`, or `npm install` in the app. (If you are using the app for the first time, you can use `npm install --prefer-offline` or `npm install --offline` instead. These alternative commands can speed up installation, because `npm install` checks the online npm registry for your addon instead of your local storage.)
 4. Add a reference to your addon's component somewhere in an app template, like `<ComponentName @buttonLabel="Register" />`
 5. Run a local server with `ember serve` and visit [http://localhost:4200](http://localhost:4200)
 
@@ -69,7 +69,7 @@ We should now see our addon in action!
 **Having problems?**
 - Check to make sure that your `package.json` is valid, looking for missing commas or trailing commas.
 - "Template precompiler" errors mean that you skipped Step 1 and 2 above.
-- `404 not found` means we forgot to `yarn` or `npm install`
+- `404 not found` means we forgot to `pnpm install`, `yarn install` or `npm install`
 - Make sure all the files have been saved.
 - Did you rename or relocate any files after they were created? This is prone to mistakes, and the resulting errors can be really strange. It is best to create files using the CLI.
 

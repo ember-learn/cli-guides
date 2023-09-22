@@ -85,9 +85,9 @@ the all-purpose technique of "turning it on and off" can apply to Ember CLI as w
 
 Some common steps are to stop the server, try one or more of these steps, and start the server again:
 
-- Run `npm install` or `yarn install`
-- Delete the `node_modules` directory and run `npm install` or `yarn install`
-- Delete the `dist` directory (found in apps with versions < 3.4), delete `node_modules`, and `npm install` or `yarn install`
+- Run `npm install`, `yarn install`, or `pnpm install`
+- Delete the `node_modules` directory and run `npm install`, `yarn install`, or `pnpm install`
+- Delete the `dist` directory (found in apps with versions < 3.4), delete `node_modules`, and `npm install`, `yarn install`, or `pnpm install`
 
 [1]: https://nodejs.org/api/debugger.html
 [2]: https://docs.npmjs.com/cli/link
