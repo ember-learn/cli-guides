@@ -29,7 +29,7 @@ Ember apps use CSS by default. However, there is support for other stylesheet sy
 
 ## Testing framework
 
-Ember has official support for QUnit and Mocha. However, other libraries may be used.
+Ember has official support for QUnit. However, other libraries may be used.
 
 ## Community build tools
 
