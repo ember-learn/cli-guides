@@ -62,6 +62,19 @@ For example, to update to a specific version, use the `--to` option:
 ember-cli-update --to 3.4.3
 ```
 
+<div class="cta">
+  <div class="cta-note">
+    <div class="cta-note-body">
+      <div class="cta-note-heading">Zoey says...</div>
+      <div class="cta-note-message">
+        Make sure your git working directory is clean before updating. This means having commited or stashed all your files.
+      </div>
+    </div>
+    <img src="/images/mascots/zoey.png" role="presentation" alt="">
+  </div>
+</div>
+
+
 ### Updating your code automatically
 
 After running the normal update shown above, and after you've resolved any conflicts,
