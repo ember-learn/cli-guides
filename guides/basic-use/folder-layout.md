@@ -67,10 +67,6 @@ The [`ember new`](../cli-commands/#createanewapp) command generates the files an
       <td> Configuration file for <a src="https://github.com/ember-template-lint/ember-template-lint"><code>ember-template-lint</code></a> rules </td>
     </tr>
     <tr>
-      <td><code>.travis.yml</code></td>
-      <td>Boiler plate configuration file for testing on <a src="https://travis-ci.org/"><code>Travis CI</code></a></td>
-    </tr>
-    <tr>
       <td><code>ember-cli-build.js</code></td>
       <td> 
         This file describes how Ember CLI should build our app.  Ember uses <a src="https://github.com/broccolijs/broccoli"><code>Broccoli</code></a> to build the application
