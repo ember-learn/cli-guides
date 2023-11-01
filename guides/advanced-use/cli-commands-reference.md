@@ -709,16 +709,16 @@ Builds and serves your app, rebuilding on file changes.
 ember serve <options...>
   Builds and serves your app, rebuilding on file changes.
   aliases: server, s
-  --port (Number) (Default: 4200) To use a port different
-   than 4200. Pass 0 to automatically pick an available
-    port.
+  --port (Number) (Default: 4200) Overrides $PORT. If the
+  port 0 or the default port 4200 is passed, ember will use
+  any available port starting from 4200.
     aliases: -p <value>
   --host (String) Listens on all interfaces by default
     aliases: -H <value>
   --proxy (String)
     aliases: -pr <value>, -pxy <value>
   --proxy-in-timeout (Number) (Default: 120000) When
-   using --proxy: timeout (in ms) for incoming requests
+  using --proxy: timeout (in ms) for incoming requests
     aliases: -pit <value>
   --proxy-out-timeout (Number) (Default: 0) When using
    --proxy: timeout (in ms) for outgoing requests
@@ -743,8 +743,8 @@ ember serve <options...>
   --live-reload-prefix (String) (Default: _lr) 
   Default to _lr
     aliases: --lrprefix <value>
-  --environment (String) (Default: development) P
-  ossible values are "development", "production", and "test".
+  --environment (String) (Default: development) Possible values
+  are "development", "production", and "test".
     aliases: -e <value>, -dev (--environment=development),
      -prod (--environment=production)
   --output-path (Path) (Default: dist/)
