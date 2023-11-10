@@ -177,6 +177,8 @@ ember generate <blueprint> <options...>
   --in (String) (Default: null) Runs a blueprint
    against an in repo addon. A path is expected,
     relative to the root of the project.
+  --typescript (Boolean) Generates a version of the blueprint written in TypeScript (if available).
+    aliases: -ts
 ```
 
 ### Available blueprints from `ember-source`
