@@ -169,7 +169,7 @@ module.exports = {
    * to work with TS at all, OR in the case that the blueprint is written in TS and the author does
    * not intend to support transpilation to JS.
   */
-  shouldTransformTypeScript: true
+  shouldTransformTypeScript: true,
 
   availableOptions: [
     {
