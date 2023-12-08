@@ -163,6 +163,14 @@ ember generate <blueprint> <options...>
 module.exports = {
   description: "Generates a foo",
 
+  /*
+   * Indicates whether or not a blueprint is a candidate for automatic transpilation from TS to JS.
+   * This property could be `false` in the case that the blueprint is written in JS and is not intended
+   * to work with TS at all, OR in the case that the blueprint is written in TS and the author does
+   * not intend to support transpilation to JS.
+  */
+  shouldTransformTypeScript: true,
+
   availableOptions: [
     {
       name: "type",
