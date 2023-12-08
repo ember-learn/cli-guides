@@ -21,13 +21,18 @@ Every development environment will be different but a realistic example setting 
   // disableAnalytics added by ember new
   "disableAnalytics": false,
   "port": 8080,
-  "proxy": "http://localhost:3000"
+  "proxy": "http://localhost:3000",
+  "isTypeScriptProject": true
 }
 ```
 
 For a complete list of command line options run `ember help`.
 
-### `package.json` Configuration
+### `isTypeScriptProject` option (default: `false`)
+
+Allows users to mark an entire Ember app or addon as a TypeScript-first project. The presence of this flag would indicate that blueprints should output TypeScript by default, rather than JavaScript as they normally would.
+
+## `package.json` Configuration
 
 Some configuration is exposed through your `package.json` file.
 
