@@ -82,7 +82,7 @@ ember addon <addon-name> <options...>
   --blueprint (String) (Default: addon)
     aliases: -b <value>
   --skip-npm (Boolean) (Default: false)
-    aliases: -sn
+    aliases: -sn, --skip-install, -sn
   --skip-bower (Boolean) (Default: false)
     aliases: -sb
   --skip-git (Boolean) (Default: false)
@@ -641,7 +641,7 @@ ember init <glob-pattern> <options...>
   --blueprint (String)
     aliases: -b <value>
   --skip-npm (Boolean) (Default: false)
-    aliases: -sn
+    aliases: -sn, --skip-install, -sn
   --skip-bower (Boolean) (Default: false)
     aliases: -sb
   --welcome (Boolean) (Default: true) Installs and
@@ -688,7 +688,7 @@ ember new <app-name> <options...>
   --blueprint (String) (Default: app)
     aliases: -b <value>
   --skip-npm (Boolean) (Default: false)
-    aliases: -sn
+    aliases: -sn, --skip-install, -sn
   --skip-bower (Boolean) (Default: false)
     aliases: -sb
   --skip-git (Boolean) (Default: false)
