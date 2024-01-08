@@ -1,6 +1,6 @@
 <!-- alex disable just -->
-For most Ember applications, Ember CLI "just works". Run `ember server` in your Terminal and you get
-a LiveReload development server at `http://localhost:4200`. Run `ember build`, and you get a `dist/`
+For most Ember applications, Ember CLI "just works". Run `ember server` or `npm start` in your Terminal and you get
+a LiveReload development server at `http://localhost:4200`. Run `ember build --environment=production` or `npm run build`, and you get a `dist/`
 directory with compiled assets ready to be deployed to your production server.
 
 But things don't always go smoothly and CLI commands can fail inexplicably with error messages that
@@ -67,7 +67,7 @@ For example, if your app installs [`ember-power-select`][3], and you want to tes
 You can verify this did the intended thing by checking that `node_modules/ember-power-select` is now
 a symlink pointing to the cloned repo.
 
-Now, in your app, if you run `ember server`, it should use the linked repo and any code changes in
+Now, in your app, if you run `npm start` or `ember server`, it should use the linked repo and any code changes in
 your local clone of `ember-power-select` should get picked up by the app.
 
 ## Broccoli Debug

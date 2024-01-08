@@ -80,6 +80,10 @@ To stop an Ember server, press `control-c`.
 If the local server will not start due to missing dependencies, use
 `npm install` or `yarn install` to get going again.
 
+Often, developers may run `npm start` instead of `ember serve`, since
+there may be some application-specific environment variables or flags specified
+in the `start` command of the project's `package.json`.
+
 ### Example use
 
 By default, apps are served at port `4200`, but if you need to change it for some reason, you could visit your app at `http://localhost:3200` by using this command:
@@ -198,6 +202,13 @@ module('My Component', function() {
 you can run only the first test with `ember test --filter="test one"`.
 
 See `ember test --help` for more options!
+
+### Running all tests including linters
+
+`ember test` runs only the tests in the `tests` folder, so if you want to
+run additional tests such as linters too, try `npm test` instead. It will run
+all tests specified in your project's `package.json` script for the `test`
+command.
 
 ### Learn more
 - [The Ember.js Guides about Testing](https://guides.emberjs.com/release/testing/)
