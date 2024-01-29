@@ -1,4 +1,4 @@
-Ember CLI’s runtime is configurable via a file named `.ember-cli`. The JSON-formatted file is in project's root directory and can include any command-line options for `ember generate`, `ember serve` or `ember test`.
+Ember CLI’s runtime is configurable via a file named `.ember-cli`. The JSON-formatted file is in project's root directory and is merged with file of the same name in user's home directory (if applicable). Project level configuration has precedence. These files can include any command-line options for `ember generate`, `ember serve` or `ember test`.
 
 Command line options are passed in a dasherized form on the command line but they must be in camel cased in `.ember-cli`. For example
 
