@@ -83,3 +83,5 @@
     url: 'common-issues'
   - title: 'Live reload integration'
     url: 'live-reload'
+  - title: 'Analytics'
+    url: 'analytics'
