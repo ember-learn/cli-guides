@@ -52,6 +52,11 @@ module.exports = function (environment) {
         'handlebars',
       ],
     },
+
+    infoBanner: {
+      style: 'warning',
+      content: `<em>This website is deprecated</em>. The default build environment switched to Vite at Ember 6.8 and supports Ember versions back to 3.28. See [Up to Date Build Tooling Documentation](https://guides.emberjs.com/release/build-tools/).`,
+    },
   };
 
   if (environment === 'development') {
