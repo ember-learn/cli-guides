@@ -45,11 +45,9 @@ See [The Windows Section](/release/appendix/windows/) for more details.
 
 ## Cygwin on Windows
 
-Node.js on Cygwin is no longer supported [more
-details](https://github.com/nodejs/node/wiki/Installation#building-on-cygwin)
-Rather then using Cygwin, we recommend running Ember CLI natively on windows,
-or via the new [Windows Subsystem
-Linux](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide).
+Node.js on Cygwin or the [Windows Subsystem
+Linux](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide) are [not supported](https://github.com/nodejs/node/blob/main/BUILDING.md#platform-list).
+We recommend running Ember CLI natively on Windows.
 
 <!-- ## Usage with Docker -->
 <!-- Possible topic for future development. -->
@@ -104,6 +102,6 @@ npm rebuild
 ### Provider
 
 The two most common Vagrant providers, VirtualBox and VMware Fusion, will both
-work. However, VMware Fusion is substantially faster and will use less battery
-life if you're on a laptop. As of now, VirtualBox will use 100% of a single CPU
-core to poll for file system changes inside of the VM.
+work. However, VMware Fusion is substantially faster and consumes less energy 
+(important if running on laptop battery power). VirtualBox uses 100% of a single 
+CPU core to poll for file system changes inside of the VM.
