@@ -13,6 +13,16 @@ would be `liveReload` in the configuration file.
   "liveReload": false
 }
 ```
+Another use would be to pass defaults to generators, for example:
+
+```json {data-filename=.ember-cli}
+"blueprint": {
+    "component": {
+      "gc": true
+    }
+  }
+```
+will add a component class automatically to generated components.
 
 Every development environment will be different but a realistic example setting `--port` and `--proxy` is shown below:
 
